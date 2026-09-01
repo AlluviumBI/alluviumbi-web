@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import { getCollection } from "astro:content";
+import { SITE } from "../../lib/site";
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => data.draft !== true);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const path = `/blog/${post.slug}`;
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Insights", item: SITE.url + "/blog" },
+      { "@type": "ListItem", position: 3, name: post.data.title, item: SITE.url + path },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.data.title,
+    description: post.data.description,
+    datePublished: post.data.pubDate.toISOString(),
+    author: { "@type": "Organization", name: "Alluvium", url: SITE.url },
+    publisher: { "@type": "Organization", name: "Alluvium", url: SITE.url },
+    mainEntityOfPage: SITE.url + path,
+  },
+];
+
+function fmt(d: Date) {
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+}
+---
+<BaseLayout
+  title={`${post.data.title} — Alluvium`}
+  description={post.data.description}
+  canonicalPath={path}
+  ogType="article"
+  publishedTime={post.data.pubDate.toISOString()}
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap-narrow">
+        <p class="kicker">Insights</p>
+        <h1>{post.data.title}</h1>
+        <p class="post-meta">{fmt(post.data.pubDate)}</p>
+        <p class="lede">{post.data.description}</p>
+      </div>
+    </header>
+    <section class="band band-alt">
+      <div class="wrap-narrow prose">
+        <Content />
+      </div>
+    </section>
+    <CtaBand text="Need a clearer finance or executive reporting stack? Book a 30-minute consult." />
+  </article>
+</BaseLayout>

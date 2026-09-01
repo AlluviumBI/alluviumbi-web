@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { SITE } from "../../lib/site";
+
+const posts = (await getCollection("blog", ({ data }) => data.draft !== true)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Insights", item: SITE.url + "/blog" },
+  ],
+};
+
+function fmt(d: Date) {
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+}
+---
+<BaseLayout
+  title="Insights | Power BI and AI Advisory — Alluvium"
+  description="Practical writing for executives and BI leaders: Power BI, reporting, and decisions—not dashboard theater."
+  canonicalPath="/blog"
+  jsonLd={jsonLd}
+>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Insights</p>
+      <h1>From reporting pain to decisions</h1>
+      <p class="lede">Short, practical pieces for C-suite and data leaders at mid-sized companies.</p>
+    </div>
+  </header>
+  <section class="band band-alt">
+    <div class="wrap">
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li>
+            <p class="post-meta">{fmt(post.data.pubDate)}</p>
+            <h2 style="font-size:1.45rem;margin:0.2rem 0 0.4rem;">
+              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            </h2>
+            <p>{post.data.description}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
