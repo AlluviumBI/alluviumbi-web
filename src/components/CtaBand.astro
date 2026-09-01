@@ -1,0 +1,18 @@
+---
+interface Props {
+  heading?: string;
+  text?: string;
+}
+const {
+  heading = "Book a 30-minute consult",
+  text = "Tell us about the reporting or analytics problem that is slowing decisions. We will map a practical next step.",
+} = Astro.props;
+---
+<section class="band" aria-labelledby="cta-heading">
+  <div class="wrap">
+    <p class="kicker">Next step</p>
+    <h2 id="cta-heading">{heading}</h2>
+    <p class="lede">{text}</p>
+    <p><a class="btn" href="/contact">Book a 30-minute consult</a></p>
+  </div>
+</section>

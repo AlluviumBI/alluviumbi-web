@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alluviumbi.com/sitemap-index.xml

@@ -1,0 +1,29 @@
+---
+import { NAV, SITE } from "../lib/site";
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="logo" style="color:#f3efe6;margin:0 0 0.5rem;">Alluvium<span style="color:#e07a55;">.</span></p>
+      <p>Strategic Power BI and practical AI advisory for mid-sized companies.</p>
+      <p><a class="btn" href="/contact" style="margin-top:0.5rem;">Book a 30-minute consult</a></p>
+    </div>
+    <div>
+      <h2 style="font-size:1rem;color:#f3efe6;">Explore</h2>
+      <ul>
+        {NAV.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h2 style="font-size:1rem;color:#f3efe6;">Legal</h2>
+      <ul>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+      </ul>
+      <p>© {year} {SITE.name}. {SITE.region}.</p>
+    </div>
+  </div>
+</footer>
