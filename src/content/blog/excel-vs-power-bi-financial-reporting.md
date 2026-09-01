@@ -25,7 +25,7 @@ Finance does two jobs under one word: reporting.
 
 **Shared actuals.** What we booked. Same definition for the CFO, the plant, and the pack. That number should not live in an email attachment.
 
-**Judgment work.** Forecasts. Scenarios. A P&amp;L that must look like last quarter’s because the committee will line it up. Cell-level models. That work is still Excel.
+**Judgment work.** Forecasts. Scenarios. A P&L that must look like last quarter’s because the committee will line it up. Cell-level models. That work is still Excel.
 
 A Power BI project that tries to be both usually fails the second job. An Excel file that tries to be both usually fails the first.
 
@@ -50,7 +50,7 @@ If the team is still copying ERP extracts into workbooks, that is the reporting 
 Keep Excel for work that is **constructed**, not merely displayed.
 
 - **Modeling.** Budgets, forecasts, what-if, capital cases. Power BI is not a modeling grid.
-- **Formatted statements.** Department P&amp;L, consolidations, trial-balance tie-outs, board packs that must match last quarter’s layout.
+- **Formatted statements.** Department P&L, consolidations, trial-balance tie-outs, board packs that must match last quarter’s layout.
 - **Commentary and adjustments.** Narrative, one-off reclasses. A workbook with an owner and a date.
 
 Put Power BI on work that must be **shared, current, and the same for everyone**.
@@ -88,9 +88,9 @@ You do not need a six-month “Excel exit.” You need a boundary, then one work
 
 5. **Inventory the dangerous workbooks.** Not every file. The five that hit the ELT or the board. Who owns them. Paste or connect. Retire last month’s extract with a new tab name. Same instinct as sunsetting abandoned reports in [Power BI governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it).
 
-6. **Prove it on one loop.** One P&amp;L (or cash view) in Power BI. One connected Excel pack. One week of the same actuals in both. If that loop still pastes, do not scale it. Slow or unused models are a different job: [dashboard optimization](/power-bi-dashboard-optimization-ai-insights).
+6. **Prove it on one loop.** One P&L (or cash view) in Power BI. One connected Excel pack. One week of the same actuals in both. If that loop still pastes, do not scale it. Slow or unused models are a different job: [dashboard optimization](/power-bi-dashboard-optimization-ai-insights).
 
-If you cannot tell a decision metric from a close artifact, that is strategy, not a license upgrade. See the [Data &amp; AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). Ongoing ownership of definitions and refresh is [Managed Data &amp; AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+If you cannot tell a decision metric from a close artifact, that is strategy, not a license upgrade. See the [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). Ongoing ownership of definitions and refresh is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
 
 ## Frequently asked questions
 
