@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Privacy", item: SITE.url + "/privacy" },
+  ],
+};
+---
+<BaseLayout
+  title="Privacy Policy | Alluvium"
+  description="How Alluvium handles information on this website. Wisconsin, United States."
+  canonicalPath="/privacy"
+  jsonLd={jsonLd}
+>
+  <article class="hero">
+    <div class="wrap-narrow prose">
+      <p class="kicker">Legal</p>
+      <h1>Privacy</h1>
+      <p>Alluvium is an independent advisory practice based in Wisconsin, United States. This policy describes how we treat information related to this website.</p>
+      <h2>Information you provide</h2>
+      <p>If you contact us, we use the details you share—such as name, email, company, and message—to respond to your inquiry. We do not sell personal information.</p>
+      <h2>This preview form</h2>
+      <p>The contact form on this static site is a client-side stub. It does not transmit data to a server, email system, or third-party form backend.</p>
+      <h2>Logs and cookies</h2>
+      <p>Hosting providers may collect standard technical logs (for example, IP address and user agent) to operate and secure the site. We do not use advertising cookies.</p>
+      <h2>Contact</h2>
+      <p>Questions about this policy can be sent through the <a href="/contact">contact page</a>.</p>
+    </div>
+  </article>
+</BaseLayout>
