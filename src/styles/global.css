@@ -1,20 +1,20 @@
 /* Alluvium — live alluviumbi.com visual language (Squarespace site.css :root) */
 :root {
   /* HSL from live :root, converted to hex */
-  --paper: #ffffff;              /* --white-hsl 0,0%,100% */
-  --paper-2: #e7e7e7;            /* --color-light 231,231,231 */
-  --paper-3: #dcdcdc;            /* --accent-hsl / --safeLightAccent-hsl 0,0%,86.27% */
-  --ink: #1c1c1c;                /* --darkAccent-hsl 0,0%,10.98% */
-  --ink-soft: #333333;           /* --color-dark 51,51,51 */
+  --paper: #ffffff;
+  --paper-2: #e7e7e7;
+  --paper-3: #dcdcdc;
+  --ink: #1c1c1c;
+  --ink-soft: #333333;
   --muted: #333333;
   --line: #dcdcdc;
-  --accent: #397fb0;             /* --lightAccent-hsl 204.71,51.07%,45.69% */
+  --accent: #397fb0;
   --accent-hover: #2f6a94;
-  --button: #1c1c1c;             /* primaryButtonBackgroundColor = darkAccent */
-  --button-text: #ffffff;        /* --safeInverseDarkAccent-hsl */
+  --button: #1c1c1c;
+  --button-text: #ffffff;
   --white: #ffffff;
-  --black: #000000;              /* footer bright-inverse --safeInverseAccent-hsl */
-  --footer-fg: #dcdcdc;          /* inverse text = accent gray */
+  --black: #000000;
+  --footer-fg: #dcdcdc;
   --focus: #397fb0;
   --radius: 300px;
   --max: 87.5rem;
@@ -68,14 +68,16 @@ header.site-header {
   min-height: 4.25rem;
 }
 .logo {
-  font-family: var(--font-sans);
-  font-weight: 400;
-  font-size: 1.35rem;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  line-height: 0;
 }
-.logo span { color: var(--accent); }
+.logo img {
+  height: 2.25rem;
+  width: auto;
+  display: block;
+}
 nav.site-nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -199,8 +201,7 @@ footer.site-footer {
 footer.site-footer a { color: var(--footer-fg); text-decoration: none; }
 footer.site-footer a:hover { color: var(--white); text-decoration: underline; }
 footer.site-footer p { color: var(--footer-fg); }
-footer.site-footer .logo { color: var(--footer-fg); }
-footer.site-footer .logo span { color: var(--accent); }
+footer.site-footer .logo img { height: 2rem; }
 footer.site-footer h2 { color: var(--footer-fg); font-size: 1rem; letter-spacing: 0.04em; text-transform: uppercase; }
 footer.site-footer .btn {
   background: transparent;
