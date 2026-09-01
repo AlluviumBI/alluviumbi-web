@@ -16,8 +16,8 @@
   --black: #000000;              /* footer bright-inverse --safeInverseAccent-hsl */
   --footer-fg: #dcdcdc;          /* inverse text = accent gray */
   --focus: #397fb0;
-  --radius: 0px;
-  --max: 72rem;
+  --radius: 300px;
+  --max: 87.5rem;
   --font-sans: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -58,7 +58,7 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 40;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
 }
 .header-inner {
   display: flex;
@@ -90,8 +90,7 @@ nav.site-nav a {
   font-size: 0.95rem;
   font-weight: 400;
 }
-nav.site-nav a:hover, nav.site-nav a[aria-current="page"] { color: var(--accent); }
-nav.site-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 1px; }
+nav.site-nav a:hover, nav.site-nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-underline-offset: 0.22em; }
 .btn {
   display: inline-block;
   background: var(--button);
@@ -107,7 +106,7 @@ nav.site-nav a[aria-current="page"] { text-decoration: underline; text-decoratio
   font-size: 0.82rem;
   border-radius: var(--radius);
 }
-.btn:hover { background: var(--black); color: var(--button-text); }
+.btn:hover { background: var(--accent); color: var(--button-text); }
 .btn-ghost {
   background: transparent;
   color: var(--ink);
@@ -166,10 +165,11 @@ section.band-cta .lede {
   color: var(--white);
 }
 section.band-cta .btn {
-  background: var(--black);
+  background: transparent;
   color: var(--white);
+  border: 1px solid var(--white);
 }
-section.band-cta .btn:hover { background: var(--ink); color: var(--white); }
+section.band-cta .btn:hover { background: var(--white); color: var(--ink); }
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -203,8 +203,9 @@ footer.site-footer .logo { color: var(--footer-fg); }
 footer.site-footer .logo span { color: var(--accent); }
 footer.site-footer h2 { color: var(--footer-fg); font-size: 1rem; letter-spacing: 0.04em; text-transform: uppercase; }
 footer.site-footer .btn {
-  background: var(--paper-3);
-  color: var(--black);
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--footer-fg);
   margin-top: 0.5rem;
 }
 footer.site-footer .btn:hover { background: var(--white); color: var(--black); }
