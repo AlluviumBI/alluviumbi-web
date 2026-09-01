@@ -22,10 +22,12 @@ const {
   publishedTime,
 } = Astro.props;
 
-const canonical = new URL(canonicalPath, SITE.url).toString().replace(/\/$/, canonicalPath === "/" ? "/" : "");
 const canonicalClean = canonicalPath === "/" ? SITE.url + "/" : `${SITE.url}${canonicalPath}`;
 const ogImage = `${SITE.url}/og.png`;
 const blocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const deployUrl = process.env.URL || process.env.DEPLOY_PRIME_URL || "";
+const isNetlifyApp = /netlify\.app/.test(deployUrl);
+const robots = isNetlifyApp ? "noindex, nofollow" : "index, follow";
 ---
 <!doctype html>
 <html lang="en">
@@ -35,7 +37,7 @@ const blocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalClean} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={robots} />
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

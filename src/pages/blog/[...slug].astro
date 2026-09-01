@@ -41,10 +41,6 @@ const jsonLd = [
     mainEntityOfPage: SITE.url + path,
   },
 ];
-
-function fmt(d: Date) {
-  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-}
 ---
 <BaseLayout
   title={`${post.data.title} — Alluvium`}
@@ -59,7 +55,6 @@ function fmt(d: Date) {
       <div class="wrap-narrow">
         <p class="kicker">Insights</p>
         <h1>{post.data.title}</h1>
-        <p class="post-meta">{fmt(post.data.pubDate)}</p>
         <p class="lede">{post.data.description}</p>
       </div>
     </header>
