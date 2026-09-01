@@ -191,6 +191,14 @@ section.band-cta .btn:hover { background: var(--white); color: var(--ink); }
   letter-spacing: -0.02em;
   margin: 0 0 0.35rem;
 }
+
+.still { margin: 0; }
+.still img {
+  width: 100%;
+  max-height: 22rem;
+  object-fit: cover;
+  object-position: center;
+}
 footer.site-footer {
   border-top: 0;
   padding: 2.5rem 0 2rem;
