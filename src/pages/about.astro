@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { SITE } from "../lib/site";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+    { "@type": "ListItem", position: 2, name: "About", item: SITE.url + "/about" },
+  ],
+};
+---
+<BaseLayout
+  title="About Alluvium | Independent Power BI Advisory"
+  description="Alluvium is an independent advisory practice for strategic Power BI and practical AI. Led by Matt. Wisconsin, United States."
+  canonicalPath="/about"
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap-narrow">
+        <p class="kicker">Practice</p>
+        <h1>About Alluvium</h1>
+        <p class="lede">An independent advisory practice focused on strategic Power BI and practical AI for mid-sized companies.</p>
+      </div>
+    </header>
+    <section class="band band-alt">
+      <div class="wrap-narrow prose">
+        <p>
+          Alluvium exists to help executives and BI leaders cut through analytics hype and build reporting people will actually use.
+          The work is senior, hands-on, and scoped to outcomes: clearer models, faster insight, and adoption that lasts.
+        </p>
+        <p>
+          Matt leads the practice. Engagements stay small on purpose—so you work with the person designing the roadmap, not a rotating bench.
+        </p>
+        <p>
+          We do not sell a platform. We help you get more from Power BI you already have, introduce AI only where it reduces effort or risk,
+          and leave your team able to operate what we build.
+        </p>
+        <p>Based in Wisconsin, serving organizations across the United States.</p>
+        <p><a href="/services">View services</a> · <a href="/blog">Read insights</a> · <a href="/contact">Book a consult</a></p>
+      </div>
+    </section>
+    <CtaBand />
+  </article>
+</BaseLayout>
