@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { SITE } from "../lib/site";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      { "@type": "ListItem", position: 3, name: "Conversational Analytics", item: SITE.url + "/conversational-analytics" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is this a chatbot that writes SQL on the fly?",
+        acceptedAnswer: { "@type": "Answer", text: "No. Questions run against a certified Power BI or Fabric semantic model with agreed measures. The model is the source of truth, not a free-form agent." },
+      },
+      {
+        "@type": "Question",
+        name: "Do you sell automations, GPT apps, or agents here?",
+        acceptedAnswer: { "@type": "Answer", text: "Not on this site. Alluvium is analytics and BI. Conversational analytics means asking a trusted model. Broader automation work lives later on a separate AlluviumAI property." },
+      },
+    ],
+  },
+];
+---
+<BaseLayout
+  title="Conversational Analytics | Ask a Certified Power BI Model — Alluvium"
+  description="Governed conversational analytics: ask questions of a certified Power BI or Fabric semantic model. Trusted measures, not a free-form chatbot."
+  canonicalPath="/conversational-analytics"
+  jsonLd={jsonLd}
+>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Services</p>
+      <h1>Conversational Analytics</h1>
+      <p class="lede">Ask a certified Power BI or Fabric semantic model. The answers come from measures leadership already trusts—not from a free-form chatbot.</p>
+      <p><a class="btn" href="/contact">Book a 30-minute consult</a></p>
+    </div>
+  </header>
+  <section class="band">
+    <div class="wrap-narrow prose">
+      <p>Most “ask your data” tools fail for the same reason dashboards fail: nobody agrees what the number means. Conversational analytics only works when the chat sits on a governed model.</p>
+      <h2>What we mean</h2>
+      <p>You (or your analysts) ask a question in language. The answer is computed from a certified semantic model: one definition of revenue, margin, inventory, or cash. Role-based access still applies. If the model cannot answer, the system should say so—not invent a measure.</p>
+      <h2>What this is not</h2>
+      <p>This is not a general-purpose GPT, an automation factory, or an agent that emails the company. Alluvium’s work here is BI: Power BI and Fabric, certified models, conversational access to those models. Automations and agents belong on a later AlluviumAI property, not this site.</p>
+      <h2>How an engagement runs</h2>
+      <ol>
+        <li>Name the certified model and the questions leadership actually asks.</li>
+        <li>Tighten measures, synonyms, and row-level security so chat cannot drift.</li>
+        <li>Stand up governed chat on that model and train a small group of owners.</li>
+      </ol>
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details open>
+          <summary>Is this a chatbot that writes SQL on the fly?</summary>
+          <p>No. Questions run against a certified Power BI or Fabric semantic model with agreed measures.</p>
+        </details>
+        <details>
+          <summary>Do you sell automations, GPT apps, or agents here?</summary>
+          <p>Not on this site. Conversational analytics means asking a trusted model. Broader automation work is a separate AlluviumAI property later.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <CtaBand heading="See if your model is ready to be asked" text="Thirty minutes is enough to pick one certified model and the questions it should answer." />
+</BaseLayout>

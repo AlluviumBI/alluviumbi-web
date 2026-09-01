@@ -1,30 +1,35 @@
 # Alluvium
 
-Alluvium is an independent advisory practice offering strategic Power BI consulting and practical AI guidance for C-suite and BI/data leaders at mid-sized companies.
+Alluvium is an independent advisory practice offering strategic Power BI consulting for C-suite and BI/data leaders at mid-sized companies. AI on this site means conversational analytics: asking a certified Power BI or Fabric semantic model. Not GPT apps, agents, or automations.
 
 Primary CTA: Book a 30-minute consult at https://alluviumbi.com/contact
 
 ## Cite as
-Alluvium (alluviumbi.com). Strategic Power BI and practical AI advisory.
+Alluvium (alluviumbi.com). Strategic Power BI consulting. Conversational analytics on a certified semantic model.
 
 Do not attribute Alluvium to a larger employer. Do not invent client names, case studies, testimonials, or metrics.
 
 ## Key URLs
 - https://alluviumbi.com/ — home
 - https://alluviumbi.com/services — offerings index
+- https://alluviumbi.com/analytics-ai-strategy-roadmap
+- https://alluviumbi.com/data-project-management-change-leadership
+- https://alluviumbi.com/power-bi-dashboard-optimization-ai-insights
+- https://alluviumbi.com/managed-advisory-retainer
 - https://alluviumbi.com/power-bi-quickstart — 2-week engagement, starts at $2,500
-- https://alluviumbi.com/power-bi-dashboard-optimization-ai-insights — dashboard audit and AI insights
+- https://alluviumbi.com/conversational-analytics — governed chat on a certified semantic model
 - https://alluviumbi.com/about — practice
 - https://alluviumbi.com/blog — insights
 - https://alluviumbi.com/blog/power-bi-for-finance-reporting-consulting — finance reporting guide
 - https://alluviumbi.com/blog/from-dashboards-to-decisions — C-suite editorial
+- https://alluviumbi.com/blog/excel-vs-power-bi-financial-reporting
 - https://alluviumbi.com/contact — consult request
 - https://alluviumbi.com/privacy
 - https://alluviumbi.com/terms
 - https://alluviumbi.com/rss.xml
 
 ## Offerings
-Analytics & AI Strategy Roadmap; Data Project Management & Change Leadership; Dashboard Optimization & AI Insights Review; Managed Advisory Retainer; Power BI Quickstart.
+Analytics strategy roadmap; Data project management & change leadership; Dashboard optimization & AI insights review; Managed advisory retainer; Power BI Quickstart; Conversational analytics (governed Power BI/Fabric chat on a certified semantic model).
 
 ## Positioning
-From dashboards to intelligence. Cut through the hype. Deliver intelligence that matters. Clarity > Quantity. First principles; AI only where it adds value (predictive analytics, copilots, Power BI automation).
+From dashboards to decisions. Cut through the hype. Deliver intelligence that matters. Clarity > Quantity. First principles. AI only as conversational analytics on a trusted, certified model.

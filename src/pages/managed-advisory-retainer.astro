@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { SITE } from "../lib/site";
+
+const faqs = [
+  {
+    q: "What does a typical month look like?",
+    a: "A standing cadence: office hours, a short backlog of model and report work, governance questions, and a monthly note on what changed. Hours are capped so the work stays focused.",
+  },
+  {
+    q: "Is AI integration included?",
+    a: "Conversational analytics on a certified semantic model can be in scope. GPT apps, agents, and automations are not sold on this site.",
+  },
+  {
+    q: "Do we need a full internal BI team first?",
+    a: "No. The retainer is for companies that need senior Power BI guidance without standing up a large internal team.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      { "@type": "ListItem", position: 3, name: "Managed Advisory Retainer", item: SITE.url + "/managed-advisory-retainer" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<BaseLayout
+  title="Managed Advisory Retainer | Ongoing Power BI Guidance — Alluvium"
+  description="Ongoing guidance on Power BI governance, semantic modeling, and conversational analytics on a certified model—without standing up a large internal team."
+  canonicalPath="/managed-advisory-retainer"
+  jsonLd={jsonLd}
+>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Services</p>
+      <h1>Managed advisory retainer</h1>
+      <p class="lede">Ongoing guidance on Power BI governance, semantic modeling, and program evolution—without standing up a large internal team.</p>
+      <p><a class="btn" href="/contact">Book a 30-minute consult</a></p>
+    </div>
+  </header>
+  <section class="band">
+    <div class="wrap-narrow prose">
+      <p>Dashboards drift. Measures fork. Someone rebuilds last month’s close in Excel. A retainer keeps a senior pair of eyes on the model so that does not become the culture.</p>
+      <h2>What sits in the hours</h2>
+      <ul>
+        <li>Power BI governance: certified models, workspace hygiene, refresh, and access.</li>
+        <li>Semantic modeling: measures leadership will actually defend.</li>
+        <li>Report and dashboard review when something is slow, unused, or untrusted.</li>
+        <li>Conversational analytics only after the model is certified and the questions are named.</li>
+      </ul>
+      <h2>What this is not</h2>
+      <p>Not a ticket mill, and not an AI ops desk. Alluvium is analytics and BI. Automations, GPT apps, and agents are a later AlluviumAI property, not this retainer.</p>
+      <h2>How it runs</h2>
+      <ol>
+        <li>Agree a monthly hour cap and the backlog that is in vs. out.</li>
+        <li>Standing office hours plus async review of models and reports.</li>
+        <li>A short monthly note: what changed, what is still untrusted, what to do next.</li>
+      </ol>
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+  <CtaBand heading="Keep the model trustworthy month after month" text="Thirty minutes is enough to see whether a retainer fits better than a one-off project." />
+</BaseLayout>
