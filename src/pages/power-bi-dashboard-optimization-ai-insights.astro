@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { SITE } from "../lib/site";
+
+const faqs = [
+  {
+    q: "How do you measure dashboard performance?",
+    a: "We analyze refresh times, model structure, query folding, and visual load performance to benchmark improvements and track measurable gains.",
+  },
+  {
+    q: "Can AI really improve dashboards?",
+    a: "Yes. AI can detect anomalies, summarize insights, and predict outcomes—reducing manual analysis time and uncovering patterns traditional reports miss.",
+  },
+  {
+    q: "Do you redesign dashboards from scratch?",
+    a: "Not always. We often optimize what exists—streamlining models, cleaning visuals, and enhancing functionality without a full rebuild.",
+  },
+  {
+    q: "Can this work with Power BI Report Server or Service?",
+    a: "Absolutely. We optimize both on-prem and cloud environments, tailoring recommendations to your infrastructure and governance model.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      { "@type": "ListItem", position: 3, name: "Dashboard Optimization & AI Insights", item: SITE.url + "/power-bi-dashboard-optimization-ai-insights" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<BaseLayout
+  title="Dashboard Optimization & AI Insights | Power BI Performance — Alluvium"
+  description="Audit and improve existing Power BI dashboards for speed, usability, and business impact. Add narrative summaries, anomaly detection, and forecasting."
+  canonicalPath="/power-bi-dashboard-optimization-ai-insights"
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <p class="kicker">Service</p>
+        <h1>Power BI dashboard optimization &amp; AI insights</h1>
+        <p class="lede">Maximize the performance and usability of your existing dashboards. Audits provide actionable recommendations to improve speed, UX, and business impact—without requiring a full rebuild.</p>
+        <p><a class="btn" href="/contact">Book a 30-minute consult</a></p>
+      </div>
+    </header>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>Go from dashboards to decisions</h2>
+        <p>Transform Power BI and analytics dashboards into insight engines powered by clarity and AI.</p>
+        <p>Dashboards should empower decisions, not overwhelm them. Alluvium helps organizations cut through clutter—simplifying data models, removing redundant visuals, and uncovering the insights that truly move the needle.</p>
+        <p>Then we take it further: layering in AI capabilities that automatically surface trends, anomalies, and predictive insights so your team sees what’s next, not just what’s now.</p>
+        <ul>
+          <li>Streamline models and visuals for faster refresh and cleaner insight.</li>
+          <li>Add anomaly detection, forecasting, and narrative summaries directly in Power BI.</li>
+          <li>Create dashboards that people actually use—simple, intuitive, and actionable.</li>
+        </ul>
+        <p>Our expert audits provide clear, actionable recommendations, empowering your team to implement changes effectively.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>Our process</h2>
+        <p>A structured, insight-first approach that combines Power BI expertise with AI innovation—delivering performance, precision, and usability across every layer of your analytics stack.</p>
+        <div class="cards">
+          <article class="card"><h3>Assessment &amp; audit</h3><p>We review your existing Power BI environment—data models, visuals, performance, and adoption—to pinpoint inefficiencies and hidden opportunities.</p></article>
+          <article class="card"><h3>Simplification &amp; redesign</h3><p>We refactor data models, clean relationships, and redesign visuals around key decisions. Every element serves a purpose.</p></article>
+          <article class="card"><h3>AI integration</h3><p>We embed intelligent capabilities—forecasting, anomaly detection, narrative summaries—to elevate dashboards beyond static reporting.</p></article>
+          <article class="card"><h3>Validation &amp; handoff</h3><p>We test usability, measure adoption, and ensure every stakeholder gets insights that are timely, accurate, and relevant.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-alt faq" aria-labelledby="faq">
+      <div class="wrap">
+        <h2 id="faq">FAQs</h2>
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <CtaBand />
+  </article>
+</BaseLayout>

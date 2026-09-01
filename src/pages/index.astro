@@ -1,0 +1,169 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { SITE } from "../lib/site";
+
+const org = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Alluvium",
+  url: SITE.url,
+  description: "Strategic Power BI and practical AI advisory.",
+};
+const website = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Alluvium",
+  url: SITE.url,
+  description: SITE.description,
+};
+---
+<BaseLayout
+  title={SITE.title}
+  description="From dashboards to intelligence. Alluvium helps mid-sized companies automate insights, boost adoption, and deliver Power BI and practical AI that leaders can use."
+  canonicalPath="/"
+  jsonLd={[org, website]}
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Analytics consulting</p>
+        <h1>From dashboards to intelligence</h1>
+        <p class="lede">Automate insights, boost adoption, and build a culture of data-driven decisions.</p>
+        <p style="font-family:var(--font-serif);font-size:clamp(1.4rem,2.4vw,1.85rem);color:var(--ink);margin:1.25rem 0 1.5rem;">
+          Cut Through the Hype. Deliver Intelligence that Matters.
+        </p>
+        <p>
+          <a class="btn" href="/contact">Book a 30-minute consult</a>
+          &nbsp;
+          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
+        </p>
+      </div>
+      <aside class="card" aria-label="Positioning">
+        <p class="kicker">Clarity &gt; Quantity</p>
+        <p>First principles. Practical AI. Reporting that helps the right people act faster with trusted data.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="band band-alt" aria-labelledby="principles">
+    <div class="wrap">
+      <h2 id="principles">First principles, practical AI</h2>
+      <p class="lede">At Alluvium, we don’t build dashboards or chase buzzwords just to tick boxes.</p>
+      <p>
+        We apply first principles thinking—breaking your reporting needs down to what truly drives outcomes:
+        enabling the right people to act faster and smarter with trusted data and intelligent insights.
+      </p>
+      <p>
+        Instead of flooding you with models, metrics, and noise, we focus on clarity—integrating AI where it actually adds value.
+        From predictive analytics and copilots to Power BI automation, every solution we design is grounded in practical impact, not complexity.
+      </p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="who">
+    <div class="wrap">
+      <p class="kicker">Who we serve</p>
+      <h2 id="who">Built for leaders who need decisions, not more dashboards</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Executives</h3>
+          <p>We help leadership teams turn analytics investments into competitive advantage—linking data strategy directly to business outcomes.</p>
+        </article>
+        <article class="card">
+          <h3>BI &amp; Data Leaders</h3>
+          <p>We support BI managers and data leaders with frameworks that optimize Power BI, streamline data models, and scale AI capabilities across the organization.</p>
+        </article>
+        <article class="card">
+          <h3>Teams</h3>
+          <p>We simplify analytics for everyday users—embedding AI-driven tools and intuitive reporting that turn manual effort into instant intelligence.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" aria-labelledby="offerings">
+    <div class="wrap">
+      <p class="kicker">Offerings</p>
+      <h2 id="offerings">Strategic analytic solutions, tailored to you</h2>
+      <p class="lede">
+        Alluvium helps organizations evolve from dashboards to decisions — combining Power BI expertise with practical AI
+        to unlock faster insights, automate analysis, and scale intelligence across the business.
+      </p>
+      <div class="cards" style="grid-template-columns:repeat(2,1fr);">
+        <article class="card">
+          <h3>Analytics &amp; AI Strategy Roadmap</h3>
+          <p>Align your data, analytics, and AI goals. We identify high-impact use cases, design scalable frameworks, and outline a clear roadmap from traditional reporting to intelligent automation.</p>
+          <p><a href="/services">See all services</a></p>
+        </article>
+        <article class="card">
+          <h3>Data Project Management &amp; Change Leadership</h3>
+          <p>End-to-end oversight for your analytics and AI initiatives. We manage scope, teams, and timelines while driving user adoption through structured communication, training, and change enablement.</p>
+        </article>
+        <article class="card">
+          <h3>Dashboard Optimization &amp; AI Insights Review</h3>
+          <p>We audit your existing Power BI ecosystem — performance, adoption, and value — then enhance it with AI-driven narrative summaries, anomaly detection, and predictive signals.</p>
+          <p><a href="/power-bi-dashboard-optimization-ai-insights">Learn more</a></p>
+        </article>
+        <article class="card">
+          <h3>Managed Advisory Retainer</h3>
+          <p>Stay ahead with ongoing strategic guidance—from Power BI governance and semantic modeling to continuous AI integration and program evolution.</p>
+        </article>
+        <article class="card">
+          <h3>Power BI Quickstart</h3>
+          <p>Solve one painful reporting problem in two weeks. Starts at $2,500. A focused engagement that turns a time-consuming report into an automated Power BI solution.</p>
+          <p><a href="/power-bi-quickstart">Explore Quickstart</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="why">
+    <div class="wrap">
+      <h2 id="why">Why choose Alluvium?</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Strategic Focus</h3>
+          <p>We emphasize advisory, data strategy, and AI roadmaps—aligning analytics initiatives to real business outcomes.</p>
+        </article>
+        <article class="card">
+          <h3>Scalable Solutions</h3>
+          <p>Our frameworks and advisory models grow with you—adapting as your data, AI, and analytics needs evolve.</p>
+        </article>
+        <article class="card">
+          <h3>Proven Expertise</h3>
+          <p>Years of hands-on Power BI and data strategy experience—backed by practical, real-world methods across industries. We do not name clients here; the work is designed to transfer.</p>
+        </article>
+      </div>
+      <article class="card" style="margin-top:1.25rem;">
+        <h3>Client-Centric Approach</h3>
+          <p>We meet you where you are, tailoring every engagement to your goals, systems, and pace of change.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band band-alt" aria-labelledby="steps">
+    <div class="wrap">
+      <h2 id="steps">Get started in 3 simple steps</h2>
+      <div class="steps">
+        <article>
+          <p class="step-num">01</p>
+          <h3>30-minute session</h3>
+          <p>Book a 30-minute session to discuss your data, analytics, or AI challenges and goals.</p>
+        </article>
+        <article>
+          <p class="step-num">02</p>
+          <h3>Roadmap or advisory package</h3>
+          <p>We’ll design a focused roadmap or advisory package—covering strategy, optimization, or ongoing partnership.</p>
+        </article>
+        <article>
+          <p class="step-num">03</p>
+          <h3>Implement</h3>
+          <p>Implement with our guidance and watch your analytics evolve into smarter, faster, AI-ready insight.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand heading="Let’s connect" text="Tell us a bit about your goals, and we’ll explore how Alluvium can help you simplify data, scale analytics, and bring AI strategy to life." />
+</BaseLayout>
