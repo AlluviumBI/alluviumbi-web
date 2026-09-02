@@ -332,6 +332,23 @@ form.contact .error { color: #b42318; font-size: 0.9rem; margin: -0.6rem 0 0.85r
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
 .nav-toggle { display: none; background: none; border: 1px solid var(--line); padding: 0.35rem 0.55rem; color: var(--ink); font-family: inherit; }
+nav.crumbs {
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin: 0 0 0.9rem;
+  line-height: 1.45;
+}
+nav.crumbs a {
+  color: #397fb0;
+  text-decoration: none;
+}
+nav.crumbs a:hover { text-decoration: underline; }
+.related-links ul {
+  margin: 0 0 1.35rem;
+  padding: 0 0 0 1.15rem;
+  color: var(--ink-soft);
+}
+.related-links h2 { font-size: 1.35rem; }
 @media (max-width: 860px) {
   .hero-grid, .cards, .cards-2, .steps, .footer-grid { grid-template-columns: 1fr; }
   .header-cta { display: none; }
