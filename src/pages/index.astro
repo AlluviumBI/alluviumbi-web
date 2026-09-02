@@ -2,7 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
 import LineIcon from "../components/LineIcon.astro";
-import { SITE, SYSTEMS } from "../lib/site";
+import SystemsCloud from "../components/SystemsCloud.astro";
+import { SITE } from "../lib/site";
 
 const org = {
   "@context": "https://schema.org",
@@ -39,11 +40,13 @@ const website = {
   <section class="band band-alt" aria-labelledby="principles">
     <div class="wrap">
       <h2 id="principles">Trusted Power BI models for mid-sized companies</h2>
-      <p class="lede">We don’t build dashboards or chase buzzwords just to tick boxes.</p>
+      <p class="lede">Automate the reporting you already run, then ask a certified Power BI or Fabric semantic model.</p>
       <p>
-        Break reporting down to what actually drives the meeting: the right people, trusted measures, on time.
-        <a href="/conversational-analytics">Conversational analytics</a> only on a certified Power BI or Fabric model — not a chatbot project.
-        When one report is the bottleneck, start with a <a href="/power-bi-quickstart">Power BI Quickstart</a>.
+        We don’t build dashboards or chase buzzwords just to tick boxes. Start with a
+        <a href="/power-bi-quickstart">Power BI Quickstart</a>
+        when one report is the bottleneck. When the model is trusted,
+        <a href="/conversational-analytics">conversational analytics</a>
+        sits on that model. Not a chatbot project.
       </p>
     </div>
   </section>
@@ -87,19 +90,23 @@ const website = {
     </div>
   </section>
 
-  <section class="band band-alt" aria-labelledby="offerings">
+  <section class="band band-alt band-quickstart" aria-labelledby="qs-band">
+    <div class="wrap band-center">
+      <h2 id="qs-band">Power BI Quickstart</h2>
+      <p class="lede">Solve one painful reporting problem in two weeks. Flat fee $3,000.</p>
+      <p class="hero-actions">
+        <a class="btn" href="/power-bi-quickstart">See Power BI Quickstart</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="offerings">
     <div class="wrap">
       <p class="kicker">Offerings</p>
       <h2 id="offerings">Power BI services from Quickstart to retainer</h2>
       <p class="lede">
         Alluvium helps organizations evolve from dashboards to decisions — Power BI expertise, plus the option to ask a certified model.
       </p>
-      <article class="card-feature">
-        <LineIcon name="time" />
-        <h3>Power BI Quickstart</h3>
-        <p>Solve one painful reporting problem in two weeks. Flat fee $3,000.</p>
-        <p><a href="/power-bi-quickstart">See Power BI Quickstart</a></p>
-      </article>
       <div class="cards-2">
         <article class="card">
           <LineIcon name="strategy" />
@@ -141,7 +148,7 @@ const website = {
     </div>
   </section>
 
-  <section class="band" aria-labelledby="systems">
+  <section class="band band-alt" aria-labelledby="systems">
     <div class="wrap">
       <p class="kicker">Systems we work with</p>
       <h2 id="systems">Power BI on the systems you already run</h2>
@@ -150,15 +157,11 @@ const website = {
         <a href="/blog/excel-vs-power-bi-financial-reporting">Excel vs Power BI for financial reporting</a>
         and the full <a href="/services">Power BI services</a> list.
       </p>
-      <ul class="systems">
-        {SYSTEMS.map((name) => (
-          <li>{name}</li>
-        ))}
-      </ul>
+      <SystemsCloud />
     </div>
   </section>
 
-  <section class="band band-alt" aria-labelledby="why">
+  <section class="band" aria-labelledby="why">
     <div class="wrap">
       <h2 id="why">Why choose Alluvium for Power BI consulting?</h2>
       <div class="cards">
@@ -186,7 +189,7 @@ const website = {
     </div>
   </section>
 
-  <section class="band" aria-labelledby="steps">
+  <section class="band band-alt" aria-labelledby="steps">
     <div class="wrap">
       <h2 id="steps">Get started with Power BI consulting in 3 steps</h2>
       <div class="steps">
