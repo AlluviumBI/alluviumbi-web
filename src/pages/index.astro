@@ -1,14 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
-import { SITE } from "../lib/site";
+import LineIcon from "../components/LineIcon.astro";
+import { SITE, SYSTEMS } from "../lib/site";
 
 const org = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Alluvium",
   url: SITE.url,
-  description: "Strategic Power BI consulting. Conversational analytics on a certified semantic model.",
+  description: "Power BI and analytics delivery for mid-sized companies. Conversational analytics means asking a certified semantic model.",
 };
 const website = {
   "@context": "https://schema.org",
@@ -20,47 +21,27 @@ const website = {
 ---
 <BaseLayout
   title={SITE.title}
-  description="From dashboards to decisions. Alluvium helps mid-sized companies get more from Power BI, boost adoption, and add conversational analytics on a certified semantic model."
+  description="From dashboards to decisions. Power BI and analytics delivery for mid-sized companies. Trusted numbers in the meeting, not more dashboards."
   canonicalPath="/"
   jsonLd={[org, website]}
 >
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="kicker">Analytics consulting</p>
-        <h1>From dashboards to decisions</h1>
-        <p class="lede">Build reporting people will actually use—and ask a certified Power BI model when the questions start.</p>
-        <p class="tagline">
-          Cut Through the Hype. Deliver Intelligence that Matters.
-        </p>
-        <p>
-          <a class="btn" href="/contact">Book a 30-minute consult</a>
-          &nbsp;
-          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
-        </p>
-      </div>
-      <aside class="card" aria-label="Positioning">
-        <p class="kicker">Clarity &gt; Quantity</p>
-        <p>First principles. Power BI that helps the right people act faster with trusted data. AI here means conversational analytics on a certified model.</p>
-      </aside>
+    <div class="wrap">
+      <h1>From dashboards to decisions</h1>
+      <p class="lede">Power BI and analytics delivery for mid-sized companies. Trusted numbers in the meeting, not more dashboards.</p>
+      <p class="hero-actions">
+        <a class="btn" href="/contact">Book a Session</a>
+        <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
+      </p>
     </div>
   </section>
 
-  <figure class="still">
-    <img src="/images/silt.jpg" alt="Layered river silt and sediment" width="1600" height="1067" />
-  </figure>
-
   <section class="band band-alt" aria-labelledby="principles">
     <div class="wrap">
-      <h2 id="principles">First principles, conversational analytics</h2>
-      <p class="lede">At Alluvium, we don’t build dashboards or chase buzzwords just to tick boxes.</p>
+      <h2 id="principles">First principles, then a model people trust</h2>
+      <p class="lede">We don’t build dashboards or chase buzzwords just to tick boxes.</p>
       <p>
-        We apply first principles thinking—breaking your reporting needs down to what truly drives outcomes:
-        enabling the right people to act faster and smarter with trusted data.
-      </p>
-      <p>
-        Instead of flooding you with models, metrics, and noise, we focus on clarity. When AI shows up on this site,
-        it is conversational analytics: asking a certified Power BI or Fabric semantic model. Not GPT apps, agents, or automations.
+        Break reporting down to what actually drives the meeting: the right people, trusted measures, on time. Conversational analytics only on a certified Power BI or Fabric model — not a chatbot project.
       </p>
     </div>
   </section>
@@ -71,16 +52,34 @@ const website = {
       <h2 id="who">Built for leaders who need decisions, not more dashboards</h2>
       <div class="cards">
         <article class="card">
-          <h3>Executives</h3>
-          <p>We help leadership teams turn analytics investments into competitive advantage—linking data strategy directly to business outcomes.</p>
+          <LineIcon name="finance" />
+          <h3>Finance</h3>
+          <p>Close, forecast vs actuals, and one P&amp;L/cash number leadership will sign.</p>
         </article>
         <article class="card">
-          <h3>BI &amp; Data Leaders</h3>
-          <p>We support BI managers and data leaders with frameworks that optimize Power BI, streamline data models, and keep measures certified and trusted.</p>
+          <LineIcon name="operations" />
+          <h3>Operations</h3>
+          <p>Throughput, inventory, scrap, and shop-floor vs finance without a second set of books.</p>
         </article>
         <article class="card">
-          <h3>Teams</h3>
-          <p>We simplify analytics for everyday users—intuitive reporting, and conversational access to a model they already trust.</p>
+          <LineIcon name="sales" />
+          <h3>Sales</h3>
+          <p>Pipeline and bookings that finance will accept, not a forecast that never ties out.</p>
+        </article>
+        <article class="card">
+          <LineIcon name="marketing" />
+          <h3>Marketing</h3>
+          <p>Spend to pipeline on the same definitions sales and finance already use.</p>
+        </article>
+        <article class="card">
+          <LineIcon name="it" />
+          <h3>IT</h3>
+          <p>Refresh, gateways, capacity, and certified models instead of sprawl.</p>
+        </article>
+        <article class="card">
+          <LineIcon name="project" />
+          <h3>Project management</h3>
+          <p>Backlog, delivery, and change leadership so the model actually gets used.</p>
         </article>
       </div>
     </div>
@@ -91,75 +90,103 @@ const website = {
       <p class="kicker">Offerings</p>
       <h2 id="offerings">Strategic analytic solutions, tailored to you</h2>
       <p class="lede">
-        Alluvium helps organizations evolve from dashboards to decisions — Power BI expertise, plus conversational analytics on a certified semantic model.
+        Alluvium helps organizations evolve from dashboards to decisions — Power BI expertise, plus the option to ask a certified model.
       </p>
-      <div class="cards" style="grid-template-columns:repeat(2,1fr);">
+      <article class="card-feature">
+        <LineIcon name="time" />
+        <h3>Power BI Quickstart</h3>
+        <p>Solve one painful reporting problem in two weeks. Flat fee $3,000.</p>
+        <p><a href="/power-bi-quickstart">See Power BI Quickstart</a></p>
+      </article>
+      <div class="cards-2">
         <article class="card">
+          <LineIcon name="strategy" />
           <h3>Analytics strategy roadmap</h3>
-          <p>Align data, analytics, and reporting goals. Identify high-impact use cases and sequence work from traditional reporting to conversational analytics on a certified model.</p>
-          <p><a href="/analytics-ai-strategy-roadmap">Learn more</a></p>
+          <p>Align data, analytics, and reporting goals. Identify high-impact use cases and sequence work from traditional reporting to asking a certified model.</p>
+          <p><a href="/analytics-ai-strategy-roadmap">See the analytics strategy roadmap</a></p>
         </article>
         <article class="card">
-          <h3>Data project management &amp; change leadership</h3>
+          <LineIcon name="project" />
+          <h3>Data &amp; Analytics project management and change leadership</h3>
           <p>End-to-end oversight for analytics and Power BI initiatives. Scope, teams, and timelines, plus adoption through communication and training.</p>
-          <p><a href="/data-project-management-change-leadership">Learn more</a></p>
+          <p><a href="/data-project-management-change-leadership">See data &amp; analytics project management</a></p>
         </article>
         <article class="card">
-          <h3>Dashboard optimization &amp; AI insights review</h3>
+          <LineIcon name="dashboard" />
+          <h3>Dashboard optimization</h3>
           <p>Audit your existing Power BI ecosystem — performance, adoption, and value — then tighten models and visuals so people actually use them.</p>
-          <p><a href="/power-bi-dashboard-optimization-ai-insights">Learn more</a></p>
+          <p><a href="/power-bi-dashboard-optimization-ai-insights">See dashboard optimization</a></p>
         </article>
         <article class="card">
+          <LineIcon name="retainer" />
           <h3>Managed advisory retainer</h3>
           <p>Ongoing strategic guidance on Power BI governance, semantic modeling, and program evolution.</p>
-          <p><a href="/managed-advisory-retainer">Learn more</a></p>
+          <p><a href="/managed-advisory-retainer">See the managed advisory retainer</a></p>
         </article>
         <article class="card">
-          <h3>Power BI Quickstart</h3>
-          <p>Solve one painful reporting problem in two weeks. Starts at $2,500. A focused engagement that turns a time-consuming report into an automated Power BI solution.</p>
-          <p><a href="/power-bi-quickstart">Explore Quickstart</a></p>
+          <LineIcon name="training" />
+          <h3>Training</h3>
+          <p>Get the team fluent on the Power BI model they already paid for — hands-on sessions, not a slide deck.</p>
+          <p><a href="/power-bi-training">See Power BI training</a></p>
         </article>
         <article class="card">
+          <LineIcon name="conversational" />
           <h3>Conversational analytics</h3>
-          <p>Ask a certified Power BI or Fabric semantic model. Governed chat on trusted measures—not a free-form chatbot.</p>
-          <p><a href="/conversational-analytics">Learn more</a></p>
+          <p>Ask a certified Power BI or Fabric semantic model. Governed questions on trusted measures—not a chatbot project.</p>
+          <p><a href="/conversational-analytics">See conversational analytics</a></p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="band" aria-labelledby="why">
+  <section class="band" aria-labelledby="systems">
+    <div class="wrap">
+      <p class="kicker">Systems we work with</p>
+      <h2 id="systems">Meet you in the stack you already run</h2>
+      <ul class="systems">
+        {SYSTEMS.map((name) => (
+          <li>{name}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="band band-alt" aria-labelledby="why">
     <div class="wrap">
       <h2 id="why">Why choose Alluvium?</h2>
       <div class="cards">
         <article class="card">
+          <LineIcon name="focus" />
           <h3>Strategic Focus</h3>
           <p>We emphasize advisory, data strategy, and Power BI roadmaps—aligning analytics initiatives to real business outcomes.</p>
         </article>
         <article class="card">
+          <LineIcon name="scale" />
           <h3>Scalable Solutions</h3>
           <p>Our frameworks and advisory models grow with you—adapting as your data and analytics needs evolve.</p>
         </article>
         <article class="card">
+          <LineIcon name="expertise" />
           <h3>Proven Expertise</h3>
           <p>Years of hands-on Power BI and data strategy experience—backed by practical, real-world methods across industries. We do not name clients here; the work is designed to transfer.</p>
         </article>
       </div>
       <article class="card" style="margin-top:1.25rem;">
+        <LineIcon name="client" />
         <h3>Client-Centric Approach</h3>
         <p>We meet you where you are, tailoring every engagement to your goals, systems, and pace of change.</p>
       </article>
     </div>
   </section>
 
-  <section class="band band-alt" aria-labelledby="steps">
+  <section class="band" aria-labelledby="steps">
     <div class="wrap">
       <h2 id="steps">Get started in 3 simple steps</h2>
       <div class="steps">
         <article>
           <p class="step-num">01</p>
-          <h3>30-minute session</h3>
-          <p>Book a 30-minute session to discuss your data, analytics, or reporting challenges and goals.</p>
+          <h3>Book a Session</h3>
+          <p>Talk through your data, analytics, or reporting challenges and goals.</p>
         </article>
         <article>
           <p class="step-num">02</p>
@@ -175,9 +202,5 @@ const website = {
     </div>
   </section>
 
-  <figure class="still">
-    <img src="/images/water-light.jpg" alt="River stones in still water" width="1600" height="1067" loading="lazy" />
-  </figure>
-
-  <CtaBand heading="Let’s connect" text="Tell us a bit about your goals, and we’ll explore how Alluvium can help you simplify data, scale analytics, and put conversational analytics on a model you already trust." />
+  <CtaBand heading="Let’s connect" text="Tell us a bit about your goals, and we’ll explore how Alluvium can help you simplify data, scale analytics, and put trusted numbers in the meeting." />
 </BaseLayout>
