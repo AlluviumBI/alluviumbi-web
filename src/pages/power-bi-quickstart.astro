@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
+import LineIcon from "../components/LineIcon.astro";
 import { SITE } from "../lib/site";
 
 const faqs = [
@@ -44,7 +45,7 @@ const jsonLd = [
 ---
 <BaseLayout
   title="Power BI Quickstart | Results in 2 Weeks — Alluvium"
-  description="Turn a painful report into an automated Power BI solution in two weeks. Starts at $2,500. Discovery, build, training, and one week of support."
+  description="Turn a painful report into an automated Power BI solution in two weeks. Flat fee $3,000. Discovery, build, training, and one week of support."
   canonicalPath="/power-bi-quickstart"
   jsonLd={jsonLd}
 >
@@ -52,16 +53,19 @@ const jsonLd = [
     <header class="hero">
       <div class="wrap">
         <p class="kicker">Focused engagement</p>
-        <h1>Power BI Quickstart: solve one painful reporting problem, fast.</h1>
-        <p class="lede">Get results in 2 weeks. We rebuild a critical report into an automated, dynamic Power BI solution, saving you hours weekly.</p>
-        <p><strong>Starts at $2,500</strong> (flat fee). No hidden costs, no long-term commitment.</p>
-        <p><a class="btn" href="/contact">Book a 30-minute consult</a></p>
+        <h1>Power BI Quickstart</h1>
+        <p class="lede">Solve one painful reporting problem in two weeks. We rebuild a critical report into an automated, dynamic Power BI solution.</p>
+        <p><strong>Flat fee $3,000</strong>. No hidden costs, no long-term commitment.</p>
+        <p><a class="btn" href="/contact">Book a Session</a></p>
       </div>
     </header>
+    <figure class="still bw">
+      <img src="/images/water-light.jpg" alt="" width="1600" height="1067" />
+    </figure>
 
     <section class="band band-alt">
       <div class="wrap prose">
-        <h2>Turn time-consuming reports into automated insights</h2>
+        <h2>Turn time-consuming reports into something the meeting can use</h2>
         <p>
           Manual reporting processes—like endless spreadsheets or repetitive updates—drain your team’s time and delay decisions.
           Alluvium’s Power BI Quickstart service targets one critical, high-impact report that’s eating your resources and rebuilds it
@@ -73,7 +77,7 @@ const jsonLd = [
           <li>Save hours weekly by eliminating repetitive updates.</li>
           <li>Deliver insights that drive business decisions.</li>
         </ul>
-        <p>Our Quickstart is designed for SMBs and teams ready to experience Power BI’s power without a long-term commitment. We handle the heavy lifting, so you see results fast.</p>
+        <p>Our Quickstart is designed for mid-sized companies ready to experience Power BI without a long-term commitment. We handle the heavy lifting, so you see results fast.</p>
       </div>
     </section>
 
@@ -81,12 +85,36 @@ const jsonLd = [
       <div class="wrap">
         <h2>A complete solution in just 2 weeks</h2>
         <div class="cards">
-          <article class="card"><h3>90-minute discovery workshop</h3><p>We identify a high-impact, time-consuming report through a collaborative session with your team.</p></article>
-          <article class="card"><h3>Data connection setup</h3><p>We connect your data (Excel, SQL, or cloud app) to Power BI for seamless integration.</p></article>
-          <article class="card"><h3>Custom Power BI report</h3><p>A fully built report replaces your manual process, designed for automation, interactivity, and business impact.</p></article>
-          <article class="card"><h3>Training session &amp; handoff</h3><p>A hands-on session equips your team to use and adapt the report, ensuring self-sufficiency.</p></article>
-          <article class="card"><h3>1 week of post-deployment support</h3><p>We provide troubleshooting and guidance to ensure a smooth transition.</p></article>
-          <article class="card"><h3>Investment</h3><p>Starts at $2,500 (flat fee). Optional add-ons: additional reports or dashboards, data model optimization, workspace and access setup, and Power BI Pro licensing guidance.</p></article>
+          <article class="card">
+            <LineIcon name="workshop" />
+            <h3>90-minute discovery workshop</h3>
+            <p>We identify a high-impact, time-consuming report through a collaborative session with your team.</p>
+          </article>
+          <article class="card">
+            <LineIcon name="connect" />
+            <h3>Data connection setup</h3>
+            <p>We connect your data (Excel, SQL, or cloud app) to Power BI for seamless integration.</p>
+          </article>
+          <article class="card">
+            <LineIcon name="report" />
+            <h3>Custom Power BI report</h3>
+            <p>A fully built report replaces your manual process, designed for automation, interactivity, and business impact.</p>
+          </article>
+          <article class="card">
+            <LineIcon name="training" />
+            <h3>Training session &amp; handoff</h3>
+            <p>A hands-on session equips your team to use and adapt the report, ensuring self-sufficiency.</p>
+          </article>
+          <article class="card">
+            <LineIcon name="support" />
+            <h3>1 week of post-deployment support</h3>
+            <p>We provide troubleshooting and guidance to ensure a smooth transition.</p>
+          </article>
+          <article class="card">
+            <LineIcon name="fee" />
+            <h3>Investment</h3>
+            <p>Flat fee $3,000. Optional add-ons: additional reports or dashboards, data model optimization, workspace and access setup, and Power BI Pro licensing guidance.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -95,9 +123,21 @@ const jsonLd = [
       <div class="wrap">
         <h2>Why choose Power BI Quickstart?</h2>
         <div class="cards">
-          <article class="card"><h3>Save time</h3><p>Eliminate hours of manual reporting with an automated, dynamic Power BI report.</p></article>
-          <article class="card"><h3>Boost decision-making</h3><p>Deliver interactive insights that align with your business goals.</p></article>
-          <article class="card"><h3>Prove Power BI’s value</h3><p>Show stakeholders the power of automation with a quick, tangible win. Create a scalable starting point for broader adoption.</p></article>
+          <article class="card">
+            <LineIcon name="time" />
+            <h3>Save time</h3>
+            <p>Eliminate hours of manual reporting with an automated, dynamic Power BI report.</p>
+          </article>
+          <article class="card">
+            <LineIcon name="decision" />
+            <h3>Boost decision-making</h3>
+            <p>Deliver interactive insights that align with your business goals.</p>
+          </article>
+          <article class="card">
+            <LineIcon name="scale" />
+            <h3>Prove Power BI’s value</h3>
+            <p>Show stakeholders a quick, tangible win. Create a scalable starting point for broader adoption.</p>
+          </article>
         </div>
         <p style="margin-top:1.25rem;">Our Quickstart is a fit for teams buried in spreadsheets, people spending hours updating reports, or leaders unsure where to begin with Power BI.</p>
       </div>
@@ -105,7 +145,7 @@ const jsonLd = [
 
     <section class="band">
       <div class="wrap">
-        <h2>From pain to power in 2 weeks</h2>
+        <h2>From pain to a report you can use in 2 weeks</h2>
         <div class="steps">
           <article>
             <p class="step-num">01</p>
@@ -138,6 +178,6 @@ const jsonLd = [
       </div>
     </section>
 
-    <CtaBand heading="Ready to solve your reporting pain in 2 weeks?" text="Stop wasting time on manual reports. Book a free 30-minute consultation to identify your critical report and see how we can transform it. Starts at $2,500; optional add-ons tailored to your needs." />
+    <CtaBand heading="Ready to solve your reporting pain in 2 weeks?" text="Stop wasting time on manual reports. Book a Session to identify your critical report and see how we can transform it. Flat fee $3,000; optional add-ons tailored to your needs." />
   </article>
 </BaseLayout>
