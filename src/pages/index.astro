@@ -2,7 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
 import LineIcon from "../components/LineIcon.astro";
-import SystemsCloud from "../components/SystemsCloud.astro";
 import { SITE } from "../lib/site";
 
 const org = {
@@ -148,19 +147,6 @@ const website = {
     </div>
   </section>
 
-  <section class="band band-alt" aria-labelledby="systems">
-    <div class="wrap">
-      <p class="kicker">Systems we work with</p>
-      <h2 id="systems">Power BI on the systems you already run</h2>
-      <p>
-        Excel, SQL Server, Fabric, and the rest of this list can feed one model. See
-        <a href="/blog/excel-vs-power-bi-financial-reporting">Excel vs Power BI for financial reporting</a>
-        and the full <a href="/services">Power BI services</a> list.
-      </p>
-      <SystemsCloud />
-    </div>
-  </section>
-
   <section class="band" aria-labelledby="why">
     <div class="wrap">
       <h2 id="why">Why choose Alluvium for Power BI consulting?</h2>
@@ -183,8 +169,8 @@ const website = {
       </div>
       <article class="card" style="margin-top:1.25rem;">
         <LineIcon name="client" />
-        <h3>Client-Centric Approach</h3>
-        <p>We meet you where you are, tailoring every engagement to your goals, systems, and pace of change.</p>
+          <h3>Client-Centric Approach</h3>
+          <p>We meet you where you are, tailoring every engagement to your goals, systems, and pace of change.</p>
       </article>
     </div>
   </section>
