@@ -1,13 +1,44 @@
-import { defineConfig } from 'astro/config';
+import { copyFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import sitemap from '@astrojs/sitemap';
+import { defineConfig } from 'astro/config';
+
+const EXCLUDED = [
+  '/404',
+  '/contact-success',
+];
+
+function isIndexable(page) {
+  let path = page;
+  try {
+    const url = new URL(page);
+    if (url.search) return false;
+    path = url.pathname;
+  } catch {
+    /* page is already a path */
+  }
+  const clean = path.replace(/\/$/, '') || '/';
+  if (clean.includes('/blog/tag')) return false;
+  return !EXCLUDED.some((p) => clean === p || clean.endsWith(p));
+}
 
 export default defineConfig({
   site: 'https://alluviumbi.com',
   output: 'static',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/404'),
+      filter: isIndexable,
     }),
+    {
+      name: 'sitemap-xml',
+      hooks: {
+        'astro:build:done': async ({ dir }) => {
+          const out = fileURLToPath(dir);
+          await copyFile(join(out, 'sitemap-0.xml'), join(out, 'sitemap.xml'));
+        },
+      },
+    },
   ],
   trailingSlash: 'never',
 });

@@ -5,6 +5,11 @@
 /privacy-policy                /privacy                          301!
 /blog/tag/*                    /blog                             301!
 
+# Sitemap: Astro emits sitemap-0.xml + sitemap-index.xml (no sitemap.xml).
+# Netlify Pretty URLs 500s on *-index.xml; serve the urlset at both paths.
+/sitemap.xml                   /sitemap-0.xml                    200
+/sitemap-index.xml             /sitemap-0.xml                    200!
+
 # HTTP → HTTPS, preserve host. Do not pick apex vs www (Netlify Primary domain).
 http://alluviumbi.com/*        https://alluviumbi.com/:splat     301!
 http://www.alluviumbi.com/*    https://www.alluviumbi.com/:splat 301!
