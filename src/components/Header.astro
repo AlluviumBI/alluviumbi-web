@@ -1,5 +1,5 @@
 ---
-import { NAV } from "../lib/site";
+import { NAV, SERVICES } from "../lib/site";
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
 <header class="site-header">
@@ -15,6 +15,21 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
         {NAV.map((item) => {
           const href = item.href;
           const current = href === "/" ? path === "/" : path === href || path.startsWith(href + "/");
+          if (item.label === "Services") {
+            const serviceCurrent = path === "/services" || SERVICES.some((s) => path === s.href);
+            return (
+              <li class="has-sub">
+                <a href={href} aria-current={serviceCurrent ? "page" : undefined}>{item.label}</a>
+                <ul class="subnav">
+                  {SERVICES.map((s) => (
+                    <li>
+                      <a href={s.href} aria-current={path === s.href ? "page" : undefined}>{s.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            );
+          }
           return (
             <li>
               <a href={href} aria-current={current ? "page" : undefined}>{item.label}</a>
@@ -23,7 +38,7 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
         })}
       </ul>
     </nav>
-    <a class="btn header-cta" href="/contact">Book a 30-minute consult</a>
+    <a class="btn header-cta" href="/contact">Book a Session</a>
   </div>
 </header>
 <script>

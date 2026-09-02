@@ -1,5 +1,5 @@
 ---
-import { NAV, SITE } from "../lib/site";
+import { NAV, SERVICES } from "../lib/site";
 const year = new Date().getFullYear();
 ---
 <footer class="site-footer">
@@ -8,8 +8,6 @@ const year = new Date().getFullYear();
       <p class="logo" style="margin:0 0 0.75rem;">
         <img src="/brand/logo-footer.png" alt="Alluvium" width="160" height="32" />
       </p>
-      <p>Strategic Power BI consulting. Conversational analytics on a certified semantic model.</p>
-      <p><a class="btn" href="/contact">Book a 30-minute consult</a></p>
     </div>
     <div>
       <h2>Explore</h2>
@@ -20,12 +18,20 @@ const year = new Date().getFullYear();
       </ul>
     </div>
     <div>
+      <h2>Services</h2>
+      <ul>
+        {SERVICES.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
       <h2>Legal</h2>
       <ul>
         <li><a href="/privacy">Privacy</a></li>
         <li><a href="/terms">Terms</a></li>
       </ul>
-      <p>© {year} Alluvium LLC.</p>
+      <p>© {year} Alluvium LLC</p>
     </div>
   </div>
 </footer>

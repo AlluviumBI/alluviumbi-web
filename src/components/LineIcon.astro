@@ -1,0 +1,43 @@
+---
+interface Props {
+  name: string;
+}
+const { name } = Astro.props;
+const icons: Record<string, string> = {
+  finance: `<rect x="4" y="5" width="16" height="14" /><path d="M4 9h16M8 5v14M12 13h4M12 16h3" />`,
+  operations: `<rect x="4" y="4" width="7" height="7" /><rect x="13" y="4" width="7" height="7" /><rect x="4" y="13" width="7" height="7" /><rect x="13" y="13" width="7" height="7" />`,
+  sales: `<path d="M4 16l5-5 3 3 8-8" /><path d="M15 6h5v5" />`,
+  marketing: `<circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="4" /><circle cx="12" cy="12" r="1" />`,
+  it: `<rect x="5" y="4" width="14" height="10" /><path d="M9 14v3M15 14v3M8 20h8M12 17v3" />`,
+  project: `<path d="M5 6h14M5 12h10M5 18h12" /><circle cx="19" cy="6" r="1.2" /><circle cx="16" cy="12" r="1.2" /><circle cx="18" cy="18" r="1.2" />`,
+  strategy: `<circle cx="12" cy="12" r="8" /><path d="M12 4v3M12 17v3M4 12h3M17 12h3M12 12l4-2" />`,
+  dashboard: `<rect x="4" y="5" width="16" height="14" /><path d="M4 10h16M10 10v9" />`,
+  retainer: `<rect x="5" y="6" width="14" height="14" /><path d="M5 10h14M9 4v4M15 4v4M9 14h6" />`,
+  training: `<path d="M4 8l8-3 8 3-8 3-8-3z" /><path d="M7 10v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5" />`,
+  conversational: `<path d="M5 6h10v8H9l-4 3V6z" /><path d="M15 10h4v6l-3 2v-2h-1" />`,
+  workshop: `<circle cx="12" cy="12" r="8" /><path d="M12 8v5l3 2" />`,
+  connect: `<circle cx="6" cy="12" r="2.2" /><circle cx="18" cy="7" r="2.2" /><circle cx="18" cy="17" r="2.2" /><path d="M8 12h7M16.2 8.6l-7.2 2.8M16.2 15.4l-7.2-2.8" />`,
+  report: `<rect x="6" y="3" width="12" height="18" /><path d="M9 8h6M9 12h6M9 16h4" />`,
+  support: `<circle cx="12" cy="12" r="8" /><path d="M12 8v8M8 12h8" />`,
+  fee: `<path d="M7 7h10v10H7z" /><path d="M10 10h4M10 14h3" />`,
+  focus: `<path d="M12 4l7 8-7 8-7-8 7-8z" />`,
+  scale: `<rect x="4" y="12" width="6" height="8" /><rect x="11" y="8" width="5" height="12" /><rect x="17" y="4" width="4" height="16" />`,
+  expertise: `<circle cx="12" cy="12" r="8" /><path d="M8 12l2.5 2.5L16 9" />`,
+  client: `<circle cx="12" cy="8" r="3" /><path d="M5 19c1.5-3.5 4-5 7-5s5.5 1.5 7 5" />`,
+  time: `<circle cx="12" cy="12" r="8" /><path d="M12 7v5h4" />`,
+  decision: `<path d="M12 4v6M8 10h8" /><path d="M6 20l6-8 6 8" />`,
+};
+const inner = icons[name] ?? icons.focus;
+---
+<svg
+  class="icon-line"
+  viewBox="0 0 24 24"
+  aria-hidden="true"
+  focusable="false"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.25"
+  stroke-linecap="square"
+  stroke-linejoin="miter"
+  set:html={inner}
+/>

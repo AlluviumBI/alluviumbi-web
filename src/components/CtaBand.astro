@@ -4,7 +4,7 @@ interface Props {
   text?: string;
 }
 const {
-  heading = "Book a 30-minute consult",
+  heading = "Book a Session",
   text = "Tell us about the reporting or analytics problem that is slowing decisions. We will map a practical next step.",
 } = Astro.props;
 ---
@@ -13,6 +13,6 @@ const {
     <p class="kicker">Next step</p>
     <h2 id="cta-heading">{heading}</h2>
     <p class="lede">{text}</p>
-    <p><a class="btn" href="/contact">Book a 30-minute consult</a></p>
+    <p><a class="btn" href="/contact">Book a Session</a></p>
   </div>
 </section>
