@@ -1,0 +1,10 @@
+# Squarespace path aliases (force 301 wins even if a page exists)
+/home                          /                                 301!
+/-data-ai-strategy-roadmap     /analytics-ai-strategy-roadmap    301!
+/managed-data-ai-advisory      /managed-advisory-retainer        301!
+/privacy-policy                /privacy                          301!
+/blog/tag/*                    /blog                             301!
+
+# HTTP → HTTPS, preserve host. Do not pick apex vs www (Netlify Primary domain).
+http://alluviumbi.com/*        https://alluviumbi.com/:splat     301!
+http://www.alluviumbi.com/*    https://www.alluviumbi.com/:splat 301!
