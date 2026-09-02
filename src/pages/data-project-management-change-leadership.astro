@@ -9,8 +9,8 @@ const faqs = [
     a: "No. We sit alongside them: scope, vendors, timelines, and the last-mile work of training and adoption so the model actually gets used.",
   },
   {
-    q: "Is this for AI transformation programs?",
-    a: "It is for analytics and Power BI programs. Conversational analytics can be in the plan once a certified model exists. Agents and automations are out of scope here.",
+    q: "Is this for a chatbot program?",
+    a: "It is for analytics and Power BI programs. Asking a certified model can be in the plan once that model exists.",
   },
   {
     q: "How long is a typical engagement?",
@@ -25,7 +25,7 @@ const jsonLd = [
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
       { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      { "@type": "ListItem", position: 3, name: "Data Project Management", item: SITE.url + "/data-project-management-change-leadership" },
+      { "@type": "ListItem", position: 3, name: "Data & Analytics Project Management", item: SITE.url + "/data-project-management-change-leadership" },
     ],
   },
   {
@@ -40,7 +40,7 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title="Data Project Management & Change Leadership | Alluvium"
+  title="Data & Analytics Project Management & Change Leadership | Alluvium"
   description="Oversight for Power BI and analytics initiatives: scope, teams, timelines, communication, training, and adoption so delivery does not stall in the last mile."
   canonicalPath="/data-project-management-change-leadership"
   jsonLd={jsonLd}
@@ -48,13 +48,16 @@ const jsonLd = [
   <header class="hero">
     <div class="wrap">
       <p class="kicker">Services</p>
-      <h1>Data project management &amp; change leadership</h1>
+      <h1>Data &amp; Analytics project management and change leadership</h1>
       <p class="lede">Oversight for analytics and Power BI initiatives: scope, teams, timelines, communication, training, and adoption—so delivery does not stall in the last mile.</p>
-      <p><a class="btn" href="/contact">Book a 30-minute consult</a></p>
+      <p><a class="btn" href="/contact">Book a Session</a></p>
     </div>
   </header>
+  <figure class="still bw">
+    <img src="/blog/why-month-end-still-takes-a-week-hero.jpg" alt="" width="1600" height="900" />
+  </figure>
   <section class="band">
-    <div class="wrap-narrow prose">
+    <div class="wrap prose">
       <p>The model can be right and still fail if finance never opens it. We treat adoption as part of delivery, not a slide at the end.</p>
       <h2>What we do</h2>
       <ul>
@@ -64,7 +67,7 @@ const jsonLd = [
         <li>Change leadership when a spreadsheet process becomes a governed report.</li>
       </ul>
       <h2>What this is not</h2>
-      <p>Not staff-aug for an AI lab, and not an automation program. Alluvium is analytics and BI. If conversational analytics is in the plan, it sits on a certified model after that model exists.</p>
+      <p>Not staff-aug for a chatbot lab. Alluvium is analytics and BI. If conversational analytics is in the plan, it sits on a certified model after that model exists.</p>
       <h2>How it runs</h2>
       <ol>
         <li>Name the initiative, the decision it serves, and who has to change how they work.</li>
@@ -82,5 +85,5 @@ const jsonLd = [
       </div>
     </div>
   </section>
-  <CtaBand heading="Keep the last mile from stalling" text="Thirty minutes is enough to see whether the gap is the model, the plan, or adoption." />
+  <CtaBand heading="Keep the last mile from stalling" text="A session is enough to see whether the gap is the model, the plan, or adoption." />
 </BaseLayout>
