@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import LineIcon from "../components/LineIcon.astro";
+import { SITE } from "../lib/site";
+
+const faqs = [
+  {
+    q: "Is this a generic Power BI class?",
+    a: "No. Sessions run on the model your team already paid for—your measures, your reports, your questions.",
+  },
+  {
+    q: "Who should attend?",
+    a: "The people who own the numbers and the people expected to use them: finance, operations, sales, and the analysts who support them.",
+  },
+  {
+    q: "What do we leave with?",
+    a: "A team that can open the model, answer the meeting questions, and a short handoff so the skill does not walk out with us.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      { "@type": "ListItem", position: 3, name: "Power BI Training", item: SITE.url + "/power-bi-training" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<BaseLayout
+  title="Power BI Training | Hands-on on Your Model — Alluvium"
+  description="Get the team fluent on the Power BI model they already paid for — hands-on sessions, not a slide deck."
+  canonicalPath="/power-bi-training"
+  jsonLd={jsonLd}
+>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Services</p>
+      <h1>Power BI training</h1>
+      <p class="lede">Get the team fluent on the Power BI model they already paid for — hands-on sessions, not a slide deck.</p>
+      <p><a class="btn" href="/contact">Book a Session</a></p>
+    </div>
+  </header>
+  <figure class="still bw">
+    <img src="/blog/why-numbers-aisle.jpg" alt="" width="1600" height="900" />
+  </figure>
+  <section class="band">
+    <div class="wrap prose">
+      <p>A model nobody can use is still a reporting problem. Training is how the meeting starts trusting the number.</p>
+      <h2>Audience</h2>
+      <p>Built for the people who have to defend the numbers: controllers, ops leads, sales managers, and the analysts who support them. Not a certification bootcamp. Not a tour of every Power BI button.</p>
+      <h2>Workshop format</h2>
+      <p>Live, hands-on sessions. Short agenda, real questions, screens shared on the same report the team will open on Monday. We keep groups small so people actually click, filter, and fail in the room—not after we leave.</p>
+      <h2>On their model</h2>
+      <p>We train on the certified Power BI model you already paid for. Your measures. Your grain. Your row-level security. Generic sample files do not transfer; your close, pipeline, or shop-floor questions do.</p>
+      <h2>Handoff</h2>
+      <p>You leave with a short list of “how we answer this,” named owners for the model, and the next questions the team can run without us. Optional follow-on office hours sit on the managed advisory retainer.</p>
+      <div class="cards" style="margin-top:2rem;">
+        <article class="card">
+          <LineIcon name="client" />
+          <h3>Audience</h3>
+          <p>The people who own the meeting and the people expected to use the report.</p>
+        </article>
+        <article class="card">
+          <LineIcon name="workshop" />
+          <h3>Workshop format</h3>
+          <p>Hands-on sessions, not a slide deck. Real questions on the live model.</p>
+        </article>
+        <article class="card">
+          <LineIcon name="dashboard" />
+          <h3>On their model</h3>
+          <p>Your certified dataset—not a demo file that looks nothing like close.</p>
+        </article>
+        <article class="card">
+          <LineIcon name="report" />
+          <h3>Handoff</h3>
+          <p>Named owners, a short how-we-answer list, and a team that can run without us.</p>
+        </article>
+      </div>
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+  <CtaBand heading="Train on the model you already paid for" text="A session is enough to name who needs to be fluent and which report they have to open." />
+</BaseLayout>
