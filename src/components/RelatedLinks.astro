@@ -9,26 +9,19 @@ interface Props {
 }
 const { services, posts } = Astro.props;
 ---
-<section class="band band-alt related" aria-labelledby="related-heading">
+<section class="band related-links" aria-labelledby="related-services">
   <div class="wrap">
-    <h2 id="related-heading">Related services and insights</h2>
-    <div class="cards-2">
-      <div>
-        <h3>Services</h3>
-        <ul>
-          {services.map((s) => (
-            <li><a href={s.href}>{s.label}</a></li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h3>Insights</h3>
-        <ul>
-          {posts.map((p) => (
-            <li><a href={p.href}>{p.label}</a></li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <h2 id="related-services">Related Power BI services</h2>
+    <ul>
+      {services.map((s) => (
+        <li><a href={s.href}>{s.label}</a></li>
+      ))}
+    </ul>
+    <h2>Related Power BI insights</h2>
+    <ul>
+      {posts.map((s) => (
+        <li><a href={s.href}>{s.label}</a></li>
+      ))}
+    </ul>
   </div>
 </section>
