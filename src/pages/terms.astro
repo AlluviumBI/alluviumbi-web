@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Crumbs from "../components/Crumbs.astro";
 import { SITE } from "../lib/site";
 const jsonLd = {
   "@context": "https://schema.org",
@@ -11,14 +12,14 @@ const jsonLd = {
 };
 ---
 <BaseLayout
-  title="Terms of use | Alluvium"
-  description="Terms of use for alluviumbi.com. Power BI consulting content is general information. Paid engagements use a separate written agreement with Alluvium LLC."
-  crumbs={[{ name: "Home", href: "/" }, { name: "Terms", href: "/terms" }]}
+  title="Website terms of use | Alluvium"
+  description="Terms of use for the Alluvium website. Independent Power BI advisory in Wisconsin, United States. Engagements are governed by a separate written agreement."
   canonicalPath="/terms"
   jsonLd={jsonLd}
 >
   <article class="hero">
-    <div class="wrap prose">
+    <div class="wrap-narrow prose">
+      <Crumbs crumbs={[{ href: "/", label: "Home" }, { label: "Terms" }]} />
       <p class="kicker">Legal</p>
       <h1>Terms</h1>
       <p>By using alluviumbi.com, you agree to these terms. The site is operated by Alluvium in Wisconsin, United States.</p>

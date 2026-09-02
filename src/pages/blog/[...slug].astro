@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CtaBand from "../../components/CtaBand.astro";
+import Crumbs from "../../components/Crumbs.astro";
 import { getCollection } from "astro:content";
-import { SITE, seoTitle } from "../../lib/site";
+import { SITE, pageTitle } from "../../lib/site";
 import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
@@ -43,9 +44,8 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title={seoTitle(post.data.title)}
+  title={pageTitle(post.data.title)}
   description={post.data.description}
-  crumbs={[{ name: "Home", href: "/" }, { name: "Insights", href: "/blog" }, { name: post.data.title, href: path }]}
   canonicalPath={path}
   ogType="article"
   publishedTime={post.data.pubDate.toISOString()}
@@ -54,6 +54,13 @@ const jsonLd = [
   <article>
     <header class="hero">
       <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/blog", label: "Insights" },
+            { label: post.data.title },
+          ]}
+        />
         <p class="kicker">Insights</p>
         <h1>{post.data.title}</h1>
         <p class="lede">{post.data.description}</p>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Crumbs from "../components/Crumbs.astro";
 import { SITE } from "../lib/site";
 const jsonLd = {
   "@context": "https://schema.org",
@@ -11,14 +12,14 @@ const jsonLd = {
 };
 ---
 <BaseLayout
-  title="Privacy policy | Alluvium"
-  description="How Alluvium handles information on this site. Wisconsin, United States. Details you share for a session stay with us; we do not sell personal information."
-  crumbs={[{ name: "Home", href: "/" }, { name: "Privacy", href: "/privacy" }]}
+  title="Website privacy policy | Alluvium"
+  description="How Alluvium handles information on this website. Independent Power BI advisory in Wisconsin, United States. We do not sell personal information here."
   canonicalPath="/privacy"
   jsonLd={jsonLd}
 >
   <article class="hero">
-    <div class="wrap prose">
+    <div class="wrap-narrow prose">
+      <Crumbs crumbs={[{ href: "/", label: "Home" }, { label: "Privacy" }]} />
       <p class="kicker">Legal</p>
       <h1>Privacy</h1>
       <p>Alluvium is an independent advisory practice based in Wisconsin, United States. This policy describes how we treat information related to this website.</p>
