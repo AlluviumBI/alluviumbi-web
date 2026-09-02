@@ -7,7 +7,8 @@
 
 # Sitemap: Astro emits sitemap-0.xml + sitemap-index.xml (no sitemap.xml).
 # Netlify Pretty URLs 500s on *-index.xml; serve the urlset at both paths.
-/sitemap.xml                   /sitemap-0.xml                    200
+# Force (200!) so rewrite applies even when sitemap.xml is absent from dist.
+/sitemap.xml                   /sitemap-0.xml                    200!
 /sitemap-index.xml             /sitemap-0.xml                    200!
 
 # HTTP → HTTPS, preserve host. Do not pick apex vs www (Netlify Primary domain).

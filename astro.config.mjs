@@ -1,6 +1,3 @@
-import { copyFile } from 'node:fs/promises';
-import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 
@@ -30,15 +27,6 @@ export default defineConfig({
     sitemap({
       filter: isIndexable,
     }),
-    {
-      name: 'sitemap-xml',
-      hooks: {
-        'astro:build:done': async ({ dir }) => {
-          const out = fileURLToPath(dir);
-          await copyFile(join(out, 'sitemap-0.xml'), join(out, 'sitemap.xml'));
-        },
-      },
-    },
   ],
   trailingSlash: 'never',
 });
