@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Crumbs from "../../components/Crumbs.astro";
 import { getCollection } from "astro:content";
 import { SITE } from "../../lib/site";
 
@@ -18,13 +19,13 @@ const jsonLd = {
 ---
 <BaseLayout
   title="Power BI insights for mid-sized companies | Alluvium"
-  description="Power BI insights for mid-sized companies: semantic models, dashboard optimization, forecast vs actuals, data quality, RLS, refresh and gateway, and training."
-  crumbs={[{ name: "Home", href: "/" }, { name: "Insights", href: "/blog" }]}
+  description="Power BI insights for mid-sized companies: models, close, licenses, adoption, and trusted numbers. Practical writing for executives and BI leaders now."
   canonicalPath="/blog"
   jsonLd={jsonLd}
 >
   <header class="hero">
     <div class="wrap">
+      <Crumbs crumbs={[{ href: "/", label: "Home" }, { label: "Insights" }]} />
       <p class="kicker">Insights</p>
       <h1>Power BI insights for mid-sized companies</h1>
       <p class="lede">Short, practical pieces for C-suite and data leaders at mid-sized companies.</p>
@@ -32,12 +33,13 @@ const jsonLd = {
   </header>
   <section class="band band-alt">
     <div class="wrap">
+      <h2>Latest Power BI articles</h2>
       <ul class="post-list">
         {posts.map((post) => (
           <li>
-            <h2 style="font-size:1.45rem;margin:0.2rem 0 0.4rem;">
+            <h3 style="font-size:1.45rem;margin:0.2rem 0 0.4rem;">
               <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-            </h2>
+            </h3>
             <p>{post.data.description}</p>
           </li>
         ))}

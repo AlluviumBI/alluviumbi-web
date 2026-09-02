@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
+import Crumbs from "../components/Crumbs.astro";
 import { SITE } from "../lib/site";
 
 const jsonLd = {
@@ -13,15 +14,15 @@ const jsonLd = {
 };
 ---
 <BaseLayout
-  title="Independent Power BI advisory | Alluvium"
-  description="Independent Power BI consulting for mid-sized companies. Semantic models, dashboard optimization, and training on your stack—led by Matt, not a bench."
-  crumbs={[{ name: "Home", href: "/" }, { name: "About", href: "/about" }]}
+  title="Independent Power BI advisory for firms | Alluvium"
+  description="Alluvium is independent Power BI advisory for mid-sized companies. Matt leads small, senior engagements so you work with the person designing the model."
   canonicalPath="/about"
   jsonLd={jsonLd}
 >
   <article>
     <header class="hero">
       <div class="wrap">
+        <Crumbs crumbs={[{ href: "/", label: "Home" }, { label: "About" }]} />
         <p class="kicker">Practice</p>
         <h1>About Alluvium</h1>
         <p class="lede">An independent advisory practice focused on strategic Power BI for mid-sized companies. Conversational analytics means asking a certified model.</p>
@@ -29,6 +30,7 @@ const jsonLd = {
     </header>
     <section class="band band-alt">
       <div class="wrap prose">
+        <h2>Independent Power BI consulting, not a platform sale</h2>
         <p>
           Alluvium exists to help executives and BI leaders cut through analytics hype and build reporting people will actually use.
           The work is senior, hands-on, and scoped to outcomes: clearer models, faster insight, and adoption that lasts.
@@ -40,7 +42,7 @@ const jsonLd = {
           We do not sell a platform. We help you get more from Power BI you already have, and we add conversational analytics only by asking a certified semantic model. Your team should be able to operate what we build.
         </p>
         <p>Serving organizations across the United States.</p>
-        <p><a href="/services">View services</a> · <a href="/blog">Read insights</a> · <a href="/contact">Book a Session</a></p>
+        <p><a href="/services">View Power BI services</a> · <a href="/blog">Read Power BI insights</a> · <a href="/contact">Book a Session</a></p>
       </div>
     </section>
     <CtaBand />

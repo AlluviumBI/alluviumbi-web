@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
 import LineIcon from "../components/LineIcon.astro";
+import Crumbs from "../components/Crumbs.astro";
 import { SITE } from "../lib/site";
 
 const jsonLd = {
@@ -14,16 +15,16 @@ const jsonLd = {
 };
 ---
 <BaseLayout
-  title="Power BI services for operations | Alluvium"
-  description="Power BI consulting: Quickstart, dashboard optimization, training, analytics project management, and conversational analytics on a certified semantic model."
-  crumbs={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }]}
+  title="Power BI services for mid-sized companies | Alluvium"
+  description="Power BI services for mid-sized companies: Quickstart, strategy, project management, dashboard optimization, training, retainer, and conversational analytics."
   canonicalPath="/services"
   jsonLd={jsonLd}
 >
   <header class="hero">
     <div class="wrap">
+      <Crumbs crumbs={[{ href: "/", label: "Home" }, { label: "Services" }]} />
       <p class="kicker">Offerings</p>
-      <h1>Services</h1>
+      <h1>Power BI services</h1>
       <p class="lede">Focused advisory and delivery for mid-sized companies that need Power BI to support real decisions. Conversational analytics means asking a certified model—not a chatbot project.</p>
     </div>
   </header>
@@ -44,7 +45,7 @@ const jsonLd = {
         </article>
         <article class="card">
           <LineIcon name="project" />
-          <h2>Data &amp; Analytics project management and change leadership</h2>
+          <h2>Analytics project management and change leadership</h2>
           <p>Oversight for analytics and Power BI initiatives: scope, teams, timelines, communication, training, and adoption—so delivery does not stall in the last mile.</p>
           <p><a href="/data-project-management-change-leadership">See data &amp; analytics project management</a></p>
         </article>
@@ -62,7 +63,7 @@ const jsonLd = {
         </article>
         <article class="card">
           <LineIcon name="training" />
-          <h2>Training</h2>
+          <h2>Power BI training</h2>
           <p>Get the team fluent on the Power BI model they already paid for — hands-on sessions, not a slide deck.</p>
           <p><a href="/power-bi-training">See Power BI training</a></p>
         </article>
