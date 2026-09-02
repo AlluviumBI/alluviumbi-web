@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
-import { SITE } from "../lib/site";
+import RelatedLinks from "../components/RelatedLinks.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE, RELATED } from "../lib/site";
 
 const faqs = [
   {
@@ -44,14 +46,15 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title="Dashboard Optimization | Power BI Performance — Alluvium"
-  description="Audit and improve existing Power BI dashboards for speed, usability, and business impact. Streamline models and visuals so people actually use them."
+  title="Power BI dashboard optimization | Alluvium"
+  description="Power BI dashboard optimization for speed, adoption, and data quality. Tighten the semantic model so finance and operations actually use those reports."
   canonicalPath="/power-bi-dashboard-optimization-ai-insights"
   jsonLd={jsonLd}
 >
   <article>
     <header class="hero">
       <div class="wrap">
+        <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Dashboard optimization" }]} />
         <p class="kicker">Service</p>
         <h1>Power BI dashboard optimization</h1>
         <p class="lede">Maximize the performance and usability of your existing dashboards. Audits provide actionable recommendations to improve speed, UX, and business impact—without requiring a full rebuild.</p>
@@ -61,10 +64,9 @@ const jsonLd = [
     <figure class="still bw">
       <img src="/blog/unused-reports-are-a-governance-smell-hero.jpg" alt="" width="1600" height="900" />
     </figure>
-
     <section class="band band-alt">
       <div class="wrap prose">
-        <h2>Go from dashboards to decisions</h2>
+        <h2>Dashboard optimization for models people actually use</h2>
         <p>Dashboards should empower decisions, not overwhelm them. Alluvium helps organizations cut through clutter—simplifying data models, removing redundant visuals, and uncovering the insights that truly move the needle.</p>
         <p>When the model is certified and the questions are named, you can ask a certified model on top of it. That work lives on a <a href="/conversational-analytics">separate service page</a>. This engagement is the model and the reports.</p>
         <ul>
@@ -72,35 +74,9 @@ const jsonLd = [
           <li>Tighten measures so leadership will actually defend the numbers.</li>
           <li>Create dashboards that people actually use—simple, intuitive, and actionable.</li>
         </ul>
-        <p>Our expert audits provide clear, actionable recommendations, empowering your team to implement changes effectively.</p>
       </div>
     </section>
-
-    <section class="band">
-      <div class="wrap">
-        <h2>Our process</h2>
-        <p>A structured, insight-first approach that combines Power BI expertise with adoption—delivering performance, precision, and usability across every layer of your analytics stack.</p>
-        <div class="cards">
-          <article class="card"><h3>Assessment &amp; audit</h3><p>We review your existing Power BI environment—data models, visuals, performance, and adoption—to pinpoint inefficiencies and hidden opportunities.</p></article>
-          <article class="card"><h3>Simplification &amp; redesign</h3><p>We refactor data models, clean relationships, and redesign visuals around key decisions. Every element serves a purpose.</p></article>
-          <article class="card"><h3>Certified measures</h3><p>We name the measures leadership will defend and close the gaps that make two reports disagree.</p></article>
-          <article class="card"><h3>Validation &amp; handoff</h3><p>We test usability, measure adoption, and ensure every stakeholder gets insights that are timely, accurate, and relevant.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="band band-alt faq" aria-labelledby="faq">
-      <div class="wrap">
-        <h2 id="faq">FAQs</h2>
-        {faqs.map((f) => (
-          <details>
-            <summary>{f.q}</summary>
-            <p>{f.a}</p>
-          </details>
-        ))}
-      </div>
-    </section>
-
+    <RelatedLinks services={RELATED["/power-bi-dashboard-optimization-ai-insights"].services} posts={RELATED["/power-bi-dashboard-optimization-ai-insights"].posts} />
     <CtaBand />
   </article>
 </BaseLayout>

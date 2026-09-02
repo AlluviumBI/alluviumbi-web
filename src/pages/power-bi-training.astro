@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
 import LineIcon from "../components/LineIcon.astro";
 import Crumbs from "../components/Crumbs.astro";
-import RelatedLinks from "../components/RelatedLinks.astro";
-import { SITE } from "../lib/site";
+import { SITE, RELATED } from "../lib/site";
 
 const faqs = [
   {
@@ -43,20 +43,14 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title="Hands-on Power BI training for your team | Alluvium"
-  description="Power BI training on the model your team already paid for. Hands-on workshops for finance, ops, and sales—not a generic slide deck. Book a Session now."
+  title="Power BI training on your model | Alluvium"
+  description="Power BI training on the semantic model you already paid for. Hands-on for finance and operations—not a generic slide-deck class or certification tour."
   canonicalPath="/power-bi-training"
   jsonLd={jsonLd}
 >
   <header class="hero">
     <div class="wrap">
-      <Crumbs
-        crumbs={[
-          { href: "/", label: "Home" },
-          { href: "/services", label: "Services" },
-          { label: "Power BI training" },
-        ]}
-      />
+      <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Power BI training" }]} />
       <p class="kicker">Services</p>
       <h1>Power BI training</h1>
       <p class="lede">Get the team fluent on the Power BI model they already paid for — hands-on sessions, not a slide deck.</p>
@@ -69,13 +63,13 @@ const jsonLd = [
   <section class="band">
     <div class="wrap prose">
       <p>A model nobody can use is still a reporting problem. Training is how the meeting starts trusting the number.</p>
-      <h2>Who Power BI training is for</h2>
+      <h2>Power BI training for finance and operations</h2>
       <p>Built for the people who have to defend the numbers: controllers, ops leads, sales managers, and the analysts who support them. Not a certification bootcamp. Not a tour of every Power BI button.</p>
-      <h2>Hands-on workshop format</h2>
+      <h2>Workshop format</h2>
       <p>Live, hands-on sessions. Short agenda, real questions, screens shared on the same report the team will open on Monday. We keep groups small so people actually click, filter, and fail in the room—not after we leave.</p>
-      <h2>Training on your Power BI model</h2>
+      <h2>On their model</h2>
       <p>We train on the certified Power BI model you already paid for. Your measures. Your grain. Your row-level security. Generic sample files do not transfer; your close, pipeline, or shop-floor questions do.</p>
-      <h2>Handoff after the session</h2>
+      <h2>Handoff</h2>
       <p>You leave with a short list of “how we answer this,” named owners for the model, and the next questions the team can run without us. Optional follow-on office hours sit on the managed advisory retainer.</p>
       <div class="cards" style="margin-top:2rem;">
         <article class="card">
@@ -99,7 +93,7 @@ const jsonLd = [
           <p>Named owners, a short how-we-answer list, and a team that can run without us.</p>
         </article>
       </div>
-      <h2>Power BI training FAQs</h2>
+      <h2>Frequently asked questions</h2>
       <div class="faq">
         {faqs.map((f) => (
           <details>
@@ -110,17 +104,6 @@ const jsonLd = [
       </div>
     </div>
   </section>
-  <RelatedLinks
-    services={[
-      { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
-      { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
-      { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
-    ]}
-    posts={[
-      { href: "/blog/nobody-opens-the-dashboard", label: "Nobody opens the dashboard" },
-      { href: "/blog/unused-power-bi-licenses", label: "Unused Power BI licenses" },
-      { href: "/blog/excel-vs-power-bi-financial-reporting", label: "Excel vs Power BI for financial reporting" },
-    ]}
-  />
+  <RelatedLinks services={RELATED["/power-bi-training"].services} posts={RELATED["/power-bi-training"].posts} />
   <CtaBand heading="Train on the model you already paid for" text="A session is enough to name who needs to be fluent and which report they have to open." />
 </BaseLayout>
