@@ -1,9 +1,6 @@
 ---
-interface Props {
-  name: string;
-}
 const { name } = Astro.props;
-const icons: Record<string, string> = {
+const icons = {
   finance: `<rect x="4.5" y="3.75" width="15" height="16.5" rx="0.75"/><path d="M8 3.75v16.5"/><path d="M10.5 8h6M10.5 15h4.5"/><path d="M10.5 11.5h6" stroke="#397fb0"/>`,
   operations: `<path d="M3.5 20.5V11.5l3.75 2.25V9.25l3.75 2.25V8h9.5v12.5H3.5z"/><path d="M7 20.5v-3.25h2.75V20.5M14.25 20.5v-3.25h2.75V20.5"/><path d="M16.75 8V4.75"/><path d="M16.75 4.75c1.15 0 2.1-.7 2.1-1.6" stroke="#397fb0"/>`,
   sales: `<path d="M4.5 4.5h15l-4.25 7.25v5.25L12 19.25l-3.25-2.25v-5.25L4.5 4.5z"/><circle cx="12" cy="21" r="1.15" fill="#397fb0" stroke="none"/>`,
@@ -41,6 +38,5 @@ const inner = icons[name] ?? icons.focus;
   stroke-width="1.85"
   stroke-linecap="round"
   stroke-linejoin="round"
->
-  <g set:html={inner} />
-</svg>
+  set:html={inner}
+/>

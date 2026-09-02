@@ -1,12 +1,4 @@
 ---
-interface Item {
-  href: string;
-  label: string;
-}
-interface Props {
-  services: Item[];
-  posts: Item[];
-}
 const { services, posts } = Astro.props;
 ---
 <section class="band related-links" aria-labelledby="related-services">

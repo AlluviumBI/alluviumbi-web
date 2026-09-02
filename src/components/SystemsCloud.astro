@@ -1,9 +1,5 @@
 ---
-type Mark =
-  | { kind: "img"; src: string; alt: string; width: number }
-  | { kind: "chip"; label: string };
-
-const groups: { label: string; items: Mark[] }[] = [
+const groups = [
   {
     label: "ERP",
     items: [

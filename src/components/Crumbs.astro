@@ -1,11 +1,4 @@
 ---
-interface Crumb {
-  href?: string;
-  label: string;
-}
-interface Props {
-  crumbs: Crumb[];
-}
 const { crumbs } = Astro.props;
 ---
 <nav class="crumbs" aria-label="Breadcrumb">

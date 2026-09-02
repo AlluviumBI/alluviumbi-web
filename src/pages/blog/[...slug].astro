@@ -4,7 +4,6 @@ import CtaBand from "../../components/CtaBand.astro";
 import Crumbs from "../../components/Crumbs.astro";
 import { getCollection } from "astro:content";
 import { SITE, pageTitle } from "../../lib/site";
-import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => data.draft !== true);
@@ -12,10 +11,6 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
     props: { post },
   }));
-}
-
-interface Props {
-  post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
