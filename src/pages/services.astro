@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
+import LineIcon from "../components/LineIcon.astro";
 import { SITE } from "../lib/site";
 
 const jsonLd = {
@@ -14,7 +15,7 @@ const jsonLd = {
 ---
 <BaseLayout
   title="Services | Power BI Strategy, Optimization, and Advisory — Alluvium"
-  description="Alluvium offerings: analytics strategy roadmap, data project management, dashboard optimization, managed advisory, Power BI Quickstart, and conversational analytics on a certified semantic model."
+  description="Alluvium offerings: analytics strategy roadmap, data and analytics project management, dashboard optimization, managed advisory, Power BI Quickstart, training, and conversational analytics on a certified semantic model."
   canonicalPath="/services"
   jsonLd={jsonLd}
 >
@@ -22,41 +23,55 @@ const jsonLd = {
     <div class="wrap">
       <p class="kicker">Offerings</p>
       <h1>Services</h1>
-      <p class="lede">Focused advisory and delivery for mid-sized companies that need Power BI to support real decisions. AI here means conversational analytics on a certified model—not GPT apps or automations.</p>
+      <p class="lede">Focused advisory and delivery for mid-sized companies that need Power BI to support real decisions. Conversational analytics means asking a certified model—not a chatbot project.</p>
     </div>
   </header>
   <section class="band band-alt">
-    <div class="wrap cards" style="grid-template-columns:repeat(2,1fr);">
-      <article class="card">
-        <h2>Analytics strategy roadmap</h2>
-        <p>Align data, analytics, and reporting goals. Identify high-impact use cases, design scalable Power BI frameworks, and sequence work from traditional reporting to conversational analytics on a certified model.</p>
-        <p><a href="/analytics-ai-strategy-roadmap">Read the service page</a></p>
-      </article>
-      <article class="card">
-        <h2>Data project management &amp; change leadership</h2>
-        <p>Oversight for analytics and Power BI initiatives: scope, teams, timelines, communication, training, and adoption—so delivery does not stall in the last mile.</p>
-        <p><a href="/data-project-management-change-leadership">Read the service page</a></p>
-      </article>
-      <article class="card">
-        <h2>Dashboard optimization &amp; AI insights review</h2>
-        <p>Audit performance, adoption, and value. Streamline models and visuals. Add narrative summaries and signals where they earn their keep in Power BI.</p>
-        <p><a href="/power-bi-dashboard-optimization-ai-insights">Read the service page</a></p>
-      </article>
-      <article class="card">
-        <h2>Managed advisory retainer</h2>
-        <p>Ongoing guidance on Power BI governance, semantic modeling, and program evolution—without standing up a large internal team.</p>
-        <p><a href="/managed-advisory-retainer">Read the service page</a></p>
-      </article>
-      <article class="card">
+    <div class="wrap">
+      <article class="card-feature">
+        <LineIcon name="time" />
         <h2>Power BI Quickstart</h2>
-        <p>One critical report, rebuilt as an automated Power BI solution in two weeks. Starts at $2,500. Training and one week of support included.</p>
-        <p><a href="/power-bi-quickstart">See Quickstart details</a></p>
+        <p>Solve one painful reporting problem in two weeks. Flat fee $3,000. Training and one week of support included.</p>
+        <p><a href="/power-bi-quickstart">See Power BI Quickstart</a></p>
       </article>
-      <article class="card">
-        <h2>Conversational analytics</h2>
-        <p>Ask a certified Power BI or Fabric semantic model. Governed chat on trusted measures—not a free-form chatbot, GPT app, or agent.</p>
-        <p><a href="/conversational-analytics">Read the service page</a></p>
-      </article>
+      <div class="cards-2">
+        <article class="card">
+          <LineIcon name="strategy" />
+          <h2>Analytics strategy roadmap</h2>
+          <p>Align data, analytics, and reporting goals. Identify high-impact use cases, design scalable Power BI frameworks, and sequence work from traditional reporting to asking a certified model.</p>
+          <p><a href="/analytics-ai-strategy-roadmap">See the analytics strategy roadmap</a></p>
+        </article>
+        <article class="card">
+          <LineIcon name="project" />
+          <h2>Data &amp; Analytics project management and change leadership</h2>
+          <p>Oversight for analytics and Power BI initiatives: scope, teams, timelines, communication, training, and adoption—so delivery does not stall in the last mile.</p>
+          <p><a href="/data-project-management-change-leadership">See data &amp; analytics project management</a></p>
+        </article>
+        <article class="card">
+          <LineIcon name="dashboard" />
+          <h2>Dashboard optimization</h2>
+          <p>Audit performance, adoption, and value. Streamline models and visuals so people actually use them.</p>
+          <p><a href="/power-bi-dashboard-optimization-ai-insights">See dashboard optimization</a></p>
+        </article>
+        <article class="card">
+          <LineIcon name="retainer" />
+          <h2>Managed advisory retainer</h2>
+          <p>Ongoing guidance on Power BI governance, semantic modeling, and program evolution—without standing up a large internal team.</p>
+          <p><a href="/managed-advisory-retainer">See the managed advisory retainer</a></p>
+        </article>
+        <article class="card">
+          <LineIcon name="training" />
+          <h2>Training</h2>
+          <p>Get the team fluent on the Power BI model they already paid for — hands-on sessions, not a slide deck.</p>
+          <p><a href="/power-bi-training">See Power BI training</a></p>
+        </article>
+        <article class="card">
+          <LineIcon name="conversational" />
+          <h2>Conversational analytics</h2>
+          <p>Ask a certified Power BI or Fabric semantic model. Governed questions on trusted measures—not a chatbot project.</p>
+          <p><a href="/conversational-analytics">See conversational analytics</a></p>
+        </article>
+      </div>
     </div>
   </section>
   <CtaBand />
