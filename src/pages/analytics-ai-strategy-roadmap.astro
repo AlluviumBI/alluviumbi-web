@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
+import Crumbs from "../components/Crumbs.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
 import { SITE } from "../lib/site";
 
 const faqs = [
@@ -40,13 +42,20 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title="Analytics Strategy Roadmap | Power BI Path for Leadership — Alluvium"
-  description="Align data, analytics, and reporting goals. Identify high-impact Power BI use cases, design a governed model path, and sequence work from traditional reporting to asking a certified model."
+  title="Analytics strategy roadmap for leadership | Alluvium"
+  description="Analytics strategy roadmap for mid-sized companies. Sequence Power BI use cases, certified models, and a 90-day plan from painful reporting to trusted numbers."
   canonicalPath="/analytics-ai-strategy-roadmap"
   jsonLd={jsonLd}
 >
   <header class="hero">
     <div class="wrap">
+      <Crumbs
+        crumbs={[
+          { href: "/", label: "Home" },
+          { href: "/services", label: "Services" },
+          { label: "Analytics strategy roadmap" },
+        ]}
+      />
       <p class="kicker">Services</p>
       <h1>Analytics strategy roadmap</h1>
       <p class="lede">Align data, analytics, and reporting goals. Identify the use cases that matter, design a scalable Power BI path, and sequence work from traditional reporting to asking a certified model.</p>
@@ -59,7 +68,7 @@ const jsonLd = [
   <section class="band">
     <div class="wrap prose">
       <p>Most companies do not need more dashboards. They need a sequence: which numbers leadership will actually use, which models must be certified first, and what can wait.</p>
-      <h2>What we cover</h2>
+      <h2>What an analytics strategy roadmap covers</h2>
       <ul>
         <li>Current-state of reporting, models, and ownership.</li>
         <li>High-impact use cases tied to decisions, not vanity metrics.</li>
@@ -68,13 +77,13 @@ const jsonLd = [
       </ul>
       <h2>What this is not</h2>
       <p>This is not a chatbot project. Alluvium is analytics and BI. Asking a certified Power BI or Fabric model can sit later in the sequence—after the model exists.</p>
-      <h2>How it runs</h2>
+      <h2>How the roadmap engagement runs</h2>
       <ol>
         <li>Discovery with the people who own the numbers and the people who use them.</li>
         <li>A written current-state and a short list of certified-model candidates.</li>
         <li>A 90-day sequence: models, reports, adoption, then conversational access if the model is ready.</li>
       </ol>
-      <h2>Frequently asked questions</h2>
+      <h2>Analytics strategy roadmap FAQs</h2>
       <div class="faq">
         {faqs.map((f) => (
           <details>
@@ -85,5 +94,17 @@ const jsonLd = [
       </div>
     </div>
   </section>
+  <RelatedLinks
+    services={[
+      { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+      { href: "/data-project-management-change-leadership", label: "Analytics project management" },
+      { href: "/conversational-analytics", label: "Conversational analytics" },
+    ]}
+    posts={[
+      { href: "/blog/semantic-model-is-the-product", label: "The semantic model is the product" },
+      { href: "/blog/conversational-analytics-needs-a-trusted-model", label: "Conversational analytics needs a trusted model" },
+      { href: "/blog/nobody-opens-the-dashboard", label: "Nobody opens the dashboard" },
+    ]}
+  />
   <CtaBand heading="Start with the sequence, not another dashboard" text="A session is enough to name the decisions that should drive the roadmap." />
 </BaseLayout>

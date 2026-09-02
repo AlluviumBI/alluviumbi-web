@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
+import Crumbs from "../components/Crumbs.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
 import { SITE } from "../lib/site";
 
 const faqs = [
@@ -40,15 +42,22 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title="Data & Analytics Project Management & Change Leadership | Alluvium"
-  description="Oversight for Power BI and analytics initiatives: scope, teams, timelines, communication, training, and adoption so delivery does not stall in the last mile."
+  title="Analytics project management and change | Alluvium"
+  description="Analytics project management and change leadership for Power BI programs. Scope, timelines, training, and adoption so delivery does not stall in the last mile."
   canonicalPath="/data-project-management-change-leadership"
   jsonLd={jsonLd}
 >
   <header class="hero">
     <div class="wrap">
+      <Crumbs
+        crumbs={[
+          { href: "/", label: "Home" },
+          { href: "/services", label: "Services" },
+          { label: "Analytics project management" },
+        ]}
+      />
       <p class="kicker">Services</p>
-      <h1>Data &amp; Analytics project management and change leadership</h1>
+      <h1>Analytics project management and change leadership</h1>
       <p class="lede">Oversight for analytics and Power BI initiatives: scope, teams, timelines, communication, training, and adoption—so delivery does not stall in the last mile.</p>
       <p><a class="btn" href="/contact">Book a Session</a></p>
     </div>
@@ -59,7 +68,7 @@ const jsonLd = [
   <section class="band">
     <div class="wrap prose">
       <p>The model can be right and still fail if finance never opens it. We treat adoption as part of delivery, not a slide at the end.</p>
-      <h2>What we do</h2>
+      <h2>What analytics project management covers</h2>
       <ul>
         <li>Scope, vendors, and timelines for Power BI and analytics work.</li>
         <li>Clear owners for certified models, reports, and refresh.</li>
@@ -68,13 +77,13 @@ const jsonLd = [
       </ul>
       <h2>What this is not</h2>
       <p>Not staff-aug for a chatbot lab. Alluvium is analytics and BI. If conversational analytics is in the plan, it sits on a certified model after that model exists.</p>
-      <h2>How it runs</h2>
+      <h2>How the engagement runs</h2>
       <ol>
         <li>Name the initiative, the decision it serves, and who has to change how they work.</li>
         <li>Stand up a simple cadence: status, blockers, and adoption metrics that are not vanity.</li>
         <li>Close with a handoff your team can run without us in the room.</li>
       </ol>
-      <h2>Frequently asked questions</h2>
+      <h2>Analytics project management FAQs</h2>
       <div class="faq">
         {faqs.map((f) => (
           <details>
@@ -85,5 +94,17 @@ const jsonLd = [
       </div>
     </div>
   </section>
+  <RelatedLinks
+    services={[
+      { href: "/power-bi-training", label: "Power BI training" },
+      { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
+      { href: "/analytics-ai-strategy-roadmap", label: "Analytics strategy roadmap" },
+    ]}
+    posts={[
+      { href: "/blog/nobody-opens-the-dashboard", label: "Nobody opens the dashboard" },
+      { href: "/blog/why-month-end-still-takes-a-week", label: "Why month-end still takes a week" },
+      { href: "/blog/semantic-model-is-the-product", label: "The semantic model is the product" },
+    ]}
+  />
   <CtaBand heading="Keep the last mile from stalling" text="A session is enough to see whether the gap is the model, the plan, or adoption." />
 </BaseLayout>
