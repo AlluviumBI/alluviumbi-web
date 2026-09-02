@@ -30,69 +30,32 @@ const jsonLd = {
     <section class="band band-alt">
       <div class="wrap-narrow">
         <h2>Tell us about your analytics goals</h2>
-        <form class="contact" id="contact-form" novalidate>
+        <form class="contact" name="contact" method="POST" action="/contact-success" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
           <p>
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
-            <span class="error" id="err-name" hidden></span>
           </p>
           <p>
             <label for="email">Email</label>
             <input id="email" name="email" type="email" autocomplete="email" required />
-            <span class="error" id="err-email" hidden></span>
           </p>
           <p>
             <label for="company">Company</label>
             <input id="company" name="company" type="text" autocomplete="organization" required />
-            <span class="error" id="err-company" hidden></span>
           </p>
           <p>
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="6" required></textarea>
-            <span class="error" id="err-message" hidden></span>
           </p>
           <p><button class="btn" type="submit">Book a Session</button></p>
         </form>
-        <div class="success" id="contact-success" hidden>
-          <h2>Thanks — we have your note on this page.</h2>
-          <p>This preview form does not send email. When you are ready to talk, use the same details on a live session request once messaging is connected, or keep a copy for your records.</p>
-        </div>
       </div>
     </section>
   </article>
-  <script>
-    const form = document.getElementById("contact-form");
-    const success = document.getElementById("contact-success");
-    function showError(id, msg) {
-      const el = document.getElementById("err-" + id);
-      if (!el) return;
-      if (msg) {
-        el.hidden = false;
-        el.textContent = msg;
-      } else {
-        el.hidden = true;
-        el.textContent = "";
-      }
-    }
-    form?.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = (document.getElementById("name") as HTMLInputElement).value.trim();
-      const email = (document.getElementById("email") as HTMLInputElement).value.trim();
-      const company = (document.getElementById("company") as HTMLInputElement).value.trim();
-      const message = (document.getElementById("message") as HTMLTextAreaElement).value.trim();
-      let ok = true;
-      showError("name", name ? "" : "Enter your name.");
-      if (!name) ok = false;
-      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      showError("email", emailOk ? "" : "Enter a valid email address.");
-      if (!emailOk) ok = false;
-      showError("company", company ? "" : "Enter your company.");
-      if (!company) ok = false;
-      showError("message", message.length >= 10 ? "" : "Add a short note (at least 10 characters).");
-      if (message.length < 10) ok = false;
-      if (!ok) return;
-      form.hidden = true;
-      if (success) success.hidden = false;
-    });
-  </script>
 </BaseLayout>
