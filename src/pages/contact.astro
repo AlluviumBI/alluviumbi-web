@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Crumbs from "../components/Crumbs.astro";
 import { SITE } from "../lib/site";
 
 const jsonLd = {
@@ -12,15 +13,15 @@ const jsonLd = {
 };
 ---
 <BaseLayout
-  title="Book a Power BI consulting session | Alluvium"
-  description="Book a Session with Alluvium. Share the Power BI, forecast vs actuals, or data quality problem slowing decisions. We map a practical next step for you."
-  crumbs={[{ name: "Home", href: "/" }, { name: "Contact", href: "/contact" }]}
+  title="Book a Power BI session with an advisor | Alluvium"
+  description="Book a Power BI session with Alluvium. Share reporting pain, systems, and goals. We help mid-sized companies put trusted numbers in the meeting, fast."
   canonicalPath="/contact"
   jsonLd={jsonLd}
 >
   <article>
     <header class="hero">
       <div class="wrap">
+        <Crumbs crumbs={[{ href: "/", label: "Home" }, { label: "Contact" }]} />
         <p class="kicker">Contact</p>
         <h1>Book a Session</h1>
         <p class="lede">Have a project in mind or need help with Power BI, data, analytics, or insights? Share a few details below. This form stays on your device in this preview—no message is sent.</p>
@@ -28,6 +29,7 @@ const jsonLd = {
     </header>
     <section class="band band-alt">
       <div class="wrap-narrow">
+        <h2>Tell us about your Power BI reporting goals</h2>
         <form class="contact" id="contact-form" novalidate>
           <p>
             <label for="name">Name</label>
