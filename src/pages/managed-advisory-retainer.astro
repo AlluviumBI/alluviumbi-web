@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
+import Crumbs from "../components/Crumbs.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
 import { SITE } from "../lib/site";
 
 const faqs = [
@@ -40,13 +42,20 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title="Managed Advisory Retainer | Ongoing Power BI Guidance — Alluvium"
-  description="Ongoing guidance on Power BI governance, semantic modeling, and asking a certified model—without standing up a large internal team."
+  title="Managed Power BI advisory retainer plan | Alluvium"
+  description="Managed advisory retainer for Power BI governance, semantic models, and program evolution. Senior guidance without standing up a large internal BI team now."
   canonicalPath="/managed-advisory-retainer"
   jsonLd={jsonLd}
 >
   <header class="hero">
     <div class="wrap">
+      <Crumbs
+        crumbs={[
+          { href: "/", label: "Home" },
+          { href: "/services", label: "Services" },
+          { label: "Managed advisory retainer" },
+        ]}
+      />
       <p class="kicker">Services</p>
       <h1>Managed advisory retainer</h1>
       <p class="lede">Ongoing guidance on Power BI governance, semantic modeling, and program evolution—without standing up a large internal team.</p>
@@ -59,7 +68,7 @@ const jsonLd = [
   <section class="band">
     <div class="wrap prose">
       <p>Dashboards drift. Measures fork. Someone rebuilds last month’s close in Excel. A retainer keeps a senior pair of eyes on the model so that does not become the culture.</p>
-      <h2>What sits in the hours</h2>
+      <h2>What sits in the managed advisory hours</h2>
       <ul>
         <li>Power BI governance: certified models, workspace hygiene, refresh, and access.</li>
         <li>Semantic modeling: measures leadership will actually defend.</li>
@@ -68,13 +77,13 @@ const jsonLd = [
       </ul>
       <h2>What this is not</h2>
       <p>Not a ticket mill, and not a chatbot desk. Alluvium is analytics and BI.</p>
-      <h2>How it runs</h2>
+      <h2>How the retainer runs</h2>
       <ol>
         <li>Agree a monthly hour cap and the backlog that is in vs. out.</li>
         <li>Standing office hours plus async review of models and reports.</li>
         <li>A short monthly note: what changed, what is still untrusted, what to do next.</li>
       </ol>
-      <h2>Frequently asked questions</h2>
+      <h2>Managed advisory retainer FAQs</h2>
       <div class="faq">
         {faqs.map((f) => (
           <details>
@@ -85,5 +94,17 @@ const jsonLd = [
       </div>
     </div>
   </section>
+  <RelatedLinks
+    services={[
+      { href: "/power-bi-training", label: "Power BI training" },
+      { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+      { href: "/analytics-ai-strategy-roadmap", label: "Analytics strategy roadmap" },
+    ]}
+    posts={[
+      { href: "/blog/unused-power-bi-licenses", label: "Unused Power BI licenses" },
+      { href: "/blog/semantic-model-is-the-product", label: "The semantic model is the product" },
+      { href: "/blog/why-month-end-still-takes-a-week", label: "Why month-end still takes a week" },
+    ]}
+  />
   <CtaBand heading="Keep the model trustworthy month after month" text="A session is enough to see whether a retainer fits better than a one-off project." />
 </BaseLayout>

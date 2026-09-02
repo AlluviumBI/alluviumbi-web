@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
+import Crumbs from "../components/Crumbs.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
 import { SITE } from "../lib/site";
 
 const jsonLd = [
@@ -32,13 +34,20 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title="Conversational Analytics | Ask a Certified Power BI Model — Alluvium"
-  description="Ask a certified Power BI or Fabric semantic model. Trusted measures, not a free-form chatbot."
+  title="Conversational analytics on a trusted model | Alluvium"
+  description="Conversational analytics on a certified Power BI or Fabric semantic model. Ask governed questions on trusted measures—not a free-form chatbot project."
   canonicalPath="/conversational-analytics"
   jsonLd={jsonLd}
 >
   <header class="hero">
     <div class="wrap">
+      <Crumbs
+        crumbs={[
+          { href: "/", label: "Home" },
+          { href: "/services", label: "Services" },
+          { label: "Conversational analytics" },
+        ]}
+      />
       <p class="kicker">Services</p>
       <h1>Conversational Analytics</h1>
       <p class="lede">Ask a certified Power BI or Fabric semantic model. The answers come from measures leadership already trusts—not from a free-form chatbot.</p>
@@ -51,17 +60,17 @@ const jsonLd = [
   <section class="band">
     <div class="wrap prose">
       <p>Most “ask your data” tools fail for the same reason dashboards fail: nobody agrees what the number means. Conversational analytics only works when the questions sit on a governed model.</p>
-      <h2>What we mean</h2>
+      <h2>What conversational analytics means here</h2>
       <p>You (or your analysts) ask a question in language. The answer is computed from a certified semantic model: one definition of revenue, margin, inventory, or cash. Role-based access still applies. If the model cannot answer, the system should say so—not invent a measure.</p>
       <h2>What this is not</h2>
       <p>This is not a chatbot project. Alluvium’s work here is BI: Power BI and Fabric, certified models, and asking those models.</p>
-      <h2>How an engagement runs</h2>
+      <h2>How a conversational analytics engagement runs</h2>
       <ol>
         <li>Name the certified model and the questions leadership actually asks.</li>
         <li>Tighten measures, synonyms, and row-level security so answers cannot drift.</li>
         <li>Stand up governed questions on that model and train a small group of owners.</li>
       </ol>
-      <h2>Frequently asked questions</h2>
+      <h2>Conversational analytics FAQs</h2>
       <div class="faq">
         <details open>
           <summary>Is this a chatbot that writes SQL on the fly?</summary>
@@ -74,5 +83,17 @@ const jsonLd = [
       </div>
     </div>
   </section>
+  <RelatedLinks
+    services={[
+      { href: "/analytics-ai-strategy-roadmap", label: "Analytics strategy roadmap" },
+      { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+      { href: "/power-bi-training", label: "Power BI training" },
+    ]}
+    posts={[
+      { href: "/blog/conversational-analytics-needs-a-trusted-model", label: "Conversational analytics needs a trusted model" },
+      { href: "/blog/semantic-model-is-the-product", label: "The semantic model is the product" },
+      { href: "/blog/nobody-opens-the-dashboard", label: "Nobody opens the dashboard" },
+    ]}
+  />
   <CtaBand heading="See if your model is ready to be asked" text="A session is enough to pick one certified model and the questions it should answer." />
 </BaseLayout>
