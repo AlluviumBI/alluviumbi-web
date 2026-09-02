@@ -241,8 +241,8 @@ section.band-cta .btn:hover { background: var(--accent-hover); color: var(--whit
   margin-bottom: 1.25rem;
 }
 .icon-line {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.9rem;
+  height: 1.9rem;
   margin: 0 0 0.75rem;
   color: var(--ink);
   stroke: currentColor;
@@ -258,6 +258,59 @@ section.band-cta .btn:hover { background: var(--accent-hover); color: var(--whit
   font-size: 0.92rem;
 }
 .systems li { white-space: nowrap; }
+.systems-cloud {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin-top: 1.35rem;
+}
+.sys-group-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5a5a5a;
+  font-weight: 500;
+  margin: 0 0 0.55rem;
+}
+.sys-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.75rem;
+}
+.sys-mark {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+.sys-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0 0.65rem;
+  border: 1px solid #8a8a8a;
+  color: #5a5a5a;
+  font-size: 11px;
+  line-height: 1;
+  background: transparent;
+  letter-spacing: 0.01em;
+}
+.band-center {
+  text-align: center;
+}
+.band-center > * {
+  max-width: none;
+  width: 100%;
+}
+.band-quickstart h2 {
+  font-size: clamp(1.85rem, 3.4vw, 2.55rem);
+}
+.band-quickstart .lede {
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+}
+.band-center .hero-actions {
+  justify-content: center;
+}
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .step-num {
   font-family: var(--font-sans);
