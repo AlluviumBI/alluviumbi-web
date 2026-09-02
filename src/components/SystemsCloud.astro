@@ -1,0 +1,72 @@
+---
+type Mark =
+  | { kind: "img"; src: string; alt: string; width: number }
+  | { kind: "chip"; label: string };
+
+const groups: { label: string; items: Mark[] }[] = [
+  {
+    label: "ERP",
+    items: [
+      { kind: "img", src: "/systems/sap.svg", alt: "SAP", width: 62 },
+      { kind: "img", src: "/systems/oracle.svg", alt: "Oracle", width: 86 },
+      { kind: "img", src: "/systems/dynamics.svg", alt: "Dynamics", width: 104 },
+      { kind: "img", src: "/systems/infor.svg", alt: "Infor", width: 74 },
+      { kind: "img", src: "/systems/netsuite.svg", alt: "NetSuite", width: 100 },
+      { kind: "img", src: "/systems/sage.svg", alt: "Sage", width: 70 },
+      { kind: "img", src: "/systems/epicor.svg", alt: "Epicor", width: 88 },
+      { kind: "chip", label: "Karmak Fusion" },
+    ],
+  },
+  {
+    label: "CRM / HCM",
+    items: [
+      { kind: "img", src: "/systems/salesforce.svg", alt: "Salesforce", width: 112 },
+      { kind: "img", src: "/systems/hubspot.svg", alt: "HubSpot", width: 96 },
+      { kind: "img", src: "/systems/workday.svg", alt: "Workday", width: 96 },
+      { kind: "img", src: "/systems/adp.svg", alt: "ADP", width: 66 },
+      { kind: "chip", label: "ServiceNow" },
+    ],
+  },
+  {
+    label: "Data",
+    items: [
+      { kind: "img", src: "/systems/snowflake.svg", alt: "Snowflake", width: 108 },
+      { kind: "img", src: "/systems/bigquery.svg", alt: "BigQuery", width: 100 },
+      { kind: "img", src: "/systems/fabric.svg", alt: "Fabric", width: 82 },
+      { kind: "chip", label: "SQL Server" },
+      { kind: "chip", label: "Azure SQL" },
+      { kind: "img", src: "/systems/ssas.svg", alt: "SSAS", width: 72 },
+      { kind: "img", src: "/systems/db2.svg", alt: "Db2", width: 66 },
+      { kind: "img", src: "/systems/aws.svg", alt: "AWS", width: 68 },
+    ],
+  },
+  {
+    label: "Workplace",
+    items: [
+      { kind: "img", src: "/systems/excel.svg", alt: "Excel", width: 76 },
+      { kind: "chip", label: "SharePoint" },
+      { kind: "chip", label: "OneDrive" },
+      { kind: "chip", label: "QuickBooks" },
+      { kind: "img", src: "/systems/jira.svg", alt: "Jira", width: 68 },
+      { kind: "chip", label: "Google Analytics" },
+      { kind: "chip", label: "Adobe Analytics" },
+    ],
+  },
+];
+---
+<div class="systems-cloud">
+  {groups.map((g) => (
+    <div class="sys-group">
+      <p class="sys-group-label">{g.label}</p>
+      <div class="sys-row">
+        {g.items.map((item) =>
+          item.kind === "img" ? (
+            <img class="sys-mark" src={item.src} alt={item.alt} width={item.width} height="36" />
+          ) : (
+            <span class="sys-chip">{item.label}</span>
+          )
+        )}
+      </div>
+    </div>
+  ))}
+</div>

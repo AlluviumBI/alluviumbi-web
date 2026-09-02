@@ -1,43 +1,44 @@
----
 interface Props {
   name: string;
 }
 const { name } = Astro.props;
 const icons: Record<string, string> = {
-  finance: `<rect x="4" y="5" width="16" height="14" /><path d="M4 9h16M8 5v14M12 13h4M12 16h3" />`,
-  operations: `<rect x="4" y="4" width="7" height="7" /><rect x="13" y="4" width="7" height="7" /><rect x="4" y="13" width="7" height="7" /><rect x="13" y="13" width="7" height="7" />`,
-  sales: `<path d="M4 16l5-5 3 3 8-8" /><path d="M15 6h5v5" />`,
-  marketing: `<circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="4" /><circle cx="12" cy="12" r="1" />`,
-  it: `<rect x="5" y="4" width="14" height="10" /><path d="M9 14v3M15 14v3M8 20h8M12 17v3" />`,
-  project: `<path d="M5 6h14M5 12h10M5 18h12" /><circle cx="19" cy="6" r="1.2" /><circle cx="16" cy="12" r="1.2" /><circle cx="18" cy="18" r="1.2" />`,
-  strategy: `<circle cx="12" cy="12" r="8" /><path d="M12 4v3M12 17v3M4 12h3M17 12h3M12 12l4-2" />`,
-  dashboard: `<rect x="4" y="5" width="16" height="14" /><path d="M4 10h16M10 10v9" />`,
-  retainer: `<rect x="5" y="6" width="14" height="14" /><path d="M5 10h14M9 4v4M15 4v4M9 14h6" />`,
-  training: `<path d="M4 8l8-3 8 3-8 3-8-3z" /><path d="M7 10v5c0 1.5 2.2 3 5 3s5-1.5 5-3v-5" />`,
-  conversational: `<path d="M5 6h10v8H9l-4 3V6z" /><path d="M15 10h4v6l-3 2v-2h-1" />`,
-  workshop: `<circle cx="12" cy="12" r="8" /><path d="M12 8v5l3 2" />`,
-  connect: `<circle cx="6" cy="12" r="2.2" /><circle cx="18" cy="7" r="2.2" /><circle cx="18" cy="17" r="2.2" /><path d="M8 12h7M16.2 8.6l-7.2 2.8M16.2 15.4l-7.2-2.8" />`,
-  report: `<rect x="6" y="3" width="12" height="18" /><path d="M9 8h6M9 12h6M9 16h4" />`,
-  support: `<circle cx="12" cy="12" r="8" /><path d="M12 8v8M8 12h8" />`,
-  fee: `<path d="M7 7h10v10H7z" /><path d="M10 10h4M10 14h3" />`,
-  focus: `<path d="M12 4l7 8-7 8-7-8 7-8z" />`,
-  scale: `<rect x="4" y="12" width="6" height="8" /><rect x="11" y="8" width="5" height="12" /><rect x="17" y="4" width="4" height="16" />`,
-  expertise: `<circle cx="12" cy="12" r="8" /><path d="M8 12l2.5 2.5L16 9" />`,
-  client: `<circle cx="12" cy="8" r="3" /><path d="M5 19c1.5-3.5 4-5 7-5s5.5 1.5 7 5" />`,
-  time: `<circle cx="12" cy="12" r="8" /><path d="M12 7v5h4" />`,
-  decision: `<path d="M12 4v6M8 10h8" /><path d="M6 20l6-8 6 8" />`,
+  finance: `<rect x="4.5" y="3.75" width="15" height="16.5" rx="0.75"/><path d="M8 3.75v16.5"/><path d="M10.5 8h6M10.5 15h4.5"/><path d="M10.5 11.5h6" stroke="#397fb0"/>`,
+  operations: `<path d="M3.5 20.5V11.5l3.75 2.25V9.25l3.75 2.25V8h9.5v12.5H3.5z"/><path d="M7 20.5v-3.25h2.75V20.5M14.25 20.5v-3.25h2.75V20.5"/><path d="M16.75 8V4.75"/><path d="M16.75 4.75c1.15 0 2.1-.7 2.1-1.6" stroke="#397fb0"/>`,
+  sales: `<path d="M4.5 4.5h15l-4.25 7.25v5.25L12 19.25l-3.25-2.25v-5.25L4.5 4.5z"/><circle cx="12" cy="21" r="1.15" fill="#397fb0" stroke="none"/>`,
+  marketing: `<path d="M5.5 10.25v3.5"/><path d="M8 8.25c2.15 1.35 2.15 6.15 0 7.5"/><path d="M10.75 6.15c3.35 1.95 3.35 9.75 0 11.7" stroke="#397fb0"/><path d="M13.5 4.35c4.35 2.5 4.35 12.8 0 15.3"/>`,
+  it: `<rect x="3.75" y="5.5" width="16.5" height="9" rx="1.1"/><path d="M8 14.5v3.25H5.5M16 14.5v3.25h2.5"/><circle cx="12" cy="10" r="1.15" fill="#397fb0" stroke="none"/><path d="M8.5 10h1.75M13.75 10H15.5"/>`,
+  project: `<rect x="4.5" y="3.75" width="15" height="16.5" rx="1"/><path d="M8 9.1l1.25 1.25L12 7.7" stroke="#397fb0"/><path d="M13.25 9.15h3.75M8 13h8M8 16.35h6.5"/>`,
+  time: `<circle cx="12" cy="12" r="8"/><path d="M12 7.5v4.7"/><path d="M12 12.2l3.35 2.05" stroke="#397fb0"/>`,
+  training: `<circle cx="8.75" cy="8" r="2.45"/><path d="M4.25 18.75c.45-3.15 2.25-4.7 4.5-4.7s4.05 1.55 4.5 4.7"/><circle cx="16.1" cy="8.75" r="2.05" stroke="#397fb0"/><path d="M13.85 18.75c.35-2.35 1.7-3.65 3.4-3.65 1.75 0 3 1.25 3.4 3.65"/>`,
+  conversational: `<path d="M4 15.75h16M6.25 18.25h11.5M8.5 20.75h7"/><path d="M5.5 4h10a1 1 0 0 1 1 1v6.15l-3.35-2.05H5.5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" stroke="#397fb0"/>`,
+  strategy: `<circle cx="5" cy="17.25" r="1.65"/><path d="M6.45 16.2 10.15 10.6"/><circle cx="11.15" cy="9.5" r="1.65"/><path d="M12.6 8.7 16.15 5.85"/><circle cx="18" cy="5.35" r="1.75" stroke="#397fb0"/><path d="M4.5 20.5h15"/>`,
+  retainer: `<path d="M7.1 6.35A7 7 0 1 0 18.4 12"/><path d="M18.4 12l2.15-3.15M18.4 12l-3.35-.35" stroke="#397fb0"/>`,
+  dashboard: `<rect x="3.75" y="3.75" width="7.25" height="7.25" rx="0.6"/><rect x="13" y="3.75" width="7.25" height="7.25" rx="0.6" stroke="#397fb0"/><rect x="3.75" y="13" width="7.25" height="7.25" rx="0.6"/><rect x="13" y="13" width="7.25" height="7.25" rx="0.6"/>`,
+  workshop: `<rect x="4" y="5" width="16" height="15" rx="1.1"/><path d="M4 9.25h16"/><circle cx="12" cy="14.75" r="3"/><path d="M12 13.1v1.85h1.7" stroke="#397fb0"/>`,
+  connect: `<circle cx="6" cy="12" r="2.35"/><circle cx="18" cy="6.5" r="2.35"/><circle cx="18" cy="17.5" r="2.35" stroke="#397fb0"/><path d="M8.15 11.15 15.85 7.35M8.15 12.85 15.85 16.65"/>`,
+  report: `<path d="M7 3.5h7.25L18.5 8v12.5H7z"/><path d="M14.25 3.5V8H18.5"/><path d="M9.5 12h6M9.5 15.5h4.25" stroke="#397fb0"/>`,
+  support: `<circle cx="12" cy="12" r="8"/><path d="M12 8.25v7.5M8.25 12h7.5" stroke="#397fb0"/>`,
+  fee: `<path d="M12 3.6 20 8v8l-8 4.4L4 16V8z"/><path d="M10 12h4M12 9.6v4.8" stroke="#397fb0"/>`,
+  focus: `<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.6"/><circle cx="12" cy="12" r="1.15" fill="#397fb0" stroke="none"/>`,
+  scale: `<rect x="3.75" y="13.5" width="4.75" height="6.75" rx="0.4"/><rect x="9.6" y="9.5" width="4.75" height="10.75" rx="0.4"/><rect x="15.5" y="5.5" width="4.75" height="14.75" rx="0.4" stroke="#397fb0"/>`,
+  expertise: `<circle cx="12" cy="12" r="8"/><path d="M8 12.2l2.65 2.65L16.35 9.15" stroke="#397fb0"/>`,
+  client: `<circle cx="12" cy="8" r="3"/><path d="M5 19.35c1.2-3.5 3.55-5.1 7-5.1s5.8 1.6 7 5.1"/><circle cx="12" cy="8" r="1.05" fill="#397fb0" stroke="none"/>`,
+  decision: `<path d="M12 3.75v6.5"/><circle cx="12" cy="11.5" r="1.35"/><path d="M12 12.85 7 20"/><path d="M12 12.85 17 20" stroke="#397fb0"/>`,
 };
 const inner = icons[name] ?? icons.focus;
 ---
 <svg
   class="icon-line"
   viewBox="0 0 24 24"
+  width="30"
+  height="30"
   aria-hidden="true"
   focusable="false"
   fill="none"
   stroke="currentColor"
-  stroke-width="1.25"
-  stroke-linecap="square"
-  stroke-linejoin="miter"
+  stroke-width="1.85"
+  stroke-linecap="round"
+  stroke-linejoin="round"
   set:html={inner}
 />
