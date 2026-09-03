@@ -23,7 +23,7 @@ If you only retire, the hose is still on. If you only freeze publishing, questio
 
 The search is real: “too many dashboard requests,” “Power BI intake process.” People are not asking for a portal. They are asking how to stop saying yes to a page every time a VP is curious.
 
-[From dashboards to decisions](/blog/from-dashboards-to-decisions) is the strategy test: is this even a decision. This post is the operating rule after that test. Recurring questions hit the model. One-offs do not get a workspace.
+From dashboards to decisions is the strategy test: is this even a decision. This post is the operating rule after that test. Recurring questions hit the model. One-offs do not get a workspace.
 
 ## How a question becomes a file
 
@@ -71,7 +71,7 @@ Do not measure the BI team on tickets closed. Measure them on certified measures
 
 5. **Time-box one-offs and refuse to promote them by default.** A sandbox report can exist for a board cycle. Then it expires. Promotion to the app is a decision: recurring, signed, tied. [The first ninety days](/blog/first-90-days-of-a-power-bi-program) should prove this loop in one domain before you scale intake theater.
 
-6. **Review demand like a PMO, not like a help desk.** Rank against the P&L. Cut. Publish the no’s. Change leadership is part of the work: [data project management](https://www.alluviumbi.com/data-project-management-change-leadership). If the backlog is only pages, rewrite it as products. Strategy without a cut needs a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) that names decisions, not a longer wish list.
+6. **Review demand like a PMO, not like a help desk.** Rank against the P&L. Cut. Publish the no’s. Change leadership is part of the work: [data project management](https://www.alluviumbi.com/data-project-management-change-leadership). If the backlog is only pages, rewrite it as products. Strategy without a cut needs a [roadmap](/analytics-ai-strategy-roadmap) that names decisions, not a longer wish list.
 
 Start where the hose is worst. One VP. One standing meeting. Prove that questions can die as filters.
 

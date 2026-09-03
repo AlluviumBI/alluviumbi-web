@@ -55,7 +55,7 @@ You do not need a survey to see this. Open last month’s executive inbox. Count
 
 ## How to put Monday in the model
 
-1. **Write the standing list.** Ten questions, not forty. The ones that hit every ELT. Cash. Margin. Backlog. Inventory. Throughput. On-time. Whatever your cadence actually fights about. If you cannot name them, you do not have a strategy. You have a suggestion box. Start from [dashboards to decisions](/blog/from-dashboards-to-decisions).
+1. **Write the standing list.** Ten questions, not forty. The ones that hit every ELT. Cash. Margin. Backlog. Inventory. Throughput. On-time. Whatever your cadence actually fights about. If you cannot name them, you do not have a strategy. You have a suggestion box. Start from dashboards to decisions.
 
 2. **Turn each question into a measure contract.** Include, exclude, grain, as-of, owner. One sentence leadership can say. If two questions share a word and not a definition, split the names. The product is [the semantic model](/blog/semantic-model-is-the-product). The brochure can wait to be pretty.
 
@@ -65,7 +65,7 @@ You do not need a survey to see this. Open last month’s executive inbox. Count
 
 5. **Route true fire drills to a labeled path.** One-offs get a steward, a date they die, and a test: will this return? If it returns, it graduates to the standing list and the model. If it does not, it does not get a report. Intake still says no to a page per curiosity.
 
-6. **Review missed Mondays like incidents.** The extract that still happened is a product bug or an ownership gap. Fix the measure. Do not praise the hero. A [Quickstart](/power-bi-quickstart) can land the first standing loop. Keeping the list honest is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory). If the list is still “everything,” you need a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) before a microphone.
+6. **Review missed Mondays like incidents.** The extract that still happened is a product bug or an ownership gap. Fix the measure. Do not praise the hero. A [Quickstart](/power-bi-quickstart) can land the first standing loop. Keeping the list honest is [Managed Data & AI Advisory](/managed-advisory-retainer). If the list is still “everything,” you need a [roadmap](/analytics-ai-strategy-roadmap) before a microphone.
 
 Finance packs that never left the scavenger hunt are [finance reporting consulting](/blog/power-bi-for-finance-reporting-consulting). Monday cash has a diet: [cash, not charts](/blog/cash-not-charts-cfo-monday). Use those when the standing question is the close. This post is the rule for any function that repeats itself weekly.
 

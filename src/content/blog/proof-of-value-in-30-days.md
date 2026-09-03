@@ -57,7 +57,7 @@ Do not call a sandbox “production” to hit the date. A proof that cannot refr
 
 ## The thirty-day loop: one decision, one number, one meeting
 
-1. **Days 1–5: pick the meeting and the question.** Which Tuesday. Which number. Who sits in the chair. Who may freeze the definition. Write it down. If two questions are “equally urgent,” pick the one that already burns a hero every week: [questions that should never be ad-hoc](/blog/questions-that-should-never-be-adhoc). Strategy without a named decision is [dashboards without decisions](/blog/from-dashboards-to-decisions).
+1. **Days 1–5: pick the meeting and the question.** Which Tuesday. Which number. Who sits in the chair. Who may freeze the definition. Write it down. If two questions are “equally urgent,” pick the one that already burns a hero every week: [questions that should never be ad-hoc](/blog/questions-that-should-never-be-adhoc). Strategy without a named decision is dashboards without decisions.
 
 2. **Days 3–12: freeze grain and a short measure list.** Not forty KPIs. One to five sentences: include, exclude, grain, owner, as-of. [Unexplained measures are not KPIs](/blog/measures-nobody-can-explain). Connect sources that already exist. Do not rebuild the ERP. Do not open a second domain.
 
@@ -69,7 +69,7 @@ Do not call a sandbox “production” to hit the date. A proof that cannot refr
 
 6. **Days 25–30: write the proof, not the museum.** Did the meeting use it. Did the twin stay closed for that question. Is there a named owner. What would the *next* thirty days copy. If the answer is “we need a roadmap first,” you learned the truth. Do not fund a program to hide it. If the answer is yes, the quarter can start: that is the 90-day article, earned.
 
-A [Quickstart](/power-bi-quickstart) is this shape: one automated loop, not a brochure factory. Change work belongs in week one: [data project management and change leadership](https://www.alluviumbi.com/data-project-management-change-leadership). If nobody can name the decision, a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) is the proof you actually need—on paper, in days, not a 40-page stall.
+A [Quickstart](/power-bi-quickstart) is this shape: one automated loop, not a brochure factory. Change work belongs in week one: [data project management and change leadership](https://www.alluviumbi.com/data-project-management-change-leadership). If nobody can name the decision, a [roadmap](/analytics-ai-strategy-roadmap) is the proof you actually need—on paper, in days, not a 40-page stall.
 
 ## What good looks like on day thirty
 

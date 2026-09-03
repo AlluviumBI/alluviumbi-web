@@ -93,7 +93,7 @@ You do not need a two-year “future state.” You need a written choice and a f
 
 5. **Do not price-shop SKUs in the ELT.** Capacity and licensing belong in a finance-and-IT memo after the operating model is chosen. Executives should see cost as a consequence of ownership, not as a feature matrix. Invented list prices in a meeting are a distraction. Get current numbers from your Microsoft agreement, not from a blog.
 
-6. **Tie the choice to decisions, not demos.** What changes on Tuesday if this is one platform. Which three metrics move first. If the answer is “we will be modern,” you do not have a decision. You have a slogan. Strategy work still starts with [From Dashboards to Decisions](/blog/from-dashboards-to-decisions) and a [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap).
+6. **Tie the choice to decisions, not demos.** What changes on Tuesday if this is one platform. Which three metrics move first. If the answer is “we will be modern,” you do not have a decision. You have a slogan. Strategy work still starts with From Dashboards to Decisions and a [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap).
 
 ## What good looks like
 

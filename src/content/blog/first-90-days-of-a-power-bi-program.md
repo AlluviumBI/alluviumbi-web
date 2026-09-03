@@ -59,7 +59,7 @@ Do not wait for perfect source data. Pick a grain finance will sign with the dir
 
 ## The ninety-day plan: one model, one app, one owner
 
-1. **Days 1–15: pick the decision and name the three seats.** Which meeting. Which number. Controller or plant VP as consumer. Steward who can freeze grain. Operations owner for refresh. Write it down. If two domains are “equally urgent,” pick the one that already argues every Monday. Strategy without a named decision is [dashboards without decisions](/blog/from-dashboards-to-decisions).
+1. **Days 1–15: pick the decision and name the three seats.** Which meeting. Which number. Controller or plant VP as consumer. Steward who can freeze grain. Operations owner for refresh. Write it down. If two domains are “equally urgent,” pick the one that already argues every Monday. Strategy without a named decision is dashboards without decisions.
 
 2. **Days 1–30: freeze grain and a short measure list.** Revenue. Margin. Inventory. On-time. Whatever that meeting actually fights about. Not forty KPIs. A sentence per measure: include, exclude, grain, owner. [Unexplained measures are not KPIs](/blog/measures-nobody-can-explain). Connect sources that already exist. Do not rebuild the ERP.
 
