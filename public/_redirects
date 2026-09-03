@@ -5,6 +5,7 @@
 /privacy-policy                https://www.alluviumbi.com/privacy                          301!
 /blog/tag/*                    https://www.alluviumbi.com/blog                             301!
 /index.html                    https://www.alluviumbi.com/                                 301!
+/services/                     https://www.alluviumbi.com/services                         301!
 
 # Duplicate sitemap files: keep one canonical urlset at /sitemap.xml
 /sitemap-index.xml             https://www.alluviumbi.com/sitemap.xml                      301!
