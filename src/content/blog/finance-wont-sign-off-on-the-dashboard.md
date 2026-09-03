@@ -76,7 +76,7 @@ Do not treat a variance under a percent as “fine” without a named residual. 
 
 6. **Do not ask for a blanket blessing.** Ask for this measure, this entity, this grain, this as-of. Expand. A controller who signs a universe will regret it. A controller who signs a loop will use it. That is the same discipline as the [first ninety days](/blog/first-90-days-of-a-power-bi-program).
 
-Ongoing stewardship after the first signature is a product, not a project closeout. [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory) is for teams that cannot leave the model in a hero’s laptop.
+Ongoing stewardship after the first signature is a product, not a project closeout. [Managed Data & AI Advisory](/managed-advisory-retainer) is for teams that cannot leave the model in a hero’s laptop.
 
 ## What good looks like
 
