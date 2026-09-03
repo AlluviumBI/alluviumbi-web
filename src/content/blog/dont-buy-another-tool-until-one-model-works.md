@@ -67,7 +67,7 @@ Do not treat a departmental tool as a harmless sandbox when it publishes “offi
 
 Do not use “the team wants to learn X” as a capital request. Learning can happen on the certified model you already own.
 
-If you cannot name the decision the next tool is for, you need a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap), not a cart.
+If you cannot name the decision the next tool is for, you need a [roadmap](/analytics-ai-strategy-roadmap), not a cart.
 
 ## How to prove one loop before you shop
 
@@ -83,7 +83,7 @@ If you cannot name the decision the next tool is for, you need a [roadmap](https
 
 6. **Only then ask if the platform is the constraint.** If the loop works and the constraint is landing, scale, or a real shared data product across domains, you have a platform conversation. Have it. If the loop does not work, a new SKU will not invent it. Capacity and architecture come after evidence, not before.
 
-A bloated first model is cheaper to fix than a second estate: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). Ongoing ownership is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+A bloated first model is cheaper to fix than a second estate: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). Ongoing ownership is [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 ## What good looks like
 
