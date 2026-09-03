@@ -81,7 +81,7 @@ Do not treat source control as optional because “it’s just Power BI.” If y
 
 6. **Make “no” a normal answer.** Some requested edits are local stories that should never touch the company word. Say no and point to a cut or a named cousin measure. A gate that never closes is a hinge.
 
-A [Quickstart](/power-bi-quickstart) can freeze one domain’s write list. Ongoing stewardship is [managed advisory](https://www.alluviumbi.com/managed-data-ai-advisory). Copies and access without a steward remain [governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it).
+A [Quickstart](/power-bi-quickstart) can freeze one domain’s write list. Ongoing stewardship is [managed advisory](/managed-advisory-retainer). Copies and access without a steward remain [governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it).
 
 Start with the one word leadership already fights about. Lock who can change it. Publish how to ask. Then the next word.
 

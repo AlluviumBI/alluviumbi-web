@@ -75,11 +75,11 @@ No invented utilization math. If the chair still cannot say who owns the number,
 
 3. **Hire to keep the product.** Model owner. Refresh owner. Someone who can change a measure under control: [who can change a measure](/blog/who-can-change-a-measure). Job descriptions should say product, not “report factory.”
 
-4. **Keep partners on spikes and reviews.** Retirement wave. RLS. A nasty source. A quarterly challenge of the certified list. [Managed advisory](https://www.alluviumbi.com/managed-data-ai-advisory) is useful when it is a conscience and a backup, not a shadow staff. Change leadership is useful when the twin will not die: [data project management](https://www.alluviumbi.com/data-project-management-change-leadership).
+4. **Keep partners on spikes and reviews.** Retirement wave. RLS. A nasty source. A quarterly challenge of the certified list. [Managed advisory](/managed-advisory-retainer) is useful when it is a conscience and a backup, not a shadow staff. Change leadership is useful when the twin will not die: [data project management](https://www.alluviumbi.com/data-project-management-change-leadership).
 
 5. **Write the handoff as a deliverable.** Descriptions. Date table. Measure sentences. Refresh runbook. Who to call when the 7 a.m. job fails. If it is not written, you rented a hero.
 
-6. **Say no to help that requires a new stack to start.** If the first meeting needs a platform program, you are buying a slide. Prove one model on what you already license. A named decision still belongs in a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap)—not as a reason to staff both benches.
+6. **Say no to help that requires a new stack to start.** If the first meeting needs a platform program, you are buying a slide. Prove one model on what you already license. A named decision still belongs in a [roadmap](/analytics-ai-strategy-roadmap)—not as a reason to staff both benches.
 
 Internal is enough more often than a pitch admits. Help is enough more often than pride admits. The test is the loop.
 
