@@ -73,7 +73,7 @@ Do not staff steering as a substitute for a backlog. Monthly status cannot rank 
 
 6. **Time-box model changes. Bounce filters.** New grain, new source, new official KPI: short, visible items. “Add a region cut that already exists in the model”: not a ticket, not a backlog item. That split keeps the PMO from becoming the new IT wait.
 
-Start with one domain and one ranked list the CFO and COO will both honor. You do not need a handbook to stop the waiting room. You need a list that is the only list. If sequence and change are understaffed, that is [data project management and change leadership](https://www.alluviumbi.com/data-project-management-change-leadership). If you cannot name the products, map decisions first: [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap).
+Start with one domain and one ranked list the CFO and COO will both honor. You do not need a handbook to stop the waiting room. You need a list that is the only list. If sequence and change are understaffed, that is [data project management and change leadership](https://www.alluviumbi.com/data-project-management-change-leadership). If you cannot name the products, map decisions first: [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap).
 
 ## What good looks like
 

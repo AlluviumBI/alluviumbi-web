@@ -65,7 +65,7 @@ Do not average the shift away to make the model smaller. Capacity is a real cons
 
 Do not wait for a MES replacement to give ops a row they already have in a historian or a time file. Many mid-market plants can model shift and line from what already lands in SQL or a flat extract. Perfect MES is how the huddle stays on paper.
 
-If you cannot name the three decisions the shift review must make, you will model the universe. Start with the standup. Strategy exists: [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). The floor needs a product, not a tour.
+If you cannot name the three decisions the shift review must make, you will model the universe. Start with the standup. Strategy exists: [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). The floor needs a product, not a tour.
 
 ## How to fix it
 
