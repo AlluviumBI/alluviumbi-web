@@ -2,7 +2,7 @@
 
 Static site for Alluvium — strategic Power BI and practical AI advisory.
 
-Canonical origin in metadata: `https://alluviumbi.com`. This repo is a preview build.
+Canonical origin in metadata: `https://www.alluviumbi.com`. Homepage canonical is `https://www.alluviumbi.com/`.
 
 **WARNING: Do not attach a custom domain without explicit approval.** Do not change production DNS.
 
