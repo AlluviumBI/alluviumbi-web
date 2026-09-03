@@ -77,7 +77,7 @@ You do not need a promised dollar savings from a software brochure. You need one
 
 6. **Connect the cash pack. Do not paste it.** The working-capital slide in the board file can stay in Excel. Point it at the model. If someone still copies last week’s warehouse export, that is a process break.
 
-If the model is slow because it is a transaction dump, tune it: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). If you cannot say which inventory decisions the ELT actually runs, use the [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). Ownership of measures and refresh sits in [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory). Copies and access without a steward are [governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it).
+If the model is slow because it is a transaction dump, tune it: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). If you cannot say which inventory decisions the ELT actually runs, use the [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). Ownership of measures and refresh sits in [Managed Data & AI Advisory](/managed-advisory-retainer). Copies and access without a steward are [governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it).
 
 ## What “current” means for working capital
 

@@ -77,7 +77,7 @@ Do not measure success by reports deleted in a week. Measure by refresh jobs gon
 
 6. **Log the funeral and watch for resurrection.** What died, what replaced it, date, owner. Review at 30 and 90 days. A copy with a new name is intake failure. Send it through [the commissioning rule](/blog/stop-commissioning-a-dashboard-per-question). The ritual is what you do *this week* to one file.
 
-Change leadership is the job: [data project management](https://www.alluviumbi.com/data-project-management-change-leadership). If nobody can say which decisions the estate serves, you need a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) before a mass grave. Start with one domain. Prove a quiet sunset.
+Change leadership is the job: [data project management](https://www.alluviumbi.com/data-project-management-change-leadership). If nobody can say which decisions the estate serves, you need a [roadmap](/analytics-ai-strategy-roadmap) before a mass grave. Start with one domain. Prove a quiet sunset.
 
 ## What good looks like
 
