@@ -65,7 +65,7 @@ Do not let “the reports are slow” be the only ticket. Slow is a symptom. Gra
 
 5. **Put refresh on the same board as the P&L pack.** A pool that fails at 6 a.m. is [close risk](/blog/refresh-failures-are-a-close-risk), not a capacity curiosity. Operations ownership sits next to the steward. Uptime of the wrong model is not a win.
 
-6. **Review at renewal like a factory, not a catalog.** What decisions did the app serve. Which datasets died. Which refresh jobs still exist because nobody said no. Strategy alignment is the [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap), not the order form. Ongoing model ownership is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+6. **Review at renewal like a factory, not a catalog.** What decisions did the app serve. Which datasets died. Which refresh jobs still exist because nobody said no. Strategy alignment is the [roadmap](/analytics-ai-strategy-roadmap), not the order form. Ongoing model ownership is [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 ## What a sane capacity picture looks like
 

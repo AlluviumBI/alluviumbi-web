@@ -75,7 +75,7 @@ RACI that lives in a slide and not in the workspace description is folklore. Put
 
 If the reason you have no owner is that nobody can rank the work, that is a delivery and PMO gap. Use a single backlog and a cut: [analytics programs fail in delivery](/blog/analytics-programs-fail-in-delivery). Hands-on sequencing is [data project management and change leadership](https://www.alluviumbi.com/data-project-management-change-leadership).
 
-If the reason is strategy fog—no decisions, only dashboards—start upstream: [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap).
+If the reason is strategy fog—no decisions, only dashboards—start upstream: [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap).
 
 ## What this is not
 
