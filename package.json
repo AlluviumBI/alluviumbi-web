@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/write-og.mjs && astro build",
     "preview": "astro preview"
   },
   "dependencies": {

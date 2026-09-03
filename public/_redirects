@@ -1,15 +1,14 @@
-# Squarespace path aliases (force 301 wins even if a page exists)
-/home                          /                                 301!
-/-data-ai-strategy-roadmap     /analytics-ai-strategy-roadmap    301!
-/managed-data-ai-advisory      /managed-advisory-retainer        301!
-/privacy-policy                /privacy                          301!
-/blog/tag/*                    /blog                             301!
+# Squarespace path aliases — one hop to www no-slash final URL
+/home                          https://www.alluviumbi.com/                                 301!
+/-data-ai-strategy-roadmap     https://www.alluviumbi.com/analytics-ai-strategy-roadmap    301!
+/managed-data-ai-advisory      https://www.alluviumbi.com/managed-advisory-retainer        301!
+/privacy-policy                https://www.alluviumbi.com/privacy                          301!
+/blog/tag/*                    https://www.alluviumbi.com/blog                             301!
+/index.html                    https://www.alluviumbi.com/                                 301!
 
-# Sitemap: Astro emits sitemap-0.xml + sitemap-index.xml (no sitemap.xml).
-# Netlify Pretty URLs 500s on *-index.xml; serve the urlset at both paths.
-# Force (200!) so rewrite applies even when sitemap.xml is absent from dist.
-/sitemap.xml                   /sitemap-0.xml                    200!
-/sitemap-index.xml             /sitemap-0.xml                    200!
+# Duplicate sitemap files: keep one canonical urlset at /sitemap.xml
+/sitemap-index.xml             https://www.alluviumbi.com/sitemap.xml                      301!
+/sitemap-0.xml                 https://www.alluviumbi.com/sitemap.xml                      301!
 
 # HTTP → HTTPS, preserve host. Do not pick apex vs www (Netlify Primary domain).
 http://alluviumbi.com/*        https://alluviumbi.com/:splat     301!
