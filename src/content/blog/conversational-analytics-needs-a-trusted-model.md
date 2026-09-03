@@ -69,7 +69,7 @@ Fund Excel as a consumer of the same product when the answer must become a state
 
 Do not fund a second semantic layer because the first is embarrassing. Make the first one true.
 
-If you cannot name the decisions the questions serve, you will chat about everything and govern nothing. That is a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) conversation.
+If you cannot name the decisions the questions serve, you will chat about everything and govern nothing. That is a [roadmap](/analytics-ai-strategy-roadmap) conversation.
 
 ## How to fix it
 
@@ -83,7 +83,7 @@ If you cannot name the decisions the questions serve, you will chat about everyt
 
 5. **Review missed and wrong answers like incidents.** Weekly, for a while. Wrong answers are model bugs or policy gaps. Treat them that way. Do not train users to “prompt better” around a broken definition.
 
-6. **Prove it on one domain.** One certified model. Ten questions. Two weeks of leadership use. If the answers match the brochure and the pack, you earned a wider audience. If they do not, stop the experiment. A [Quickstart](/power-bi-quickstart) can still be the first automated report—on the model you intend to ask. Tuning the report is [optimization](/power-bi-dashboard-optimization-ai-insights). Keeping the product honest over time is [advisory](/managed-data-ai-advisory).
+6. **Prove it on one domain.** One certified model. Ten questions. Two weeks of leadership use. If the answers match the brochure and the pack, you earned a wider audience. If they do not, stop the experiment. A [Quickstart](/power-bi-quickstart) can still be the first automated report—on the model you intend to ask. Tuning the report is [optimization](/power-bi-dashboard-optimization-ai-insights). Keeping the product honest over time is [advisory](/managed-advisory-retainer).
 
 Sprawl makes this harder. Fifty reports, fifty places a language layer might look. Inventory, certify, retire before you add a microphone. That tax is [dashboard sprawl](/blog/dashboard-sprawl-is-a-tax). Governance still sits underneath: [hidden costs of poor Power BI governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it).
 
