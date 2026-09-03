@@ -77,7 +77,7 @@ Do not treat display format as definition. Two decimals and a % sign do not tell
 
 Do not start a DAX rewrite to avoid the conversation. A cleaner formula on an unsigned definition is still unsigned.
 
-If you cannot name the decisions the KPIs serve, you will define everything and own nothing. That is a [strategy roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) conversation, not a measure sprint.
+If you cannot name the decisions the KPIs serve, you will define everything and own nothing. That is a [strategy roadmap](/analytics-ai-strategy-roadmap) conversation, not a measure sprint.
 
 ## How to fix it
 

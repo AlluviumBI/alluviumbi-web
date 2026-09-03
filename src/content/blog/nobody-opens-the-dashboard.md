@@ -60,7 +60,7 @@ You do not need a percentage from a vendor blog to act. Open activity. If the me
 
 Start with the meeting, not the LMS.
 
-1. **Name the decision and the owner.** Which Tuesday question does this page answer? Who is allowed to change the measure? If you cannot name both, do not train anyone. Retire or rebuild. Roadmap work that is still fuzzy belongs in a [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap).
+1. **Name the decision and the owner.** Which Tuesday question does this page answer? Who is allowed to change the measure? If you cannot name both, do not train anyone. Retire or rebuild. Roadmap work that is still fuzzy belongs in a [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap).
 
 2. **Match grain to the job.** ELT: few measures, stamped as-of, exceptions. Managers: the cut they actually filter. Do not ship one page for every role. Wrong grain is the most common “it’s impressive, I don’t know what it’s telling me.”
 
@@ -72,7 +72,7 @@ Start with the meeting, not the LMS.
 
 6. **Sunset what nobody opens.** Activity logs are enough. Archive the museum. A smaller app of reports that get used beats a portal of leftovers. Stewardship and sunsetting sit in [governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it)—do the retirement on the pages that already lost Tuesday.
 
-Ongoing ownership of the surviving model is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory). Finance packs that never left the scavenger hunt are [finance reporting consulting](/blog/power-bi-for-finance-reporting-consulting).
+Ongoing ownership of the surviving model is [Managed Data & AI Advisory](/managed-advisory-retainer). Finance packs that never left the scavenger hunt are [finance reporting consulting](/blog/power-bi-for-finance-reporting-consulting).
 
 ## What good adoption looks like
 
