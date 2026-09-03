@@ -63,7 +63,7 @@ It is not a ban on local models. Local models are for local questions: a campaig
 
 It is not “everyone in one workspace.” Workspaces can still match teams. The dataset should not.
 
-If you cannot name the domains, you will either freeze publishing or bless every clone. That is a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) conversation before it is a capacity SKU.
+If you cannot name the domains, you will either freeze publishing or bless every clone. That is a [roadmap](/analytics-ai-strategy-roadmap) conversation before it is a capacity SKU.
 
 ## How to fix it
 
@@ -79,7 +79,7 @@ If you cannot name the domains, you will either freeze publishing or bless every
 
 6. **Retire on a date, with a redirect.** After the shared product answers the meeting, turn off the team ledgers that were pretending to be company actuals. Keep a sandbox if they still need to explore. Do not keep a shadow GL. A [Power BI Quickstart](/power-bi-quickstart) can collapse two revenues onto one product for one meeting—then you earn the next domain.
 
-Day-to-day stewardship of the kernel is closer to [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory) than to another workspace template.
+Day-to-day stewardship of the kernel is closer to [Managed Data & AI Advisory](/managed-advisory-retainer) than to another workspace template.
 
 ## What good looks like
 
