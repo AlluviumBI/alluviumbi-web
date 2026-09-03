@@ -77,7 +77,7 @@ Do not treat certified as “we like this author.” The contract is the number.
 
 5. **Demote in public.** When a certified product no longer meets the bar, pull the badge and say where people should go instead. Ghosts with ribbons are how five Revenues return while the catalog still looks clean.
 
-6. **Make promotion a backlog item, not a favor.** The path is a request with a date, owned like any other product change. Fast enough that people will use it. Slow enough that the sentence gets written. A [Quickstart](/power-bi-quickstart) can get one domain over the bar. Ongoing stewardship is [managed advisory](https://www.alluviumbi.com/managed-data-ai-advisory) if you do not have the bench.
+6. **Make promotion a backlog item, not a favor.** The path is a request with a date, owned like any other product change. Fast enough that people will use it. Slow enough that the sentence gets written. A [Quickstart](/power-bi-quickstart) can get one domain over the bar. Ongoing stewardship is [managed advisory](/managed-advisory-retainer) if you do not have the bench.
 
 Start with one word leadership already fights about. Promote one product. Lid on the cousins. Then the next word.
 
