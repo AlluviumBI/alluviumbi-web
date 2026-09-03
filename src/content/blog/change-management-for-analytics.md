@@ -23,7 +23,7 @@ Awareness does not move a close. Operators change when the new path is faster th
 
 This is not [why nobody opens the dashboard](/blog/nobody-opens-the-dashboard). That piece is the product: grain, speed, trust. This piece is the operating change: who stops, who owns, what the default is on Monday. Delivery without that change ships a museum. We already said programs stall on scope and owners in [analytics programs fail in delivery](/blog/analytics-programs-fail-in-delivery). Here the stall is after the ship: the work still lives in the twin.
 
-Hands-on sequence and adoption is the job Alluvium scopes as [data project management and change leadership](https://www.alluviumbi.com/data-project-management-change-leadership). Strategy still matters. If the report is not tied to a decision, no amount of coaching will make it a habit. That is [from dashboards to decisions](/blog/from-dashboards-to-decisions). Do not confuse a decision map with a training plan.
+Hands-on sequence and adoption is the job Alluvium scopes as [data project management and change leadership](https://www.alluviumbi.com/data-project-management-change-leadership). Strategy still matters. If the report is not tied to a decision, no amount of coaching will make it a habit. That is from dashboards to decisions. Do not confuse a decision map with a training plan.
 
 ## What practical change actually is
 
