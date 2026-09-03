@@ -29,11 +29,12 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": SITE.url + path,
     headline: post.data.title,
     description: post.data.description,
     datePublished: post.data.pubDate.toISOString(),
-    author: { "@type": "Organization", name: "Alluvium", url: SITE.url },
-    publisher: { "@type": "Organization", name: "Alluvium", url: SITE.url },
+    author: { "@type": "Organization", "@id": SITE.url, name: "Alluvium", url: SITE.url },
+    publisher: { "@type": "Organization", "@id": SITE.url, name: "Alluvium", url: SITE.url },
     mainEntityOfPage: SITE.url + path,
   },
 ];

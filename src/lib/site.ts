@@ -1,12 +1,19 @@
 export const SITE = {
   name: "Alluvium",
-  url: "https://alluviumbi.com",
+  url: "https://www.alluviumbi.com",
   title: "Power BI consulting for mid-market | Alluvium",
   description:
     "Power BI consulting for mid-sized companies: semantic models, dashboard optimization, and trusted numbers in the meeting. Book a Session.",
   locale: "en_US",
   region: "United States",
 } as const;
+
+/** Absolute www URL. Homepage keeps a trailing slash; all other paths have none. */
+export function absUrl(path: string): string {
+  if (!path || path === "/") return SITE.url + "/";
+  const p = path.startsWith("/") ? path : "/" + path;
+  return SITE.url + p.replace(/\/+$/, "");
+}
 
 /** Unique <title>: primary query | Alluvium. Hard max 60 characters. */
 export function pageTitle(query: string): string {
@@ -127,7 +134,7 @@ export const RELATED: Record<
     ],
     posts: [
       { href: "/blog/conversational-analytics-needs-a-trusted-model", label: "Conversational analytics needs a trusted model" },
-      { href: "/blog/ask-the-model-dont-screenshot", label: "Ask the model, don’t screenshot" },
+      { href: "/blog/ask-the-model-dont-screenshot", label: "Ask the model, don\u2019t screenshot" },
       { href: "/blog/semantic-model-is-the-product", label: "The semantic model is the product" },
     ],
   },

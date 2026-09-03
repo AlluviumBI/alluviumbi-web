@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE } from "../lib/site";
+import { SITE, absUrl } from "../lib/site";
 
 const {
   title,
@@ -12,14 +12,15 @@ const {
   jsonLd,
   publishedTime,
   crumbs,
+  robots: robotsOverride,
 } = Astro.props;
 
-const canonicalClean = canonicalPath === "/" ? SITE.url + "/" : `${SITE.url}${canonicalPath}`;
+const canonicalClean = absUrl(canonicalPath ?? "/");
 const ogImage = `${SITE.url}/og.png`;
 const blocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const deployUrl = process.env.URL || process.env.DEPLOY_PRIME_URL || "";
 const isNetlifyApp = /netlify\.app/.test(deployUrl);
-const robots = isNetlifyApp ? "noindex, nofollow" : "index, follow";
+const robots = robotsOverride ?? (isNetlifyApp ? "noindex, nofollow" : "index, follow");
 ---
 <!doctype html>
 <html lang="en">
