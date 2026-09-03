@@ -77,7 +77,7 @@ Do this as a pass, then keep it as hygiene. Funerals still use the ritual. The p
 
 6. **Close the hose.** Cleanup without intake is a season. Stop commissioning a page per question. Standing executive asks go into the model: [questions that should never be ad-hoc](/blog/questions-that-should-never-be-adhoc). Review usage monthly like incidents. A copy with a new name is a resurrection. Send it through commissioning, not through nostalgia.
 
-Change leadership is how the live door becomes default: [data project management](https://www.alluviumbi.com/data-project-management-change-leadership). If nobody can say which decisions the estate serves, you need a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) before a purge. A [Quickstart](/power-bi-quickstart) can still be the one live loop you point at while the attic darkens. Ongoing conscience is [managed advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+Change leadership is how the live door becomes default: [data project management](https://www.alluviumbi.com/data-project-management-change-leadership). If nobody can say which decisions the estate serves, you need a [roadmap](/analytics-ai-strategy-roadmap) before a purge. A [Quickstart](/power-bi-quickstart) can still be the one live loop you point at while the attic darkens. Ongoing conscience is [managed advisory](/managed-advisory-retainer).
 
 ## What good looks like
 

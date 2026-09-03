@@ -58,7 +58,7 @@ Value concentrates. It does not spread with every new author.
 
 5. **Match SKU to sharing, not to hope.** If you cannot share a report, you may be missing the right seat type for *viewers*—or you may have no report worth sharing. Those are different. Do not solve “nobody cares” with a higher SKU. Do not solve “we cannot share the one good report” by handing Pro to the whole company if a viewer path exists for that app.
 
-6. **Review at renewal like a product, not a count.** What decisions did the app serve? Which reports die? Which seats go back? Sunsetting content is governance. Sunsetting seats is hygiene. A program that still cannot name its decision metrics needs a [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap), not another order form. Ongoing model ownership is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+6. **Review at renewal like a product, not a count.** What decisions did the app serve? Which reports die? Which seats go back? Sunsetting content is governance. Sunsetting seats is hygiene. A program that still cannot name its decision metrics needs a [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap), not another order form. Ongoing model ownership is [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 Finance teams that never left the scavenger hunt will not use seats well until the pack is connected: [finance reporting consulting](/blog/power-bi-for-finance-reporting-consulting). Strategy that was “buy licenses, then figure it out” is [strategy alignment](/blog/power-bi-strategy-alignment).
 
