@@ -93,7 +93,7 @@ When the pack is late, you know which of the three clocks broke: freeze, narrati
 
 Governance still matters. Access to the pre-read. Who can change a measure after freeze. Sunset of last year’s pack files sitting in a workspace. That is the operating system in [Power BI governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it). Timing is the SLA you put on top.
 
-If you cannot say which decisions the pack exists to support, you will keep adding tabs. That is a roadmap problem: [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap).
+If you cannot say which decisions the pack exists to support, you will keep adding tabs. That is a roadmap problem: [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap).
 
 ## Get started
 
