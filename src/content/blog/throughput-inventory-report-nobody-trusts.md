@@ -63,7 +63,7 @@ Do not wait for a MES replacement. ERP already knows receipts, issues, and confi
 
 Do not shame ops for units or finance for dollars. They are doing their jobs. The model failed both without lying.
 
-If you cannot name the constraint and the inventory decision the ELT actually runs, you will keep painting a plant mural. Strategy exists: [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). This post needs two products, not a tour.
+If you cannot name the constraint and the inventory decision the ELT actually runs, you will keep painting a plant mural. Strategy exists: [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). This post needs two products, not a tour.
 
 ## How to show both without mixing them
 
@@ -79,7 +79,7 @@ If you cannot name the constraint and the inventory decision the ELT actually ru
 
 6. **Give each meeting one primary board.** Stand-up runs throughput. Cash or S&OP runs inventory. The product is shared: [the model is the product](/blog/semantic-model-is-the-product). Brochures are role-specific. If leadership still wants one slide, connect Excel and keep the two numbers labeled.
 
-If the model is a dump, tune it: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). Measure ownership sits in [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+If the model is a dump, tune it: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). Measure ownership sits in [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 ## What good looks like
 

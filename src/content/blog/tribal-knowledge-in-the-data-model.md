@@ -61,7 +61,7 @@ Do not “document later” after go-live. Later is how tribal hardens. Descript
 
 Do not keep credentials and gateway ownership on a personal account because it was faster. Faster is how vacation becomes an incident.
 
-Do not replace the person with a second hero. Two heads is still not a product. If you cannot name who inherits the model, you need a [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) before more pages.
+Do not replace the person with a second hero. Two heads is still not a product. If you cannot name who inherits the model, you need a [roadmap](/analytics-ai-strategy-roadmap) before more pages.
 
 ## How to get the model out of someone’s head
 
@@ -71,7 +71,7 @@ Do not replace the person with a second hero. Two heads is still not a product. 
 
 3. **Move hidden filters into named measures or dimension members.** If plant 00 is always out, that is a definition, not a page trick. If returns are out of throughput, the measure says so. Page-level folklore is how twins disagree. The filter must live where a successor will look.
 
-4. **Name a steward and a deputy on the workspace.** Not a distribution list. Two roles who can change relationships and publish. Document who owns refresh credentials and the gateway. Alerts follow the role. [Managed advisory](https://www.alluviumbi.com/managed-data-ai-advisory) exists for when that seat is empty. A single admin is a risk register item, not a compliment.
+4. **Name a steward and a deputy on the workspace.** Not a distribution list. Two roles who can change relationships and publish. Document who owns refresh credentials and the gateway. Alerts follow the role. [Managed advisory](/managed-advisory-retainer) exists for when that seat is empty. A single admin is a risk register item, not a compliment.
 
 5. **Ship a one-page map with the product.** Sources, grain, date rules, RLS in a paragraph, relationship gotchas, where the glossary lives. Store it next to the model. Update it the day grain changes.
 
