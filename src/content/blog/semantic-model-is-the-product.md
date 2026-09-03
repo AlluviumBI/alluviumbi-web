@@ -72,7 +72,7 @@ Do not fund a visual redesign as a substitute for grain. Pretty does not fix a f
 
 Do not fund a platform tour because the model is embarrassing. If one model does not work, another logo will not.
 
-If you cannot name the three decisions the model must serve, start with strategy, not a new canvas. The [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) is for that conversation. Day-to-day ownership of the product is closer to [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+If you cannot name the three decisions the model must serve, start with strategy, not a new canvas. The [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap) is for that conversation. Day-to-day ownership of the product is closer to [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 ## How to fix it
 

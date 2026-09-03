@@ -73,7 +73,7 @@ Do not certify a report that sits on a forked model. A pretty page on a twin is 
 
 5. **Name the promotion path in one page.** How a useful cut becomes a certified measure. Who signs. How the old local file dies. If promotion is a six-month committee, explorers will keep shipping twins into the ELT channel.
 
-6. **Watch for twins, not just unused reports.** Usage logs catch museums. Definition drift needs a catalog of measure names across datasets. Two measures named Revenue is the smell. A [Quickstart](/power-bi-quickstart) can put one domain on a kernel. Stewardship is [managed advisory](https://www.alluviumbi.com/managed-data-ai-advisory) if you do not have the bench.
+6. **Watch for twins, not just unused reports.** Usage logs catch museums. Definition drift needs a catalog of measure names across datasets. Two measures named Revenue is the smell. A [Quickstart](/power-bi-quickstart) can put one domain on a kernel. Stewardship is [managed advisory](/managed-advisory-retainer) if you do not have the bench.
 
 Start with one word leadership already fights about. Put explore on that kernel. Ban the local twin. Then the next word.
 
