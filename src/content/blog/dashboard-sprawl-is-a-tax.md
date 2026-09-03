@@ -65,7 +65,7 @@ Do not recertify everything. Most of the estate is working paper. Treat it that 
 
 Do not buy a new layer of tooling so you can keep every page. Inventory first. Then certify a few. Then turn the rest off.
 
-If the program has no decisions attached to it, that is strategy, not a workspace setting. See the [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). If the files you keep are slow, that is a different job: [dashboard optimization](/power-bi-dashboard-optimization-ai-insights).
+If the program has no decisions attached to it, that is strategy, not a workspace setting. See the [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). If the files you keep are slow, that is a different job: [dashboard optimization](/power-bi-dashboard-optimization-ai-insights).
 
 ## How to fix it: inventory, certify, retire
 
