@@ -22,3 +22,17 @@ if (b64) {
 } else {
   console.warn('no og.png source; public/og.png not written');
 }
+
+const heroesDir = path.join(root, 'scripts', 'heroes');
+if (fs.existsSync(heroesDir)) {
+  const blogDir = path.join(root, 'public', 'blog');
+  fs.mkdirSync(blogDir, { recursive: true });
+  for (const name of fs.readdirSync(heroesDir)) {
+    if (!name.endsWith('.jpg.b64')) continue;
+    const outName = name.slice(0, -'.b64'.length);
+    const outPath = path.join(blogDir, outName);
+    const heroB64 = fs.readFileSync(path.join(heroesDir, name), 'utf8').trim();
+    fs.writeFileSync(outPath, Buffer.from(heroB64, 'base64'));
+    console.log('wrote', outPath, fs.statSync(outPath).size);
+  }
+}
