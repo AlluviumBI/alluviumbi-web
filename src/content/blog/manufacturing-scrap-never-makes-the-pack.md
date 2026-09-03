@@ -65,7 +65,7 @@ Keep grain honest: scrap quantity and cost, first-pass with a signed sentence, a
 
 6. **Connect the pack. Do not paste the clipboard.** The yield slide can stay formatted in Excel if it must. Point it at the model. If someone still types last week’s scrap from a printout, that is a process break, not a tooling gap.
 
-If the model is a transaction dump, tune it: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). Ownership of the measure and the refresh sits in [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory). Copies of quality files without a steward are [governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it).
+If the model is a transaction dump, tune it: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). Ownership of the measure and the refresh sits in [Managed Data & AI Advisory](/managed-advisory-retainer). Copies of quality files without a steward are [governance](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it).
 
 ## What good looks like
 

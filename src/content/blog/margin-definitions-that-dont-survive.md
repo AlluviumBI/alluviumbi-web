@@ -77,7 +77,7 @@ Do not dump the formula in a tooltip. The room needs English names. Do not let â
 
 6. **Retire the unlabeled tile and the paste.** When the three names exist in the app, turn off `Margin`. Stop pasting a fourth into the pack. If someone needs a customer cut, they filter contribution (or gross)â€”they do not mint a file. Excel can still format the statement. It should pull the named measure, not a private bag.
 
-A [Power BI Quickstart](/power-bi-quickstart) can stand up the three names on actuals finance already trusts. Sign-off is [managed advisory](https://www.alluviumbi.com/managed-data-ai-advisory) if the bench is thin. Making the pack *use* the names is [change leadership](https://www.alluviumbi.com/data-project-management-change-leadership). Start in one close cycle. Then the next argument is the business, not the dictionary.
+A [Power BI Quickstart](/power-bi-quickstart) can stand up the three names on actuals finance already trusts. Sign-off is [managed advisory](/managed-advisory-retainer) if the bench is thin. Making the pack *use* the names is [change leadership](https://www.alluviumbi.com/data-project-management-change-leadership). Start in one close cycle. Then the next argument is the business, not the dictionary.
 
 ## What good looks like
 
