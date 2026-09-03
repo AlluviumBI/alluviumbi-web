@@ -34,7 +34,12 @@ if (fs.existsSync(heroesDir)) {
     const outName = name.slice(0, -'.b64'.length);
     const outPath = path.join(blogDir, outName);
     const heroB64 = fs.readFileSync(path.join(heroesDir, name), 'utf8').trim();
-    fs.writeFileSync(outPath, Buffer.from(heroB64, 'base64'));
+    const buf = Buffer.from(heroB64, 'base64');
+    if (buf.length < 3 || buf[0] !== 0xff || buf[1] !== 0xd8) {
+      console.warn('skip invalid whole sidecar', name);
+      continue;
+    }
+    fs.writeFileSync(outPath, buf);
     console.log('wrote', outPath, fs.statSync(outPath).size);
     done.add(outName);
   }
@@ -50,12 +55,24 @@ if (fs.existsSync(heroesDir)) {
   }
   for (const [outName, parts] of groups) {
     parts.sort((a, b) => a[0] - b[0]);
+    if (!parts.length || parts[0][0] !== 0) continue;
+    let consecutive = true;
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i][0] !== i) { consecutive = false; break; }
+    }
+    if (!consecutive) continue;
     let heroB64 = '';
     for (const [, name] of parts) {
       heroB64 += fs.readFileSync(path.join(heroesDir, name), 'utf8').trim();
     }
+    const buf = Buffer.from(heroB64, 'base64');
+    if (buf.length < 3 || buf[0] !== 0xff || buf[1] !== 0xd8) continue;
+    if (buf[buf.length - 2] !== 0xff || buf[buf.length - 1] !== 0xd9) {
+      console.warn('skip incomplete JPEG parts', outName, parts.length);
+      continue;
+    }
     const outPath = path.join(blogDir, outName);
-    fs.writeFileSync(outPath, Buffer.from(heroB64, 'base64'));
+    fs.writeFileSync(outPath, buf);
     console.log('wrote', outPath, fs.statSync(outPath).size);
   }
 }
