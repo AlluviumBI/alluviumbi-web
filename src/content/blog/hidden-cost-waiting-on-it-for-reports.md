@@ -77,7 +77,7 @@ You do not need a steering committee named Center of Excellence. You need a boun
 
 6. **Retire the shadow path on purpose.** When a cut is available in the app, stop fulfilling it by email. If people keep exporting, ask whether the grain is wrong, the refresh is late, or the access is still too tight. Then fix that. Do not add another report.
 
-If you cannot tell a decision metric from a departmental curiosity, map it in a [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). Getting the change to stick is [Data Project Management & Change Leadership](https://www.alluviumbi.com/data-project-management-change-leadership). Ongoing measure ownership is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+If you cannot tell a decision metric from a departmental curiosity, map it in a [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). Getting the change to stick is [Data Project Management & Change Leadership](https://www.alluviumbi.com/data-project-management-change-leadership). Ongoing measure ownership is [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 ## What good self-service feels like
 

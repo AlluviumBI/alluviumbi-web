@@ -65,7 +65,7 @@ A tie needs one calendar, one freeze, a mapping in the model, and either one sen
 
 6. **Review the miss at the grain you planned.** If you planned at product group, do not punish a SKU surprise as if it were a forecast error. Exception lists for ELT; grain for the owner of the plan. Wrong grain is how nobody uses the page: [nobody opens the dashboard](/blog/nobody-opens-the-dashboard).
 
-If you cannot say which plan the ELT actually runs, use the [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). Ownership of measures and the landing path sits in [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory). A [Quickstart](/power-bi-quickstart) can land one domain’s plan next to actuals without boiling the full planning stack.
+If you cannot say which plan the ELT actually runs, use the [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). Ownership of measures and the landing path sits in [Managed Data & AI Advisory](/managed-advisory-retainer). A [Quickstart](/power-bi-quickstart) can land one domain’s plan next to actuals without boiling the full planning stack.
 
 ## What good looks like
 
