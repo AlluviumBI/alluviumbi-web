@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alluviumbi.com/sitemap.xml
+Sitemap: https://www.alluviumbi.com/sitemap.xml
