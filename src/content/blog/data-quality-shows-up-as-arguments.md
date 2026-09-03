@@ -61,7 +61,7 @@ Do not hide nulls to make the visual pretty. A blank is information. A coerced d
 
 Do not treat “the ERP is wrong” as the end of the conversation. It might be. Then the steward is in operations or master data, not in the BI team. Name that person. The model still needs a rule for what to do this week.
 
-Do not stand up a quality tool as the strategy. Strategy is which arguments you will no longer have. A [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) that lists platforms and not stewards will reproduce this next year.
+Do not stand up a quality tool as the strategy. Strategy is which arguments you will no longer have. A [roadmap](/analytics-ai-strategy-roadmap) that lists platforms and not stewards will reproduce this next year.
 
 ## How to turn arguments into a queue
 
