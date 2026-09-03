@@ -77,7 +77,7 @@ Do not let every department own a private reprint. That is how you get five Q2 p
 
 6. **Point the standing artifacts at the reprint.** Flash. Board pack. Ops review. If those still start from a blank file, the system is a slide. A [Power BI Quickstart](/power-bi-quickstart) can force one pack onto a reusable model and template—then stop. Do not commission a new dashboard for the next question. Filter the one you kept.
 
-Day-to-day ownership of that loop sits closer to [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory) than to a one-week theme refresh.
+Day-to-day ownership of that loop sits closer to [Managed Data & AI Advisory](/managed-advisory-retainer) than to a one-week theme refresh.
 
 ## What good looks like
 

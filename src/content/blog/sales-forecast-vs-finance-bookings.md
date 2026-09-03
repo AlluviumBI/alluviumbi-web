@@ -65,7 +65,7 @@ You do not need a promised conversion rate from a CRM vendor. If the chair still
 
 6. **Steer each process with its own control.** Sales ops owns stage exit and snapshot hygiene. Finance owns what hits the books. ELT owns which number they are managing *this meeting*. If they want one steering number, they pick it in writing. They do not pick it by forcing a tile.
 
-If the two functions will not share a map, that is strategy before modeling: [single source of truth is a decision](/blog/single-source-of-truth-is-a-decision). A [roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap) names which process the company runs. A [Quickstart](/power-bi-quickstart) can land pipeline next to bookings. Stewardship sits in [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+If the two functions will not share a map, that is strategy before modeling: [single source of truth is a decision](/blog/single-source-of-truth-is-a-decision). A [roadmap](/analytics-ai-strategy-roadmap) names which process the company runs. A [Quickstart](/power-bi-quickstart) can land pipeline next to bookings. Stewardship sits in [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 ## What good looks like
 
