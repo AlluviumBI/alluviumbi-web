@@ -84,7 +84,7 @@ Plants can still have plant views. Row-level access is not a second truth. A sec
 
 6. **Put the rule on the operating cadence.** Monthly: did any deck use an unlabeled twin? Quarterly: is the steward still the right role? Annually: does this metric still deserve to be official? SSOT that is not reviewed becomes wallpaper.
 
-If the list of official metrics is really a list of every dashboard request, you have a strategy problem. Start with [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). If the official report is unused because it is slow or ugly, fix that asset: [dashboard optimization](/power-bi-dashboard-optimization-ai-insights). Ongoing stewardship is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+If the list of official metrics is really a list of every dashboard request, you have a strategy problem. Start with [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). If the official report is unused because it is slow or ugly, fix that asset: [dashboard optimization](/power-bi-dashboard-optimization-ai-insights). Ongoing stewardship is [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 ## What this is not
 

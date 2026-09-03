@@ -73,7 +73,7 @@ A kickoff crowd is not a decision room. Platform IT can be on call. They should 
 
 6. **Debrief once, in writing.** What question the page could not take. What will change before the next sitting. What will not change because the sentence is the sentence. Then the window ends. Endless hypercare is how a project never has an owner.
 
-A [Quickstart](/power-bi-quickstart) that does not include the first exec sitting is a publish, not a delivery. Sequence and stakeholders that are still fuzzy belong in a [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). Ongoing ownership after the window is [managed advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+A [Quickstart](/power-bi-quickstart) that does not include the first exec sitting is a publish, not a delivery. Sequence and stakeholders that are still fuzzy belong in a [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). Ongoing ownership after the window is [managed advisory](/managed-advisory-retainer).
 
 ## What good looks like
 
