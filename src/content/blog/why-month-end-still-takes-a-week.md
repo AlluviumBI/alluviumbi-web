@@ -65,7 +65,7 @@ You need one actuals model, a refresh the close can trust, drill when a line is 
 
 5. **Freeze the pack structure.** Stop rebuilding tabs every cycle. Same pages, same order, same owners of commentary. What changes is the data. If a tab only exists because “we always had it,” retire it. Rebuilds are drag.
 
-6. **Prove it on one loop.** One P&L or cash view in the model. One connected pack. One close where gathering is not the longest task. If that loop still pastes, do not scale. Slow models are a different job: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). A company-wide map of close metrics belongs in a [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). Ongoing ownership of definitions and refresh is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+6. **Prove it on one loop.** One P&L or cash view in the model. One connected pack. One close where gathering is not the longest task. If that loop still pastes, do not scale. Slow models are a different job: [dashboard optimization](https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights). A company-wide map of close metrics belongs in a [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). Ongoing ownership of definitions and refresh is [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 Start with the pack leadership already waits on. Not a catalog of every workbook.
 

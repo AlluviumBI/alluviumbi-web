@@ -71,7 +71,7 @@ You do not need a steering committee. You need one number the room will argue fr
 
 5. **Retire the competing slides.** If last month’s version stays in the deck, the argument stays with it. One view for the room. Departmental detail can exist. It cannot contradict the number the ELT will use. Sunsetting abandoned copies is governance work; the instinct is the same as in the [governance post](https://www.alluviumbi.com/blog/the-hidden-costs-of-poor-power-bi-governance-and-how-to-fix-it). Do the retirement on this one metric first.
 
-6. **Prove it in one meeting.** One metric. One owner. Same number on finance, ops, and sales slides. If that loop still disagrees, do not scale it. Find which of the three—definition, source, refresh—broke. Then fix that. Definitions that need a company-wide map, not a one-pager, belong in a [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). Ongoing ownership of those definitions is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+6. **Prove it in one meeting.** One metric. One owner. Same number on finance, ops, and sales slides. If that loop still disagrees, do not scale it. Find which of the three—definition, source, refresh—broke. Then fix that. Definitions that need a company-wide map, not a one-pager, belong in a [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). Ongoing ownership of those definitions is [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 ## Frequently asked questions
 
