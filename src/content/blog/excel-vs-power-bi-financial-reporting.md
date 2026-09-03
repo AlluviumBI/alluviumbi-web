@@ -90,7 +90,7 @@ You do not need a six-month “Excel exit.” You need a boundary, then one work
 
 6. **Prove it on one loop.** One P&L (or cash view) in Power BI. One connected Excel pack. One week of the same actuals in both. If that loop still pastes, do not scale it. Slow or unused models are a different job: [dashboard optimization](/power-bi-dashboard-optimization-ai-insights).
 
-If you cannot tell a decision metric from a close artifact, that is strategy, not a license upgrade. See the [Data & AI Strategy Roadmap](https://www.alluviumbi.com/-data-ai-strategy-roadmap). Ongoing ownership of definitions and refresh is [Managed Data & AI Advisory](https://www.alluviumbi.com/managed-data-ai-advisory).
+If you cannot tell a decision metric from a close artifact, that is strategy, not a license upgrade. See the [Data & AI Strategy Roadmap](/analytics-ai-strategy-roadmap). Ongoing ownership of definitions and refresh is [Managed Data & AI Advisory](/managed-advisory-retainer).
 
 ## Frequently asked questions
 
