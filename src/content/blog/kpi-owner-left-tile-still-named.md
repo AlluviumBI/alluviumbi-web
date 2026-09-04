@@ -41,17 +41,17 @@ The scorecard was treated as a report, not as an operating system. Reports can b
 
 Teams fear breaking the visual. Changing an owner field feels cosmetic until the next escalation. Cosmetic work loses to firefighting every time.
 
-The real owner is informal. Everyone "knows" who watches margin. Nobody wrote it where the pack lives. When the informal owner leaves, the informal network leaves with them.
+The real owner is informal. Everyone “knows” who watches margin. Nobody wrote it where the pack lives. When the informal owner leaves, the informal network leaves with them.
 
-Reorgs multiply the problem. Titles change. Dotted lines appear. The tile still shows last year's org chart in miniature.
+Reorgs multiply the problem. Titles change. Dotted lines appear. The tile still shows last year’s org chart in miniature.
 
 ## The costs of orphaned KPI ownership
 
 1. **Escalations bounce.** A bad number lands in the weekly review. The named owner is gone. The room spends ten minutes finding a substitute. The decision waits a cycle.
 
-2. **Definitions freeze in the wrong person's head.** The departed owner carried the edge cases—returns, intercompany, partial periods. The model still calculates. Nobody can defend it under pressure.
+2. **Definitions freeze in the wrong person’s head.** The departed owner carried the edge cases—returns, intercompany, partial periods. The model still calculates. Nobody can defend it under pressure.
 
-3. **Shadow owners appear without mandate.** An analyst quietly becomes the person who "looks at it." They have no authority to change the business process. They become a human gateway, the same failure pattern as [the analyst who became the gateway](/blog/the-analyst-who-became-the-gateway).
+3. **Shadow owners appear without mandate.** An analyst quietly becomes the person who “looks at it.” They have no authority to change the business process. They become a human gateway, the same failure pattern as [the analyst who became the gateway](/blog/the-analyst-who-became-the-gateway).
 
 4. **Incentive lines detach from the scorecard.** Comp and performance conversations still reference the tile. The person paid for the outcome is not the name on the page. Trust in the pack erodes.
 
@@ -59,7 +59,7 @@ Reorgs multiply the problem. Titles change. Dotted lines appear. The tile still 
 
 6. **New leaders inherit ghosts.** A new VP opens the app and sees predecessors everywhere. They cannot tell ceremonial names from real ones. Onboarding becomes archaeology.
 
-7. **Audit conversations get awkward.** When finance asks who owns a control metric, "the person who left" is not an answer. Documentation that lists departed staff is worse than a blank field.
+7. **Audit conversations get awkward.** When finance asks who owns a control metric, “the person who left” is not an answer. Documentation that lists departed staff is worse than a blank field.
 
 8. **You fund a living system with dead accountability.** Capacity, gateways, and certified datasets still run. The management layer that was supposed to use them still points at empty chairs.
 
@@ -89,7 +89,7 @@ Every tile in the pack has a living owner and a backup. Offboarding updates the 
 
 When a variance turns red, the room already knows who speaks first. The name on the tile can raise a hand.
 
-New leaders do not inherit a wall of ghosts. They inherit a short roster that matches the org chart they just joined. Analysts stop being the unofficial owner of metrics they cannot change. Finance can answer an audit question without opening last year's email archive.
+New leaders do not inherit a wall of ghosts. They inherit a short roster that matches the org chart they just joined. Analysts stop being the unofficial owner of metrics they cannot change. Finance can answer an audit question without opening last year’s email archive.
 
 The scorecard becomes a management instrument again. Not a yearbook of people who used to care.
 
