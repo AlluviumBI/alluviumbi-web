@@ -27,12 +27,15 @@ const heroesDir = path.join(root, 'scripts', 'heroes');
 if (fs.existsSync(heroesDir)) {
   const blogDir = path.join(root, 'public', 'blog');
   fs.mkdirSync(blogDir, { recursive: true });
+  const publicRootHeroes = new Set(['how-to-choose-a-power-bi-partner-hero.jpg']);
   const names = fs.readdirSync(heroesDir);
   const done = new Set();
   for (const name of names) {
     if (!name.endsWith('.jpg.b64')) continue;
     const outName = name.slice(0, -'.b64'.length);
-    const outPath = path.join(blogDir, outName);
+    const outPath = publicRootHeroes.has(outName)
+      ? path.join(root, 'public', outName)
+      : path.join(blogDir, outName);
     const heroB64 = fs.readFileSync(path.join(heroesDir, name), 'utf8').trim();
     const buf = Buffer.from(heroB64, 'base64');
     if (buf.length < 3 || buf[0] !== 0xff || buf[1] !== 0xd8) {
@@ -71,7 +74,9 @@ if (fs.existsSync(heroesDir)) {
       console.warn('skip incomplete JPEG parts', outName, parts.length);
       continue;
     }
-    const outPath = path.join(blogDir, outName);
+    const outPath = publicRootHeroes.has(outName)
+      ? path.join(root, 'public', outName)
+      : path.join(blogDir, outName);
     fs.writeFileSync(outPath, buf);
     console.log('wrote', outPath, fs.statSync(outPath).size);
   }
