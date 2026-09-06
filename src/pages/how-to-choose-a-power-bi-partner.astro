@@ -1,0 +1,396 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+
+const title = "How to Choose a Power BI Partner for Manufacturing | Alluvium";
+const description =
+  "A practical checklist for mid-market manufacturers choosing a Power BI partner—ERP fit, shared KPIs, adoption, and when a Quickstart beats a long project.";
+
+const checklist = [
+  {
+    id: "c1",
+    strong: "Can they start with one painful report?",
+    span: "A focused early win beats a six-month “BI transformation” with no output.",
+  },
+  {
+    id: "c2",
+    strong: "Do they model for reuse across finance and ops?",
+    span: "Shop-floor metrics and P&L should share definitions—not two sets of books.",
+  },
+  {
+    id: "c3",
+    strong: "Are they ERP-aware?",
+    span: "SAP, Odoo, Infor, and similar systems need practical extract and model patterns.",
+  },
+  {
+    id: "c4",
+    strong: "Will they fix trust, not just visuals?",
+    span: "Slow refresh, wrong grain, and inconsistent KPIs kill adoption faster than ugly charts.",
+  },
+  {
+    id: "c5",
+    strong: "Who does the work?",
+    span: "Prefer senior practitioners who stay on the engagement—not bait-and-switch staffing.",
+  },
+  {
+    id: "c6",
+    strong: "What does handoff look like?",
+    span: "Working report, clear measures, and training on your data—not a slide deck.",
+  },
+  {
+    id: "c7",
+    strong: "How do they price scope?",
+    span: "Flat fee for a defined deliverable is easier to approve than open-ended hours.",
+  },
+  {
+    id: "c8",
+    strong: "Do they plan for governance?",
+    span: "Workspaces, certified datasets, refresh, and capacity once more than one team uses the model.",
+  },
+  {
+    id: "c9",
+    strong: "Can they say no?",
+    span: "A good partner narrows scope. A weak one sells more dashboards.",
+  },
+  {
+    id: "c10",
+    strong: "What happens after go-live?",
+    span: "Optional retainer or clear next steps—without locking you into a platform pitch.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "How to choose a Power BI partner for manufacturing",
+        item: SITE.url + "/how-to-choose-a-power-bi-partner",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/how-to-choose-a-power-bi-partner",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
+  },
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/how-to-choose-a-power-bi-partner"
+  jsonLd={jsonLd}
+>
+  <article class="mfg-partner-guide">
+    <header class="mfg-hero" aria-labelledby="mfg-hero-heading">
+      <div class="mfg-hero-copy">
+        <p class="kicker mfg-kicker">Manufacturing buyer guide</p>
+        <h1 id="mfg-hero-heading">How to choose a Power BI partner for manufacturing</h1>
+        <p>
+          Most manufacturers do not need another dashboard vendor. They need a partner who can connect ERP and plant data,
+          align finance and ops on the same numbers, and leave the team able to run the model after handoff.
+        </p>
+      </div>
+      <div class="mfg-hero-media">
+        <img
+          src="/how-to-choose-a-power-bi-partner-hero.jpg"
+          alt="Manufacturing professional on a plant floor"
+          width="1280"
+          height="720"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    </header>
+
+    <section class="band" aria-labelledby="checklist-heading">
+      <div class="wrap-narrow">
+        <h2 id="checklist-heading">Buyer checklist: what to ask before you hire</h2>
+        <p class="lede">
+          Use this as a working list. If a partner cannot answer these clearly, keep looking. Check items off as you evaluate.
+        </p>
+        <ul class="mfg-checklist" id="checklist">
+          {checklist.map((item) => (
+            <li>
+              <input type="checkbox" id={item.id} />
+              <label for={item.id}>
+                <strong>{item.strong}</strong>
+                <span>{item.span}</span>
+              </label>
+            </li>
+          ))}
+        </ul>
+        <p class="mfg-progress" id="progress" aria-live="polite">0 of 10 checked</p>
+        <p>
+          For manufacturing reporting patterns and where consulting usually helps, see
+          <a href="/blog/power-bi-for-manufacturing-reporting-consulting">Power BI for manufacturing reporting consulting</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="band band-alt" aria-labelledby="signals-heading">
+      <div class="wrap-narrow">
+        <h2 id="signals-heading">Manufacturing-specific signals</h2>
+        <div class="mfg-signals">
+          <div class="mfg-card">
+            <h3>Strong signals</h3>
+            <ul>
+              <li>Throughput, scrap/yield, OTIF, inventory, downtime + finance close</li>
+              <li>Asks about grain (unit, shift, line, plant) before visuals</li>
+              <li>Expects ERP + MES + CMMS + Excel reality</li>
+              <li>Role-fit views for operators, plant leads, leadership</li>
+              <li>Treats performance as first-class at high volume</li>
+            </ul>
+          </div>
+          <div class="mfg-card">
+            <h3>Weak signals</h3>
+            <ul>
+              <li>Leads with AI chatbot before the model is trusted</li>
+              <li>Only clean SaaS demos with tiny datasets</li>
+              <li>Ops vs finance forever separate projects</li>
+              <li>Enterprise program when you asked for one weekly report</li>
+              <li>Cannot explain certified, reusable measures</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="fit-heading">
+      <div class="wrap-narrow">
+        <div class="mfg-fit">
+          <h2 id="fit-heading">When Alluvium fits</h2>
+          <p>
+            Alluvium (Alluvium LLC) is a Power BI / analytics delivery partner for US mid-market manufacturers and similar
+            ops-heavy firms.
+          </p>
+          <p><strong>We fit when you need:</strong></p>
+          <ul>
+            <li>
+              One high-impact report automated fast →
+              <a href="/power-bi-quickstart">Power BI Quickstart</a>
+            </li>
+            <li>Ops and finance on one trusted model</li>
+            <li>Dashboard optimization when people don’t trust what exists</li>
+            <li>Training on your model—not generic slides</li>
+            <li>Roadmap or retainer without hiring a full-time BI team yet</li>
+          </ul>
+          <p>
+            <strong>Not a fit:</strong> body shop staffing, multi-year rewrite before any report ships, chatbot on unverified
+            measures.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-cta mfg-cta" aria-labelledby="next-heading">
+      <div class="wrap-narrow">
+        <h2 id="next-heading">Next step</h2>
+        <p class="lede">Start with one bottleneck report, or talk through fit.</p>
+        <div class="hero-actions">
+          <a class="btn" href="/power-bi-quickstart">Power BI Quickstart</a>
+          <a class="btn btn-ghost mfg-btn-ghost" href="/contact">Book a Session</a>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <script is:inline>
+    (function () {
+      var boxes = Array.prototype.slice.call(document.querySelectorAll("#checklist input[type=checkbox]"));
+      var progress = document.getElementById("progress");
+      if (!boxes.length || !progress) return;
+      function sync() {
+        var n = boxes.filter(function (b) {
+          return b.checked;
+        }).length;
+        progress.textContent = n + " of " + boxes.length + " checked";
+      }
+      boxes.forEach(function (b) {
+        b.addEventListener("change", sync);
+      });
+      sync();
+    })();
+  </script>
+</BaseLayout>
+
+<style>
+  .mfg-partner-guide .mfg-hero {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 0;
+    background: #111;
+    color: var(--white);
+    min-height: 22rem;
+    overflow: hidden;
+  }
+  .mfg-partner-guide .mfg-hero-copy {
+    padding: 3.25rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #1c1c1c 0%, #2a2a2a 100%);
+  }
+  .mfg-partner-guide .mfg-kicker {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .mfg-partner-guide .mfg-hero-copy h1 {
+    color: var(--white);
+    font-size: clamp(1.75rem, 3.2vw, 2.55rem);
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+  .mfg-partner-guide .mfg-hero-copy p {
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0;
+    max-width: 34rem;
+  }
+  .mfg-partner-guide .mfg-hero-media {
+    position: relative;
+    min-height: 16rem;
+  }
+  .mfg-partner-guide .mfg-hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .mfg-partner-guide .mfg-hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(28, 28, 28, 0.55), transparent 45%);
+    pointer-events: none;
+  }
+  .mfg-partner-guide .mfg-checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+  }
+  .mfg-partner-guide .mfg-checklist li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.85rem;
+    align-items: start;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0.9rem 1rem;
+    background: var(--paper);
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .mfg-partner-guide .mfg-checklist li:has(input:checked) {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(57, 127, 176, 0.25);
+    background: #f7fbfe;
+  }
+  .mfg-partner-guide .mfg-checklist input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.15rem;
+    border: 2px solid #666;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    background: var(--paper);
+  }
+  .mfg-partner-guide .mfg-checklist input[type="checkbox"]:checked {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .mfg-partner-guide .mfg-checklist input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .mfg-partner-guide .mfg-checklist label {
+    cursor: pointer;
+  }
+  .mfg-partner-guide .mfg-checklist strong {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+    color: var(--ink);
+  }
+  .mfg-partner-guide .mfg-checklist span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .mfg-partner-guide .mfg-progress {
+    margin: 1rem 0 1.25rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .mfg-partner-guide .mfg-signals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .mfg-partner-guide .mfg-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.25rem 1.35rem;
+    background: #fafafa;
+  }
+  .mfg-partner-guide .mfg-card h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+  }
+  .mfg-partner-guide .mfg-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--ink-soft);
+  }
+  .mfg-partner-guide .mfg-card li {
+    margin: 0.35rem 0;
+  }
+  .mfg-partner-guide .mfg-fit {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: var(--paper);
+  }
+  .mfg-partner-guide .mfg-fit ul {
+    margin: 0.4rem 0 1rem;
+    padding-left: 1.15rem;
+    color: var(--ink-soft);
+  }
+  .mfg-partner-guide .mfg-cta .mfg-btn-ghost {
+    color: var(--white);
+    border-color: #888;
+  }
+  .mfg-partner-guide .mfg-cta .mfg-btn-ghost:hover {
+    border-color: var(--white);
+    background: transparent;
+    color: var(--white);
+  }
+  @media (max-width: 860px) {
+    .mfg-partner-guide .mfg-hero {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 700px) {
+    .mfg-partner-guide .mfg-signals {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
