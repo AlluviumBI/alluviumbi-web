@@ -1,15 +1,1 @@
-# Squarespace path aliases — one hop to www no-slash final URL
-/home                          https://www.alluviumbi.com/                                 301!
-/-data-ai-strategy-roadmap     https://www.alluviumbi.com/analytics-ai-strategy-roadmap    301!
-/managed-data-ai-advisory      https://www.alluviumbi.com/managed-advisory-retainer        301!
-/privacy-policy                https://www.alluviumbi.com/privacy                          301!
-/blog/tag/*                    https://www.alluviumbi.com/blog                             301!
-/index.html                    https://www.alluviumbi.com/                                 301!
-
-# Duplicate sitemap files: keep one canonical urlset at /sitemap.xml
-/sitemap-index.xml             https://www.alluviumbi.com/sitemap.xml                      301!
-/sitemap-0.xml                 https://www.alluviumbi.com/sitemap.xml                      301!
-
-# HTTP → HTTPS, preserve host. Do not pick apex vs www (Netlify Primary domain).
-http://alluviumbi.com/*        https://alluviumbi.com/:splat     301!
-http://www.alluviumbi.com/*    https://www.alluviumbi.com/:splat 301!
+PLACEHOLDER
