@@ -104,6 +104,9 @@ Includes:
 
 We’re not here to sell a platform. We’re here to make Power BI work for your people and your processes.
 
+If you are still comparing firms, use our practical checklist:
+[How to choose a Power BI partner for manufacturing](/how-to-choose-a-power-bi-partner).
+
 ## Ready to Talk?
 
 If you want to stop wrangling spreadsheets and start making faster, data-backed decisions, let’s talk.

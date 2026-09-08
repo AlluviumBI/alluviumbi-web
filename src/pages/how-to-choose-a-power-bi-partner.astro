@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Crumbs from "../components/Crumbs.astro";
 import { SITE } from "../lib/site";
 
 const title = "How to Choose a Power BI Partner for Manufacturing | Alluvium";
@@ -92,6 +93,12 @@ const jsonLd = [
   <article class="mfg-partner-guide">
     <header class="mfg-hero" aria-labelledby="mfg-hero-heading">
       <div class="mfg-hero-copy">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { label: "How to choose a Power BI partner for manufacturing" },
+          ]}
+        />
         <p class="kicker mfg-kicker">Manufacturing buyer guide</p>
         <h1 id="mfg-hero-heading">How to choose a Power BI partner for manufacturing</h1>
         <p>
@@ -197,7 +204,7 @@ const jsonLd = [
         <p class="lede">Start with one bottleneck report, or talk through fit.</p>
         <div class="hero-actions">
           <a class="btn" href="/power-bi-quickstart">Power BI Quickstart</a>
-          <a class="btn btn-ghost mfg-btn-ghost" href="/contact">Book a Session</a>
+          <a class="btn mfg-btn-session" href="/contact">Book a Session</a>
         </div>
       </div>
     </section>
@@ -241,6 +248,17 @@ const jsonLd = [
   }
   .mfg-partner-guide .mfg-kicker {
     color: rgba(255, 255, 255, 0.75);
+  }
+  .mfg-partner-guide .crumbs {
+    margin: 0 0 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+  }
+  .mfg-partner-guide .crumbs a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .mfg-partner-guide .crumbs a:hover {
+    color: var(--white);
   }
   .mfg-partner-guide .mfg-hero-copy h1 {
     color: var(--white);
@@ -374,13 +392,25 @@ const jsonLd = [
     padding-left: 1.15rem;
     color: var(--ink-soft);
   }
-  .mfg-partner-guide .mfg-cta .mfg-btn-ghost {
+  /* Dark CTA band: solid accent CTAs (header-cta treatment). Ghost gray-on-dark failed visibility. */
+  .mfg-partner-guide .mfg-cta {
+    background: #1c1c1c;
     color: var(--white);
-    border-color: #888;
   }
-  .mfg-partner-guide .mfg-cta .mfg-btn-ghost:hover {
-    border-color: var(--white);
-    background: transparent;
+  .mfg-partner-guide .mfg-cta h2,
+  .mfg-partner-guide .mfg-cta .lede,
+  .mfg-partner-guide .mfg-cta p {
+    color: var(--white);
+  }
+  .mfg-partner-guide .mfg-cta .btn,
+  .mfg-partner-guide .mfg-cta .mfg-btn-session {
+    background: #397fb0;
+    color: var(--white);
+    border: 0;
+  }
+  .mfg-partner-guide .mfg-cta .btn:hover,
+  .mfg-partner-guide .mfg-cta .mfg-btn-session:hover {
+    background: #2f6a94;
     color: var(--white);
   }
   @media (max-width: 860px) {
