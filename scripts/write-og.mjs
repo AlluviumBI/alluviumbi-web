@@ -81,3 +81,17 @@ if (fs.existsSync(heroesDir)) {
     console.log('wrote', outPath, fs.statSync(outPath).size);
   }
 }
+
+// Materialize OEE product screenshots from scripts/tools/*.png.b64
+const toolsDir = path.join(root, 'scripts', 'tools');
+const toolsOut = path.join(root, 'public', 'tools');
+if (fs.existsSync(toolsDir)) {
+  fs.mkdirSync(toolsOut, { recursive: true });
+  for (const name of fs.readdirSync(toolsDir)) {
+    if (!name.endsWith('.png.b64')) continue;
+    const outName = name.slice(0, -'.b64'.length);
+    const buf = Buffer.from(fs.readFileSync(path.join(toolsDir, name), 'utf8').trim(), 'base64');
+    fs.writeFileSync(path.join(toolsOut, outName), buf);
+    console.log('wrote', path.join(toolsOut, outName), buf.length);
+  }
+}
