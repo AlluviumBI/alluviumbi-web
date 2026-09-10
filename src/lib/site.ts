@@ -129,13 +129,14 @@ export const RELATED: Record<
   },
   "/conversational-analytics": {
     services: [
+      { href: "/power-bi-model-health", label: "Power BI model health" },
+      { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
       { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
       { href: "/analytics-ai-strategy-roadmap", label: "Analytics strategy roadmap" },
-      { href: "/power-bi-training", label: "Power BI training" },
     ],
     posts: [
       { href: "/blog/conversational-analytics-needs-a-trusted-model", label: "Conversational analytics needs a trusted model" },
-      { href: "/blog/ask-the-model-dont-screenshot", label: "Ask the model, don\u2019t screenshot" },
+      { href: "/blog/ask-the-model-dont-screenshot", label: "Ask the model, don’t screenshot" },
       { href: "/blog/semantic-model-is-the-product", label: "The semantic model is the product" },
     ],
   },
@@ -195,6 +196,21 @@ export const RELATED: Record<
       { href: "/blog/power-bi-for-manufacturing-reporting-consulting", label: "Power BI for manufacturing reporting consulting" },
     ],
   },
+  "/power-bi-for-sales": {
+    services: [
+      { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+      { href: "/power-bi-for-finance", label: "Power BI for finance" },
+      { href: "/power-bi-training", label: "Power BI training" },
+      { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+    ],
+    posts: [
+      { href: "/blog/power-bi-for-sales-analytics-consulting", label: "Power BI for sales analytics consulting" },
+      { href: "/blog/sales-forecast-vs-finance-bookings", label: "Sales forecast vs finance bookings" },
+      { href: "/blog/dynamics-salesforce-two-systems-one-label", label: "Dynamics / Salesforce: two systems, one label" },
+      { href: "/blog/forecast-never-ties-to-actuals", label: "When forecast never ties to actuals" },
+    ],
+  },
+
   "/power-bi-for-hr": {
     services: [
       { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
