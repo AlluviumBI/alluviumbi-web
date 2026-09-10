@@ -1,0 +1,268 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
+import LineIcon from "../components/LineIcon.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE, pageTitle } from "../lib/site";
+
+const title = pageTitle("Power BI for finance reporting");
+const description =
+  "Power BI for mid-market finance: month-end close, P&L and variance, cash, and ERP + Excel on trusted numbers. Quickstart flat fee $3,000.";
+
+const faqs = [
+  {
+    q: "Will this replace Excel for the close?",
+    a: "Not overnight. We automate the painful recurring pack—P&L, variance, cash—while keeping Excel where it still belongs for analysis that is truly ad hoc.",
+  },
+  {
+    q: "Can finance and ops share the same model?",
+    a: "Yes—and they should. Accrual, ops, and cash views need clear definitions so Monday’s meeting is not three different revenues.",
+  },
+  {
+    q: "What if our ERP is changing?",
+    a: "A focused Quickstart on one critical report is often the right bridge while systems move. We connect to the sources you have now and keep measures named for reuse.",
+  },
+  {
+    q: "What does the Quickstart cost?",
+    a: "Flat fee $3,000 for one critical finance report rebuilt in two weeks—discovery, automated report, training, and one week of support.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Power BI for finance",
+        item: SITE.url + "/power-bi-for-finance",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/power-bi-for-finance",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Power BI for finance",
+    description,
+    url: SITE.url + "/power-bi-for-finance",
+    provider: { "@type": "Organization", name: "Alluvium", url: SITE.url },
+    areaServed: { "@type": "Country", name: "United States" },
+    serviceType: "Power BI consulting for finance",
+    offers: {
+      "@type": "Offer",
+      name: "Power BI Quickstart",
+      price: "3000",
+      priceCurrency: "USD",
+      description: "One painful finance report rebuilt in two weeks. Flat fee $3,000.",
+      url: SITE.url + "/power-bi-quickstart",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/power-bi-for-finance"
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/services", label: "Services" },
+            { label: "Power BI for finance" },
+          ]}
+        />
+        <p class="kicker">By audience</p>
+        <h1>Power BI for finance</h1>
+        <p class="lede">
+          Month-end close, P&amp;L and variance, and cash on numbers leadership will sign—ERP and Excel connected to one semantic model mid-market finance teams can defend in the meeting.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/contact">Book a Session</a>
+          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+        </p>
+      </div>
+    </header>
+
+    <figure class="still bw">
+      <img
+        src="/blog/why-month-end-still-takes-a-week-hero.jpg"
+        alt=""
+        width="1600"
+        height="900"
+      />
+    </figure>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>When the close still takes a week</h2>
+        <p>
+          Mid-market finance teams know the pattern: spreadsheets passed between departments, late feeds from ops, static packs that cannot drill, and a board or leadership meeting that waits on a number nobody fully trusts. Power BI helps—but only when measures are named, sources are wired, and the pack matches how controllers actually close.
+        </p>
+        <p>
+          Alluvium helps CFOs, controllers, and FP&amp;A automate the recurring work, align ERP and Excel to shared definitions, and put trusted numbers in the meeting. No invented client logos. No chatbot project dressed up as finance BI.
+        </p>
+        <ul>
+          <li>Automated monthly close reporting and variance that drills by cost center, region, or GL.</li>
+          <li>Cash and liquidity views leadership will open on Monday—not chart theater.</li>
+          <li>ERP + Excel on one model finance will sign off on.</li>
+          <li>Training on your certified measures so the skill does not walk out with the consultant.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>What we do for finance and reporting teams</h2>
+        <div class="cards">
+          <article class="card">
+            <LineIcon name="time" />
+            <h3>Shorten the close pack</h3>
+            <p>
+              Replace the multi-spreadsheet monthly grind with a refreshing Power BI pack.
+              Background: <a href="/blog/why-month-end-still-takes-a-week">why month-end still takes a week</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="finance" />
+            <h3>P&amp;L and variance that answer questions</h3>
+            <p>
+              Variance as a question you can drill—not a red tile with no owner.
+              See <a href="/blog/variance-is-a-question-not-a-red-tile">variance is a question, not a red tile</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="decision" />
+            <h3>Cash, not charts</h3>
+            <p>
+              Cash and working-capital views CFOs open on Monday—not vanity dashboards.
+              Related: <a href="/blog/cash-not-charts-cfo-monday">cash, not charts, for the CFO Monday</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="connect" />
+            <h3>ERP + Excel, same definitions</h3>
+            <p>
+              Connect accounting systems and the workbooks you still need—without five versions of revenue.
+              Practical framing: <a href="/blog/excel-vs-power-bi-financial-reporting">Excel vs Power BI for financial reporting</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="report" />
+            <h3>Accrual, ops, and cash aligned</h3>
+            <p>
+              Clear views so accrual books, ops actuals, and cash do not fight in the same meeting.
+              Read <a href="/blog/finance-accrual-ops-cash">finance: accrual, ops, and cash</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="expertise" />
+            <h3>Numbers finance will sign</h3>
+            <p>
+              Certified measures, named owners, and a pack controllers will defend—not a dashboard they refuse to endorse.
+              See <a href="/blog/finance-wont-sign-off-on-the-dashboard">when finance won’t sign off on the dashboard</a>.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>Start with one painful finance report</h2>
+        <p>
+          The <a href="/power-bi-quickstart">Power BI Quickstart</a> rebuilds one critical finance report in two weeks—close pack, variance, cash, departmental KPI, or similar.
+          <strong>Flat fee $3,000</strong>. Discovery, automated report, training, and one week of support included. Optional add-ons for additional reports, model work, or workspace setup.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/power-bi-quickstart">See Power BI Quickstart</a>
+          <a class="btn btn-ghost" href="/contact">Book a Session</a>
+        </p>
+        <p>
+          Deeper consulting shape and service menu:
+          <a href="/blog/power-bi-for-finance-reporting-consulting">Power BI for finance reporting consulting</a>.
+          When the model itself is the risk, try the optional
+          <a href="/power-bi-model-health">Power BI model health score</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="band faq" aria-labelledby="fin-faq">
+      <div class="wrap">
+        <h2 id="fin-faq">Finance Power BI FAQs</h2>
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <RelatedLinks
+      services={[
+        { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+        { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+        { href: "/power-bi-training", label: "Power BI training" },
+        { href: "/analytics-ai-strategy-roadmap", label: "Analytics strategy roadmap" },
+        { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
+      ]}
+      posts={[
+        {
+          href: "/blog/power-bi-for-finance-reporting-consulting",
+          label: "Power BI for finance reporting consulting",
+        },
+        {
+          href: "/blog/why-month-end-still-takes-a-week",
+          label: "Why month-end still takes a week",
+        },
+        {
+          href: "/blog/cash-not-charts-cfo-monday",
+          label: "Cash, not charts: CFO Monday",
+        },
+        {
+          href: "/blog/finance-accrual-ops-cash",
+          label: "Finance: accrual, ops, and cash",
+        },
+        {
+          href: "/blog/excel-vs-power-bi-financial-reporting",
+          label: "Excel vs Power BI for financial reporting",
+        },
+        {
+          href: "/blog/variance-is-a-question-not-a-red-tile",
+          label: "Variance is a question, not a red tile",
+        },
+      ]}
+    />
+
+    <CtaBand
+      heading="Put trusted numbers in the meeting"
+      text="Book a Session to name the finance report that slows the close. Or start with Power BI Quickstart—one painful report in two weeks, flat fee $3,000."
+    />
+  </article>
+</BaseLayout>
