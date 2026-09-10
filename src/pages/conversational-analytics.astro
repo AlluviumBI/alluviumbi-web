@@ -3,7 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
 import RelatedLinks from "../components/RelatedLinks.astro";
 import Crumbs from "../components/Crumbs.astro";
-import { SITE, RELATED } from "../lib/site";
+import { SITE, RELATED, pageTitle } from "../lib/site";
+
+const title = pageTitle("Conversational analytics on a model");
+const description =
+  "Ask a certified Power BI or Fabric semantic model—governed questions on trusted measures with RLS and refresh you can defend. Not chatbot theater. Delivery on alluviumbi.com.";
 
 const jsonLd = [
   {
@@ -12,37 +16,113 @@ const jsonLd = [
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
       { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      { "@type": "ListItem", position: 3, name: "Conversational Analytics", item: SITE.url + "/conversational-analytics" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Conversational analytics",
+        item: SITE.url + "/conversational-analytics",
+      },
     ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/conversational-analytics",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
   },
 ];
 ---
 <BaseLayout
-  title="Conversational analytics on a model | Alluvium"
-  description="Conversational analytics on a certified Power BI semantic model. Ask trusted measures with RLS and refresh you can defend—not a Copilot experiment here."
+  title={title}
+  description={description}
   canonicalPath="/conversational-analytics"
   jsonLd={jsonLd}
 >
-  <header class="hero">
-    <div class="wrap">
-      <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Conversational analytics" }]} />
-      <p class="kicker">Services</p>
-      <h1>Conversational Analytics</h1>
-      <p class="lede">Ask a certified Power BI or Fabric semantic model. The answers come from measures leadership already trusts—not from a free-form chatbot.</p>
-      <p><a class="btn" href="/contact">Book a Session</a></p>
-    </div>
-  </header>
-  <figure class="still bw">
-    <img src="/blog/ask-the-model-dont-screenshot-hero.jpg" alt="Black and white photo of an analyst at a laptop reviewing a model" width="1600" height="900" />
-  </figure>
-  <section class="band">
-    <div class="wrap prose">
-      <h2>Conversational analytics on a certified semantic model</h2>
-      <p>You (or your analysts) ask a question in language. The answer is computed from a certified semantic model: one definition of revenue, margin, inventory, or cash.</p>
-      <h2>What this is not</h2>
-      <p>This is not a chatbot project. Alluvium’s work here is BI: Power BI and Fabric, certified models, and asking those models.</p>
-    </div>
-  </section>
-  <RelatedLinks services={RELATED["/conversational-analytics"].services} posts={RELATED["/conversational-analytics"].posts} />
-  <CtaBand heading="See if your model is ready to be asked" text="A session is enough to pick one certified model and the questions it should answer." />
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/services", label: "Services" },
+            { label: "Conversational analytics" },
+          ]}
+        />
+        <p class="kicker">Services</p>
+        <h1>Conversational analytics</h1>
+        <p class="lede">
+          Ask a certified Power BI or Fabric semantic model. Answers come from measures leadership already trusts—with refresh and RLS you can defend—not from a free-form chatbot.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/contact">Book a Session</a>
+          <a class="btn btn-ghost" href="/power-bi-model-health">Check model health</a>
+        </p>
+      </div>
+    </header>
+
+    <figure class="still bw">
+      <img src="/blog/ask-the-model-dont-screenshot-hero.jpg" alt="" width="1600" height="900" />
+    </figure>
+
+    <section class="band">
+      <div class="wrap prose">
+        <h2>Ask the model—not chatbot theater</h2>
+        <p>
+          You (or your analysts) ask a question in language. The answer is computed from a certified semantic model: one definition of revenue, margin, inventory, or cash. That is conversational analytics on Power BI / Fabric—not a demo chatbot wired to messy spreadsheets.
+        </p>
+        <p>
+          <strong>AlluviumAI is parked.</strong> This page is delivery on alluviumbi.com: model readiness, certified measures, and governed questions on the stack you already run.
+        </p>
+      </div>
+    </section>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>Prerequisites before anyone “asks”</h2>
+        <ul>
+          <li>A semantic model with named, certified measures someone will defend in the meeting.</li>
+          <li>Clear grain and source of truth—finance and ops not running two books under one tile.</li>
+          <li>Refresh that meets the close / huddle calendar, not “whenever the gateway finishes.”</li>
+          <li>RLS when the audience should not see each other’s books.</li>
+          <li>A steward who can change a measure without a war room.</li>
+        </ul>
+        <p>
+          Not ready yet? Start with
+          <a href="/power-bi-model-health">Power BI model health</a>
+          or rebuild one painful report via
+          <a href="/power-bi-quickstart">Power BI Quickstart</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap prose">
+        <h2>What this is not</h2>
+        <ul>
+          <li>A Copilot experiment dropped on untrusted measures.</li>
+          <li>A standalone chatbot product or AlluviumAI launch.</li>
+          <li>Screenshot theater where the “answer” is still a slide someone rebuilt overnight.</li>
+        </ul>
+        <p>
+          Related reading:
+          <a href="/blog/conversational-analytics-needs-a-trusted-model">conversational analytics needs a trusted model</a>,
+          <a href="/blog/ask-the-model-dont-screenshot">ask the model, don’t screenshot</a>,
+          and
+          <a href="/blog/semantic-model-is-the-product">the semantic model is the product</a>.
+        </p>
+      </div>
+    </section>
+
+    <RelatedLinks
+      services={RELATED["/conversational-analytics"].services}
+      posts={RELATED["/conversational-analytics"].posts}
+    />
+
+    <CtaBand
+      heading="See if your model is ready to be asked"
+      text="Book a Session to pick one certified model and the questions it should answer—after the measures are trusted."
+    />
+  </article>
 </BaseLayout>

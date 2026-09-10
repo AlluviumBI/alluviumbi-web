@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Power BI Quickstart playbook | Alluvium</title>
+  <meta name="description" content="Power BI Quickstart playbook: one painful report, data checklist, two-week path, flat fee $3,000." />
+  <style>
+    :root {
+      --ink: #1c1c1c;
+      --ink-soft: #333333;
+      --muted: #555555;
+      --line: #dcdcdc;
+      --paper: #ffffff;
+      --paper-2: #f7f7f7;
+      --accent: #397fb0;
+      --accent-hover: #2f6a94;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    a { color: var(--accent); text-underline-offset: 0.18em; }
+    a:hover { color: var(--accent-hover); }
+    .top {
+      background: var(--ink);
+      color: var(--white);
+      padding: 1rem 1.25rem;
+    }
+    .top a { color: #cfe6f5; }
+    .wrap { width: min(100% - 2rem, 42rem); margin-inline: auto; padding: 2.5rem 0 3.5rem; }
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin: 0 0 0.5rem;
+      font-weight: 500;
+    }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.35rem); margin: 0 0 1rem; line-height: 1.2; }
+    h2 { font-size: 1.35rem; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.05rem; margin: 1.25rem 0 0.4rem; }
+    p { margin: 0 0 1rem; color: var(--ink-soft); }
+    ul, ol { color: var(--ink-soft); margin: 0 0 1rem; padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    .price {
+      display: inline-block;
+      background: #eef5fa;
+      border: 1px solid #c5dceb;
+      color: var(--ink);
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      margin: 0.5rem 0 1rem;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.15rem 1.25rem;
+      background: var(--paper-2);
+      margin: 1rem 0;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 640px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .cta {
+      margin-top: 2.5rem;
+      padding: 1.5rem;
+      background: var(--ink);
+      color: var(--white);
+      border-radius: 12px;
+    }
+    .cta p { color: rgba(255,255,255,0.9); }
+    .cta h2 { margin-top: 0; color: var(--white); }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white) !important;
+      text-decoration: none;
+      padding: 0.7rem 1.15rem;
+      border-radius: 999px;
+      font-weight: 500;
+      margin-right: 0.5rem;
+      margin-top: 0.35rem;
+    }
+    .btn:hover { background: var(--accent-hover); }
+    .btn-ghost {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.55);
+      color: var(--white) !important;
+      text-decoration: none;
+      padding: 0.7rem 1.15rem;
+      border-radius: 999px;
+      font-weight: 500;
+      margin-top: 0.35rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 1.25rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div style="width:min(100% - 2rem,42rem);margin-inline:auto;">
+      <strong>Alluvium</strong> · Power BI Quickstart playbook ·
+      <a href="/power-bi-quickstart">Service page</a> ·
+      <a href="/contact">Book a Session</a>
+    </div>
+  </div>
+  <main class="wrap">
+    <p class="kicker">Playbook</p>
+    <h1>Power BI Quickstart playbook</h1>
+    <p>
+      Rebuild one critical report in two weeks. Flat fee <span class="price">$3,000</span>.
+      Built for US mid-market finance, ops, and manufacturing teams who need trusted numbers in the meeting—not a six-month “BI transformation.”
+    </p>
+    <p>No invented case studies. No chatbot theater. One painful report, then handoff.</p>
+
+    <h2>1. Pick one painful report</h2>
+    <p>Choose the recurring pack that burns the most hours and creates the most arguments:</p>
+    <ul>
+      <li>Month-end close / P&amp;L variance pack</li>
+      <li>Weekly production, scrap, or OTIF</li>
+      <li>Pipeline vs bookings for the QBR</li>
+      <li>Inventory or cash view leadership opens on Monday</li>
+    </ul>
+    <div class="card">
+      <strong>Rule:</strong> If you cannot name the report, the owner, and the meeting it feeds in one sentence, you are not ready for Quickstart yet. Use the
+      <a href="/how-to-choose-a-power-bi-partner">partner checklist</a> or <a href="/contact">Book a Session</a> first.
+    </div>
+
+    <h2>2. Data checklist before kickoff</h2>
+    <ul>
+      <li>Source systems identified (ERP, CRM, Excel, warehouse, SharePoint)</li>
+      <li>Grain agreed (unit, period, plant, GL, opportunity)</li>
+      <li>Access path for read-only extracts or certified datasets</li>
+      <li>Current “source of truth” spreadsheet attached (warts included)</li>
+      <li>Named steward who can approve measure definitions</li>
+      <li>Refresh expectation vs close / huddle calendar</li>
+    </ul>
+
+    <h2>3. Two-week path</h2>
+    <ol>
+      <li><strong>Days 1–2:</strong> Discovery — name the report, grain, and success criteria.</li>
+      <li><strong>Days 3–8:</strong> Model + report — connect sources, certify measures, build the pack.</li>
+      <li><strong>Days 9–10:</strong> Review with the steward; fix trust issues, not polish-only.</li>
+      <li><strong>Days 11–14:</strong> Training on your model + one week of support after go-live.</li>
+    </ol>
+
+    <h2>4. Alluvium vs client</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Alluvium owns</h3>
+        <ul>
+          <li>Model and report build for the scoped pack</li>
+          <li>Named measures and documentation</li>
+          <li>Training session on your data</li>
+          <li>One week of post-go-live support</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Client owns</h3>
+        <ul>
+          <li>Access, samples, and steward time</li>
+          <li>Business definitions and sign-off</li>
+          <li>Workspace / capacity decisions</li>
+          <li>Ongoing measure changes after handoff</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>5. FAQ</h2>
+    <h3>Is $3,000 the whole engagement?</h3>
+    <p>Yes for one critical report in two weeks as scoped. Optional add-ons for extra reports, deeper model work, or workspace setup are quoted separately.</p>
+    <h3>Do you invent client logos or case studies?</h3>
+    <p>No. This playbook describes the delivery pattern—not fictional wins.</p>
+    <h3>What if the model is a mess?</h3>
+    <p>Start with <a href="/power-bi-model-health">model health</a> or the <a href="/how-to-choose-a-power-bi-partner">partner checklist</a>. Quickstart still needs one named report and a steward.</p>
+    <h3>Where does conversational analytics fit?</h3>
+    <p>Only after measures are certified. See <a href="/conversational-analytics">conversational analytics</a>—ask the model, not chatbot theater. AlluviumAI is parked; delivery is on alluviumbi.com.</p>
+
+    <div class="cta">
+      <h2>Next step</h2>
+      <p>Ready to name the report? Book a Session, or go straight to Quickstart at a flat $3,000.</p>
+      <a class="btn" href="/contact">Book a Session</a>
+      <a class="btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+    </div>
+  </main>
+  <footer>
+    © Alluvium LLC · Quickstart playbook · <a href="/">alluviumbi.com</a>
+  </footer>
+</body>
+</html>

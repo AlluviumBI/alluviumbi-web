@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE, pageTitle } from "../lib/site";
+
+const title = pageTitle("Power BI Quickstart playbook");
+const description =
+  "Email-gated Power BI Quickstart playbook: one painful report, data checklist, two-week path, and flat fee $3,000. Work email required.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Tools", item: SITE.url + "/tools" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Power BI Quickstart playbook",
+        item: SITE.url + "/power-bi-quickstart-playbook",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/power-bi-quickstart-playbook",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
+  },
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/power-bi-quickstart-playbook"
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/tools", label: "Tools" },
+            { label: "Quickstart playbook" },
+          ]}
+        />
+        <p class="kicker">Playbook</p>
+        <h1>Power BI Quickstart playbook</h1>
+        <p class="lede">
+          One painful report, a data checklist, and a two-week path to a flat-fee rebuild at $3,000. Enter a work email to unlock the playbook.
+        </p>
+      </div>
+    </header>
+
+    <section class="band band-alt">
+      <div class="wrap-narrow">
+        <h2>What’s inside</h2>
+        <ul>
+          <li>How to pick the one painful report worth automating first</li>
+          <li>Data and access checklist before kickoff</li>
+          <li>Two-week path: Alluvium vs client ownership</li>
+          <li>FAQ and fixed price: <strong>$3,000</strong></li>
+        </ul>
+        <p>No invented case studies. Practical delivery for US mid-market finance, ops, and manufacturing.</p>
+
+        <form
+          class="contact"
+          name="quickstart-playbook"
+          method="POST"
+          action="/power-bi-quickstart-playbook-thanks"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="quickstart-playbook" />
+          <p hidden>
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
+          <p>
+            <label for="pb-name">Name</label>
+            <input id="pb-name" name="name" type="text" autocomplete="name" required />
+          </p>
+          <p>
+            <label for="pb-email">Work email</label>
+            <input
+              id="pb-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="you@company.com"
+            />
+          </p>
+          <p>
+            <label for="pb-company">Company</label>
+            <input id="pb-company" name="company" type="text" autocomplete="organization" />
+          </p>
+          <p><button class="btn" type="submit">Get the playbook</button></p>
+        </form>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
