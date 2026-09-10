@@ -1,0 +1,261 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
+import LineIcon from "../components/LineIcon.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE, pageTitle } from "../lib/site";
+
+const title = pageTitle("Power BI for sales analytics");
+const description =
+  "Power BI for mid-market sales: pipeline and bookings finance will accept, CRM + ERP on shared definitions. Quickstart flat fee $3,000.";
+
+const faqs = [
+  {
+    q: "Will this make sales forecast equal finance bookings?",
+    a: "No—and it should not pretend to. We name pipeline, commit, and bookings as separate measures with clear calendars so the QBR stops subtracting two different processes.",
+  },
+  {
+    q: "Can CRM and ERP share the same model?",
+    a: "Yes. Salesforce, Dynamics, HubSpot, and similar CRMs can sit beside ERP and finance facts—with mapped grain, not a hallway translation on Monday.",
+  },
+  {
+    q: "Do you invent sales case studies or logos?",
+    a: "No. Same delivery pattern as finance and manufacturing: one painful report, named measures, training on your model—no invented clients.",
+  },
+  {
+    q: "What does the Quickstart cost?",
+    a: "Flat fee $3,000 for one critical sales report rebuilt in two weeks—discovery, automated report, training, and one week of support.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Power BI for sales",
+        item: SITE.url + "/power-bi-for-sales",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/power-bi-for-sales",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Power BI for sales",
+    description,
+    url: SITE.url + "/power-bi-for-sales",
+    provider: { "@type": "Organization", name: "Alluvium", url: SITE.url },
+    areaServed: { "@type": "Country", name: "United States" },
+    serviceType: "Power BI consulting for sales",
+    offers: {
+      "@type": "Offer",
+      name: "Power BI Quickstart",
+      price: "3000",
+      priceCurrency: "USD",
+      description: "One painful sales report rebuilt in two weeks. Flat fee $3,000.",
+      url: SITE.url + "/power-bi-quickstart",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/power-bi-for-sales"
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/services", label: "Services" },
+            { label: "Power BI for sales" },
+          ]}
+        />
+        <p class="kicker">By audience</p>
+        <h1>Power BI for sales</h1>
+        <p class="lede">
+          Pipeline and bookings for US mid-market teams—CRM facts sales can run, finance definitions leadership will accept, and a QBR that stops pretending forecast equals bookings.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/contact">Book a Session</a>
+          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+        </p>
+      </div>
+    </header>
+
+    <figure class="still bw">
+      <img
+        src="/blog/sales-forecast-vs-finance-bookings-hero.jpg"
+        alt=""
+        width="1600"
+        height="900"
+      />
+    </figure>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>When the forecast never ties to bookings</h2>
+        <p>
+          Mid-market sales leaders know the pattern: CRM stages that never match the ledger, weighted pipeline treated like cash, and a Monday pack where sales and finance argue about the same deal under two calendars. Power BI helps—but only when pipeline, commit, and bookings are named as different measures.
+        </p>
+        <p>
+          Alluvium helps sales ops, revenue leaders, and finance partners put CRM and ERP on shared grain, automate the painful recurring pack, and leave the team able to run the model. No invented client logos. No chatbot project dressed up as sales BI.
+        </p>
+        <ul>
+          <li>Pipeline hygiene: stale opps culled, stage exit criteria sales will defend, next-step and close-date discipline.</li>
+          <li>Bookings and finance facts that do not pretend to be weighted pipeline.</li>
+          <li>CRM + ERP on one semantic model—field hygiene so the report is not cleaning the CRM in DAX.</li>
+          <li>Training on your certified measures so the skill does not walk out with the consultant.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>What we do for sales and revenue teams</h2>
+        <div class="cards">
+          <article class="card">
+            <LineIcon name="sales" />
+            <h3>Pipeline that sales can run</h3>
+            <p>
+              Stage exit criteria, stale-opp culls, next-step and close-date discipline, and CRM field hygiene—
+              so the pack reflects a pipeline reps will defend, not a vanity funnel.
+              Background:
+              <a href="/blog/power-bi-for-sales-analytics-consulting">Power BI for sales analytics consulting</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="finance" />
+            <h3>Forecast vs bookings, named apart</h3>
+            <p>
+              Stop subtracting two processes. Name pipeline and bookings so the QBR can decide.
+              Read
+              <a href="/blog/sales-forecast-vs-finance-bookings">sales forecast vs finance bookings</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="connect" />
+            <h3>CRM + ERP, same grain</h3>
+            <p>
+              Salesforce, Dynamics, HubSpot, and the ledger—mapped, not hallway-translated.
+              Related:
+              <a href="/blog/dynamics-salesforce-two-systems-one-label">Dynamics / Salesforce, two systems, one label</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="decision" />
+            <h3>Numbers finance will accept</h3>
+            <p>
+              Certified measures and calendars so commercial and finance stop fighting the same title.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="report" />
+            <h3>One painful sales pack first</h3>
+            <p>
+              Weekly pipeline, bookings vs plan, or territory performance—rebuilt so Monday opens with a number.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="expertise" />
+            <h3>Handoff your team can run</h3>
+            <p>
+              Training on your model—not generic slides—so sales ops owns the next change.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>Start with one painful sales report</h2>
+        <p>
+          The <a href="/power-bi-quickstart">Power BI Quickstart</a> rebuilds one critical sales report in two weeks—pipeline pack, bookings vs plan, territory KPI, or similar.
+          <strong>Flat fee $3,000</strong>. Discovery, automated report, training, and one week of support included.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/power-bi-quickstart">See Power BI Quickstart</a>
+          <a class="btn btn-ghost" href="/contact">Book a Session</a>
+        </p>
+        <p>
+          Deeper consulting shape:
+          <a href="/blog/power-bi-for-sales-analytics-consulting">Power BI for sales analytics consulting</a>.
+          When the model itself is the risk, try
+          <a href="/power-bi-model-health">Power BI model health</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="band faq" aria-labelledby="sales-faq">
+      <div class="wrap">
+        <h2 id="sales-faq">Sales Power BI FAQs</h2>
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <RelatedLinks
+      services={[
+        { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+        { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+        { href: "/power-bi-training", label: "Power BI training" },
+        { href: "/power-bi-for-finance", label: "Power BI for finance" },
+        { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
+      ]}
+      posts={[
+        {
+          href: "/blog/power-bi-for-sales-analytics-consulting",
+          label: "Power BI for sales analytics consulting",
+        },
+        {
+          href: "/blog/sales-forecast-vs-finance-bookings",
+          label: "Sales forecast vs finance bookings",
+        },
+        {
+          href: "/blog/dynamics-salesforce-two-systems-one-label",
+          label: "Dynamics / Salesforce: two systems, one label",
+        },
+        {
+          href: "/blog/forecast-never-ties-to-actuals",
+          label: "When forecast never ties to actuals",
+        },
+      ]}
+    />
+
+    <CtaBand
+      heading="Put pipeline and bookings in the same meeting"
+      text="Book a Session to name the sales report that breaks the QBR. Or start with Power BI Quickstart—one painful report in two weeks, flat fee $3,000."
+    />
+  </article>
+</BaseLayout>
