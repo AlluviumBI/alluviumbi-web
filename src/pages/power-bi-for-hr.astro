@@ -1,0 +1,261 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
+import LineIcon from "../components/LineIcon.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE, pageTitle } from "../lib/site";
+
+const title = pageTitle("Power BI for HR");
+const description =
+  "Power BI for mid-market HR and people analytics: headcount, labor, and people costs that tie to the P&L. Quickstart flat fee $3,000.";
+
+const faqs = [
+  {
+    q: "Is this people analytics or just headcount charts?",
+    a: "People analytics that finance will accept—headcount, labor, and people costs on shared definitions with the P&L, not a side HR dashboard that never ties out.",
+  },
+  {
+    q: "Can HR and finance share the same model?",
+    a: "Yes. Headcount and labor should use the same calendar, org, and cost-center grain finance already owns—so Monday’s meeting is not two versions of people cost.",
+  },
+  {
+    q: "Do you invent HR case studies or logos?",
+    a: "No. We reuse the same delivery pattern as finance and manufacturing Quickstarts: one painful report, named measures, training on your model—no invented clients.",
+  },
+  {
+    q: "What does the Quickstart cost?",
+    a: "Flat fee $3,000 for one critical HR or people-cost report rebuilt in two weeks—discovery, automated report, training, and one week of support.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Power BI for HR",
+        item: SITE.url + "/power-bi-for-hr",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/power-bi-for-hr",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Power BI for HR",
+    description,
+    url: SITE.url + "/power-bi-for-hr",
+    provider: { "@type": "Organization", name: "Alluvium", url: SITE.url },
+    areaServed: { "@type": "Country", name: "United States" },
+    serviceType: "Power BI consulting for HR and people analytics",
+    offers: {
+      "@type": "Offer",
+      name: "Power BI Quickstart",
+      price: "3000",
+      priceCurrency: "USD",
+      description: "One painful HR report rebuilt in two weeks. Flat fee $3,000.",
+      url: SITE.url + "/power-bi-quickstart",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/power-bi-for-hr"
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/services", label: "Services" },
+            { label: "Power BI for HR" },
+          ]}
+        />
+        <p class="kicker">By audience</p>
+        <h1>Power BI for HR</h1>
+        <p class="lede">
+          People analytics for US mid-market teams—headcount, labor, and people costs that actually tie to the P&amp;L, not a side dashboard finance will not sign.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/contact">Book a Session</a>
+          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+        </p>
+      </div>
+    </header>
+
+    <figure class="still bw">
+      <img
+        src="/blog/finance-accrual-ops-cash-hero.jpg"
+        alt=""
+        width="1600"
+        height="900"
+      />
+    </figure>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>When people costs never tie to the close</h2>
+        <p>
+          Mid-market HR and finance already know the pattern: headcount in one workbook, labor in another, overtime argued in email, and a P&amp;L that cannot explain the people line. Power BI helps—but only when org, calendar, and cost center match the definitions controllers already own.
+        </p>
+        <p>
+          Alluvium helps HR, FP&amp;A, and ops put headcount and labor on the same semantic model as the close. People analytics that leadership will open on Monday. No invented HR case studies. No chatbot project dressed up as workforce BI.
+        </p>
+        <ul>
+          <li>Headcount and FTE that share calendar and org grain with finance.</li>
+          <li>Labor and people costs that drill to cost center—not a black-box “HR total.”</li>
+          <li>Training on your certified measures so the skill stays with the team.</li>
+          <li>Natural links to <a href="/power-bi-for-finance">Power BI for finance</a>, training, and managed advisory.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>What we do for HR and people analytics</h2>
+        <div class="cards">
+          <article class="card">
+            <LineIcon name="hr" />
+            <h3>Headcount that matches the org</h3>
+            <p>
+              Active headcount and FTE on shared org and calendar—so HR and FP&amp;A stop reconciling two rosters before the meeting.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="finance" />
+            <h3>People costs on the P&amp;L</h3>
+            <p>
+              Labor and people cost views that drill the way controllers close.
+              Related: <a href="/power-bi-for-finance">Power BI for finance</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="connect" />
+            <h3>HRIS + payroll + GL</h3>
+            <p>
+              Practical connections to the systems you already run—Workday, ADP, Dynamics, Excel—without a greenfield people-data warehouse first.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="expertise" />
+            <h3>Numbers finance will sign</h3>
+            <p>
+              Named measures and owners so people analytics earns the same sign-off standard as the rest of the pack.
+              See <a href="/blog/finance-wont-sign-off-on-the-dashboard">when finance won’t sign off on the dashboard</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="training" />
+            <h3>Skill that stays in-house</h3>
+            <p>
+              Hands-on <a href="/power-bi-training">Power BI training</a> on your certified headcount and labor measures—not a generic course.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="retainer" />
+            <h3>Ongoing stewardship</h3>
+            <p>
+              When definitions and access need a standing owner, use
+              <a href="/managed-advisory-retainer">managed advisory</a>—including RLS that matches HR groups.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>Start with one painful HR report</h2>
+        <p>
+          The <a href="/power-bi-quickstart">Power BI Quickstart</a> rebuilds one critical HR or people-cost report in two weeks—headcount pack, labor variance, departmental people cost, or similar.
+          <strong>Flat fee $3,000</strong>. Discovery, automated report, training, and one week of support included.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/power-bi-quickstart">See Power BI Quickstart</a>
+          <a class="btn btn-ghost" href="/contact">Book a Session</a>
+        </p>
+        <p>
+          Deeper finance alignment:
+          <a href="/power-bi-for-finance">Power BI for finance</a>.
+          When the model itself is the risk, try the optional
+          <a href="/power-bi-model-health">Power BI model health score</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="band faq" aria-labelledby="hr-faq">
+      <div class="wrap">
+        <h2 id="hr-faq">HR Power BI FAQs</h2>
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <RelatedLinks
+      services={[
+        { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+        { href: "/power-bi-for-finance", label: "Power BI for finance" },
+        { href: "/power-bi-training", label: "Power BI training" },
+        { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
+        { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+      ]}
+      posts={[
+        {
+          href: "/blog/finance-accrual-ops-cash",
+          label: "Finance: accrual, ops, and cash",
+        },
+        {
+          href: "/blog/finance-wont-sign-off-on-the-dashboard",
+          label: "When finance won’t sign off on the dashboard",
+        },
+        {
+          href: "/blog/row-level-security-who-sees-the-number",
+          label: "Row-level security: who sees the number",
+        },
+        {
+          href: "/blog/power-bi-for-finance-reporting-consulting",
+          label: "Power BI for finance reporting consulting",
+        },
+        {
+          href: "/blog/change-management-for-analytics",
+          label: "Change management for analytics",
+        },
+      ]}
+    />
+
+    <CtaBand
+      heading="Put people costs on the same model as the P&L"
+      text="Book a Session to name the HR report that never ties to the close. Or start with Power BI Quickstart—one painful report in two weeks, flat fee $3,000."
+    />
+  </article>
+</BaseLayout>
