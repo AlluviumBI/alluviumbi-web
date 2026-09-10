@@ -1,0 +1,261 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
+import LineIcon from "../components/LineIcon.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE, pageTitle } from "../lib/site";
+
+const title = pageTitle("Power BI for supply chain");
+const description =
+  "Power BI for mid-market supply chain: inventory, OTIF, and supplier numbers in the same model as finance. Quickstart flat fee $3,000.";
+
+const faqs = [
+  {
+    q: "Can inventory live in the same model as the P&L?",
+    a: "Yes—and it should. On-hand, turns, and fill rate need shared definitions with finance so Monday’s cash talk and the warehouse meeting are not two companies.",
+  },
+  {
+    q: "Do you build a separate supply-chain warehouse first?",
+    a: "No. We start with one painful report—inventory visibility, OTIF, or supplier scorecard—on the sources you already run, then name measures for reuse.",
+  },
+  {
+    q: "How does this relate to manufacturing Power BI?",
+    a: "Throughput and inventory are different clocks. We keep plant grain for the huddle and working-capital views for cash—linked where natural, not collapsed into one dishonest tile.",
+  },
+  {
+    q: "What does the Quickstart cost?",
+    a: "Flat fee $3,000 for one critical supply-chain report rebuilt in two weeks—discovery, automated report, training, and one week of support.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Power BI for supply chain",
+        item: SITE.url + "/power-bi-for-supply-chain",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/power-bi-for-supply-chain",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Power BI for supply chain",
+    description,
+    url: SITE.url + "/power-bi-for-supply-chain",
+    provider: { "@type": "Organization", name: "Alluvium", url: SITE.url },
+    areaServed: { "@type": "Country", name: "United States" },
+    serviceType: "Power BI consulting for supply chain",
+    offers: {
+      "@type": "Offer",
+      name: "Power BI Quickstart",
+      price: "3000",
+      priceCurrency: "USD",
+      description: "One painful supply-chain report rebuilt in two weeks. Flat fee $3,000.",
+      url: SITE.url + "/power-bi-quickstart",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/power-bi-for-supply-chain"
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/services", label: "Services" },
+            { label: "Power BI for supply chain" },
+          ]}
+        />
+        <p class="kicker">By audience</p>
+        <h1>Power BI for supply chain</h1>
+        <p class="lede">
+          Inventory, OTIF, and supplier numbers in the same model as finance—so US mid-market ops and controllers stop managing working capital from last Friday’s extract.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/contact">Book a Session</a>
+          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+        </p>
+      </div>
+    </header>
+
+    <figure class="still bw">
+      <img
+        src="/blog/inventory-is-cash-slow-stock-reporting-hero.jpg"
+        alt=""
+        width="1600"
+        height="900"
+      />
+    </figure>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>When inventory is cash and the report is a week late</h2>
+        <p>
+          Mid-market supply chain teams rarely lack spreadsheets. They lack on-hand, turns, aging, and fill rate in one semantic model finance will defend. The COO feels lag as service. The CFO feels it as cash. Warehouses stay full while customers wait—because the pack still waits on Excel.
+        </p>
+        <p>
+          Alluvium helps supply chain, ops, and finance put inventory and OTIF on the same definitions as the P&amp;L. Not a second set of books. Not invented client logos. Practical Power BI that matches how US mid-market teams already run the meeting.
+        </p>
+        <ul>
+          <li>On-hand, turns, and dead stock that refresh with the sources you already run.</li>
+          <li>OTIF and fill rate tied to the customer—not only a warehouse tile.</li>
+          <li>Supplier and inventory views that share measures with <a href="/power-bi-for-finance">finance</a> and, for plants, <a href="/power-bi-for-manufacturing">manufacturing</a>.</li>
+          <li>Training on certified measures so the skill does not walk out with the consultant.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>What we do for supply chain teams</h2>
+        <div class="cards">
+          <article class="card">
+            <LineIcon name="supply" />
+            <h3>Inventory as working capital</h3>
+            <p>
+              On-hand, turns, and aging as cash questions—not a week of files after the extract.
+              Background: <a href="/blog/inventory-is-cash-slow-stock-reporting">inventory is cash; slow stock reporting is a working-capital problem</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="operations" />
+            <h3>Throughput and inventory, both honest</h3>
+            <p>
+              Ops units and finance dollars without collapsing them into one ignored tile.
+              See <a href="/blog/throughput-inventory-report-nobody-trusts">throughput, inventory, and the report nobody trusts</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="finance" />
+            <h3>Same model as finance</h3>
+            <p>
+              Shared definitions so Monday’s cash talk and the warehouse meeting stop being two companies.
+              Related: <a href="/power-bi-for-finance">Power BI for finance</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="connect" />
+            <h3>ERP-aware extracts</h3>
+            <p>
+              Practical patterns for the ERP and WMS you already run—without a six-month “BI transformation” before the first useful pack.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="decision" />
+            <h3>OTIF that leadership opens</h3>
+            <p>
+              Fill rate and OTIF tied to service and cash—not chart theater nobody brings upstairs.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="report" />
+            <h3>One painful report first</h3>
+            <p>
+              Inventory visibility, OTIF, or a supplier scorecard rebuilt as a refreshing pack—then measures named for reuse across ops and finance.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>Start with one painful supply-chain report</h2>
+        <p>
+          The <a href="/power-bi-quickstart">Power BI Quickstart</a> rebuilds one critical supply-chain report in two weeks—inventory visibility, OTIF, aging, supplier scorecard, or similar.
+          <strong>Flat fee $3,000</strong>. Discovery, automated report, training, and one week of support included. Optional add-ons for additional reports, model work, or workspace setup.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/power-bi-quickstart">See Power BI Quickstart</a>
+          <a class="btn btn-ghost" href="/contact">Book a Session</a>
+        </p>
+        <p>
+          Plant-side grain and OEE live on
+          <a href="/power-bi-for-manufacturing">Power BI for manufacturing</a>.
+          When the model itself is the risk, try the optional
+          <a href="/power-bi-model-health">Power BI model health score</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="band faq" aria-labelledby="sc-faq">
+      <div class="wrap">
+        <h2 id="sc-faq">Supply chain Power BI FAQs</h2>
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <RelatedLinks
+      services={[
+        { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+        { href: "/power-bi-for-manufacturing", label: "Power BI for manufacturing" },
+        { href: "/power-bi-for-finance", label: "Power BI for finance" },
+        { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+        { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
+      ]}
+      posts={[
+        {
+          href: "/blog/inventory-is-cash-slow-stock-reporting",
+          label: "Inventory is cash: slow stock reporting",
+        },
+        {
+          href: "/blog/throughput-inventory-report-nobody-trusts",
+          label: "Throughput inventory report nobody trusts",
+        },
+        {
+          href: "/blog/ops-still-runs-the-plant-from-spreadsheets",
+          label: "Why ops still runs the plant from spreadsheets",
+        },
+        {
+          href: "/blog/power-bi-for-manufacturing-reporting-consulting",
+          label: "Power BI for manufacturing reporting consulting",
+        },
+        {
+          href: "/blog/cash-not-charts-cfo-monday",
+          label: "Cash, not charts: CFO Monday",
+        },
+      ]}
+    />
+
+    <CtaBand
+      heading="Put inventory and finance on one model"
+      text="Book a Session to name the supply-chain report that slows service or cash. Or start with Power BI Quickstart—one painful report in two weeks, flat fee $3,000."
+    />
+  </article>
+</BaseLayout>
