@@ -36,6 +36,7 @@ export const NAV = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/power-bi-quickstart", label: "Quickstart" },
+  { href: "/tools", label: "Tools" },
   { href: "/blog", label: "Insights" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -136,6 +137,76 @@ export const RELATED: Record<
       { href: "/blog/conversational-analytics-needs-a-trusted-model", label: "Conversational analytics needs a trusted model" },
       { href: "/blog/ask-the-model-dont-screenshot", label: "Ask the model, don\u2019t screenshot" },
       { href: "/blog/semantic-model-is-the-product", label: "The semantic model is the product" },
+    ],
+  },
+  "/power-bi-for-manufacturing": {
+    services: [
+      { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+      { href: "/power-bi-oee-gauge", label: "Alluvium OEE Gauge" },
+      { href: "/how-to-choose-a-power-bi-partner", label: "How to choose a Power BI partner" },
+      { href: "/power-bi-for-finance", label: "Power BI for finance" },
+    ],
+    posts: [
+      { href: "/blog/power-bi-for-manufacturing-reporting-consulting", label: "Power BI for manufacturing reporting consulting" },
+      { href: "/blog/ops-still-runs-the-plant-from-spreadsheets", label: "Why ops still runs the plant from spreadsheets" },
+      { href: "/blog/manufacturing-scrap-never-makes-the-pack", label: "Manufacturing scrap that never makes the pack" },
+      { href: "/blog/slow-bi-costs-manufacturing-downtime", label: "Slow BI costs manufacturing downtime" },
+    ],
+  },
+  "/power-bi-for-finance": {
+    services: [
+      { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+      { href: "/power-bi-training", label: "Power BI training" },
+      { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+      { href: "/power-bi-for-manufacturing", label: "Power BI for manufacturing" },
+    ],
+    posts: [
+      { href: "/blog/power-bi-for-finance-reporting-consulting", label: "Power BI for finance reporting consulting" },
+      { href: "/blog/why-month-end-still-takes-a-week", label: "Why month-end still takes a week" },
+      { href: "/blog/cash-not-charts-cfo-monday", label: "Cash, not charts: CFO Monday" },
+      { href: "/blog/finance-accrual-ops-cash", label: "Finance: accrual, ops, and cash" },
+    ],
+  },
+  "/power-bi-for-supply-chain": {
+    services: [
+      { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+      { href: "/power-bi-for-manufacturing", label: "Power BI for manufacturing" },
+      { href: "/power-bi-for-finance", label: "Power BI for finance" },
+      { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
+    ],
+    posts: [
+      { href: "/blog/inventory-is-cash-slow-stock-reporting", label: "Inventory is cash: slow stock reporting" },
+      { href: "/blog/throughput-inventory-report-nobody-trusts", label: "Throughput inventory report nobody trusts" },
+      { href: "/blog/ops-still-runs-the-plant-from-spreadsheets", label: "Why ops still runs the plant from spreadsheets" },
+      { href: "/blog/cash-not-charts-cfo-monday", label: "Cash, not charts: CFO Monday" },
+    ],
+  },
+  "/power-bi-for-quality": {
+    services: [
+      { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+      { href: "/power-bi-for-manufacturing", label: "Power BI for manufacturing" },
+      { href: "/power-bi-oee-gauge", label: "Alluvium OEE Gauge" },
+      { href: "/power-bi-for-finance", label: "Power BI for finance" },
+    ],
+    posts: [
+      { href: "/blog/manufacturing-scrap-never-makes-the-pack", label: "Manufacturing scrap that never makes the pack" },
+      { href: "/blog/slow-bi-costs-manufacturing-downtime", label: "Slow BI costs manufacturing downtime" },
+      { href: "/blog/weekly-ops-review-is-a-slide-deck", label: "When the weekly ops review is a slide deck" },
+      { href: "/blog/power-bi-for-manufacturing-reporting-consulting", label: "Power BI for manufacturing reporting consulting" },
+    ],
+  },
+  "/power-bi-for-hr": {
+    services: [
+      { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+      { href: "/power-bi-for-finance", label: "Power BI for finance" },
+      { href: "/power-bi-training", label: "Power BI training" },
+      { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
+    ],
+    posts: [
+      { href: "/blog/finance-accrual-ops-cash", label: "Finance: accrual, ops, and cash" },
+      { href: "/blog/finance-wont-sign-off-on-the-dashboard", label: "When finance won’t sign off on the dashboard" },
+      { href: "/blog/row-level-security-who-sees-the-number", label: "Row-level security: who sees the number" },
+      { href: "/blog/change-management-for-analytics", label: "Change management for analytics" },
     ],
   },
 };

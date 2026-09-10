@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE } from "../lib/site";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: SITE.url + "/tools" },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Power BI Model Health",
+      item: SITE.url + "/power-bi-model-health",
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Check your email for the score | Alluvium Model Health"
+  description="Your Power BI model health submission was received. Check your email for the score and review."
+  canonicalPath="/model-health-success"
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/tools", label: "Tools" },
+            { href: "/power-bi-model-health", label: "Model Health" },
+            { label: "Submitted" },
+          ]}
+        />
+        <p class="kicker">Model Health</p>
+        <h1>Check your email for the score</h1>
+        <p class="lede">Power BI model health review — metadata only.</p>
+      </div>
+    </header>
+    <section class="band band-alt">
+      <div class="wrap-narrow">
+        <h2>We have your export</h2>
+        <p>
+          Thanks — your file is in. We’ll score the model from metadata only and send the
+          review to the work email you shared. Look for an Alluvium Model Health message shortly.
+        </p>
+        <p>
+          No <code>.pbix</code> accepted on this path. Files are used only to produce your report
+          and are not kept for training.
+        </p>
+        <p>
+          <a class="btn" href="/power-bi-model-health">Back to Model Health</a>
+          <a class="btn" href="/" style="margin-left:0.75rem">Home</a>
+        </p>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

@@ -81,3 +81,47 @@ if (fs.existsSync(heroesDir)) {
     console.log('wrote', outPath, fs.statSync(outPath).size);
   }
 }
+
+// Materialize OEE product screenshots from scripts/tools/*.png.b64 (+ optional .b64.N parts)
+const toolsDir = path.join(root, 'scripts', 'tools');
+const toolsOut = path.join(root, 'public', 'tools');
+if (fs.existsSync(toolsDir)) {
+  fs.mkdirSync(toolsOut, { recursive: true });
+  const names = fs.readdirSync(toolsDir);
+  const done = new Set();
+  for (const name of names) {
+    if (!name.endsWith('.png.b64')) continue;
+    const outName = name.slice(0, -'.b64'.length);
+    const buf = Buffer.from(fs.readFileSync(path.join(toolsDir, name), 'utf8').trim(), 'base64');
+    fs.writeFileSync(path.join(toolsOut, outName), buf);
+    console.log('wrote', path.join(toolsOut, outName), buf.length);
+    done.add(outName);
+  }
+  const partRe = /^(.+\.png)\.b64\.(\d+)$/;
+  const groups = new Map();
+  for (const name of names) {
+    const m = name.match(partRe);
+    if (!m) continue;
+    const outName = m[1];
+    if (done.has(outName)) continue;
+    if (!groups.has(outName)) groups.set(outName, []);
+    groups.get(outName).push([Number(m[2]), name]);
+  }
+  for (const [outName, parts] of groups) {
+    parts.sort((a, b) => a[0] - b[0]);
+    if (!parts.length || parts[0][0] !== 0) continue;
+    let consecutive = true;
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i][0] !== i) { consecutive = false; break; }
+    }
+    if (!consecutive) continue;
+    let b64 = '';
+    for (const [, name] of parts) {
+      b64 += fs.readFileSync(path.join(toolsDir, name), 'utf8').trim();
+    }
+    const buf = Buffer.from(b64, 'base64');
+    fs.writeFileSync(path.join(toolsOut, outName), buf);
+    console.log('wrote', path.join(toolsOut, outName), buf.length);
+  }
+}
+

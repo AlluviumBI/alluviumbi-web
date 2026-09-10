@@ -1,0 +1,261 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBand from "../components/CtaBand.astro";
+import RelatedLinks from "../components/RelatedLinks.astro";
+import LineIcon from "../components/LineIcon.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE, pageTitle } from "../lib/site";
+
+const title = pageTitle("Power BI for quality");
+const description =
+  "Power BI for mid-market quality: scrap, yield, and customer escapes in the Monday pack—not a plant-only report. Quickstart flat fee $3,000.";
+
+const faqs = [
+  {
+    q: "Is this plant quality or data quality?",
+    a: "Plant quality—scrap, yield, rework, and customer escapes. Dirty feeds show up as arguments too, but this landing is the pack that never saw the bin.",
+  },
+  {
+    q: "Can quality and finance share one model?",
+    a: "Yes. MES, QMS, and ERP should feed scrap quantity, cost, and reason into the same semantic model as production and COGS—not a side workspace named “ops only.”",
+  },
+  {
+    q: "Where does this sit relative to manufacturing Power BI?",
+    a: "Manufacturing covers plant grain and shared KPIs. Quality focuses on yield that graduates into the Monday pack finance will defend. They link naturally.",
+  },
+  {
+    q: "What does the Quickstart cost?",
+    a: "Flat fee $3,000 for one critical quality report rebuilt in two weeks—scrap summary, yield pack, escapes, or similar—with training and one week of support.",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Power BI for quality",
+        item: SITE.url + "/power-bi-for-quality",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/power-bi-for-quality",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Power BI for quality",
+    description,
+    url: SITE.url + "/power-bi-for-quality",
+    provider: { "@type": "Organization", name: "Alluvium", url: SITE.url },
+    areaServed: { "@type": "Country", name: "United States" },
+    serviceType: "Power BI consulting for quality",
+    offers: {
+      "@type": "Offer",
+      name: "Power BI Quickstart",
+      price: "3000",
+      priceCurrency: "USD",
+      description: "One painful quality report rebuilt in two weeks. Flat fee $3,000.",
+      url: SITE.url + "/power-bi-quickstart",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/power-bi-for-quality"
+  jsonLd={jsonLd}
+>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/services", label: "Services" },
+            { label: "Power BI for quality" },
+          ]}
+        />
+        <p class="kicker">By audience</p>
+        <h1>Power BI for quality</h1>
+        <p class="lede">
+          Scrap, yield, and customer escapes in the Monday pack for US mid-market plants—not a plant-only report that never graduates upstairs.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/contact">Book a Session</a>
+          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+        </p>
+      </div>
+    </header>
+
+    <figure class="still bw">
+      <img
+        src="/blog/manufacturing-scrap-never-makes-the-pack-hero.jpg"
+        alt=""
+        width="1600"
+        height="900"
+      />
+    </figure>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>When scrap is known on the floor and missing in the pack</h2>
+        <p>
+          Mid-market quality teams already count what they threw away. Finance still books a smoother yield story two weeks later. Rework hides as utilization. Customer escapes live in another system. The Monday pack that only shows “COGS” is a partial confession—and leaders learn that quality is a local hobby.
+        </p>
+        <p>
+          Alluvium helps quality, ops, and finance put scrap and yield into the same semantic model as production and the P&amp;L. Named measures. Shared definitions. No invented case-study logos. Power BI that matches how US mid-market plants already run the meeting.
+        </p>
+        <ul>
+          <li>First-pass yield, scrap cost, and rework in the same pack as throughput.</li>
+          <li>Customer escapes that meet internal scrap—not two disconnected systems.</li>
+          <li>One model quality and finance both consume, not an “ops only” side workspace.</li>
+          <li>Links to <a href="/power-bi-for-manufacturing">manufacturing</a> plant grain and <a href="/power-bi-for-finance">finance</a> sign-off where natural.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>What we do for quality teams</h2>
+        <div class="cards">
+          <article class="card">
+            <LineIcon name="quality" />
+            <h3>Scrap that makes the pack</h3>
+            <p>
+              Yield and scrap cost that finance will defend—not a clipboard that never graduates.
+              Read <a href="/blog/manufacturing-scrap-never-makes-the-pack">why manufacturing scrap never makes the pack</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="operations" />
+            <h3>Plant grain, Monday audience</h3>
+            <p>
+              Line and shift scrap that still reads upstairs—so quality is not only a huddle hobby.
+              Related: <a href="/power-bi-for-manufacturing">Power BI for manufacturing</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="time" />
+            <h3>Signals before another shift of scrap</h3>
+            <p>
+              Tuned models so defect and downtime insight arrives while you can still act.
+              Background: <a href="/blog/slow-bi-costs-manufacturing-downtime">slow BI costs manufacturing downtime</a>.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="finance" />
+            <h3>Shared definitions with finance</h3>
+            <p>
+              Certified yield measures with a steward—usually operations with finance consulted—not a pasted screenshot.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="connect" />
+            <h3>QMS, MES, and ERP together</h3>
+            <p>
+              Practical extract patterns so scrap quantity, cost, and reason join production and COGS in one model.
+            </p>
+          </article>
+          <article class="card">
+            <LineIcon name="dashboard" />
+            <h3>Huddles over slide decks</h3>
+            <p>
+              Live pages for quality and ops review instead of stale screenshots.
+              See <a href="/blog/weekly-ops-review-is-a-slide-deck">when the weekly ops review is a slide deck</a>.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-alt">
+      <div class="wrap prose">
+        <h2>Start with one painful quality report</h2>
+        <p>
+          The <a href="/power-bi-quickstart">Power BI Quickstart</a> rebuilds one high-impact quality report in two weeks—scrap summary, first-pass yield, rework pack, customer escapes, or similar.
+          <strong>Flat fee $3,000</strong>. Discovery, automated report, training, and one week of support included.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="/power-bi-quickstart">See Power BI Quickstart</a>
+          <a class="btn btn-ghost" href="/contact">Book a Session</a>
+        </p>
+        <p>
+          Broader plant KPIs:
+          <a href="/power-bi-for-manufacturing">Power BI for manufacturing</a>.
+          The free <a href="/power-bi-oee-gauge">Alluvium OEE Gauge</a> shows Availability × Performance × Quality at a glance—the consulting work is the trusted measures behind it.
+        </p>
+      </div>
+    </section>
+
+    <section class="band faq" aria-labelledby="qa-faq">
+      <div class="wrap">
+        <h2 id="qa-faq">Quality Power BI FAQs</h2>
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <RelatedLinks
+      services={[
+        { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
+        { href: "/power-bi-for-manufacturing", label: "Power BI for manufacturing" },
+        { href: "/power-bi-oee-gauge", label: "Alluvium OEE Gauge" },
+        { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+        { href: "/power-bi-for-finance", label: "Power BI for finance" },
+      ]}
+      posts={[
+        {
+          href: "/blog/manufacturing-scrap-never-makes-the-pack",
+          label: "Manufacturing scrap that never makes the pack",
+        },
+        {
+          href: "/blog/slow-bi-costs-manufacturing-downtime",
+          label: "Slow BI costs manufacturing downtime",
+        },
+        {
+          href: "/blog/ops-still-runs-the-plant-from-spreadsheets",
+          label: "Why ops still runs the plant from spreadsheets",
+        },
+        {
+          href: "/blog/weekly-ops-review-is-a-slide-deck",
+          label: "When the weekly ops review is a slide deck",
+        },
+        {
+          href: "/blog/power-bi-for-manufacturing-reporting-consulting",
+          label: "Power BI for manufacturing reporting consulting",
+        },
+      ]}
+    />
+
+    <CtaBand
+      heading="Put scrap in the Monday pack"
+      text="Book a Session to name the quality report that never makes it upstairs. Or start with Power BI Quickstart—one painful report in two weeks, flat fee $3,000."
+    />
+  </article>
+</BaseLayout>

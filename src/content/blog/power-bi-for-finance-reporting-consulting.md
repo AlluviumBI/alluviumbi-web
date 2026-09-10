@@ -68,7 +68,7 @@ You don’t need a full-time developer. You need a focused partner when:
 Whether you need a small win to build internal momentum or want to rebuild reporting from the ground up, Alluvium can help.
 
 **Explore Our Services:**
-- **Quickstart:** 1 critical report, 2 weeks, $2,500
+- **Quickstart:** 1 critical report, 2 weeks, $3,000
 - **Dashboard Optimization:** Tune-ups for clarity, performance, and usability
 - **Strategic Consulting:** Align reporting to decision-making
 - **Finance-Focused Training:** Custom learning sessions for your team
