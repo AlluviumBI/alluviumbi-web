@@ -1,0 +1,275 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Crumbs from "../components/Crumbs.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { SITE, pageTitle } from "../lib/site";
+
+const title = pageTitle("Power BI OEE Gauge for manufacturing");
+const description =
+  "Alluvium OEE Gauge: free Power BI custom visual for manufacturing OEE — Availability × Performance × Quality, target bands, and offline format options.";
+
+const appsourceUrl =
+  "https://marketplace.microsoft.com/en-us/product/power-bi-visuals/alluviumllc1788788073302.alluvium-oee-gauge";
+
+const features = [
+  {
+    title: "Target bands on the OEE arc",
+    text: "Mark the threshold that matters on the plant floor so operators and supervisors see status at a glance — not just a raw percentage.",
+  },
+  {
+    title: "Availability, Performance, and Quality gauges",
+    text: "Show the three OEE drivers beside the composite score so teams can see which lever moved the number.",
+  },
+  {
+    title: "Format pane control",
+    text: "Colors, thresholds, and decimal places live in the standard Power BI format pane — no custom scripting required.",
+  },
+  {
+    title: "No network calls",
+    text: "The visual computes from the fields you bind. It does not call external services or phone home.",
+  },
+];
+
+const dataRoles = [
+  { role: "Availability", required: "Yes", notes: "Numeric measure or column, typically 0–1 or 0–100." },
+  { role: "Performance", required: "Yes", notes: "Numeric measure or column for rate vs. ideal cycle." },
+  { role: "Quality", required: "Yes", notes: "Numeric measure or column for good units vs. total." },
+  { role: "Target (optional)", required: "No", notes: "Optional target for the OEE arc tick / band." },
+];
+
+const screenshots = [
+  {
+    src: "/tools/oee-screenshot-1.png",
+    alt: "Alluvium OEE Gauge showing overall OEE with Availability, Performance, and Quality",
+    caption: "OEE with Availability, Performance, and Quality",
+  },
+  {
+    src: "/tools/oee-screenshot-2.png",
+    alt: "Alluvium OEE Gauge with target tick on the OEE arc",
+    caption: "Target tick on the OEE arc",
+  },
+  {
+    src: "/tools/oee-screenshot-3.png",
+    alt: "Power BI format pane for Alluvium OEE Gauge colors, thresholds, and decimals",
+    caption: "Format pane: colors, thresholds, decimals",
+  },
+];
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Tools", item: SITE.url + "/tools" },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Alluvium OEE Gauge",
+        item: SITE.url + "/power-bi-oee-gauge",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Alluvium OEE Gauge",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Power BI",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      url: appsourceUrl,
+    },
+    description,
+    url: SITE.url + "/power-bi-oee-gauge",
+    downloadUrl: appsourceUrl,
+    publisher: { "@type": "Organization", name: SITE.name, url: SITE.url + "/" },
+  },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/power-bi-oee-gauge" jsonLd={jsonLd}>
+  <article class="oee-page">
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/tools", label: "Tools" },
+            { label: "Alluvium OEE Gauge" },
+          ]}
+        />
+        <p class="kicker">AppSource visual</p>
+        <h1>Alluvium OEE Gauge</h1>
+        <p class="lede">
+          A free Power BI custom visual for manufacturing teams that need overall equipment effectiveness on the page —
+          Availability × Performance × Quality — without another spreadsheet or vendor dashboard.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href={appsourceUrl} target="_blank" rel="noopener noreferrer">Get it on AppSource</a>
+          <a class="btn btn-ghost" href="/contact">Support</a>
+        </p>
+      </div>
+    </header>
+
+    <section class="band band-alt" aria-labelledby="oee-what">
+      <div class="wrap prose">
+        <h2 id="oee-what">What it is</h2>
+        <p>
+          OEE (overall equipment effectiveness) is the product of three rates: <strong>Availability</strong>,
+          <strong>Performance</strong>, and <strong>Quality</strong>. Plants use it to see whether a line is
+          running when it should, at the speed it should, and producing good units.
+        </p>
+        <p>
+          Alluvium OEE Gauge puts that composite score — and the three drivers behind it — into a Power BI visual
+          built for production, maintenance, and ops leaders who already live in reports. Bind your measures, set
+          a target if you use one, and publish with the rest of the model.
+        </p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="oee-features">
+      <div class="wrap">
+        <h2 id="oee-features">Features</h2>
+        <div class="cards">
+          {features.map((f) => (
+            <article class="card">
+              <h3>{f.title}</h3>
+              <p>{f.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-alt" aria-labelledby="oee-shots">
+      <div class="wrap">
+        <h2 id="oee-shots">In the report</h2>
+        <div class="oee-shots">
+          {screenshots.map((s) => (
+            <figure class="oee-figure">
+              <img src={s.src} alt={s.alt} width="1200" height="675" loading="lazy" />
+              <figcaption>{s.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="oee-roles">
+      <div class="wrap prose">
+        <h2 id="oee-roles">Data roles</h2>
+        <p>Map existing measures from your semantic model. Typical manufacturing models already expose these rates.</p>
+        <div class="oee-table-wrap">
+          <table class="oee-table">
+            <thead>
+              <tr>
+                <th scope="col">Field</th>
+                <th scope="col">Required</th>
+                <th scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {dataRoles.map((r) => (
+                <tr>
+                  <td>{r.role}</td>
+                  <td>{r.required}</td>
+                  <td>{r.notes}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-alt" aria-labelledby="oee-get">
+      <div class="wrap prose">
+        <h2 id="oee-get">How to get it</h2>
+        <ol>
+          <li>Open Power BI Desktop (or the service visual marketplace where custom visuals are allowed).</li>
+          <li>Prefer the <a href={appsourceUrl} target="_blank" rel="noopener noreferrer">Marketplace listing</a>, or in Desktop use Get more visuals → search <strong>Alluvium OEE Gauge</strong> (in-product gallery can lag the Marketplace page by 10–14 days).</li>
+          <li>Add the visual to the report canvas and bind Availability, Performance, and Quality.</li>
+          <li>Use the format pane for colors, thresholds, and decimals. No network configuration is required.</li>
+        </ol>
+        <p class="hero-actions" style="margin-top: 1.25rem;">
+          <a class="btn" href={appsourceUrl} target="_blank" rel="noopener noreferrer">Get it on AppSource</a>
+        </p>
+        <p id="appsource" class="oee-appsource-note">
+          <strong>Live on Marketplace.</strong>
+          <a href={appsourceUrl} target="_blank" rel="noopener noreferrer">Get Alluvium OEE Gauge on AppSource</a>.
+          The in-product Get more visuals gallery can take 10–14 days to catch up after the Marketplace page goes live.
+        </p>
+        <p>
+          Support: <a href="/contact">/contact</a>. Privacy for this visual:
+          <a href="/privacy">/privacy</a>.
+        </p>
+      </div>
+    </section>
+
+    <CtaBand
+      heading="Book a Session"
+      text="Need OEE wired into a trusted semantic model — or help rolling the visual into plant reports? Tell us what the line needs to show."
+    />
+  </article>
+</BaseLayout>
+
+<style>
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 1.25rem;
+  }
+  .oee-shots {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .oee-figure {
+    margin: 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  .oee-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .oee-figure figcaption {
+    padding: 0.75rem 1rem;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    border-top: 1px solid var(--line);
+  }
+  .oee-table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0 0;
+  }
+  .oee-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.98rem;
+  }
+  .oee-table th,
+  .oee-table td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .oee-table th {
+    color: var(--ink);
+    font-weight: 600;
+    background: var(--paper-2);
+  }
+  .oee-appsource-note {
+    margin-top: 1.25rem;
+    padding: 1rem 1.1rem;
+    background: var(--paper);
+    border-left: 4px solid var(--accent);
+  }
+</style>
