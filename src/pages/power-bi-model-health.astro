@@ -136,6 +136,23 @@ const jsonLd = [
         </form>
 
         <p class="mh-privacy">Work email required. Files used only to produce your report.</p>
+
+        <aside class="mh-deep-dive" aria-labelledby="mh-deep">
+          <h2 id="mh-deep">Model Health Deep Dive</h2>
+          <p>
+            Free score first. Then a Matt-signed deep pass on your worst findings —
+            flat fee <strong>$1,500</strong>.
+          </p>
+          <p class="mh-deep-note">
+            Deeper findings with Why / Risk / Impact, a top fix list for the next 30 days,
+            and a short readout — still from your metadata export. Not self-serve checkout:
+            we qualify on a Session.
+          </p>
+          <p class="hero-actions" style="margin-top:1rem;">
+            <a class="btn" href="/contact">Get a Model Health Deep Dive</a>
+            <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+          </p>
+        </aside>
       </div>
     </section>
   </article>
@@ -380,6 +397,24 @@ const jsonLd = [
     border-top: 1px solid var(--line);
     font-size: 0.92rem;
     color: var(--muted);
+  }
+
+  .mh-deep-dive {
+    margin-top: 2rem;
+    padding: 1.25rem 1.25rem 1.35rem;
+    border: 1px solid var(--line);
+    background: var(--white);
+  }
+  .mh-deep-dive h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+  }
+  .mh-deep-dive p {
+    margin: 0 0 0.65rem;
+    color: var(--ink-soft);
+  }
+  .mh-deep-note {
+    font-size: 0.95rem;
   }
 </style>
 
