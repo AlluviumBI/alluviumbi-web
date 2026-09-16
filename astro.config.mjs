@@ -7,6 +7,8 @@ import { defineConfig } from 'astro/config';
 const EXCLUDED = [
   '/404',
   '/contact-success',
+  '/model-health-success',
+  '/power-bi-quickstart-playbook-thanks',
 ];
 
 function isIndexable(page) {
