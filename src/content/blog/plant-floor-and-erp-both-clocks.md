@@ -16,7 +16,7 @@ Finance speaks ERP. Period. Order. Standard cost. Scrap that posted to the books
 
 Both use English words like scrap, downtime, and throughput. They do not share a clock. Then someone builds one Power BI tile and expects manufacturing and finance to agree. They argue past each other. Someone prints a second pack—cousin to [the plant manager prints the dashboard](/blog/plant-manager-prints-the-dashboard)—because the model never named both grains.
 
-![Black-and-white plant floor worker guiding a large suspended industrial machine component](/blog/plant-floor-and-erp-both-clocks-hero.jpg)
+![Black-and-white plant floor worker guiding a large suspended industrial machine component](/blog/plant-floor-and-erp-both-clocks-hero.svg)
 
 ## Shared labels, different clocks
 
