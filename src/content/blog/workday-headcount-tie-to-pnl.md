@@ -16,7 +16,7 @@ Both look right in their own system. Then someone builds a Power BI tile labeled
 
 That is not a chart problem. That is a missing bridge between HRIS labor and GL labor—burden, contractors, and effective dating included—published before anyone trusts the tile.
 
-![Black-and-white silhouette of high-voltage transmission towers and power lines toward a low sun](/blog/workday-headcount-tie-to-pnl-hero.jpg)
+![Black-and-white silhouette of high-voltage transmission towers and power lines toward a low sun](/blog/workday-headcount-tie-to-pnl-hero.svg)
 
 ## Same noun, different rules
 

@@ -16,7 +16,7 @@ Leadership wants one margin story across the three. Someone joins on customer or
 
 No product-brand theater. Generic dealer and OEM-style ops: unit and serial are the join across parts, service, and sales. Without that grain, Power BI becomes three teams arguing in one workspace.
 
-![Black-and-white low-angle view of a tower crane and building framework against an overcast sky](/blog/heavy-equipment-ops-unit-grain-hero.jpg)
+![Black-and-white low-angle view of a tower crane and building framework against an overcast sky](/blog/heavy-equipment-ops-unit-grain-hero.svg)
 
 ## Unit grain is the join
 
