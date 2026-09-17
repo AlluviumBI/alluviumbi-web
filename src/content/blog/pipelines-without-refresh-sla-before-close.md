@@ -16,7 +16,7 @@ Azure Data Factory, Fabric pipelines, and sibling orchestration tools can land t
 
 This is pipeline how-to for mid-market close—not a product launch story. The question is whether finance can defend the as-of when the room opens the pack.
 
-![Black-and-white aerial view of a container terminal with gantry cranes and stacked containers](/blog/pipelines-without-refresh-sla-before-close-hero.jpg)
+![Black-and-white aerial view of a container terminal with gantry cranes and stacked containers](/blog/pipelines-without-refresh-sla-before-close-hero.svg)
 
 ## Movement is not freshness
 
