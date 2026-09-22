@@ -1,5 +1,5 @@
 ---
-title: "Your Power BI App Has Twelve Pages. The Room Uses Two."
+title: "Your Power BI App Has Twelve Pages. The Room Uses Two"
 description: "Extra pages are not a program. They are navigation tax. Cut to the two the meeting actually opens."
 pubDate: 2026-09-19
 tags:

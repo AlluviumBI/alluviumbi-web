@@ -1,5 +1,5 @@
 ---
-title: "Snowflake Is Not a Semantic Model. Your Measures Still Need an Owner."
+title: "Snowflake Is Not a Semantic Model. Your Measures Still Need an Owner"
 description: "A clean Snowflake warehouse still produces five Revenues if each Power BI team invents measures. The platform is not the trusted model."
 pubDate: 2026-09-10
 tags:

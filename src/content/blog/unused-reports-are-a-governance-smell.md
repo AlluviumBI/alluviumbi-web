@@ -1,5 +1,5 @@
 ---
-title: "Unused Reports Are a Governance Smell. Here’s the Cleanup."
+title: "Unused Reports Are a Governance Smell. Here’s the Cleanup"
 description: "Zero views is a signal. Refreshing ghosts is how capacity and trust both leak."
 pubDate: 2026-08-28
 tags:
