@@ -1,5 +1,5 @@
 ---
-title: "Your Books Closed Friday. Power BI Still Shows Thursday."
+title: "Your Books Closed Friday. Power BI Still Shows Thursday"
 description: "QBO or ERP closed Friday while Power BI still shows Thursday. Name freshness, extract timing, and as-of rules before the Monday pack."
 pubDate: 2026-09-15
 tags:
