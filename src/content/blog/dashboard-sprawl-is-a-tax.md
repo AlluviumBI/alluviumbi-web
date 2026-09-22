@@ -1,5 +1,5 @@
 ---
-title: "Dashboard Sprawl Is Not Self-Service. It’s a Tax."
+title: "Dashboard Sprawl Is Not Self-Service. It’s a Tax"
 description: "Fifty reports is not a program. Sprawl burns refresh, meetings, and the one number leadership needed."
 pubDate: 2026-05-18
 tags:
