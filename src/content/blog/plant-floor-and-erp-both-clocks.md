@@ -1,5 +1,5 @@
 ---
-title: "Your Plant Floor Speaks Machines. Finance Speaks ERP. The Model Needs Both Clocks."
+title: "Your Plant Floor Speaks Machines. Finance Speaks ERP. The Model Needs Both Clocks"
 description: "Shift OEE and financial scrap share labels but not clocks. Model both grains or manufacturing and finance argue past each other."
 pubDate: 2026-09-17
 tags:
