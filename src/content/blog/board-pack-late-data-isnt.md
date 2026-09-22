@@ -1,5 +1,5 @@
 ---
-title: "Your Board Pack Is Late Because the Data Isn’t."
+title: "Your Board Pack Is Late Because the Data Isn’t"
 description: "The pack slips while actuals already exist. Assembly, paste, and versioning are the drag."
 pubDate: 2026-05-25
 tags:
