@@ -1,5 +1,5 @@
 ---
-title: "Power BI Is Live. Your Management Cadence Never Changed."
+title: "Power BI Is Live. Your Management Cadence Never Changed"
 description: "Power BI adoption stalls when meetings, reviews, and accountabilities still run on the old reporting cadence. Change the management system, not the training deck."
 pubDate: 2026-09-04
 tags:

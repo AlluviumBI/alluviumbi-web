@@ -1,5 +1,5 @@
 ---
-title: "The Refresh Succeeded. The Data Is Still Wrong."
+title: "The Refresh Succeeded. The Data Is Still Wrong"
 description: "A green Power BI refresh does not mean the numbers are right. Add data-quality checks after refresh or executives will distrust every successful run."
 pubDate: 2026-09-29
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "You Promoted the Report. Nobody Promoted the Measure."
+title: "You Promoted the Report. Nobody Promoted the Measure"
 description: "Shipping Power BI pages to Prod while the semantic model stays a Desktop file turns every small fix into a production surprise. Promote the model."
 pubDate: 2026-09-11
 tags:

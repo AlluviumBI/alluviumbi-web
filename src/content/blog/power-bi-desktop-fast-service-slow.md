@@ -1,5 +1,5 @@
 ---
-title: "Desktop Is Fast. The Service Is Slow. Stop Tuning the Wrong Thing."
+title: "Desktop Is Fast. The Service Is Slow. Stop Tuning the Wrong Thing"
 description: "If Power BI flies in Desktop and crawls after publish, stop polishing visuals. Fix model size, gateway path, capacity, or query-time DAX."
 pubDate: 2026-09-10
 tags:
