@@ -1,5 +1,5 @@
 ---
-title: "Your Dataset Is Certified. The Room Still Asks for the Excel."
+title: "Your Dataset Is Certified. The Room Still Asks for the Excel"
 description: "Power BI certification badges do not create trust. Incomplete grains, missing measures, and no steward send leaders back to Excel."
 pubDate: 2026-09-22
 tags:

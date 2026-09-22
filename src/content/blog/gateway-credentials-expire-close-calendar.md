@@ -1,5 +1,5 @@
 ---
-title: "Gateway Credentials Expire. Your Close Calendar Doesn't Care."
+title: "Gateway Credentials Expire. Your Close Calendar Doesn't Care"
 description: "Expired Power BI gateway passwords and OAuth silently kill refresh. Put credential rotation on the close calendar—not only HA monitoring."
 pubDate: 2026-09-22
 tags:

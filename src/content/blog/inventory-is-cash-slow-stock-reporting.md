@@ -1,5 +1,5 @@
 ---
-title: "Inventory Is Cash. Slow Stock Reporting Is a Working-Capital Problem."
+title: "Inventory Is Cash. Slow Stock Reporting Is a Working-Capital Problem"
 description: "If on-hand, turns, and dead stock take a week of Excel, you are managing working capital by lag."
 pubDate: 2026-05-08
 tags:

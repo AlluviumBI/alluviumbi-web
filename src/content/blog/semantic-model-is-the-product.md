@@ -1,5 +1,5 @@
 ---
-title: "The Semantic Model Is the Product. The Report Is the Brochure."
+title: "The Semantic Model Is the Product. The Report Is the Brochure"
 description: "Executives buy reports. The durable asset is the model: measures, grain, relationships, owners."
 pubDate: 2026-05-22
 tags:

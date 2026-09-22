@@ -1,5 +1,5 @@
 ---
-title: "Nobody Opens the Dashboard. Here’s What Adoption Actually Costs."
+title: "Nobody Opens the Dashboard. Here’s What Adoption Actually Costs"
 description: "Unused reports still cost refresh, meetings, and trust. Adoption is an operating problem, not a training slide."
 pubDate: 2026-05-11
 tags:

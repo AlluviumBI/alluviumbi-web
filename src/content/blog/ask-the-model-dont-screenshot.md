@@ -1,5 +1,5 @@
 ---
-title: "Ask the Model. Don’t Screenshot the Dashboard."
+title: "Ask the Model. Don’t Screenshot the Dashboard"
 description: "Screenshots age in an hour. A trusted model answers the next question without a new file."
 pubDate: 2026-06-24
 tags:

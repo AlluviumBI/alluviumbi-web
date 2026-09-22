@@ -1,5 +1,5 @@
 ---
-title: "Three Workspaces. Same Measure. Three Definitions."
+title: "Three Workspaces. Same Measure. Three Definitions"
 description: "Duplicate Power BI measures across workspaces mean three KPI definitions. Consolidate to one semantic model before the next reconciliation fight."
 pubDate: 2026-10-01
 tags:

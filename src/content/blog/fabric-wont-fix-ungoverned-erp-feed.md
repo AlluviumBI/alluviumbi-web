@@ -1,5 +1,5 @@
 ---
-title: "Fabric Won't Fix an Ungoverned ERP Feed. It Will Host It Faster."
+title: "Fabric Won't Fix an Ungoverned ERP Feed. It Will Host It Faster"
 description: "Moving a messy ERP extract into a lakehouse without grain, owners, and checks just accelerates bad Monday numbers."
 pubDate: 2026-09-15
 tags:

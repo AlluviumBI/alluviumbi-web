@@ -1,5 +1,5 @@
 ---
-title: "Excel vs Power BI Is the Wrong Fight. Here's What Finance Should Keep."
+title: "Excel vs Power BI Is the Wrong Fight. Here's What Finance Should Keep"
 description: "Power BI vs Excel is the wrong fight. Keep shared actuals in Power BI, modeling and statements in Excel, connected—not pasted. A mid-market CFO guide."
 pubDate: 2026-08-31
 tags:

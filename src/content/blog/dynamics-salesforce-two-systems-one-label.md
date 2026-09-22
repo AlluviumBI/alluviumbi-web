@@ -1,5 +1,5 @@
 ---
-title: "Dynamics Actuals and Salesforce Pipeline Are Two Systems. One Label Breaks the QBR."
+title: "Dynamics Actuals and Salesforce Pipeline Are Two Systems. One Label Breaks the QBR"
 description: "CRM stages and ERP bookings sharing a name without shared grain and calendar turns mid-market QBRs into reconciliation theater."
 pubDate: 2026-09-10
 tags:

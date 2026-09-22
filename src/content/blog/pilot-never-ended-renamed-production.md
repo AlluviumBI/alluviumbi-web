@@ -1,5 +1,5 @@
 ---
-title: "The Pilot Never Ended. It Just Got Renamed Production."
+title: "The Pilot Never Ended. It Just Got Renamed Production"
 description: "A Power BI pilot stuck in production keeps unfinished ownership, quality, and scope. Close the pilot for real or stop calling the estate production."
 pubDate: 2026-10-02
 tags:

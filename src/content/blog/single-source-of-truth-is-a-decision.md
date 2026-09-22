@@ -1,5 +1,5 @@
 ---
-title: "Single Source of Truth Is a Decision, Not a Slogan."
+title: "Single Source of Truth Is a Decision, Not a Slogan"
 description: "SSOT fails when two owners keep two models. It is a named source and a named steward, not a slide."
 pubDate: 2026-05-27
 tags:

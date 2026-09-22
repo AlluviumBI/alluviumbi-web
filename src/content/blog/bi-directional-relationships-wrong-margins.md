@@ -1,5 +1,5 @@
 ---
-title: "Bi-Directional Relationships Don't Throw Errors. They Throw Wrong Margins."
+title: "Bi-Directional Relationships Don't Throw Errors. They Throw Wrong Margins"
 description: "Flipping Power BI filter direction to fix a visual can quietly double-count. Wrong margins look like a definition fight. Fix the model."
 pubDate: 2026-09-09
 tags:

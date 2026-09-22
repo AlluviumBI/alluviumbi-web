@@ -1,5 +1,5 @@
 ---
-title: "NetSuite Inventory and the Warehouse System Disagree. Power BI Shouldn't Pick a Side Quietly."
+title: "NetSuite Inventory and the Warehouse System Disagree. Power BI Shouldn't Pick a Side Quietly"
 description: "On-hand fights are grain and timing fights between ERP and WMS. Name the source of truth in the model or Excel returns."
 pubDate: 2026-09-15
 tags:

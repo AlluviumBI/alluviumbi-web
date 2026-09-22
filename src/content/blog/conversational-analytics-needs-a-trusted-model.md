@@ -1,5 +1,5 @@
 ---
-title: "Conversational Analytics Without a Trusted Model Is Just Chat."
+title: "Conversational Analytics Without a Trusted Model Is Just Chat"
 description: "Asking questions of data only works if the model already has agreed measures. Chat does not invent definitions."
 pubDate: 2026-06-01
 tags:

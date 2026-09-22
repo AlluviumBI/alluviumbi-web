@@ -1,5 +1,5 @@
 ---
-title: "Variance Is a Question. A Red Tile Is Not an Answer."
+title: "Variance Is a Question. A Red Tile Is Not an Answer"
 description: "Color is not commentary. Executives need the driver, the owner, and whether to act."
 pubDate: 2026-09-05
 tags:
