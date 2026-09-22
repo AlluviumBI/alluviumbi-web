@@ -1,5 +1,5 @@
 ---
-title: "The KPI Owner Left. The Tile Still Has Their Name."
+title: "The KPI Owner Left. The Tile Still Has Their Name"
 description: "When a KPI tile still shows a departed owner, the scorecard is lying about accountability. Reassign ownership before the next review."
 pubDate: 2026-09-23
 tags:

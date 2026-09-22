@@ -1,5 +1,5 @@
 ---
-title: "A Model Health Score Is Not a Vanity Metric. It's Close Insurance."
+title: "A Model Health Score Is Not a Vanity Metric. It's Close Insurance"
 description: "Score Power BI relationships, bloat, and DAX risk before month-end. Treat model health like close insurance, not a dashboard garnish."
 pubDate: 2026-09-22
 tags:
