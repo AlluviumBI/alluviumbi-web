@@ -1,5 +1,5 @@
 ---
-title: "Shared Capacity Throttled the Close. Nobody Noticed Until Thursday."
+title: "Shared Capacity Throttled the Close. Nobody Noticed Until Thursday"
 description: "Month-end refresh lost to someone else’s dataset. Capacity is an operating risk, not an IT curiosity."
 pubDate: 2026-09-18
 tags:

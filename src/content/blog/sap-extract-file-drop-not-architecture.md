@@ -1,5 +1,5 @@
 ---
-title: "Your SAP Extract Is a File Drop. That Is Not an Analytics Architecture."
+title: "Your SAP Extract Is a File Drop. That Is Not an Analytics Architecture"
 description: "Nightly flat files without keys, history, or quality gates turn every variance into a source fight. Design the landing zone before the dashboard."
 pubDate: 2026-09-10
 tags:
