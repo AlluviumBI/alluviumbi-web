@@ -1,0 +1,242 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE, pageTitle } from "../lib/site";
+
+const title = pageTitle("Tableau to Power BI");
+const description =
+  "Move from Tableau to Power BI: cut seat cost, ease support, and land on a living analytics platform.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Power BI migration", item: SITE.url + "/power-bi-migration" },
+      { "@type": "ListItem", position: 3, name: "Tableau → Power BI", item: SITE.url + "/tableau-to-power-bi" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/tableau-to-power-bi",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
+  },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/tableau-to-power-bi" jsonLd={jsonLd}>
+  <article>
+<header class="hero">
+  <div class="wrap">
+        <Crumbs crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/power-bi-migration", label: "Power BI migration" },
+            { label: "Tableau → Power BI" }
+          ]} />
+        <div class="hero-grid">
+      <div>
+        <p class="kicker">Tableau → Power BI</p>
+        <h1>Stop paying for seats on a stack that barely moves.</h1>
+        <p class="lede">Tableau costs real money in seats and licenses, it is hard to support, and the product has not really been made better for a long time. Mid-market owners and finance leads leave because the bill keeps rising while the tool stands still. We move you to Power BI on a clear finish path.</p>
+        <p class="hero-actions">
+          <a class="btn" href="/contact">Book a Session</a>
+        </p>
+      </div>
+      <figure class="diagram" aria-label="Tableau cost and stagnation versus Power BI">
+        <svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Burning seat cost and a flat stagnant product dissolve into a calm Power BI workspace with rising pace.">
+          <rect width="640" height="340" fill="#ffffff"/>
+          <rect x="16" y="14" width="608" height="312" rx="20" fill="#f4f4f4"/>
+          <rect x="40" y="40" width="568" height="268" rx="18" fill="#e6e6e6" opacity="0.55"/>
+          <rect x="36" y="36" width="568" height="268" rx="18" fill="#ffffff" stroke="#dcdcdc"/>
+          <rect x="36" y="36" width="568" height="28" rx="18" fill="#fafafa"/>
+          <rect x="36" y="50" width="568" height="14" fill="#fafafa"/>
+          <circle cx="56" cy="50" r="4.5" fill="#dcdcdc"/>
+          <circle cx="72" cy="50" r="4.5" fill="#dcdcdc"/>
+          <circle cx="88" cy="50" r="4.5" fill="#397fb0" opacity="0.75"/>
+          <!-- pain zone: coin tower + flat line in open space -->
+          <ellipse cx="130" cy="220" rx="30" ry="9" fill="#c8c8c8"/>
+          <ellipse cx="130" cy="200" rx="30" ry="9" fill="#b8b8b8"/>
+          <ellipse cx="130" cy="180" rx="30" ry="9" fill="#a8a8a8"/>
+          <ellipse cx="130" cy="160" rx="30" ry="9" fill="#999"/>
+          <ellipse cx="130" cy="140" rx="30" ry="9" fill="#888"/>
+          <ellipse cx="130" cy="120" rx="30" ry="9" fill="#777"/>
+          <path d="M178 108 C188 88 204 88 214 108 C224 128 240 128 250 108" fill="none" stroke="#397fb0" stroke-width="2.2" opacity="0.4"/>
+          <path d="M88 258 H230" stroke="#dcdcdc" stroke-width="2"/>
+          <path d="M88 258 H200" stroke="#999" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="200" cy="258" r="7" fill="#999"/>
+          <rect x="186" y="226" width="28" height="20" rx="4" fill="#fff" stroke="#999"/>
+          <rect x="194" y="232" width="12" height="8" fill="#999"/>
+          <defs>
+            <linearGradient id="tabF2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <rect x="230" y="88" width="80" height="190" fill="url(#tabF2)"/>
+          <!-- Power BI product star -->
+          <rect x="290" y="84" width="290" height="196" rx="16" fill="#1c1c1c"/>
+          <rect x="290" y="84" width="290" height="28" rx="16" fill="#2a2a2a"/>
+          <rect x="290" y="98" width="290" height="14" fill="#2a2a2a"/>
+          <circle cx="310" cy="98" r="4" fill="#555"/>
+          <circle cx="324" cy="98" r="4" fill="#555"/>
+          <circle cx="338" cy="98" r="4" fill="#397fb0"/>
+          <!-- calm seat -->
+          <ellipse cx="352" cy="152" rx="24" ry="8" fill="#555"/>
+          <ellipse cx="352" cy="138" rx="24" ry="8" fill="#397fb0"/>
+          <!-- support cluster -->
+          <circle cx="430" cy="134" r="12" fill="#397fb0"/>
+          <path d="M414 164c8-16 24-16 32 0" fill="#397fb0"/>
+          <circle cx="468" cy="134" r="12" fill="#397fb0"/>
+          <path d="M452 164c8-16 24-16 32 0" fill="#397fb0"/>
+          <circle cx="506" cy="134" r="12" fill="#555"/>
+          <path d="M490 164c8-16 24-16 32 0" fill="#555"/>
+          <!-- rising pace curve -->
+          <path d="M320 248 C370 240 410 200 460 156 S530 112 556 104" fill="none" stroke="#397fb0" stroke-width="3.2" stroke-linecap="round"/>
+          <circle cx="556" cy="104" r="6" fill="#397fb0"/>
+          <rect x="310" y="248" width="250" height="20" rx="6" fill="#2a2a2a"/>
+          <circle cx="328" cy="258" r="6" fill="#397fb0"/>
+          <path d="M325 258 L327.5 260.5 L333 254" fill="none" stroke="#fff" stroke-width="1.5"/>
+          <rect x="346" y="254" width="160" height="5" rx="1" fill="#555"/>
+        </svg>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <p class="kicker">Why leave</p>
+    <h2>Cost, support, and a product that stopped moving</h2>
+    <div class="beats">
+      <article class="beat">
+                <div class="mini">
+          <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Burning seat-cost coin tower with heat wash.">
+              <rect width="280" height="130" fill="#ffffff"/>
+              <rect x="8" y="8" width="264" height="114" rx="14" fill="#f4f4f4"/>
+              <rect x="16" y="14" width="248" height="102" rx="12" fill="#ffffff" stroke="#dcdcdc"/>
+              <rect x="16" y="14" width="248" height="16" rx="12" fill="#fafafa"/>
+              <rect x="16" y="24" width="248" height="6" fill="#fafafa"/>
+              <circle cx="28" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="38" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="48" cy="22" r="2.8" fill="#397fb0" opacity="0.7"/>
+              <!-- rising coin stacks (cost climb) -->
+              <ellipse cx="70" cy="100" rx="18" ry="5.5" fill="#d0d0d0"/>
+              <ellipse cx="70" cy="90" rx="18" ry="5.5" fill="#c0c0c0"/>
+              <ellipse cx="70" cy="80" rx="18" ry="5.5" fill="#b0b0b0"/>
+              <ellipse cx="140" cy="100" rx="18" ry="5.5" fill="#c0c0c0"/>
+              <ellipse cx="140" cy="90" rx="18" ry="5.5" fill="#b0b0b0"/>
+              <ellipse cx="140" cy="80" rx="18" ry="5.5" fill="#a0a0a0"/>
+              <ellipse cx="140" cy="70" rx="18" ry="5.5" fill="#909090"/>
+              <ellipse cx="140" cy="60" rx="18" ry="5.5" fill="#888"/>
+              <ellipse cx="210" cy="100" rx="18" ry="5.5" fill="#b0b0b0"/>
+              <ellipse cx="210" cy="90" rx="18" ry="5.5" fill="#a0a0a0"/>
+              <ellipse cx="210" cy="80" rx="18" ry="5.5" fill="#909090"/>
+              <ellipse cx="210" cy="70" rx="18" ry="5.5" fill="#808080"/>
+              <ellipse cx="210" cy="60" rx="18" ry="5.5" fill="#777"/>
+              <ellipse cx="210" cy="50" rx="18" ry="5.5" fill="#666"/>
+              <path d="M232 42c6-12 16-12 22 0s16 12 22 0" fill="none" stroke="#397fb0" stroke-width="1.8" opacity="0.5"/>
+              <defs>
+                <linearGradient id="tabCostWash" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0" stop-color="#397fb0" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#397fb0" stop-opacity="0.12"/>
+                </linearGradient>
+              </defs>
+              <rect x="40" y="36" width="200" height="40" fill="url(#tabCostWash)"/>
+            </svg>
+        </div>
+        <h3>Cost</h3>
+        <p>Seat and license spend is the first reason mid-market buyers leave. You are paying premium prices for capacity you can get on normal Power BI seats.</p>
+      </article>
+      <article class="beat">
+                <div class="mini">
+          <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lone support figure beside empty dashed seats.">
+              <rect width="280" height="130" fill="#ffffff"/>
+              <rect x="8" y="8" width="264" height="114" rx="14" fill="#f4f4f4"/>
+              <rect x="16" y="14" width="248" height="102" rx="12" fill="#ffffff" stroke="#dcdcdc"/>
+              <rect x="16" y="14" width="248" height="16" rx="12" fill="#fafafa"/>
+              <rect x="16" y="24" width="248" height="6" fill="#fafafa"/>
+              <circle cx="28" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="38" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="48" cy="22" r="2.8" fill="#397fb0" opacity="0.7"/>
+              <!-- soft stage -->
+              <rect x="40" y="48" width="200" height="54" rx="12" fill="#f4f4f4"/>
+              <!-- one solid person -->
+              <circle cx="90" cy="66" r="12" fill="#999"/>
+              <path d="M70 100c10-20 30-20 40 0" fill="#999"/>
+              <!-- empty dashed seats -->
+              <circle cx="150" cy="66" r="12" fill="none" stroke="#dcdcdc" stroke-width="2" stroke-dasharray="3.5 3"/>
+              <path d="M130 100c10-20 30-20 40 0" fill="none" stroke="#dcdcdc" stroke-width="2" stroke-dasharray="3.5 3"/>
+              <circle cx="210" cy="66" r="12" fill="none" stroke="#dcdcdc" stroke-width="2" stroke-dasharray="3.5 3"/>
+              <path d="M190 100c10-20 30-20 40 0" fill="none" stroke="#dcdcdc" stroke-width="2" stroke-dasharray="3.5 3"/>
+              <!-- soft stress accent -->
+              <path d="M102 52c4-8 10-8 14 0" fill="none" stroke="#397fb0" stroke-width="1.6" opacity="0.45"/>
+            </svg>
+        </div>
+        <h3>Hard to support</h3>
+        <p>Finding and keeping people who can run Tableau well is expensive and slow. Ops and finance feel it every time a workbook breaks or a server need stacks up.</p>
+      </article>
+      <article class="beat">
+                <div class="mini">
+          <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flat stagnant product line locked still.">
+              <rect width="280" height="130" fill="#ffffff"/>
+              <rect x="8" y="8" width="264" height="114" rx="14" fill="#f4f4f4"/>
+              <rect x="16" y="14" width="248" height="102" rx="12" fill="#ffffff" stroke="#dcdcdc"/>
+              <rect x="16" y="14" width="248" height="16" rx="12" fill="#fafafa"/>
+              <rect x="16" y="24" width="248" height="6" fill="#fafafa"/>
+              <circle cx="28" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="38" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="48" cy="22" r="2.8" fill="#397fb0" opacity="0.7"/>
+              <!-- axis + flat line -->
+              <path d="M44 100 H236" stroke="#e6e6e6" stroke-width="1.8"/>
+              <path d="M44 100 H200" stroke="#999" stroke-width="3.2" stroke-linecap="round"/>
+              <circle cx="200" cy="100" r="7" fill="#999"/>
+              <!-- lock on the flat end -->
+              <path d="M188 62 V72 A14 14 0 0 0 216 72 V62" fill="none" stroke="#999" stroke-width="2.4"/>
+              <rect x="182" y="70" width="36" height="22" rx="5" fill="#fff" stroke="#999" stroke-width="1.6"/>
+              <rect x="194" y="78" width="12" height="8" rx="1" fill="#999"/>
+              <!-- faint failed climb ghost -->
+              <path d="M44 100 C90 100 120 70 160 70" fill="none" stroke="#397fb0" stroke-width="1.8" opacity="0.25" stroke-dasharray="4 4"/>
+            </svg>
+        </div>
+        <h3>Not getting better</h3>
+        <p>The product has not really been made better for a long time. Buyers who want a living analytics platform move to Power BI, where the roadmap and talent pool still grow.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band-cta">
+  <div class="wrap">
+    <p class="kicker">Next step</p>
+    <h2>Size the exit. Land in Power BI.</h2>
+    <p class="lede">Book a Session to map seat cost, support load, and a finish date—then land the first Power BI slice while Tableau winds down.</p>
+    <p class="hero-actions">
+      <a class="btn" href="/contact">Book a Session</a>
+    </p>
+  </div>
+</section>
+  </article>
+</BaseLayout>
+
+<style>
+  .diagram{border:1px solid var(--line);border-radius:10px;background:var(--paper-2);padding:.75rem;overflow:hidden}
+  .diagram svg{width:100%;border-radius:6px}
+  .beats,.paths{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem}
+  .beat,.path-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1rem 1rem}
+  .beat .mini,.path-card .mini{margin:0 0 .75rem;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+  .beat p,.path-card p{margin:0;font-size:.95rem}
+  a.path-card{text-decoration:none;color:inherit;display:block;transition:border-color .15s}
+  a.path-card:hover{border-color:var(--accent)}
+  .path-card .go{margin-top:.75rem;font-size:.85rem;color:var(--accent);font-weight:500}
+  .reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem}
+  .reason{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1rem}
+  .mig-back{font-size:.95rem;margin:0 0 1rem}
+  .mig-back a{color:var(--accent)}
+  @media(max-width:900px){
+    .beats,.paths,.reasons{grid-template-columns:1fr}
+  }
+</style>
+

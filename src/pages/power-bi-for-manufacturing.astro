@@ -8,7 +8,7 @@ import { SITE, pageTitle } from "../lib/site";
 
 const title = pageTitle("Power BI for manufacturing");
 const description =
-  "Power BI for mid-market manufacturing: shared shop-floor and finance KPIs, OEE and scrap in the huddle, ERP-aware models. Quickstart flat fee $3,000.";
+  "Power BI for mid-market manufacturing: shared shop-floor and finance KPIs, OEE and scrap in the huddle, ERP-aware models. Quickstart ";
 
 const faqs = [
   {
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What does a Quickstart cover for a plant?",
-    a: "One painful report—weekly production, scrap pack, OTIF, or inventory visibility—rebuilt in two weeks. Flat fee $3,000, with training and one week of support.",
+    a: "One painful report—weekly production, scrap pack, OTIF, or inventory visibility—rebuilt in two weeks. Flat fee , with training and one week of support.",
   },
 ];
 
@@ -60,15 +60,7 @@ const jsonLd = [
     url: SITE.url + "/power-bi-for-manufacturing",
     provider: { "@type": "Organization", name: "Alluvium", url: SITE.url },
     areaServed: { "@type": "Country", name: "United States" },
-    serviceType: "Power BI consulting for manufacturing",
-    offers: {
-      "@type": "Offer",
-      name: "Power BI Quickstart",
-      price: "3000",
-      priceCurrency: "USD",
-      description: "One painful manufacturing report rebuilt in two weeks. Flat fee $3,000.",
-      url: SITE.url + "/power-bi-quickstart",
-    },
+    serviceType: "Power BI consulting for manufacturing"
   },
   {
     "@context": "https://schema.org",
@@ -104,7 +96,7 @@ const jsonLd = [
         </p>
         <p class="hero-actions">
           <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
         </p>
       </div>
     </header>
@@ -195,7 +187,7 @@ const jsonLd = [
         <h2>Start with one painful plant report</h2>
         <p>
           The <a href="/power-bi-quickstart">Power BI Quickstart</a> rebuilds one high-impact manufacturing report in two weeks—weekly production, inventory visibility, OTIF, scrap summary, or a similar bottleneck.
-          <strong>Flat fee $3,000</strong>. Discovery, automated report, training, and one week of support included.
+          . Discovery, automated report, training, and one week of support included.
         </p>
         <p class="hero-actions">
           <a class="btn" href="/power-bi-quickstart">See Power BI Quickstart</a>
@@ -264,7 +256,7 @@ const jsonLd = [
 
     <CtaBand
       heading="Put the plant and finance on one model"
-      text="Book a Session to name the report that slows the huddle or the close. Or start with Power BI Quickstart—one painful manufacturing report in two weeks, flat fee $3,000."
+      text="Book a Session to name the report that slows the huddle or the close. Or start with Power BI Quickstart—one painful manufacturing report in two weeks, "
     />
   </article>
 </BaseLayout>

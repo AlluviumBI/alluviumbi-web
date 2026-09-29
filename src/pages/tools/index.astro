@@ -1,12 +1,12 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Crumbs from "../components/Crumbs.astro";
-import CtaBand from "../components/CtaBand.astro";
-import { SITE, pageTitle } from "../lib/site";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Crumbs from "../../components/Crumbs.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import { SITE, pageTitle } from "../../lib/site";
 
 const title = pageTitle("Power BI tools");
 const description =
-  "Free Power BI tools from Alluvium: Model Health metadata score and the Alluvium OEE Gauge visual for manufacturing.";
+  "Free Power BI tools from Alluvium: Model Health metadata score, Alluvium OEE Gauge for manufacturing, and a paste-ready date dimension.";
 
 const jsonLd = [
   {
@@ -34,7 +34,7 @@ const jsonLd = [
       <p class="kicker">Tools</p>
       <h1>Power BI tools</h1>
       <p class="lede">
-        Practical tools for mid-market Power BI teams — free model health scoring and a manufacturing OEE gauge on AppSource.
+        Practical tools for mid-market Power BI teams — free model health scoring, a manufacturing OEE gauge on AppSource, and a paste-ready date dimension.
       </p>
     </div>
   </header>
@@ -42,7 +42,7 @@ const jsonLd = [
   <section class="band band-alt" aria-labelledby="tools-heading">
     <div class="wrap">
       <h2 id="tools-heading" class="sr-only">Available tools</h2>
-      <div class="cards-2">
+      <div class="cards-2 tools-free-row">
         <article class="card">
           <h2>Power BI Model Health</h2>
           <p>
@@ -51,7 +51,7 @@ const jsonLd = [
           <p><a class="btn" href="/power-bi-model-health">Get your model health score</a></p>
           <p class="tools-secondary">
             Free score first. Want help on the worst findings?
-            <a href="/contact">Model Health Deep Dive</a> — flat fee <strong>$1,500</strong>.
+            <a href="/contact">Model Health Deep Dive</a>
           </p>
         </article>
         <article class="card">
@@ -64,10 +64,17 @@ const jsonLd = [
             <a href="https://marketplace.microsoft.com/en-us/product/power-bi-visuals/alluviumllc1788788073302.alluvium-oee-gauge" target="_blank" rel="noopener noreferrer">Get it on AppSource</a>
           </p>
         </article>
+        <article class="card">
+          <h2>Power BI Date Dimension</h2>
+          <p>
+            Free Power Query M date table — calendar, fiscal year, offsets, DateKey YYYYMMDD, and reverse-sort helpers. Paste into a blank query.
+          </p>
+          <p><a class="btn" href="/tools/date-dimension">Open date dimension</a></p>
+          <p class="tools-secondary">Paste-ready M · .txt download · Sort By Column tips</p>
+        </article>
       </div>
     </div>
   </section>
-
 
   <section class="band" aria-labelledby="engagements-heading">
     <div class="wrap">
@@ -76,16 +83,14 @@ const jsonLd = [
       <div class="cards-2">
         <article class="card">
           <h3>Readiness &amp; Governance Groundwork</h3>
-          <p class="tools-price">Flat fee <strong>$2,500</strong></p>
           <p>
             Not ready to hire a BI partner yet? Owners, definitions, publish path, and a 90-day plan
-            so a later Quickstart or hire can succeed. Different job from Deep Dive ($1,500) or Quickstart ($3,000).
+            so a later Quickstart or hire can succeed.
           </p>
           <p><a class="btn" href="/contact">Book a Session — ask about Groundwork</a></p>
         </article>
         <article class="card">
           <h3>Reporting Estate Audit</h3>
-          <p class="tools-price">Flat fee <strong>$3,500</strong></p>
           <p>
             Power BI / Fabric sprawl: inventory, unused-signal review, Model Health on up to three exports,
             and a retire / remediate / invest matrix. Not a remodel — and not a promise of license savings.
@@ -109,7 +114,7 @@ const jsonLd = [
         </article>
         <article class="card">
           <h3>Quickstart playbook</h3>
-          <p>Email-gated playbook for the two-week, flat-fee $3,000 rebuild path.</p>
+          <p>Email-gated playbook for the two-week rebuild path.</p>
           <p><a href="/power-bi-quickstart-playbook">Get the playbook</a></p>
         </article>
       </div>
@@ -147,5 +152,14 @@ const jsonLd = [
   .tools-secondary a {
     color: var(--accent);
     text-underline-offset: 0.18em;
+  }
+  /* Third free-tool card sits in the same section; 3-up on wide so Model Health + OEE + Date Dimension share one row */
+  .tools-free-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 960px) {
+    .tools-free-row {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

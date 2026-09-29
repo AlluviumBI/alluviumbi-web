@@ -1,0 +1,241 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Crumbs from "../components/Crumbs.astro";
+import { SITE, pageTitle } from "../lib/site";
+
+const title = pageTitle("Homegrown custom BI to Power BI");
+const description =
+  "Retire antiquated custom BI. Rebuild critical views on Power BI where talent and the market already live.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Power BI migration", item: SITE.url + "/power-bi-migration" },
+      { "@type": "ListItem", position: 3, name: "Homegrown → Power BI", item: SITE.url + "/homegrown-custom-bi-to-power-bi" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: SITE.url + "/homegrown-custom-bi-to-power-bi",
+    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
+  },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/homegrown-custom-bi-to-power-bi" jsonLd={jsonLd}>
+  <article>
+<header class="hero">
+  <div class="wrap">
+        <Crumbs crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/power-bi-migration", label: "Power BI migration" },
+            { label: "Homegrown → Power BI" }
+          ]} />
+        <div class="hero-grid">
+      <div>
+        <p class="kicker">Homegrown / custom BI → Power BI</p>
+        <h1>Retire the custom stack that only a few people can touch.</h1>
+        <p class="lede">Homegrown and custom BI systems grow antiquated, inflexible, and hard to support. They are not best-in-class. Mid-market owners and ops leads move to Power BI so reporting stops depending on one fragile build.</p>
+        <p class="hero-actions">
+          <a class="btn" href="/contact">Book a Session</a>
+        </p>
+      </div>
+      <figure class="diagram" aria-label="Antiquated custom BI versus Power BI">
+        <svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Locked cracked custom BI tower dissolves into a modern Power BI platform with talent pool.">
+          <rect width="640" height="340" fill="#ffffff"/>
+          <rect x="16" y="14" width="608" height="312" rx="20" fill="#f4f4f4"/>
+          <rect x="40" y="40" width="568" height="268" rx="18" fill="#e6e6e6" opacity="0.55"/>
+          <rect x="36" y="36" width="568" height="268" rx="18" fill="#ffffff" stroke="#dcdcdc"/>
+          <rect x="36" y="36" width="568" height="28" rx="18" fill="#fafafa"/>
+          <rect x="36" y="50" width="568" height="14" fill="#fafafa"/>
+          <circle cx="56" cy="50" r="4.5" fill="#dcdcdc"/>
+          <circle cx="72" cy="50" r="4.5" fill="#dcdcdc"/>
+          <circle cx="88" cy="50" r="4.5" fill="#397fb0" opacity="0.75"/>
+          <!-- cracked locked tower -->
+          <rect x="100" y="100" width="130" height="120" rx="8" fill="#fff" stroke="#999" stroke-width="1.8"/>
+          <rect x="118" y="118" width="40" height="30" fill="#dcdcdc"/>
+          <rect x="172" y="118" width="40" height="30" fill="#dcdcdc"/>
+          <rect x="118" y="162" width="40" height="30" fill="#dcdcdc"/>
+          <rect x="172" y="162" width="40" height="30" fill="#c8c8c8"/>
+          <path d="M165 100 V140 L156 156 L170 176 V220" fill="none" stroke="#dcdcdc" stroke-width="2.4"/>
+          <path d="M148 232 V248 A18 18 0 0 0 184 248 V232" fill="none" stroke="#999" stroke-width="3"/>
+          <rect x="138" y="246" width="56" height="30" rx="5" fill="#999"/>
+          <circle cx="166" cy="259" r="5" fill="#f4f4f4"/>
+          <defs>
+            <linearGradient id="hgF2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <rect x="230" y="88" width="80" height="190" fill="url(#hgF2)"/>
+          <!-- modern platform -->
+          <rect x="290" y="84" width="290" height="196" rx="16" fill="#1c1c1c"/>
+          <rect x="290" y="84" width="290" height="28" rx="16" fill="#2a2a2a"/>
+          <rect x="290" y="98" width="290" height="14" fill="#2a2a2a"/>
+          <circle cx="310" cy="98" r="4" fill="#555"/>
+          <circle cx="324" cy="98" r="4" fill="#555"/>
+          <circle cx="338" cy="98" r="4" fill="#397fb0"/>
+          <rect x="310" y="124" width="250" height="80" rx="12" fill="#2a2a2a"/>
+          <rect x="332" y="144" width="18" height="44" rx="3" fill="#397fb0"/>
+          <rect x="364" y="156" width="18" height="32" rx="3" fill="#555"/>
+          <rect x="396" y="138" width="18" height="50" rx="3" fill="#397fb0"/>
+          <rect x="428" y="150" width="18" height="38" rx="3" fill="#397fb0"/>
+          <path d="M470 164 L490 138 L510 156" fill="none" stroke="#397fb0" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="346" cy="242" r="14" fill="#397fb0"/>
+          <path d="M328 272c9-18 27-18 36 0" fill="#397fb0"/>
+          <circle cx="394" cy="242" r="14" fill="#397fb0"/>
+          <path d="M376 272c9-18 27-18 36 0" fill="#397fb0"/>
+          <circle cx="442" cy="242" r="14" fill="#555"/>
+          <path d="M424 272c9-18 27-18 36 0" fill="#555"/>
+          <circle cx="528" cy="248" r="18" fill="#2a2a2a" stroke="#397fb0" stroke-width="2.2"/>
+          <path d="M518 248 L525 255 L540 238" fill="none" stroke="#397fb0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <p class="kicker">Why leave</p>
+    <h2>Antiquated, inflexible, unsupported, not best-in-class</h2>
+    <div class="beats">
+      <article class="beat">
+                <div class="mini">
+          <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aging cracked custom panel with stopped clock.">
+              <rect width="280" height="130" fill="#ffffff"/>
+              <rect x="8" y="8" width="264" height="114" rx="14" fill="#f4f4f4"/>
+              <rect x="16" y="14" width="248" height="102" rx="12" fill="#ffffff" stroke="#dcdcdc"/>
+              <rect x="16" y="14" width="248" height="16" rx="12" fill="#fafafa"/>
+              <rect x="16" y="24" width="248" height="6" fill="#fafafa"/>
+              <circle cx="28" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="38" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="48" cy="22" r="2.8" fill="#397fb0" opacity="0.7"/>
+              <!-- aging panel -->
+              <rect x="48" y="42" width="184" height="62" rx="12" fill="#f4f4f4"/>
+              <rect x="64" y="52" width="48" height="28" fill="#dcdcdc"/>
+              <rect x="124" y="52" width="48" height="28" fill="#d0d0d0"/>
+              <rect x="184" y="52" width="32" height="28" fill="#c8c8c8"/>
+              <!-- crack -->
+              <path d="M140 42 V58 L132 70 L148 84 V104" fill="none" stroke="#dcdcdc" stroke-width="2.2"/>
+              <!-- stopped clock -->
+              <circle cx="140" cy="72" r="16" fill="#fff" stroke="#999" stroke-width="1.8"/>
+              <path d="M140 62 V72 H150" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round"/>
+              <path d="M156 56c4-6 10-6 14 0" fill="none" stroke="#397fb0" stroke-width="1.5" opacity="0.4"/>
+            </svg>
+        </div>
+        <h3>Antiquated</h3>
+        <p>The custom stack was built for yesterday’s questions. New data sources and new KPIs pile onto a design that was never meant to grow.</p>
+      </article>
+      <article class="beat">
+                <div class="mini">
+          <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Locked custom box blocked from change, dashed open path ahead.">
+              <rect width="280" height="130" fill="#ffffff"/>
+              <rect x="8" y="8" width="264" height="114" rx="14" fill="#f4f4f4"/>
+              <rect x="16" y="14" width="248" height="102" rx="12" fill="#ffffff" stroke="#dcdcdc"/>
+              <rect x="16" y="14" width="248" height="16" rx="12" fill="#fafafa"/>
+              <rect x="16" y="24" width="248" height="6" fill="#fafafa"/>
+              <circle cx="28" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="38" cy="22" r="2.8" fill="#dcdcdc"/>
+              <circle cx="48" cy="22" r="2.8" fill="#397fb0" opacity="0.7"/>
+              <!-- locked box -->
+              <rect x="36" y="46" width="88" height="56" rx="10" fill="#f4f4f4"/>
+              <path d="M64 54 V62 A14 14 0 0 0 92 62 V54" fill="none" stroke="#999" stroke-width="2.4"/>
+              <rect x="58" y="62" width="40" height="28" rx="4" fill="#999"/>
+              <circle cx="78" cy="74" r="3.5" fill="#f4f4f4"/>
+              <!-- dashed unreachable change -->
+              <path d="M136 74 H160" stroke="#999" stroke-width="2" stroke-dasharray="4 3"/>
+              <rect x="168" y="46" width="88" height="56" rx="10" fill="#fff" stroke="#dcdcdc" stroke-dasharray="5 4"/>
+              <circle cx="212" cy="74" r="14" fill="none" stroke="#397fb0" stroke-width="2"/>
+              <path d="M212 64 V74 H222" fill="none" stroke="#397fb0" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <h3>Inflexible + hard to support</h3>
+        <p>Every change needs the one person who knows the build. That is expensive and fragile. Power BI changes land with the platform and a wider talent pool.</p>
+      </article>
+      <article class="beat">
+                <div class="mini">
+          <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Weak custom chart card dissolves into polished Power BI product chrome with a clear best-in-class mark." preserveAspectRatio="xMidYMid meet">
+              <rect width="280" height="130" fill="#ffffff"/>
+              <rect x="10" y="10" width="260" height="110" rx="14" fill="#f4f4f4"/>
+              <rect x="18" y="16" width="244" height="98" rx="12" fill="#ffffff" stroke="#dcdcdc"/>
+              <rect x="18" y="16" width="244" height="18" rx="12" fill="#fafafa"/>
+              <rect x="18" y="28" width="244" height="6" fill="#fafafa"/>
+              <circle cx="30" cy="25" r="2.8" fill="#dcdcdc"/>
+              <circle cx="40" cy="25" r="2.8" fill="#dcdcdc"/>
+              <circle cx="50" cy="25" r="2.8" fill="#397fb0" opacity="0.7"/>
+              <!-- weak custom card -->
+              <rect x="32" y="44" width="92" height="58" rx="10" fill="#f4f4f4" stroke="#dcdcdc"/>
+              <rect x="44" y="72" width="12" height="18" rx="2" fill="#c8c8c8"/>
+              <rect x="62" y="64" width="12" height="26" rx="2" fill="#bdbdbd"/>
+              <rect x="80" y="78" width="12" height="12" rx="2" fill="#d0d0d0"/>
+              <rect x="98" y="68" width="12" height="22" rx="2" fill="#bebebe"/>
+              <circle cx="112" cy="52" r="7" fill="#fff" stroke="#999" stroke-width="1.5"/>
+              <path d="M109 49 L115 55 M115 49 L109 55" stroke="#999" stroke-width="1.6" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="hgBestFadeV9" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+                  <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.75"/>
+                  <stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              <rect x="108" y="40" width="42" height="68" fill="url(#hgBestFadeV9)"/>
+              <!-- elevated Power BI chrome -->
+              <rect x="150" y="48" width="100" height="58" rx="10" fill="#e6e6e6"/>
+              <rect x="148" y="44" width="100" height="58" rx="10" fill="#1c1c1c"/>
+              <circle cx="160" cy="54" r="2.2" fill="#555"/>
+              <circle cx="168" cy="54" r="2.2" fill="#555"/>
+              <circle cx="176" cy="54" r="2.2" fill="#397fb0"/>
+              <rect x="160" y="80" width="11" height="14" rx="2" fill="#555"/>
+              <rect x="176" y="70" width="11" height="24" rx="2" fill="#397fb0"/>
+              <rect x="192" y="74" width="11" height="20" rx="2" fill="#555"/>
+              <rect x="208" y="64" width="11" height="30" rx="2" fill="#397fb0"/>
+              <rect x="224" y="72" width="11" height="22" rx="2" fill="#555"/>
+              <circle cx="234" cy="54" r="8" fill="#397fb0"/>
+              <path d="M230 54 L233 57 L239 50" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h3>Not best-in-class</h3>
+        <p>Custom does not mean better. Power BI is the market standard mid-market buyers can hire for, train on, and hand to the next operator without a private manual.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band-cta">
+  <div class="wrap">
+    <p class="kicker">Next step</p>
+    <h2>Archive the private stack. Land on Power BI.</h2>
+    <p class="lede">Book a Session to map what the custom system still owns—then rebuild the first critical views on Power BI while the old stack goes to archive.</p>
+    <p class="hero-actions">
+      <a class="btn" href="/contact">Book a Session</a>
+    </p>
+  </div>
+</section>
+  </article>
+</BaseLayout>
+
+<style>
+  .diagram{border:1px solid var(--line);border-radius:10px;background:var(--paper-2);padding:.75rem;overflow:hidden}
+  .diagram svg{width:100%;border-radius:6px}
+  .beats,.paths{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem}
+  .beat,.path-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1rem 1rem}
+  .beat .mini,.path-card .mini{margin:0 0 .75rem;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+  .beat p,.path-card p{margin:0;font-size:.95rem}
+  a.path-card{text-decoration:none;color:inherit;display:block;transition:border-color .15s}
+  a.path-card:hover{border-color:var(--accent)}
+  .path-card .go{margin-top:.75rem;font-size:.85rem;color:var(--accent);font-weight:500}
+  .reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem}
+  .reason{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1rem}
+  .mig-back{font-size:.95rem;margin:0 0 1rem}
+  .mig-back a{color:var(--accent)}
+  @media(max-width:900px){
+    .beats,.paths,.reasons{grid-template-columns:1fr}
+  }
+</style>
+
