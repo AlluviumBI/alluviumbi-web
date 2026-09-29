@@ -8,7 +8,7 @@ import { SITE, pageTitle } from "../lib/site";
 
 const title = pageTitle("Power BI for quality");
 const description =
-  "Power BI for mid-market quality: scrap, yield, and customer escapes in the Monday pack—not a plant-only report. Quickstart flat fee $3,000.";
+  "Power BI for mid-market quality: scrap, yield, and customer escapes in the Monday pack—not a plant-only report. Quickstart ";
 
 const faqs = [
   {
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What does the Quickstart cost?",
-    a: "Flat fee $3,000 for one critical quality report rebuilt in two weeks—scrap summary, yield pack, escapes, or similar—with training and one week of support.",
+    a: "Flat fee  for one critical quality report rebuilt in two weeks—scrap summary, yield pack, escapes, or similar—with training and one week of support.",
   },
 ];
 
@@ -60,15 +60,7 @@ const jsonLd = [
     url: SITE.url + "/power-bi-for-quality",
     provider: { "@type": "Organization", name: "Alluvium", url: SITE.url },
     areaServed: { "@type": "Country", name: "United States" },
-    serviceType: "Power BI consulting for quality",
-    offers: {
-      "@type": "Offer",
-      name: "Power BI Quickstart",
-      price: "3000",
-      priceCurrency: "USD",
-      description: "One painful quality report rebuilt in two weeks. Flat fee $3,000.",
-      url: SITE.url + "/power-bi-quickstart",
-    },
+    serviceType: "Power BI consulting for quality"
   },
   {
     "@context": "https://schema.org",
@@ -104,7 +96,7 @@ const jsonLd = [
         </p>
         <p class="hero-actions">
           <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
         </p>
       </div>
     </header>
@@ -195,7 +187,7 @@ const jsonLd = [
         <h2>Start with one painful quality report</h2>
         <p>
           The <a href="/power-bi-quickstart">Power BI Quickstart</a> rebuilds one high-impact quality report in two weeks—scrap summary, first-pass yield, rework pack, customer escapes, or similar.
-          <strong>Flat fee $3,000</strong>. Discovery, automated report, training, and one week of support included.
+          . Discovery, automated report, training, and one week of support included.
         </p>
         <p class="hero-actions">
           <a class="btn" href="/power-bi-quickstart">See Power BI Quickstart</a>
@@ -255,7 +247,7 @@ const jsonLd = [
 
     <CtaBand
       heading="Put scrap in the Monday pack"
-      text="Book a Session to name the quality report that never makes it upstairs. Or start with Power BI Quickstart—one painful report in two weeks, flat fee $3,000."
+      text="Book a Session to name the quality report that never makes it upstairs. Or start with Power BI Quickstart—one painful report in two weeks, "
     />
   </article>
 </BaseLayout>
