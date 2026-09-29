@@ -8,7 +8,7 @@ import { SITE, pageTitle } from "../lib/site";
 
 const title = pageTitle("Power BI for supply chain");
 const description =
-  "Power BI for mid-market supply chain: inventory, OTIF, and supplier numbers in the same model as finance. Quickstart flat fee $3,000.";
+  "Power BI for mid-market supply chain: inventory, OTIF, and supplier numbers in the same model as finance. Quickstart ";
 
 const faqs = [
   {
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What does the Quickstart cost?",
-    a: "Flat fee $3,000 for one critical supply-chain report rebuilt in two weeks—discovery, automated report, training, and one week of support.",
+    a: "Flat fee  for one critical supply-chain report rebuilt in two weeks—discovery, automated report, training, and one week of support.",
   },
 ];
 
@@ -60,15 +60,7 @@ const jsonLd = [
     url: SITE.url + "/power-bi-for-supply-chain",
     provider: { "@type": "Organization", name: "Alluvium", url: SITE.url },
     areaServed: { "@type": "Country", name: "United States" },
-    serviceType: "Power BI consulting for supply chain",
-    offers: {
-      "@type": "Offer",
-      name: "Power BI Quickstart",
-      price: "3000",
-      priceCurrency: "USD",
-      description: "One painful supply-chain report rebuilt in two weeks. Flat fee $3,000.",
-      url: SITE.url + "/power-bi-quickstart",
-    },
+    serviceType: "Power BI consulting for supply chain"
   },
   {
     "@context": "https://schema.org",
@@ -104,7 +96,7 @@ const jsonLd = [
         </p>
         <p class="hero-actions">
           <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart — $3,000</a>
+          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
         </p>
       </div>
     </header>
@@ -194,7 +186,7 @@ const jsonLd = [
         <h2>Start with one painful supply-chain report</h2>
         <p>
           The <a href="/power-bi-quickstart">Power BI Quickstart</a> rebuilds one critical supply-chain report in two weeks—inventory visibility, OTIF, aging, supplier scorecard, or similar.
-          <strong>Flat fee $3,000</strong>. Discovery, automated report, training, and one week of support included. Optional add-ons for additional reports, model work, or workspace setup.
+          . Discovery, automated report, training, and one week of support included. Optional add-ons for additional reports, model work, or workspace setup.
         </p>
         <p class="hero-actions">
           <a class="btn" href="/power-bi-quickstart">See Power BI Quickstart</a>
@@ -255,7 +247,7 @@ const jsonLd = [
 
     <CtaBand
       heading="Put inventory and finance on one model"
-      text="Book a Session to name the supply-chain report that slows service or cash. Or start with Power BI Quickstart—one painful report in two weeks, flat fee $3,000."
+      text="Book a Session to name the supply-chain report that slows service or cash. Or start with Power BI Quickstart—one painful report in two weeks, "
     />
   </article>
 </BaseLayout>
