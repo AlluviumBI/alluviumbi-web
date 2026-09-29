@@ -1,0 +1,190 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CtaBand from "../../components/CtaBand.astro";
+import Crumbs from "../../components/Crumbs.astro";
+import { SITE, pageTitle } from "../../lib/site";
+
+const mPath = path.join(process.cwd(), "public", "tools", "Alluvium-Date-Dimension.txt");
+const mSource = fs.readFileSync(mPath, "utf8");
+
+const title = pageTitle("Free Power BI date dimension");
+const description =
+  "Free Power Query M date dimension for Power BI: calendar, fiscal year, day/week/month offsets, DateKey YYYYMMDD, and reverse-sort columns. Paste into a blank query.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Free tools", item: SITE.url + "/tools" },
+      { "@type": "ListItem", position: 3, name: "Date dimension", item: SITE.url + "/tools/date-dimension" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Alluvium Date Dimension",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Power BI, Power Query",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    description,
+    url: SITE.url + "/tools/date-dimension",
+    publisher: {
+      "@type": "Organization",
+      name: SITE.name,
+      url: SITE.url + "/",
+    },
+  },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/tools/date-dimension" jsonLd={jsonLd}>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs
+          crumbs={[
+            { href: "/", label: "Home" },
+            { href: "/tools", label: "Free tools" },
+            { label: "Date dimension" },
+          ]}
+        />
+        <p class="kicker">Free tool</p>
+        <h1>Power BI date dimension</h1>
+        <p class="lede">
+          A paste-ready Power Query M date table for Power BI. One blank query gives you calendar and fiscal columns, relative offsets, a numeric DateKey, and reverse-sort keys so month and quarter labels sort the way the room expects.
+        </p>
+        <p class="hero-actions">
+          <a class="btn" href="#m-source">Copy the M</a>
+          <a class="btn btn-ghost" href="/tools/Alluvium-Date-Dimension.txt" download="Alluvium-Date-Dimension.txt">Download .txt</a>
+        </p>
+      </div>
+    </header>
+
+    <section class="band band-alt" aria-labelledby="why-heading">
+      <div class="wrap prose">
+        <h2 id="why-heading">What it is and why it helps</h2>
+        <p>
+          Most Power BI models need a proper date table—not a calculated column bolted onto fact data.
+          This Alluvium date dimension is a single M script you paste into Power Query. Set the year range and fiscal start once;
+          you get Year, Month Name, Quarter, week boundaries, fiscal year/quarter/month, Day/Week/Month/Quarter/Year offsets vs today,
+          Year-Month labels, and Sort By Column helpers for reverse chronological slicers.
+        </p>
+        <p>
+          Use it as the shared calendar behind measures, time intelligence, and filters so every report agrees on “this month” and “this fiscal year.”
+        </p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="config-heading">
+      <div class="wrap">
+        <h2 id="config-heading">Config knobs</h2>
+        <p>Edit these near the top of the query before Close &amp; Apply:</p>
+        <ul class="tool-knobs">
+          <li>
+            <strong><code>StartYear</code> / <code>EndYear</code></strong>
+            <p style="margin:0.35rem 0 0;">Inclusive calendar range. Defaults cover 2026–2030; widen to match your facts and forecast horizon.</p>
+          </li>
+          <li>
+            <strong><code>FiscalYearStartMonth</code></strong>
+            <p style="margin:0.35rem 0 0;">Month number where the fiscal year begins (<code>1</code> = January, <code>7</code> = July, and so on). Drives Fiscal Year, Fiscal Quarter, and Fiscal Month.</p>
+          </li>
+          <li>
+            <strong><code>FirstDayOfWeek</code></strong>
+            <p style="margin:0.35rem 0 0;">Power Query day enum used for week-of-year, week-of-month, and start/end of week (for example <code>Day.Monday</code> or <code>Day.Sunday</code>).</p>
+          </li>
+          <li>
+            <strong><code>DefaultSortAscending</code></strong>
+            <p style="margin:0.35rem 0 0;">When <code>true</code>, table rows sort oldest → newest by Date. Set <code>false</code> for newest → oldest as the default row order.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="band band-alt" aria-labelledby="install-heading">
+      <div class="wrap">
+        <h2 id="install-heading">Install in five steps</h2>
+        <ol class="tool-steps">
+          <li>In Power BI Desktop (or Excel Power Query), open <strong>Get data</strong> → <strong>Blank query</strong> (or Home → Transform data → New Source → Blank Query).</li>
+          <li>With the new query selected, open the <strong>Advanced Editor</strong>.</li>
+          <li>Delete the stub code, then <strong>paste</strong> the Alluvium Date Dimension M from the block below (or from the downloaded .txt).</li>
+          <li><strong>Rename</strong> the query to something clear—for example <code>Date</code> or <code>DimDate</code>—and confirm no red underlines after Done.</li>
+          <li>Choose <strong>Close &amp; Apply</strong>. Mark the table as a date table on the Date column, relate it to your facts, and set Sort By Column where needed.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="datekey-heading">
+      <div class="wrap prose">
+        <h2 id="datekey-heading">DateKey (YYYYMMDD)</h2>
+        <div class="tool-note">
+          <p>
+            <strong>DateKey</strong> is an integer in <code>YYYYMMDD</code> form (for example 20260926).
+            Use it for surrogate-key joins when facts store dates as integers, or keep relationships on the Date column when both sides are true dates.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band-alt" aria-labelledby="sort-heading">
+      <div class="wrap prose">
+        <h2 id="sort-heading">Reverse-sort tip (Sort By Column)</h2>
+        <p>
+          Label columns like Month Name do not sort chronologically on their own. The M includes reverse-sort helpers called out in the script comments.
+          In Model view, select the label column → <strong>Sort by column</strong> → pick the matching reverse-sort column when you want newest-first slicers
+          (for example <strong>Month Name</strong> → <strong>Month Reverse Sort</strong>, and the same pattern for Year, Quarter, Week of Year, Day of Week, and Year-Month).
+        </p>
+      </div>
+    </section>
+
+    <section class="band" id="m-source" aria-labelledby="m-heading">
+      <div class="wrap">
+        <h2 id="m-heading">Power Query M — paste ready</h2>
+        <p>Copy the block below into Advanced Editor, or download the .txt for your repo / handoff pack.</p>
+        <div class="tool-code-wrap">
+          <div class="tool-code-toolbar">
+            <p class="tool-code-label">Alluvium-Date-Dimension.txt</p>
+            <div class="tool-code-actions">
+              <button class="btn" type="button" id="copy-m" data-copy-target="m-source-text">Copy M</button>
+              <a class="btn btn-ghost" href="/tools/Alluvium-Date-Dimension.txt" download="Alluvium-Date-Dimension.txt">Download .txt</a>
+            </div>
+          </div>
+          <pre class="tool-code" id="m-source-text" tabindex="0"><code>{mSource}</code></pre>
+        </div>
+        <p id="copy-m-status" class="sr-only" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <CtaBand
+      heading="Book a Session"
+      text="If you want this date table wired into a trusted model—or a painful report rebuilt as a Quickstart—tell us what the room needs to decide."
+    />
+  </article>
+</BaseLayout>
+
+<script>
+  const btn = document.getElementById("copy-m");
+  const status = document.getElementById("copy-m-status");
+  btn?.addEventListener("click", async () => {
+    const id = btn.getAttribute("data-copy-target");
+    const el = id ? document.getElementById(id) : null;
+    const text = el?.textContent ?? "";
+    try {
+      await navigator.clipboard.writeText(text);
+      if (status) status.textContent = "Copied to clipboard.";
+      const prev = btn.textContent;
+      btn.textContent = "Copied";
+      setTimeout(() => {
+        btn.textContent = prev || "Copy M";
+      }, 1800);
+    } catch {
+      if (status) status.textContent = "Copy failed — select the code and copy manually.";
+    }
+  });
+</script>
