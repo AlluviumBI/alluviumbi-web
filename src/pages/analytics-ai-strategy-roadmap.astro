@@ -1,120 +1,114 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CtaBand from "../components/CtaBand.astro";
-import Crumbs from "../components/Crumbs.astro";
-import RelatedLinks from "../components/RelatedLinks.astro";
-import { SITE } from "../lib/site";
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
-      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      { "@type": "ListItem", position: 3, name: "Analytics strategy roadmap", item: SITE.url + "/analytics-ai-strategy-roadmap" },
-    ],
-  },
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.alluviumbi.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.alluviumbi.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Analytics Strategy Roadmap",
+        "item": "https://www.alluviumbi.com/analytics-ai-strategy-roadmap"
+      }
+    ]
+  }
 ];
 ---
 <BaseLayout
-  title="Power BI analytics roadmap | Alluvium"
-  description="You already have the tools. You do not have a sequence. We name what to do first, and what to leave alone."
+  title="Decide what analytics work comes first | Alluvium"
+  description="You already have Power BI or Excel. The roadmap names what your team should do first, and what can wait."
   canonicalPath="/analytics-ai-strategy-roadmap"
   jsonLd={jsonLd}
 >
-  <article>
-    <header class="hero">
-      <div class="wrap">
-        <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Analytics strategy roadmap" }]} />
-        <p class="kicker">Analytics strategy roadmap</p>
-        <h1>The order of the analytics work</h1>
-        <p class="lede">You already have the tools. You do not have a sequence. We name what to do first, and what to leave alone.</p>
-        <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
-      </div>
-    </header>
-    <section class="band">
-      <div class="wrap prose">
-        <h2>More tools will not sort this out</h2>
-        <p>Finance wants a view. Operations wants a view. The board wants a view. Each request is reasonable, and none of them says what comes first.</p>
-        <p>The roadmap names the numbers a meeting will actually use, the model those numbers depend on, and the requests that do not change a decision yet. Your team can staff that order.</p>
-      </div>
-    </section>
-    <section class="band band-alt">
-      <div class="wrap">
-        <h2>The work in order, and the work that waits</h2>
-        <p>The line is the sequence. The pages that do not touch the line can wait.</p>
-        <figure>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 310" role="img" aria-label="Four stages of one report on a single path. Two request pages sit off the path.">
-        <line x1="40" y1="186" x2="640" y2="186" stroke="#dcdcdc" stroke-width="8" stroke-linecap="round"/>
-        <line x1="94" y1="186" x2="554" y2="186" stroke="#397fb0" stroke-width="8" stroke-linecap="round"/>
-
-        <rect x="40" y="32" width="108" height="132" rx="4" fill="#ffffff" stroke="#dcdcdc" stroke-width="2"/>
-        <line x1="58" y1="58" x2="128" y2="58" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
-        <line x1="58" y1="74" x2="110" y2="74" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
-
-        <rect x="188" y="32" width="108" height="132" rx="4" fill="#ffffff" stroke="#dcdcdc" stroke-width="2"/>
-        <rect x="202" y="48" width="34" height="22" fill="#e7f1f8"/>
-        <rect x="244" y="48" width="38" height="22" fill="#dcdcdc"/>
-        <rect x="202" y="78" width="46" height="26" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="1.5"/>
-        <rect x="256" y="82" width="26" height="30" fill="#e7f1f8"/>
-        <rect x="202" y="114" width="30" height="28" fill="#dcdcdc"/>
-        <rect x="240" y="122" width="42" height="20" fill="#e7f1f8"/>
-
-        <rect x="332" y="22" width="120" height="146" rx="4" fill="#e7f1f8" stroke="#1c1c1c" stroke-width="2.5"/>
-        <line x1="350" y1="136" x2="434" y2="136" stroke="#397fb0" stroke-width="2"/>
-        <rect x="358" y="104" width="16" height="32" fill="#397fb0"/>
-        <rect x="384" y="76" width="16" height="60" fill="#1c1c1c"/>
-        <rect x="410" y="90" width="16" height="46" fill="#397fb0"/>
-
-        <rect x="500" y="32" width="108" height="132" rx="4" fill="#ffffff" stroke="#397fb0" stroke-width="2.5"/>
-        <line x1="516" y1="132" x2="592" y2="132" stroke="#dcdcdc" stroke-width="2"/>
-        <rect x="524" y="104" width="16" height="28" fill="#dcdcdc"/>
-        <rect x="548" y="78" width="16" height="54" fill="#397fb0"/>
-        <rect x="572" y="92" width="16" height="40" fill="#397fb0" opacity="0.72"/>
-
-        <circle cx="94" cy="186" r="12" fill="#ffffff" stroke="#397fb0" stroke-width="4"/>
-        <circle cx="242" cy="186" r="12" fill="#397fb0"/>
-        <circle cx="392" cy="186" r="14" fill="#1c1c1c"/>
-        <circle cx="554" cy="186" r="12" fill="#ffffff" stroke="#397fb0" stroke-width="4"/>
-
-        <rect x="118" y="220" width="100" height="70" rx="3" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
-        <line x1="134" y1="240" x2="200" y2="240" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
-        <line x1="134" y1="254" x2="186" y2="254" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
-        <line x1="134" y1="268" x2="174" y2="268" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
-
-        <rect x="438" y="228" width="92" height="62" rx="3" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
-        <line x1="452" y1="246" x2="514" y2="246" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
-        <line x1="452" y1="260" x2="498" y2="260" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
-        <line x1="452" y1="274" x2="482" y2="274" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-        </figure>
-      </div>
-    </section>
-    <section class="band">
-      <div class="wrap">
-        <h2>What the roadmap settles</h2>
-        <div class="cards">
-          <article class="card"><h3>The decisions</h3><p>The reporting has to support them, in the words leadership already uses.</p></article>
-          <article class="card"><h3>The data</h3><p>Where it is not good enough for someone to defend the number.</p></article>
-          <article class="card"><h3>The path</h3><p>A Power BI path that does not mean a new report for every question.</p></article>
-          <article class="card"><h3>The order</h3><p>What your team does first, and what it ignores until that work is done.</p></article>
-        </div>
-        <p>This is the sequence. It is not another report, and it is not a tour of tools.</p>
-      </div>
-    </section>
-    <RelatedLinks
-      services={[
-        { href: "/data-project-management-change-leadership", label: "Analytics project management" },
-        { href: "/conversational-analytics", label: "Conversational analytics" },
-        { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
-      ]}
-      posts={[
-        { href: "/blog/semantic-model-is-the-product", label: "The semantic model is the product" },
-        { href: "/blog/power-bi-strategy-alignment", label: "Power BI strategy alignment" },
-        { href: "/blog/forecast-never-ties-to-actuals", label: "When forecast never ties to actuals" },
-      ]}
-    />
-    <CtaBand heading="Start with what comes first." text="Book a session. We will name the decisions that should drive the order of work." />
-  </article>
+  <div class="service-fold">
+<article>
+<header class="hero"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><a href="/services">Services</a><span aria-hidden="true"> / </span><span>Analytics Strategy Roadmap</span></nav>
+<p class="kicker">Analytics Strategy Roadmap</p>
+<h1>Decide what analytics work comes first</h1>
+<p class="lede">You already have Power BI, and you may still run the business from Excel. What you need is an order of work. We name what to do first, and what can wait.</p>
+<p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
+</div></header>
+<section class="band"><div class="wrap">
+<h2>Every team wants a report, and nobody has ranked them</h2>
+<p>Finance wants a view of the close. Operations wants a view of the week. The board wants a pack. Each request is reasonable on its own, and the team starts whichever one arrived last.</p>
+<p>The roadmap names the numbers a meeting will actually use, the data those numbers depend on, and the requests that do not change a decision yet. Your own people can staff that list.</p>
+</div></section>
+<section class="band band-alt"><div class="wrap">
+<h2>The work that comes first, and the work that waits</h2>
+<p>Your team staffs the work on the line first. Requests that do not change a decision stay off to the side until that work is done.</p>
+<figure class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-label="Four report pages sit on one path. Two extra pages sit off the path.">
+<line x1="40" y1="176" x2="640" y2="176" stroke="#dcdcdc" stroke-width="8" stroke-linecap="round"/>
+<line x1="94" y1="176" x2="554" y2="176" stroke="#397fb0" stroke-width="8" stroke-linecap="round"/>
+<rect x="40" y="28" width="108" height="126" rx="4" fill="#ffffff" stroke="#dcdcdc" stroke-width="2"/>
+<line x1="58" y1="54" x2="128" y2="54" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+<line x1="58" y1="70" x2="110" y2="70" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+<rect x="188" y="28" width="108" height="126" rx="4" fill="#ffffff" stroke="#dcdcdc" stroke-width="2"/>
+<rect x="202" y="46" width="34" height="22" fill="#e7f1f8"/>
+<rect x="244" y="46" width="38" height="22" fill="#dcdcdc"/>
+<rect x="202" y="76" width="46" height="26" fill="#f4f7fa" stroke="#dcdcdc"/>
+<rect x="256" y="80" width="26" height="30" fill="#e7f1f8"/>
+<rect x="332" y="18" width="120" height="140" rx="4" fill="#e7f1f8" stroke="#1c1c1c" stroke-width="2.5"/>
+<rect x="358" y="98" width="16" height="32" fill="#397fb0"/>
+<rect x="384" y="70" width="16" height="60" fill="#1c1c1c"/>
+<rect x="410" y="84" width="16" height="46" fill="#397fb0"/>
+<rect x="500" y="28" width="108" height="126" rx="4" fill="#ffffff" stroke="#397fb0" stroke-width="2.5"/>
+<rect x="524" y="96" width="16" height="28" fill="#dcdcdc"/>
+<rect x="548" y="70" width="16" height="54" fill="#397fb0"/>
+<rect x="572" y="84" width="16" height="40" fill="#397fb0" opacity="0.72"/>
+<circle cx="94" cy="176" r="11" fill="#ffffff" stroke="#397fb0" stroke-width="4"/>
+<circle cx="242" cy="176" r="11" fill="#397fb0"/>
+<circle cx="392" cy="176" r="13" fill="#1c1c1c"/>
+<circle cx="554" cy="176" r="11" fill="#ffffff" stroke="#397fb0" stroke-width="4"/>
+<rect x="118" y="210" width="96" height="66" rx="3" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
+<line x1="134" y1="230" x2="196" y2="230" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+<line x1="134" y1="246" x2="180" y2="246" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+<rect x="448" y="214" width="90" height="60" rx="3" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
+<line x1="462" y1="234" x2="520" y2="234" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+<line x1="462" y1="250" x2="504" y2="250" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+</svg><figcaption>The four steps on the path come first. The two pages beside the path can wait until that work is done.</figcaption></figure>
+</div></section>
+<section class="band"><div class="wrap">
+<h2>What you leave with</h2>
+<div class="cards">
+<article class="card"><h3>The decisions</h3><p>The reporting has to support them, in the words leadership already uses in the meeting.</p></article>
+<article class="card"><h3>The data</h3><p>We mark where the data is too weak for someone to defend the number.</p></article>
+<article class="card"><h3>The path</h3><p>One Power BI setup that can answer the next question from the same numbers.</p></article>
+<article class="card"><h3>The order</h3><p>What your team does first, and what it leaves alone until that work is finished.</p></article>
+</div>
+</div></section>
+<section class="band related-links" aria-labelledby="related-services">
+  <div class="wrap">
+    <h2 id="related-services">Related Power BI Services</h2>
+    <ul><li><a href="/data-project-management-change-leadership">Data Project Management</a></li>
+<li><a href="/conversational-analytics">Conversational Analytics</a></li>
+<li><a href="/managed-advisory-retainer">Managed Advisory Retainer</a></li></ul>
+    <h2>Related Power BI Insights</h2>
+    <ul><li><a href="/blog/semantic-model-is-the-product">The semantic model is the product</a></li>
+<li><a href="/blog/power-bi-strategy-alignment">Power BI strategy alignment</a></li>
+<li><a href="/blog/forecast-never-ties-to-actuals">When forecast never ties to actuals</a></li></ul>
+  </div>
+</section><section class="band band-cta" aria-labelledby="cta-heading">
+  <div class="wrap">
+    <p class="kicker">Next step</p>
+    <h2 id="cta-heading">Start with what comes first.</h2>
+    <p class="lede">Book a session. We will name the decisions that should set the order of work.</p>
+    <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
+  </div>
+</section></article>
+  </div>
 </BaseLayout>
