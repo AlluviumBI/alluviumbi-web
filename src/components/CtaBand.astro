@@ -2,6 +2,7 @@
 const {
   heading = "Book a Session",
   text = "Tell us about the reporting or analytics problem that is slowing decisions. We will map a practical next step.",
+  href = "/contact",
 } = Astro.props;
 ---
 <section class="band band-cta" aria-labelledby="cta-heading">
@@ -9,6 +10,6 @@ const {
     <p class="kicker">Next step</p>
     <h2 id="cta-heading">{heading}</h2>
     <p class="lede">{text}</p>
-    <p><a class="btn" href="/contact">Book a Session</a></p>
+    <p><a class="btn" href={href}>Book a Session</a></p>
   </div>
 </section>

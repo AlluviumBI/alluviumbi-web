@@ -8,6 +8,7 @@ tags:
   - Manufacturing
   - Finance
 draft: false
+ctaHref: /acquisition-performance-visibility
 ---
 
 The deal closed Friday. Monday, the operating partner wants the same pack the portfolio runs everywhere else.
