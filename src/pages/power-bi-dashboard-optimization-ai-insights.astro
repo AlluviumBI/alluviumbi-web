@@ -1,167 +1,147 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CtaBand from "../components/CtaBand.astro";
-import Crumbs from "../components/Crumbs.astro";
-import RelatedLinks from "../components/RelatedLinks.astro";
-import { SITE } from "../lib/site";
-
-const faqs = [
-  {
-    q: "How do you judge whether it got faster?",
-    a: "How long refresh takes, how the model is built, whether the query can run where the data lives, and how long the page takes to draw. We compare before and after.",
-  },
-  {
-    q: "Do you redesign from scratch?",
-    a: "Not always. We often keep the report and remove what makes it slow or hard to trust.",
-  },
-  {
-    q: "Cloud, or on our own servers?",
-    a: "Both. The recommendations follow your setup and the rules you already use for who can see which rows.",
-  },
-  {
-    q: "Can we ask this report questions in plain language?",
-    a: "That is separate work. This one is the model, the page, and whether people use it.",
-  },
-];
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
-      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      { "@type": "ListItem", position: 3, name: "Dashboard optimization", item: SITE.url + "/power-bi-dashboard-optimization-ai-insights" },
-    ],
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.alluviumbi.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.alluviumbi.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Dashboard Optimization",
+        "item": "https://www.alluviumbi.com/power-bi-dashboard-optimization-ai-insights"
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you judge whether it got faster?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We look at how long the refresh takes, how the report is built, whether the query can run where the data lives, and how long the page takes to draw. We compare before and after."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you start over?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Often we keep the report and remove what makes it slow or hard to trust."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cloud, or our own servers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. The recommendations follow your setup and the rules you already use for who can see which rows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we ask this report questions in plain language?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "That is separate work, on the reports you already trust. This one is the report itself, and whether people use it."
+        }
+      }
+    ]
+  }
 ];
 ---
 <BaseLayout
-  title="Power BI dashboard optimization for teams | Alluvium"
-  description="The report exists. People do not trust it, or they cannot find the number. We fix that report instead of starting over."
+  title="Fix the report you already paid for | Alluvium"
+  description="The Power BI report exists, and the meeting still exports to Excel. We revise that report so people can find the number and trust it."
   canonicalPath="/power-bi-dashboard-optimization-ai-insights"
   jsonLd={jsonLd}
 >
-  <article>
-    <header class="hero">
-      <div class="wrap">
-        <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Dashboard optimization" }]} />
-        <p class="kicker">Dashboard optimization</p>
-        <h1>Fix the report you already paid for</h1>
-        <p class="lede">The report exists. People do not trust it, or they cannot find the number. We fix that report instead of starting over.</p>
-        <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
-      </div>
-    </header>
-    <section class="band">
-      <div class="wrap prose">
-        <h2>The meeting still does not use it</h2>
-        <p>Refresh drags. The page is crowded. Two reports disagree on a figure someone has to defend, so someone exports to Excel.</p>
-        <p>Another chart will not fix that. The work is the model and the report you already have.</p>
-      </div>
-    </section>
-    <section class="band band-alt">
-      <div class="wrap">
-        <h2>The same report, once the number is easy to find</h2>
-        <p>One page is full of charts that do not change the meeting. The other is the same report, with the number in front.</p>
-        <figure>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-label="Two reports the same size. The left is a grid of small charts. The right is four bars and open space.">
-        <rect x="16" y="16" width="308" height="268" rx="6" fill="#ffffff" stroke="#dcdcdc" stroke-width="2"/>
-        <rect x="34" y="34" width="62" height="70" fill="#e7f1f8"/>
-        <rect x="104" y="34" width="62" height="70" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="1.5"/>
-        <rect x="174" y="34" width="62" height="70" fill="#dcdcdc"/>
-        <rect x="244" y="34" width="62" height="70" fill="#e7f1f8"/>
-        <rect x="42" y="78" width="10" height="16" fill="#397fb0"/>
-        <rect x="56" y="70" width="10" height="24" fill="#1c1c1c" opacity="0.45"/>
-        <rect x="70" y="84" width="10" height="10" fill="#397fb0" opacity="0.6"/>
-        <rect x="116" y="48" width="38" height="8" fill="#dcdcdc"/>
-        <rect x="116" y="62" width="30" height="8" fill="#dcdcdc"/>
-        <rect x="116" y="76" width="34" height="8" fill="#dcdcdc"/>
-        <rect x="186" y="58" width="14" height="32" fill="#ffffff" opacity="0.85"/>
-        <rect x="206" y="48" width="14" height="42" fill="#ffffff" opacity="0.7"/>
-        <rect x="256" y="48" width="38" height="8" fill="#397fb0" opacity="0.45"/>
-        <rect x="256" y="64" width="28" height="8" fill="#397fb0" opacity="0.3"/>
-        <rect x="256" y="80" width="34" height="8" fill="#dcdcdc"/>
-
-        <rect x="34" y="112" width="62" height="70" fill="#ffffff" stroke="#dcdcdc" stroke-width="1.5"/>
-        <rect x="104" y="112" width="62" height="70" fill="#e7f1f8"/>
-        <rect x="174" y="112" width="62" height="70" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="1.5"/>
-        <rect x="244" y="112" width="62" height="70" fill="#dcdcdc"/>
-        <polyline points="44,160 58,140 72,152 86,132" fill="none" stroke="#1c1c1c" stroke-width="2"/>
-        <rect x="116" y="128" width="14" height="40" fill="#397fb0"/>
-        <rect x="136" y="144" width="14" height="24" fill="#1c1c1c" opacity="0.55"/>
-        <rect x="186" y="126" width="38" height="10" fill="#dcdcdc"/>
-        <rect x="186" y="144" width="28" height="10" fill="#dcdcdc"/>
-        <rect x="186" y="162" width="34" height="10" fill="#e7f1f8"/>
-        <rect x="258" y="140" width="34" height="24" fill="#ffffff" opacity="0.55"/>
-
-        <rect x="34" y="190" width="62" height="74" fill="#dcdcdc"/>
-        <rect x="104" y="190" width="62" height="74" fill="#e7f1f8"/>
-        <rect x="174" y="190" width="62" height="74" fill="#ffffff" stroke="#dcdcdc" stroke-width="1.5"/>
-        <rect x="244" y="190" width="62" height="74" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="1.5"/>
-        <rect x="46" y="214" width="38" height="8" fill="#ffffff" opacity="0.7"/>
-        <rect x="46" y="230" width="28" height="8" fill="#ffffff" opacity="0.5"/>
-        <rect x="116" y="208" width="14" height="40" fill="#397fb0" opacity="0.7"/>
-        <rect x="136" y="220" width="14" height="28" fill="#1c1c1c" opacity="0.35"/>
-        <rect x="186" y="206" width="38" height="8" fill="#dcdcdc"/>
-        <rect x="186" y="222" width="32" height="8" fill="#dcdcdc"/>
-        <rect x="186" y="238" width="24" height="8" fill="#dcdcdc"/>
-        <rect x="256" y="208" width="38" height="40" fill="#e7f1f8"/>
-
-        <rect x="356" y="16" width="308" height="268" rx="6" fill="#ffffff" stroke="#1c1c1c" stroke-width="2.5"/>
-        <rect x="380" y="42" width="64" height="16" rx="8" fill="#397fb0"/>
-        <line x1="380" y1="240" x2="640" y2="240" stroke="#dcdcdc" stroke-width="2"/>
-        <rect x="400" y="168" width="36" height="72" fill="#dcdcdc"/>
-        <rect x="464" y="124" width="36" height="116" fill="#397fb0"/>
-        <rect x="528" y="84" width="36" height="156" fill="#1c1c1c"/>
-        <rect x="592" y="140" width="36" height="100" fill="#397fb0" opacity="0.75"/>
-      </svg>
-        </figure>
-      </div>
-    </section>
-    <section class="band">
-      <div class="wrap">
-        <h2>How the fix runs</h2>
-        <div class="cards">
-          <article class="card"><h3>Assessment</h3><p>We review the model, the page, how long refresh takes, and whether anyone uses the report.</p></article>
-          <article class="card"><h3>Simplification</h3><p>We clean how the tables relate and take off charts that do not serve a decision. Often this is a revision of what you have, not a blank file.</p></article>
-          <article class="card"><h3>Definitions people will defend</h3><p>We close the gaps that make two reports disagree.</p></article>
-          <article class="card"><h3>Handoff</h3><p>The people who need the report can open it and read it before the meeting starts.</p></article>
-        </div>
-        <p>This works in Power BI in the cloud and on Power BI Report Server. The advice follows the setup you already run.</p>
-      </div>
-    </section>
-    <section class="band band-alt faq" aria-labelledby="faq">
-      <div class="wrap">
-        <h2 id="faq">Questions</h2>
-        {faqs.map((f) => (
-          <details>
-            <summary>{f.q}</summary>
-            <p>{f.a}</p>
-          </details>
-        ))}
-      </div>
-    </section>
-    <RelatedLinks
-      services={[
-        { href: "/conversational-analytics", label: "Conversational analytics" },
-        { href: "/power-bi-training", label: "Power BI training" },
-        { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
-      ]}
-      posts={[
-        { href: "/blog/nobody-opens-the-dashboard", label: "Nobody opens the dashboard" },
-        { href: "/blog/unused-power-bi-licenses", label: "Unused Power BI licenses" },
-        { href: "/blog/why-power-bi-reports-show-different-numbers", label: "Why Power BI reports show different numbers" },
-      ]}
-    />
-    <CtaBand heading="Bring the report people complain about." text="Book a session. We will tell you whether the problem is the model, the page, or the fact that nobody trusts the number." />
-  </article>
+  <div class="service-fold">
+<article>
+<header class="hero"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><a href="/services">Services</a><span aria-hidden="true"> / </span><span>Dashboard Optimization</span></nav>
+<p class="kicker">Dashboard Optimization</p>
+<h1>Fix the report you already paid for</h1>
+<p class="lede">The report exists. People do not trust it, or they cannot find the number, so the meeting goes back to Excel. We fix that report.</p>
+<p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
+</div></header>
+<section class="band"><div class="wrap">
+<h2>The meeting still exports the numbers</h2>
+<p>Refresh drags. The page is crowded with charts that do not change the conversation. Two reports disagree on a figure someone has to defend, so someone pastes the numbers into a spreadsheet and rebuilds the pack by hand.</p>
+<p>The repair is the report you already have: how it is built, how long it takes to refresh, and whether the number on the page is the one the meeting will stand behind.</p>
+</div></section>
+<section class="band band-alt"><div class="wrap">
+<h2>The same report, with the number in front</h2>
+<p>One page is full of charts. The other is the same report, with the figure the meeting needs where people can see it.</p>
+<figure class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" role="img" aria-label="A crowded report page beside the same page with one clear figure.">
+<rect x="16" y="16" width="280" height="208" rx="4" fill="#ffffff" stroke="#dcdcdc" stroke-width="2"/>
+<rect x="32" y="32" width="70" height="36" fill="#e7e7e7"/>
+<rect x="110" y="32" width="70" height="36" fill="#dcdcdc"/>
+<rect x="188" y="32" width="90" height="36" fill="#e7e7e7"/>
+<rect x="32" y="78" width="40" height="70" fill="#dcdcdc"/>
+<rect x="80" y="96" width="40" height="52" fill="#e7e7e7"/>
+<rect x="128" y="64" width="40" height="84" fill="#c8c8c8"/>
+<rect x="176" y="88" width="40" height="60" fill="#dcdcdc"/>
+<rect x="224" y="72" width="54" height="76" fill="#e7e7e7"/>
+<rect x="32" y="160" width="246" height="46" fill="#f4f4f4" stroke="#dcdcdc"/>
+<rect x="344" y="16" width="280" height="208" rx="4" fill="#e7f1f8" stroke="#1c1c1c" stroke-width="2.5"/>
+<rect x="368" y="48" width="150" height="28" fill="#397fb0"/>
+<rect x="368" y="100" width="36" height="80" fill="#1c1c1c"/>
+<rect x="416" y="128" width="36" height="52" fill="#397fb0"/>
+<rect x="464" y="112" width="36" height="68" fill="#397fb0" opacity="0.75"/>
+</svg><figcaption>The crowded page, and the same report once the number is easy to find.</figcaption></figure>
+</div></section>
+<section class="band"><div class="wrap">
+<h2>How the fix runs</h2>
+<div class="cards">
+<article class="card"><h3>Assessment</h3><p>We review the report, how long refresh takes, and whether anyone opens it.</p></article>
+<article class="card"><h3>Simplification</h3><p>We clean how the tables relate and take off charts that do not serve a decision. Often this is a revision of the file you have.</p></article>
+<article class="card"><h3>Definitions people will defend</h3><p>We close the gaps that make two reports disagree on the same figure.</p></article>
+<article class="card"><h3>Handoff</h3><p>The people who need the report can open it and read the number before the meeting starts.</p></article>
+</div>
+<p>This works in Power BI in the cloud and on Power BI Report Server. The advice follows the setup you already run.</p>
+<h2>Questions</h2>
+<div class="faq">
+<details><summary>How do you judge whether it got faster?</summary><p>We look at how long the refresh takes, how the report is built, whether the query can run where the data lives, and how long the page takes to draw. We compare before and after.</p></details>
+<details><summary>Do you start over?</summary><p>Often we keep the report and remove what makes it slow or hard to trust.</p></details>
+<details><summary>Cloud, or our own servers?</summary><p>Both. The recommendations follow your setup and the rules you already use for who can see which rows.</p></details>
+<details><summary>Can we ask this report questions in plain language?</summary><p>That is separate work, on the reports you already trust. This one is the report itself, and whether people use it.</p></details>
+</div>
+</div></section>
+<section class="band related-links" aria-labelledby="related-services">
+  <div class="wrap">
+    <h2 id="related-services">Related Power BI Services</h2>
+    <ul><li><a href="/conversational-analytics">Conversational Analytics</a></li>
+<li><a href="/power-bi-training">Power BI Training</a></li>
+<li><a href="/managed-advisory-retainer">Managed Advisory Retainer</a></li></ul>
+    <h2>Related Power BI Insights</h2>
+    <ul><li><a href="/blog/nobody-opens-the-dashboard">Nobody opens the dashboard</a></li>
+<li><a href="/blog/unused-power-bi-licenses">Unused Power BI licenses</a></li>
+<li><a href="/blog/why-power-bi-reports-show-different-numbers">Why Power BI reports show different numbers</a></li></ul>
+  </div>
+</section><section class="band band-cta" aria-labelledby="cta-heading">
+  <div class="wrap">
+    <p class="kicker">Next step</p>
+    <h2 id="cta-heading">Bring the report people complain about.</h2>
+    <p class="lede">Book a session and we will look at that report with you.</p>
+    <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
+  </div>
+</section></article>
+  </div>
 </BaseLayout>
