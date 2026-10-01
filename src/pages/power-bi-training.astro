@@ -1,23 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
-import RelatedLinks from "../components/RelatedLinks.astro";
-import LineIcon from "../components/LineIcon.astro";
 import Crumbs from "../components/Crumbs.astro";
-import { SITE, RELATED } from "../lib/site";
+import RelatedLinks from "../components/RelatedLinks.astro";
+import { SITE } from "../lib/site";
 
 const faqs = [
   {
     q: "Is this a generic Power BI class?",
-    a: "No. Sessions run on the model your team already paid for—your measures, your reports, your questions.",
+    a: "No. Sessions run on the model your team already paid for. Your definitions, your reports, your questions.",
   },
   {
     q: "Who should attend?",
-    a: "The people who own the numbers and the people expected to use them: finance, operations, sales, and the analysts who support them.",
+    a: "The people who own the numbers and the people expected to use them. Finance, operations, sales, and the analysts who support them.",
   },
   {
     q: "What do we leave with?",
-    a: "A team that can open the model, answer the meeting questions, and a short handoff so the skill does not walk out with us.",
+    a: "A team that can open the report, answer the meeting questions, and change the report without us in the room.",
   },
 ];
 
@@ -28,7 +27,7 @@ const jsonLd = [
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
       { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      { "@type": "ListItem", position: 3, name: "Power BI Training", item: SITE.url + "/power-bi-training" },
+      { "@type": "ListItem", position: 3, name: "Power BI training", item: SITE.url + "/power-bi-training" },
     ],
   },
   {
@@ -44,57 +43,83 @@ const jsonLd = [
 ---
 <BaseLayout
   title="Power BI training on your model | Alluvium"
-  description="Power BI training on the semantic model you already paid for. Hands-on for finance and operations—not a generic slide-deck class or certification tour."
+  description="A slide class does not stick. We teach on your Power BI model, in the room, and leave your team able to change the report."
   canonicalPath="/power-bi-training"
   jsonLd={jsonLd}
 >
-  <header class="hero">
-    <div class="wrap">
-      <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Power BI training" }]} />
-      <p class="kicker">Services</p>
-      <h1>Power BI training</h1>
-      <p class="lede">Get the team fluent on the Power BI model they already paid for — hands-on sessions, not a slide deck.</p>
-      <p><a class="btn" href="/contact">Book a Session</a></p>
-    </div>
-  </header>
-  <figure class="still bw">
-    <img src="/blog/why-numbers-aisle.jpg" alt="Black and white photo of a grocery aisle representing confusing metrics" width="1600" height="900" />
-  </figure>
-  <section class="band">
-    <div class="wrap prose">
-      <p>A model nobody can use is still a reporting problem. Training is how the meeting starts trusting the number.</p>
-      <h2>Power BI training for finance and operations</h2>
-      <p>Built for the people who have to defend the numbers: controllers, ops leads, sales managers, and the analysts who support them. Not a certification bootcamp. Not a tour of every Power BI button.</p>
-      <h2>Workshop format</h2>
-      <p>Live, hands-on sessions. Short agenda, real questions, screens shared on the same report the team will open on Monday. We keep groups small so people actually click, filter, and fail in the room—not after we leave.</p>
-      <h2>On their model</h2>
-      <p>We train on the certified Power BI model you already paid for. Your measures. Your grain. Your row-level security. Generic sample files do not transfer; your close, pipeline, or shop-floor questions do.</p>
-      <h2>Handoff</h2>
-      <p>You leave with a short list of “how we answer this,” named owners for the model, and the next questions the team can run without us. Optional follow-on office hours sit on the managed advisory retainer.</p>
-      <div class="cards" style="margin-top:2rem;">
-        <article class="card">
-          <LineIcon name="client" />
-          <h3>Audience</h3>
-          <p>The people who own the meeting and the people expected to use the report.</p>
-        </article>
-        <article class="card">
-          <LineIcon name="workshop" />
-          <h3>Workshop format</h3>
-          <p>Hands-on sessions, not a slide deck. Real questions on the live model.</p>
-        </article>
-        <article class="card">
-          <LineIcon name="dashboard" />
-          <h3>On their model</h3>
-          <p>Your certified dataset—not a demo file that looks nothing like close.</p>
-        </article>
-        <article class="card">
-          <LineIcon name="report" />
-          <h3>Handoff</h3>
-          <p>Named owners, a short how-we-answer list, and a team that can run without us.</p>
-        </article>
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Power BI training" }]} />
+        <p class="kicker">Power BI training</p>
+        <h1>Train on the report you already use</h1>
+        <p class="lede">A slide class does not stick. We teach on your model, in the room, and leave your team able to change the report.</p>
+        <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
       </div>
-      <h2>Frequently asked questions</h2>
-      <div class="faq">
+    </header>
+    <section class="band">
+      <div class="wrap prose">
+        <h2>The class used a sample. Monday is still your file.</h2>
+        <p>People sat through the buttons. They still cannot open the report they are supposed to trust, so the meeting goes back to the spreadsheet.</p>
+        <p>The session is on the model you already paid for. Your definitions. Your reports. The questions your close, your pipeline, or your shop floor actually asks.</p>
+      </div>
+    </section>
+    <section class="band band-alt">
+      <div class="wrap">
+        <h2>Everyone is in the same report</h2>
+        <p>The slide stays in the background. The room works in the report they will open next week.</p>
+        <figure>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" role="img" aria-label="A slide of text lines behind three screens. Each screen shows the same three bars.">
+        <rect x="150" y="12" width="380" height="150" rx="4" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
+        <line x1="178" y1="40" x2="420" y2="40" stroke="#dcdcdc" stroke-width="8" stroke-linecap="round"/>
+        <line x1="178" y1="64" x2="490" y2="64" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+        <line x1="178" y1="82" x2="460" y2="82" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+        <line x1="178" y1="100" x2="440" y2="100" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+
+        <rect x="36" y="118" width="184" height="132" rx="4" fill="#ffffff" stroke="#1c1c1c" stroke-width="2.5"/>
+        <rect x="248" y="118" width="184" height="132" rx="4" fill="#ffffff" stroke="#1c1c1c" stroke-width="2.5"/>
+        <rect x="460" y="118" width="184" height="132" rx="4" fill="#ffffff" stroke="#1c1c1c" stroke-width="2.5"/>
+
+        <line x1="52" y1="226" x2="204" y2="226" stroke="#dcdcdc" stroke-width="2"/>
+        <line x1="264" y1="226" x2="416" y2="226" stroke="#dcdcdc" stroke-width="2"/>
+        <line x1="476" y1="226" x2="628" y2="226" stroke="#dcdcdc" stroke-width="2"/>
+
+        <rect x="70" y="190" width="18" height="36" fill="#dcdcdc"/>
+        <rect x="98" y="162" width="18" height="64" fill="#397fb0"/>
+        <rect x="126" y="178" width="18" height="48" fill="#1c1c1c"/>
+        <rect x="282" y="190" width="18" height="36" fill="#dcdcdc"/>
+        <rect x="310" y="162" width="18" height="64" fill="#397fb0"/>
+        <rect x="338" y="178" width="18" height="48" fill="#1c1c1c"/>
+        <rect x="494" y="190" width="18" height="36" fill="#dcdcdc"/>
+        <rect x="522" y="162" width="18" height="64" fill="#397fb0"/>
+        <rect x="550" y="178" width="18" height="48" fill="#1c1c1c"/>
+
+        <path d="M322 154 l0 26 6 6 3-9 9 2 z" fill="#1c1c1c"/>
+
+        <rect x="28" y="250" width="200" height="10" rx="2" fill="#1c1c1c"/>
+        <rect x="240" y="250" width="200" height="10" rx="2" fill="#1c1c1c"/>
+        <rect x="452" y="250" width="200" height="10" rx="2" fill="#1c1c1c"/>
+        <rect x="100" y="264" width="56" height="6" rx="1" fill="#dcdcdc"/>
+        <rect x="312" y="264" width="56" height="6" rx="1" fill="#dcdcdc"/>
+        <rect x="524" y="264" width="56" height="6" rx="1" fill="#dcdcdc"/>
+      </svg>
+        </figure>
+      </div>
+    </section>
+    <section class="band">
+      <div class="wrap prose">
+        <h2>Who is in the room</h2>
+        <p>The people who have to defend the numbers, and the people expected to use the report. Controllers, operations leads, sales managers, and the analysts who support them.</p>
+        <p>It is not a certification course, and it is not a tour of every button.</p>
+        <h2>How a session runs</h2>
+        <p>It is live. A short agenda, real questions, and a screen on the report itself. Groups stay small so people click, filter, and get stuck while we are still there.</p>
+        <p>You leave able to change the report when the question changes. You also leave with a short list of how each meeting question gets answered, a named owner for the model, and the next questions the team can run without us.</p>
+        <p>If you want office hours after that, they sit with the <a href="/managed-advisory-retainer">managed advisory retainer</a>.</p>
+      </div>
+    </section>
+    <section class="band band-alt faq" aria-labelledby="faq">
+      <div class="wrap">
+        <h2 id="faq">Questions</h2>
         {faqs.map((f) => (
           <details>
             <summary>{f.q}</summary>
@@ -102,8 +127,18 @@ const jsonLd = [
           </details>
         ))}
       </div>
-    </div>
-  </section>
-  <RelatedLinks services={RELATED["/power-bi-training"].services} posts={RELATED["/power-bi-training"].posts} />
-  <CtaBand heading="Train on the model you already paid for" text="A session is enough to name who needs to be fluent and which report they have to open." />
+    </section>
+    <RelatedLinks
+      services={[
+        { href: "/data-project-management-change-leadership", label: "Analytics project management" },
+        { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
+        { href: "/analytics-ai-strategy-roadmap", label: "Analytics strategy roadmap" },
+      ]}
+      posts={[
+        { href: "/blog/the-meeting-after-go-live", label: "The meeting after go-live" },
+        { href: "/blog/change-management-for-analytics", label: "Change management for analytics" },
+      ]}
+    />
+    <CtaBand heading="Name the report they have to open." text="Book a session. We will name who needs to be in the room, and which report they have to be able to change." />
+  </article>
 </BaseLayout>
