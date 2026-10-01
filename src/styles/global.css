@@ -102,7 +102,7 @@ nav.site-nav .subnav {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 16rem;
+  min-width: 18.5rem;
   background: var(--paper);
   border: 1px solid var(--line);
   padding: 0.65rem 0.85rem;
@@ -515,3 +515,28 @@ nav.crumbs a:hover { text-decoration: underline; }
   margin: 0 0 1.25rem;
 }
 .tool-note p { margin: 0; }
+
+/* Service pages 2026-10-01. Scoped so other heroes keep the live padding. */
+.service-fold .hero { padding: 1.35rem 0 0.15rem; }
+.service-fold .hero .lede { margin-bottom: 0.85rem; }
+.service-fold .hero-actions { margin: 0.15rem 0 0; }
+.service-fold section.band { padding: 1.75rem 0; }
+.service-fold.service-hub section.band { padding: 2.35rem 0; }
+.service-fold .hero + .band,
+.service-fold.service-hub .hero + .band { padding-top: 0.7rem; }
+.service-fold .hero + .band h2,
+.service-fold.service-hub .hero + .band h2 { margin-top: 0; }
+.service-fold section.band.related-links { padding-top: 0.5rem; }
+.service-fold .related-links ul { margin: 0 0 0.5rem; }
+.service-fold p.see { text-align: center; margin: 1.15rem 0 0; }
+.service-fold p.see a:not(.btn) { font-weight: 500; }
+.service-fold .industry-head { margin-top: 4.75rem; }
+.service-fold .card-quickstart {
+  background: #e8f2f8;
+  border: 2px solid #397fb0;
+}
+.service-fold .card-quickstart h2 { color: var(--ink); }
+.service-fold .card-quickstart p { color: var(--ink-soft); }
+.service-fold .card-quickstart .icon-line { color: #397fb0; }
+.service-fold figure.diagram { margin: 0.35rem auto 0.25rem; max-width: 42rem; }
+.service-fold figure.diagram figcaption { margin-top: 0.65rem; color: var(--ink-soft); }
