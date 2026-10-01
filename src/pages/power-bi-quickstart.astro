@@ -1,27 +1,26 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
-import LineIcon from "../components/LineIcon.astro";
 import Crumbs from "../components/Crumbs.astro";
 import RelatedLinks from "../components/RelatedLinks.astro";
 import { SITE } from "../lib/site";
 
 const faqs = [
   {
-    q: "What types of reports can you build?",
-    a: "We target any time-consuming report, such as financial summaries, sales trackers, or operational metrics, using data from Excel, SQL, or cloud apps.",
+    q: "What kinds of reports?",
+    a: "A report that takes too long. Financial summaries, sales trackers, and operational metrics are typical. The source can be Excel, SQL, or a cloud app.",
   },
   {
-    q: "How much time does my team need to commit?",
-    a: "About 2–3 hours for the discovery workshop and training, with our team handling the rest.",
+    q: "How much time does my team give?",
+    a: "About two to three hours for the workshop and the training. We handle the build.",
   },
   {
-    q: "What happens after the Quickstart?",
-    a: "You get a fully functional report and the skills to maintain it. Optional add-ons or retainers can support further growth.",
+    q: "What happens after?",
+    a: "You keep a working report and the skill to maintain it. Later add-ons can be another report, model cleanup, workspace access, or Power BI Pro licensing guidance. None of those are required to start.",
   },
   {
-    q: "Do I need a Power BI license?",
-    a: "We guide you on licensing (e.g., Power BI Pro) if needed, ensuring compliance and setup.",
+    q: "Do we need a Power BI license?",
+    a: "We tell you if Power BI Pro is required and how to set it up.",
   },
 ];
 
@@ -48,7 +47,7 @@ const jsonLd = [
 ---
 <BaseLayout
   title="Power BI Quickstart for mid-sized firms | Alluvium"
-  description="Power BI Quickstart: one painful report rebuilt in two weeks. Flat fee $3,000. Discovery, automated report, training, and one week of support included."
+  description="One painful report, rebuilt in two weeks. Flat fee $3,000. You get an automated Power BI report, a training session, and one week of support."
   canonicalPath="/power-bi-quickstart"
   jsonLd={jsonLd}
 >
@@ -64,63 +63,46 @@ const jsonLd = [
         />
         <p class="kicker">Focused engagement</p>
         <h1>Power BI Quickstart</h1>
-        <p class="lede">Solve one painful reporting problem in two weeks. We rebuild a critical report into an automated, dynamic Power BI solution.</p>
-        <p><strong>Flat fee $3,000</strong>. No hidden costs, no long-term commitment.</p>
-        <p><a class="btn" href="/contact">Book a Session</a></p>
+        <p class="lede">One painful report, rebuilt in two weeks. You get an automated Power BI report, a training session, and one week of support.</p>
+        <p><strong>Flat fee $3,000.</strong> No hidden costs. No long-term commitment.</p>
+        <p class="hero-actions">
+          <a class="btn" href="/contact">Book a Session</a>
+          <a class="btn btn-ghost" href="/power-bi-quickstart">The Quickstart offer</a>
+        </p>
       </div>
     </header>
 
     <section class="band band-alt">
       <div class="wrap prose">
-        <h2>Turn time-consuming reports into Power BI in two weeks</h2>
-        <p>
-          Manual reporting processes—like endless spreadsheets or repetitive updates—drain your team’s time and delay decisions.
-          Alluvium’s Power BI Quickstart service targets one critical, high-impact report that’s eating your resources and rebuilds it
-          into a fast, automated Power BI solution. In just 2 weeks, we deliver a dynamic report that’s ready for decision-making,
-          with minimal disruption to your workflow.
-        </p>
-        <ul>
-          <li>Replace manual spreadsheets with automated reporting.</li>
-          <li>Save hours weekly by eliminating repetitive updates.</li>
-          <li>Deliver insights that drive business decisions.</li>
-        </ul>
-        <p>Our Quickstart is designed for mid-sized companies ready to experience Power BI without a long-term commitment. We handle the heavy lifting, so you see results fast.</p>
+        <h2>The report that eats the week</h2>
+        <p>Someone rebuilds the same pack before every meeting. Numbers move from a spreadsheet, a SQL extract, or a cloud app into slides by hand. The file is late, and two copies do not match.</p>
+        <p>Quickstart takes that one report. It does not start a program, and it does not ask for a retainer.</p>
       </div>
     </section>
 
     <section class="band">
       <div class="wrap">
-        <h2>What a Power BI Quickstart includes</h2>
+        <h2>What the two weeks include</h2>
         <div class="cards">
           <article class="card">
-            <LineIcon name="workshop" />
             <h3>90-minute discovery workshop</h3>
-            <p>We identify a high-impact, time-consuming report through a collaborative session with your team.</p>
+            <p>We name the report, the decision it has to support, the data, and the owner.</p>
           </article>
           <article class="card">
-            <LineIcon name="connect" />
-            <h3>Data connection setup</h3>
-            <p>We connect your data (Excel, SQL, or cloud app) to Power BI for seamless integration.</p>
+            <h3>Data connection</h3>
+            <p>We connect Excel, SQL, or a cloud app so the report is not pasted together again.</p>
           </article>
           <article class="card">
-            <LineIcon name="report" />
-            <h3>Custom Power BI report</h3>
-            <p>A fully built report replaces your manual process, designed for automation, interactivity, and business impact.</p>
+            <h3>The Power BI report</h3>
+            <p>One report replaces the manual rebuild. People can filter it and trust the figure in the meeting.</p>
           </article>
           <article class="card">
-            <LineIcon name="training" />
-            <h3>Training session &amp; handoff</h3>
-            <p>A hands-on session equips your team to use and adapt the report, ensuring self-sufficiency.</p>
+            <h3>Training and handoff</h3>
+            <p>A hands-on session so your team can use the report and adjust it without us in the room.</p>
           </article>
           <article class="card">
-            <LineIcon name="support" />
-            <h3>1 week of post-deployment support</h3>
-            <p>We provide troubleshooting and guidance to ensure a smooth transition.</p>
-          </article>
-          <article class="card">
-            <LineIcon name="fee" />
-            <h3>Investment</h3>
-            <p>Flat fee $3,000. Optional add-ons: additional reports or dashboards, data model optimization, workspace and access setup, and Power BI Pro licensing guidance.</p>
+            <h3>One week of support</h3>
+            <p>After go-live we stay for troubleshooting and questions while the first real cycle runs.</p>
           </article>
         </div>
       </div>
@@ -128,74 +110,54 @@ const jsonLd = [
 
     <section class="band band-alt">
       <div class="wrap">
-        <h2>Why choose Power BI Quickstart?</h2>
-        <div class="cards">
-          <article class="card">
-            <LineIcon name="time" />
-            <h3>Save time</h3>
-            <p>Eliminate hours of manual reporting with an automated, dynamic Power BI report.</p>
-          </article>
-          <article class="card">
-            <LineIcon name="decision" />
-            <h3>Boost decision-making</h3>
-            <p>Deliver interactive insights that align with your business goals.</p>
-          </article>
-          <article class="card">
-            <LineIcon name="scale" />
-            <h3>Prove Power BI’s value</h3>
-            <p>Show stakeholders a quick, tangible win. Create a scalable starting point for broader adoption.</p>
-          </article>
-        </div>
-        <p style="margin-top:1.25rem;">Our Quickstart is a fit for teams buried in spreadsheets, people spending hours updating reports, or leaders unsure where to begin with Power BI.</p>
+        <h2>Two weeks, then a week of support</h2>
+        <p>Your team’s time is about two to three hours: the workshop and the training. We do the build.</p>
+        <figure>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 150" role="img" aria-label="A two-week path with four stops, then a lighter week of support.">
+        <line x1="36" y1="78" x2="604" y2="78" stroke="#dcdcdc" stroke-width="6" stroke-linecap="round"/>
+        <line x1="36" y1="78" x2="430" y2="78" stroke="#397fb0" stroke-width="6" stroke-linecap="round"/>
+        <line x1="430" y1="78" x2="604" y2="78" stroke="#397fb0" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 10" opacity="0.55"/>
+        <rect x="36" y="108" width="394" height="8" rx="2" fill="#397fb0"/>
+        <rect x="438" y="108" width="166" height="8" rx="2" fill="#397fb0" opacity="0.35"/>
+        <circle cx="48" cy="78" r="14" fill="#fff" stroke="#397fb0" stroke-width="4"/>
+        <circle cx="230" cy="78" r="14" fill="#397fb0"/>
+        <circle cx="430" cy="78" r="14" fill="#1c1c1c"/>
+        <circle cx="592" cy="78" r="14" fill="#fff" stroke="#397fb0" stroke-width="4"/>
+        <rect x="38" y="36" width="22" height="18" rx="2" fill="none" stroke="#397fb0" stroke-width="2"/>
+        <line x1="38" y1="42" x2="60" y2="42" stroke="#397fb0" stroke-width="2"/>
+        <rect x="214" y="34" width="32" height="22" rx="2" fill="#e7f1f8" stroke="#397fb0" stroke-width="2"/>
+        <line x1="220" y1="42" x2="240" y2="42" stroke="#397fb0" stroke-width="2"/>
+        <line x1="220" y1="48" x2="234" y2="48" stroke="#397fb0" stroke-width="2"/>
+        <rect x="416" y="32" width="28" height="22" rx="2" fill="none" stroke="#1c1c1c" stroke-width="2"/>
+        <path d="M422 44 h8 M434 40 v8" stroke="#1c1c1c" stroke-width="2" fill="none"/>
+      </svg>
+          <ol class="timeline-labels">
+            <li><strong>Discover</strong> 90 minutes. Name the report and the owner.</li>
+            <li><strong>Build</strong> About one week. Connect the data and make the report.</li>
+            <li><strong>Hand off</strong> One to two days of training. The team can run it.</li>
+            <li><strong>Support</strong> The week after go-live. Questions while it is in use.</li>
+          </ol>
+        </figure>
       </div>
     </section>
 
     <section class="band">
-      <div class="wrap">
-        <h2>From pain to a report you can use in 2 weeks</h2>
-        <div class="steps">
-          <article>
-            <p class="step-num">01</p>
-            <h3>Discovery workshop (90 minutes)</h3>
-            <p>We pinpoint a critical report that’s costing you time and align on goals.</p>
-          </article>
-          <article>
-            <p class="step-num">02</p>
-            <h3>Report build (1 week)</h3>
-            <p>Our experts connect your data and create a custom Power BI report.</p>
-          </article>
-          <article>
-            <p class="step-num">03</p>
-            <h3>Training &amp; handoff (1–2 days)</h3>
-            <p>We train your team to use the report and provide 1 week of support. Discovery to delivery in 2 weeks, with minimal disruption.</p>
-          </article>
-        </div>
+      <div class="wrap prose">
+        <h2>Who it is for</h2>
+        <p>A mid-sized team that can point at the report. People buried in the weekly spreadsheet. A leader who wants proof that Power BI is worth using, on one real file, before a larger effort.</p>
+        <p>If you cannot name the report, the data, and an owner, start with Readiness and Governance Groundwork. That is not this offer under another name.</p>
       </div>
     </section>
 
     <section class="band band-alt faq" aria-labelledby="faq">
       <div class="wrap">
-        <h2 id="faq">Power BI Quickstart FAQs</h2>
+        <h2 id="faq">Questions</h2>
         {faqs.map((f) => (
           <details>
             <summary>{f.q}</summary>
             <p>{f.a}</p>
           </details>
         ))}
-      </div>
-    </section>
-
-
-    <section class="band" aria-labelledby="groundwork">
-      <div class="wrap band-center">
-        <h2 id="groundwork">Not ready for a rebuild yet?</h2>
-        <p class="lede">
-          If you cannot name the painful report, the data, and an owner, start with
-          <strong>Readiness &amp; Governance Groundwork</strong> — not a disguised Quickstart.
-        </p>
-        <p class="hero-actions">
-          <a class="btn" href="/contact">Book a Session — ask about Groundwork</a>
-        </p>
       </div>
     </section>
 
@@ -212,6 +174,25 @@ const jsonLd = [
       ]}
     />
 
-    <CtaBand heading="Ready to solve your reporting pain in 2 weeks?" text="Stop wasting time on manual reports. Book a Session to identify your critical report and see how we can transform it. Flat fee $3,000; optional add-ons tailored to your needs." />
+    <CtaBand
+      heading="Name the one report."
+      text="Book a session. We will confirm the report, the data, and the owner. One report, two weeks, $3,000."
+    />
   </article>
 </BaseLayout>
+
+<style>
+  .timeline-labels {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .timeline-labels li { margin: 0; color: var(--ink-soft); }
+  .timeline-labels strong { display: block; color: var(--ink); font-weight: 500; }
+  @media (max-width: 700px) {
+    .timeline-labels { grid-template-columns: 1fr 1fr; }
+  }
+</style>

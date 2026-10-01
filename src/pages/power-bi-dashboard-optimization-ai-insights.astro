@@ -7,20 +7,20 @@ import { SITE } from "../lib/site";
 
 const faqs = [
   {
-    q: "How do you measure dashboard performance?",
-    a: "We analyze refresh times, model structure, query folding, and visual load performance to benchmark improvements and track measurable gains.",
+    q: "How do you judge whether it got faster?",
+    a: "How long refresh takes, how the model is built, whether the query can run where the data lives, and how long the page takes to draw. We compare before and after.",
   },
   {
-    q: "Is this where conversational analytics lives?",
-    a: "No. This engagement is models, visuals, and adoption. Asking a certified Power BI or Fabric model is a separate service: Conversational Analytics.",
+    q: "Do you redesign from scratch?",
+    a: "Not always. We often keep the report and remove what makes it slow or hard to trust.",
   },
   {
-    q: "Do you redesign dashboards from scratch?",
-    a: "Not always. We often optimize what exists—streamlining models, cleaning visuals, and enhancing functionality without a full rebuild.",
+    q: "Cloud, or on our own servers?",
+    a: "Both. The recommendations follow your setup and the rules you already use for who can see which rows.",
   },
   {
-    q: "Can this work with Power BI Report Server or Service?",
-    a: "Yes. We optimize both on-prem and cloud environments, tailoring recommendations to your infrastructure and governance model.",
+    q: "Can we ask this report questions in plain language?",
+    a: "That is separate work. This one is the model, the page, and whether people use it.",
   },
 ];
 
@@ -31,7 +31,7 @@ const jsonLd = [
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
       { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      { "@type": "ListItem", position: 3, name: "Dashboard Optimization", item: SITE.url + "/power-bi-dashboard-optimization-ai-insights" },
+      { "@type": "ListItem", position: 3, name: "Dashboard optimization", item: SITE.url + "/power-bi-dashboard-optimization-ai-insights" },
     ],
   },
   {
@@ -47,60 +47,101 @@ const jsonLd = [
 ---
 <BaseLayout
   title="Power BI dashboard optimization for teams | Alluvium"
-  description="Power BI dashboard optimization for speed, usability, and adoption. Audit models and visuals so people actually use the reports you already built today."
+  description="The report exists. People do not trust it, or they cannot find the number. We fix that report instead of starting over."
   canonicalPath="/power-bi-dashboard-optimization-ai-insights"
   jsonLd={jsonLd}
 >
   <article>
     <header class="hero">
       <div class="wrap">
-        <Crumbs
-          crumbs={[
-            { href: "/", label: "Home" },
-            { href: "/services", label: "Services" },
-            { label: "Dashboard optimization" },
-          ]}
-        />
-        <p class="kicker">Service</p>
-        <h1>Power BI dashboard optimization</h1>
-        <p class="lede">Maximize the performance and usability of your existing dashboards. Audits provide actionable recommendations to improve speed, UX, and business impact—without requiring a full rebuild.</p>
-        <p><a class="btn" href="/contact">Book a Session</a></p>
+        <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Dashboard optimization" }]} />
+        <p class="kicker">Dashboard optimization</p>
+        <h1>Fix the report you already paid for</h1>
+        <p class="lede">The report exists. People do not trust it, or they cannot find the number. We fix that report instead of starting over.</p>
+        <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
       </div>
     </header>
-    <figure class="still bw">
-      <img src="/blog/unused-reports-are-a-governance-smell-hero.jpg" alt="Black and white photo of unused reports stacked on a desk" width="1600" height="900" />
-    </figure>
-
-    <section class="band band-alt">
+    <section class="band">
       <div class="wrap prose">
-        <h2>Go from dashboards to decisions</h2>
-        <p>Dashboards should empower decisions, not overwhelm them. Alluvium helps organizations cut through clutter—simplifying data models, removing redundant visuals, and uncovering the insights that truly move the needle.</p>
-        <p>When the model is certified and the questions are named, you can ask a certified model on top of it. That work lives on a <a href="/conversational-analytics">separate service page</a>. This engagement is the model and the reports.</p>
-        <ul>
-          <li>Streamline models and visuals for faster refresh and cleaner insight.</li>
-          <li>Tighten measures so leadership will actually defend the numbers.</li>
-          <li>Create dashboards that people actually use—simple, intuitive, and actionable.</li>
-        </ul>
-        <p>Our expert audits provide clear, actionable recommendations, empowering your team to implement changes effectively.</p>
+        <h2>The meeting still does not use it</h2>
+        <p>Refresh drags. The page is crowded. Two reports disagree on a figure someone has to defend, so someone exports to Excel.</p>
+        <p>Another chart will not fix that. The work is the model and the report you already have.</p>
       </div>
     </section>
+    <section class="band band-alt">
+      <div class="wrap">
+        <h2>The same report, once the number is easy to find</h2>
+        <p>One page is full of charts that do not change the meeting. The other is the same report, with the number in front.</p>
+        <figure>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-label="Two reports the same size. The left is a grid of small charts. The right is four bars and open space.">
+        <rect x="16" y="16" width="308" height="268" rx="6" fill="#ffffff" stroke="#dcdcdc" stroke-width="2"/>
+        <rect x="34" y="34" width="62" height="70" fill="#e7f1f8"/>
+        <rect x="104" y="34" width="62" height="70" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="1.5"/>
+        <rect x="174" y="34" width="62" height="70" fill="#dcdcdc"/>
+        <rect x="244" y="34" width="62" height="70" fill="#e7f1f8"/>
+        <rect x="42" y="78" width="10" height="16" fill="#397fb0"/>
+        <rect x="56" y="70" width="10" height="24" fill="#1c1c1c" opacity="0.45"/>
+        <rect x="70" y="84" width="10" height="10" fill="#397fb0" opacity="0.6"/>
+        <rect x="116" y="48" width="38" height="8" fill="#dcdcdc"/>
+        <rect x="116" y="62" width="30" height="8" fill="#dcdcdc"/>
+        <rect x="116" y="76" width="34" height="8" fill="#dcdcdc"/>
+        <rect x="186" y="58" width="14" height="32" fill="#ffffff" opacity="0.85"/>
+        <rect x="206" y="48" width="14" height="42" fill="#ffffff" opacity="0.7"/>
+        <rect x="256" y="48" width="38" height="8" fill="#397fb0" opacity="0.45"/>
+        <rect x="256" y="64" width="28" height="8" fill="#397fb0" opacity="0.3"/>
+        <rect x="256" y="80" width="34" height="8" fill="#dcdcdc"/>
 
+        <rect x="34" y="112" width="62" height="70" fill="#ffffff" stroke="#dcdcdc" stroke-width="1.5"/>
+        <rect x="104" y="112" width="62" height="70" fill="#e7f1f8"/>
+        <rect x="174" y="112" width="62" height="70" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="1.5"/>
+        <rect x="244" y="112" width="62" height="70" fill="#dcdcdc"/>
+        <polyline points="44,160 58,140 72,152 86,132" fill="none" stroke="#1c1c1c" stroke-width="2"/>
+        <rect x="116" y="128" width="14" height="40" fill="#397fb0"/>
+        <rect x="136" y="144" width="14" height="24" fill="#1c1c1c" opacity="0.55"/>
+        <rect x="186" y="126" width="38" height="10" fill="#dcdcdc"/>
+        <rect x="186" y="144" width="28" height="10" fill="#dcdcdc"/>
+        <rect x="186" y="162" width="34" height="10" fill="#e7f1f8"/>
+        <rect x="258" y="140" width="34" height="24" fill="#ffffff" opacity="0.55"/>
+
+        <rect x="34" y="190" width="62" height="74" fill="#dcdcdc"/>
+        <rect x="104" y="190" width="62" height="74" fill="#e7f1f8"/>
+        <rect x="174" y="190" width="62" height="74" fill="#ffffff" stroke="#dcdcdc" stroke-width="1.5"/>
+        <rect x="244" y="190" width="62" height="74" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="1.5"/>
+        <rect x="46" y="214" width="38" height="8" fill="#ffffff" opacity="0.7"/>
+        <rect x="46" y="230" width="28" height="8" fill="#ffffff" opacity="0.5"/>
+        <rect x="116" y="208" width="14" height="40" fill="#397fb0" opacity="0.7"/>
+        <rect x="136" y="220" width="14" height="28" fill="#1c1c1c" opacity="0.35"/>
+        <rect x="186" y="206" width="38" height="8" fill="#dcdcdc"/>
+        <rect x="186" y="222" width="32" height="8" fill="#dcdcdc"/>
+        <rect x="186" y="238" width="24" height="8" fill="#dcdcdc"/>
+        <rect x="256" y="208" width="38" height="40" fill="#e7f1f8"/>
+
+        <rect x="356" y="16" width="308" height="268" rx="6" fill="#ffffff" stroke="#1c1c1c" stroke-width="2.5"/>
+        <rect x="380" y="42" width="64" height="16" rx="8" fill="#397fb0"/>
+        <line x1="380" y1="240" x2="640" y2="240" stroke="#dcdcdc" stroke-width="2"/>
+        <rect x="400" y="168" width="36" height="72" fill="#dcdcdc"/>
+        <rect x="464" y="124" width="36" height="116" fill="#397fb0"/>
+        <rect x="528" y="84" width="36" height="156" fill="#1c1c1c"/>
+        <rect x="592" y="140" width="36" height="100" fill="#397fb0" opacity="0.75"/>
+      </svg>
+        </figure>
+      </div>
+    </section>
     <section class="band">
       <div class="wrap">
-        <h2>Our Power BI dashboard optimization process</h2>
-        <p>A structured, insight-first approach that combines Power BI expertise with adoption—delivering performance, precision, and usability across every layer of your analytics stack.</p>
+        <h2>How the fix runs</h2>
         <div class="cards">
-          <article class="card"><h3>Assessment &amp; audit</h3><p>We review your existing Power BI environment—data models, visuals, performance, and adoption—to pinpoint inefficiencies and hidden opportunities.</p></article>
-          <article class="card"><h3>Simplification &amp; redesign</h3><p>We refactor data models, clean relationships, and redesign visuals around key decisions. Every element serves a purpose.</p></article>
-          <article class="card"><h3>Certified measures</h3><p>We name the measures leadership will defend and close the gaps that make two reports disagree.</p></article>
-          <article class="card"><h3>Validation &amp; handoff</h3><p>We test usability, measure adoption, and ensure every stakeholder gets insights that are timely, accurate, and relevant.</p></article>
+          <article class="card"><h3>Assessment</h3><p>We review the model, the page, how long refresh takes, and whether anyone uses the report.</p></article>
+          <article class="card"><h3>Simplification</h3><p>We clean how the tables relate and take off charts that do not serve a decision. Often this is a revision of what you have, not a blank file.</p></article>
+          <article class="card"><h3>Definitions people will defend</h3><p>We close the gaps that make two reports disagree.</p></article>
+          <article class="card"><h3>Handoff</h3><p>The people who need the report can open it and read it before the meeting starts.</p></article>
         </div>
+        <p>This works in Power BI in the cloud and on Power BI Report Server. The advice follows the setup you already run.</p>
       </div>
     </section>
-
     <section class="band band-alt faq" aria-labelledby="faq">
       <div class="wrap">
-        <h2 id="faq">Dashboard optimization FAQs</h2>
+        <h2 id="faq">Questions</h2>
         {faqs.map((f) => (
           <details>
             <summary>{f.q}</summary>
@@ -109,12 +150,11 @@ const jsonLd = [
         ))}
       </div>
     </section>
-
     <RelatedLinks
       services={[
-        { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
-        { href: "/power-bi-training", label: "Power BI training" },
         { href: "/conversational-analytics", label: "Conversational analytics" },
+        { href: "/power-bi-training", label: "Power BI training" },
+        { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
       ]}
       posts={[
         { href: "/blog/nobody-opens-the-dashboard", label: "Nobody opens the dashboard" },
@@ -122,7 +162,6 @@ const jsonLd = [
         { href: "/blog/why-power-bi-reports-show-different-numbers", label: "Why Power BI reports show different numbers" },
       ]}
     />
-
-    <CtaBand />
+    <CtaBand heading="Bring the report people complain about." text="Book a session. We will tell you whether the problem is the model, the page, or the fact that nobody trusts the number." />
   </article>
 </BaseLayout>

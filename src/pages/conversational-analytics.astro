@@ -1,13 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
-import RelatedLinks from "../components/RelatedLinks.astro";
 import Crumbs from "../components/Crumbs.astro";
-import { SITE, RELATED, pageTitle } from "../lib/site";
-
-const title = pageTitle("Conversational analytics on a model");
-const description =
-  "Ask a certified Power BI or Fabric semantic model. Governed questions on trusted measures, with refresh and row-level security you can defend. Not a chatbot.";
+import RelatedLinks from "../components/RelatedLinks.astro";
+import { SITE } from "../lib/site";
 
 const jsonLd = [
   {
@@ -16,113 +12,87 @@ const jsonLd = [
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
       { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Conversational analytics",
-        item: SITE.url + "/conversational-analytics",
-      },
+      { "@type": "ListItem", position: 3, name: "Conversational analytics", item: SITE.url + "/conversational-analytics" },
     ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: title,
-    description,
-    url: SITE.url + "/conversational-analytics",
-    isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url + "/" },
   },
 ];
 ---
 <BaseLayout
-  title={title}
-  description={description}
+  title="Conversational analytics on a model | Alluvium"
+  description="Someone asks a question in ordinary language and gets the number from a report people already trust. This is not a new chatbot."
   canonicalPath="/conversational-analytics"
   jsonLd={jsonLd}
 >
   <article>
     <header class="hero">
       <div class="wrap">
-        <Crumbs
-          crumbs={[
-            { href: "/", label: "Home" },
-            { href: "/services", label: "Services" },
-            { label: "Conversational analytics" },
-          ]}
-        />
-        <p class="kicker">Services</p>
-        <h1>Conversational analytics</h1>
-        <p class="lede">
-          Ask a certified Power BI or Fabric semantic model. Answers come from measures leadership already trusts—with refresh and RLS you can defend—not from a free-form chatbot.
-        </p>
-        <p class="hero-actions">
-          <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-model-health">Check model health</a>
-        </p>
+        <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Conversational analytics" }]} />
+        <p class="kicker">Conversational analytics</p>
+        <h1>Ask the Power BI reports you already have</h1>
+        <p class="lede">Someone asks a question in ordinary language and gets the number from a report people already trust. This is not a new chatbot.</p>
+        <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
       </div>
     </header>
-
-    <figure class="still bw">
-      <img src="/blog/ask-the-model-dont-screenshot-hero.jpg" alt="" width="1600" height="900" />
-    </figure>
-
     <section class="band">
       <div class="wrap prose">
-        <h2>Ask the model—not chatbot theater</h2>
-        <p>
-          You (or your analysts) ask a question in language. The answer is computed from a certified semantic model: one definition of revenue, margin, inventory, or cash. That is conversational analytics on Power BI / Fabric—not a demo chatbot wired to messy spreadsheets.
-        </p>
-        <p>
-          This is work on the Power BI stack you already run: get the model ready, certify the measures, then let people ask governed questions.
-        </p>
+        <h2>A chatbot on a pile of spreadsheets will talk. It will not agree with the meeting.</h2>
+        <p>The demo answers from whichever file was uploaded last. It does not use one definition of revenue, margin, inventory, or cash.</p>
+        <p>Here the question goes to the Power BI reports you already have. The answer is the same number that report would have shown.</p>
       </div>
     </section>
-
     <section class="band band-alt">
-      <div class="wrap prose">
-        <h2>Prerequisites before anyone “asks”</h2>
-        <ul>
-          <li>A semantic model with named, certified measures someone will defend in the meeting.</li>
-          <li>Clear grain and source of truth—finance and ops not running two books under one tile.</li>
-          <li>Refresh that meets the close / huddle calendar, not “whenever the gateway finishes.”</li>
-          <li>RLS when the audience should not see each other’s books.</li>
-          <li>A steward who can change a measure without a war room.</li>
-        </ul>
-        <p>
-          Not ready yet? Start with
-          <a href="/power-bi-model-health">Power BI model health</a>
-          or rebuild one painful report via
-          <a href="/power-bi-quickstart">Power BI Quickstart</a>.
-        </p>
+      <div class="wrap">
+        <h2>The question hits the report</h2>
+        <p>It does not land on the spreadsheet pile.</p>
+        <figure>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" role="img" aria-label="A stack of spreadsheets on the left. A question mark points at one bar in a report on the right.">
+        <rect x="20" y="108" width="184" height="196" rx="3" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
+        <rect x="20" y="108" width="184" height="22" fill="#e7f1f8"/>
+        <rect x="40" y="124" width="184" height="196" rx="3" fill="#ffffff" stroke="#dcdcdc" stroke-width="2"/>
+        <rect x="40" y="124" width="184" height="22" fill="#f4f7fa"/>
+        <rect x="60" y="140" width="184" height="176" rx="3" fill="#ffffff" stroke="#1c1c1c" stroke-width="2"/>
+        <rect x="60" y="140" width="184" height="26" fill="#e7f1f8"/>
+        <path d="M88 166 V300 M116 166 V300 M144 166 V300 M172 166 V300 M200 166 V300 M228 166 V300" stroke="#dcdcdc" stroke-width="1.5"/>
+        <path d="M76 186 H228 M76 210 H228 M76 234 H228 M76 258 H228 M76 282 H228" stroke="#dcdcdc" stroke-width="1.5"/>
+
+        <rect x="330" y="136" width="322" height="176" rx="6" fill="#ffffff" stroke="#1c1c1c" stroke-width="2.5"/>
+        <line x1="352" y1="276" x2="630" y2="276" stroke="#dcdcdc" stroke-width="2"/>
+        <rect x="368" y="224" width="28" height="52" fill="#dcdcdc"/>
+        <rect x="416" y="196" width="28" height="80" fill="#397fb0"/>
+        <rect x="464" y="156" width="28" height="120" fill="#1c1c1c"/>
+        <rect x="512" y="208" width="28" height="68" fill="#397fb0" opacity="0.75"/>
+        <rect x="560" y="184" width="28" height="92" fill="#397fb0"/>
+        <path d="M446 88 L478 134 L510 88 Z" fill="#ffffff"/>
+        <path d="M446 88 L478 134 L510 88" fill="none" stroke="#397fb0" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <rect x="400" y="4" width="156" height="88" rx="22" fill="#ffffff" stroke="#397fb0" stroke-width="2.5"/>
+        <path d="M460 42 c0 -14 36 -16 36 0 c0 12 -16 14 -18 26" fill="none" stroke="#397fb0" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="478" cy="76" r="3.4" fill="#397fb0"/>
+        <rect x="442" y="82" width="72" height="14" fill="#ffffff"/>
+      </svg>
+        </figure>
       </div>
     </section>
-
     <section class="band">
       <div class="wrap prose">
-        <h2>What this is not</h2>
-        <ul>
-          <li>A Copilot experiment dropped on untrusted measures.</li>
-          <li>A standalone chatbot product.</li>
-          <li>Screenshot theater where the “answer” is still a slide someone rebuilt overnight.</li>
-        </ul>
-        <p>
-          Related reading:
-          <a href="/blog/conversational-analytics-needs-a-trusted-model">conversational analytics needs a trusted model</a>,
-          <a href="/blog/ask-the-model-dont-screenshot">ask the model, don’t screenshot</a>,
-          and
-          <a href="/blog/semantic-model-is-the-product">the semantic model is the product</a>.
-        </p>
+        <h2>What has to be true first</h2>
+        <p>The report has to be one people already trust. One definition of the number, refresh in time for the meeting, and people see only the rows they should see. Someone inside the company can change a definition without a fight. If that is not true yet, the questions wait.</p>
+        <h2>The answer comes from the report</h2>
+        <p>You, or your analysts, ask in plain language. The answer is calculated from the Power BI model behind those reports, using the same definitions the meeting already uses.</p>
+        <p>You are asking the reports you have. You are not standing up a separate product with its own data.</p>
       </div>
     </section>
-
     <RelatedLinks
-      services={RELATED["/conversational-analytics"].services}
-      posts={RELATED["/conversational-analytics"].posts}
+      services={[
+        { href: "/power-bi-model-health", label: "Power BI model health" },
+        { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
+        { href: "/analytics-ai-strategy-roadmap", label: "Analytics strategy roadmap" },
+      ]}
+      posts={[
+        { href: "/blog/conversational-analytics-needs-a-trusted-model", label: "Conversational analytics needs a trusted model" },
+        { href: "/blog/ask-the-model-dont-screenshot", label: "Ask the model, don’t screenshot" },
+        { href: "/blog/semantic-model-is-the-product", label: "The semantic model is the product" },
+      ]}
     />
-
-    <CtaBand
-      heading="See if your model is ready to be asked"
-      text="Book a Session to pick one certified model and the questions it should answer—after the measures are trusted."
-    />
+    <CtaBand heading="Bring one report people already trust." text="Book a session. We will pick that report and the questions it should answer." />
   </article>
 </BaseLayout>
