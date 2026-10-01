@@ -8,6 +8,7 @@ tags:
   - Manufacturing
   - Finance
 draft: false
+ctaHref: /power-bi-migration
 ---
 
 Someone demos a Tableau-to-Power-BI converter. Sheets appear. Colors roughly match. Leadership hears "migration" and schedules a cutover.
