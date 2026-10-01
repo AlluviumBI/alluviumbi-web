@@ -43,12 +43,12 @@ export const NAV = [
 
 export const SERVICES = [
   { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
-  { href: "/analytics-ai-strategy-roadmap", label: "Analytics strategy roadmap" },
-  { href: "/data-project-management-change-leadership", label: "Data & Analytics project management" },
-  { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
-  { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
-  { href: "/power-bi-training", label: "Training" },
-  { href: "/conversational-analytics", label: "Conversational analytics" },
+  { href: "/analytics-ai-strategy-roadmap", label: "Analytics Strategy Roadmap" },
+  { href: "/data-project-management-change-leadership", label: "Data Project Management" },
+  { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard Optimization" },
+  { href: "/managed-advisory-retainer", label: "Managed Advisory Retainer" },
+  { href: "/power-bi-training", label: "Power BI Training" },
+  { href: "/conversational-analytics", label: "Conversational Analytics" },
 ] as const;
 
 export type Crumb = { name: string; href: string };
