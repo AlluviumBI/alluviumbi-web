@@ -8,6 +8,7 @@ tags:
   - Manufacturing
   - Finance
 draft: false
+ctaHref: /power-bi-migration
 ---
 
 The inventory says two hundred Tableau workbooks. The migration plan says migrate all of them. The budget will not survive the plan.
