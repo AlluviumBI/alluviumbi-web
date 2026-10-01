@@ -8,6 +8,7 @@ tags:
   - Manufacturing
   - Finance
 draft: false
+ctaHref: /acquisition-performance-visibility
 ---
 
 Private equity does not ask for another dashboard. It asks for the same margin language across every add-on.
