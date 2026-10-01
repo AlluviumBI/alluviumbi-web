@@ -1,120 +1,105 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CtaBand from "../components/CtaBand.astro";
-import Crumbs from "../components/Crumbs.astro";
-import RelatedLinks from "../components/RelatedLinks.astro";
-import { SITE } from "../lib/site";
 
 const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
-      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      { "@type": "ListItem", position: 3, name: "Managed advisory retainer", item: SITE.url + "/managed-advisory-retainer" },
-    ],
-  },
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.alluviumbi.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.alluviumbi.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Managed Advisory Retainer",
+        "item": "https://www.alluviumbi.com/managed-advisory-retainer"
+      }
+    ]
+  }
 ];
 ---
 <BaseLayout
-  title="Managed Power BI advisory retainer | Alluvium"
-  description="After go-live the report goes stale, or it splits into copies. We keep one version current, without a large team on staff to watch it."
+  title="Keep one version of the report current | Alluvium"
+  description="After go-live the Power BI report goes stale or splits into copies. A retainer keeps one version current without a large team on staff."
   canonicalPath="/managed-advisory-retainer"
   jsonLd={jsonLd}
 >
-  <article>
-    <header class="hero">
-      <div class="wrap">
-        <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Managed advisory retainer" }]} />
-        <p class="kicker">Managed advisory retainer</p>
-        <h1>Keep one version of the report current</h1>
-        <p class="lede">After go-live the report goes stale, or it splits into copies. We keep one version current, without a large team on staff to watch it.</p>
-        <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
-      </div>
-    </header>
-    <section class="band">
-      <div class="wrap prose">
-        <h2>The project ends. The report does not stay still.</h2>
-        <p>Someone changes a definition. Who can see which rows still matches last year. The refresh finishes when it finishes, not when the meeting needs the number.</p>
-        <p>Then two people answer the same question from two copies. You do not need a bench of specialists to stop that. You need one version kept honest.</p>
-      </div>
-    </section>
-    <section class="band band-alt">
-      <div class="wrap">
-        <h2>The same report, month after month</h2>
-        <p>The copies sit off to the side. The report on the line is the one people still open.</p>
-        <figure>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" role="img" aria-label="One report sits on a line of time. Two copies sit off the line, and their bars do not match.">
-        <rect x="28" y="36" width="168" height="128" rx="5" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
-        <line x1="44" y1="56" x2="176" y2="56" stroke="#dcdcdc" stroke-width="2"/>
-        <line x1="44" y1="136" x2="180" y2="136" stroke="#dcdcdc" stroke-width="2"/>
-        <rect x="50" y="100" width="16" height="36" fill="#dcdcdc"/>
-        <rect x="74" y="78" width="16" height="58" fill="#dcdcdc"/>
-        <rect x="98" y="112" width="16" height="24" fill="#dcdcdc"/>
-        <rect x="122" y="90" width="16" height="46" fill="#dcdcdc"/>
-
-        <rect x="484" y="48" width="168" height="128" rx="5" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
-        <line x1="500" y1="68" x2="632" y2="68" stroke="#dcdcdc" stroke-width="2"/>
-        <line x1="500" y1="148" x2="636" y2="148" stroke="#dcdcdc" stroke-width="2"/>
-        <rect x="508" y="112" width="16" height="36" fill="#dcdcdc"/>
-        <rect x="532" y="96" width="16" height="52" fill="#dcdcdc"/>
-        <rect x="556" y="80" width="16" height="68" fill="#dcdcdc"/>
-        <rect x="580" y="120" width="16" height="28" fill="#dcdcdc"/>
-
-        <rect x="226" y="28" width="228" height="176" rx="6" fill="#ffffff" stroke="#397fb0" stroke-width="3"/>
-        <line x1="246" y1="56" x2="434" y2="56" stroke="#e7f1f8" stroke-width="6" stroke-linecap="round"/>
-        <line x1="248" y1="172" x2="432" y2="172" stroke="#dcdcdc" stroke-width="2"/>
-        <rect x="262" y="124" width="22" height="48" fill="#dcdcdc"/>
-        <rect x="298" y="84" width="22" height="88" fill="#397fb0"/>
-        <rect x="334" y="100" width="22" height="72" fill="#1c1c1c"/>
-        <rect x="370" y="116" width="22" height="56" fill="#397fb0"/>
-
-        <line x1="340" y1="204" x2="340" y2="252" stroke="#397fb0" stroke-width="2"/>
-        <line x1="48" y1="268" x2="632" y2="268" stroke="#397fb0" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="60" cy="268" r="8" fill="#ffffff" stroke="#397fb0" stroke-width="3"/>
-        <circle cx="152" cy="268" r="8" fill="#397fb0"/>
-        <circle cx="244" cy="268" r="8" fill="#397fb0"/>
-        <circle cx="340" cy="268" r="11" fill="#1c1c1c"/>
-        <circle cx="436" cy="268" r="8" fill="#397fb0"/>
-        <circle cx="528" cy="268" r="8" fill="#397fb0"/>
-        <circle cx="620" cy="268" r="8" fill="#ffffff" stroke="#397fb0" stroke-width="3"/>
-      </svg>
-        </figure>
-      </div>
-    </section>
-    <section class="band">
-      <div class="wrap">
-        <h2>What the retainer watches</h2>
-        <p>This is care after the build. It is not a second implementation.</p>
-        <div class="cards">
-          <article class="card"><h3>The definitions</h3><p>The numbers the reports use, and how the tables connect.</p></article>
-          <article class="card"><h3>Who may change a number</h3><p>And how that change is reviewed before the meeting.</p></article>
-          <article class="card"><h3>Who can see which rows</h3><p>Updated when people change roles.</p></article>
-          <article class="card"><h3>Refresh</h3><p>Timed to the close and the operating meeting.</p></article>
-          <article class="card"><h3>The list of reports</h3><p>Which one is next, which one should be retired, and whether people still open what you paid for.</p></article>
-        </div>
-      </div>
-    </section>
-    <section class="band band-alt">
-      <div class="wrap prose">
-        <h2>Who it is for</h2>
-        <p>A mid-sized company that already has Power BI and does not want a large internal team just to keep it honest.</p>
-        <p>You still need someone inside the company who can approve a definition. The retainer keeps that definition from quietly changing after the project team leaves.</p>
-      </div>
-    </section>
-    <RelatedLinks
-      services={[
-        { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
-        { href: "/data-project-management-change-leadership", label: "Analytics project management" },
-        { href: "/power-bi-training", label: "Power BI training" },
-      ]}
-      posts={[
-        { href: "/blog/who-can-change-a-measure", label: "Who can change a measure" },
-        { href: "/blog/row-level-security-who-sees-the-number", label: "Row-level security: who sees the number" },
-        { href: "/blog/gateway-refresh-7am-surprise", label: "Gateway refresh and the 7am surprise" },
-      ]}
-    />
-    <CtaBand heading="See if a retainer fits better than another project." text="Book a session. We will look at whether the report is going stale or splitting into copies." />
-  </article>
+  <div class="service-fold">
+<article>
+<header class="hero"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><a href="/services">Services</a><span aria-hidden="true"> / </span><span>Managed Advisory Retainer</span></nav>
+<p class="kicker">Managed Advisory Retainer</p>
+<h1>Keep one version of the report current</h1>
+<p class="lede">After go-live the report goes stale, or it splits into copies. We keep one version current, without a large team on staff to watch it.</p>
+<p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
+</div></header>
+<section class="band"><div class="wrap">
+<h2>The project ends, and the report keeps changing</h2>
+<p>Someone changes a definition. Who can see which rows still matches last year. The refresh finishes when it finishes, and the meeting has already started.</p>
+<p>Then two people answer the same question from two copies. Steady attention on one version stops that. You can keep the report honest without hiring a bench of specialists.</p>
+</div></section>
+<section class="band band-alt"><div class="wrap">
+<h2>The same report, month after month</h2>
+<p>Copies sit off to the side. The report on the line is the one people still open.</p>
+<figure class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" role="img" aria-label="One report stays on a line. Two copies sit off to the side.">
+<line x1="40" y1="120" x2="600" y2="120" stroke="#dcdcdc" stroke-width="8" stroke-linecap="round"/>
+<rect x="250" y="36" width="140" height="168" rx="4" fill="#e7f1f8" stroke="#1c1c1c" stroke-width="2.5"/>
+<rect x="270" y="58" width="100" height="16" fill="#397fb0"/>
+<rect x="270" y="88" width="22" height="70" fill="#1c1c1c"/>
+<rect x="302" y="110" width="22" height="48" fill="#397fb0"/>
+<rect x="334" y="98" width="22" height="60" fill="#397fb0" opacity="0.75"/>
+<circle cx="320" cy="120" r="8" fill="#1c1c1c"/>
+<rect x="36" y="150" width="110" height="70" rx="3" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
+<line x1="50" y1="172" x2="128" y2="172" stroke="#dcdcdc" stroke-width="3"/>
+<line x1="50" y1="188" x2="112" y2="188" stroke="#dcdcdc" stroke-width="3"/>
+<rect x="490" y="148" width="110" height="70" rx="3" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
+<line x1="504" y1="170" x2="582" y2="170" stroke="#dcdcdc" stroke-width="3"/>
+<line x1="504" y1="186" x2="560" y2="186" stroke="#dcdcdc" stroke-width="3"/>
+</svg><figcaption>One report stays on the line. The copies do not.</figcaption></figure>
+</div></section>
+<section class="band"><div class="wrap">
+<h2>What the retainer watches</h2>
+<div class="cards">
+<article class="card"><h3>The definitions</h3><p>The numbers the reports use, and how the tables connect.</p></article>
+<article class="card"><h3>Who may change a number</h3><p>And how that change is reviewed before the meeting.</p></article>
+<article class="card"><h3>Who can see which rows</h3><p>Updated when people change roles.</p></article>
+<article class="card"><h3>Refresh</h3><p>Timed to the close and the operating meeting.</p></article>
+<article class="card"><h3>The list of reports</h3><p>Which one is next, which one should be retired, and whether people still open what you paid for.</p></article>
+</div>
+</div></section>
+<section class="band band-alt"><div class="wrap">
+<h2>Who it is for</h2>
+<p>A mid-sized company that already has Power BI and wants the reports kept current after the project team leaves.</p>
+<p>You still need someone inside the company who can approve a definition. The retainer keeps that definition from quietly changing once the build is over.</p>
+</div></section>
+<section class="band related-links" aria-labelledby="related-services">
+  <div class="wrap">
+    <h2 id="related-services">Related Power BI Services</h2>
+    <ul><li><a href="/power-bi-dashboard-optimization-ai-insights">Dashboard Optimization</a></li>
+<li><a href="/data-project-management-change-leadership">Data Project Management</a></li>
+<li><a href="/power-bi-training">Power BI Training</a></li></ul>
+    <h2>Related Power BI Insights</h2>
+    <ul><li><a href="/blog/who-can-change-a-measure">Who can change a measure</a></li>
+<li><a href="/blog/row-level-security-who-sees-the-number">Row-level security: who sees the number</a></li>
+<li><a href="/blog/gateway-refresh-7am-surprise">Gateway refresh and the 7am surprise</a></li></ul>
+  </div>
+</section><section class="band band-cta" aria-labelledby="cta-heading">
+  <div class="wrap">
+    <p class="kicker">Next step</p>
+    <h2 id="cta-heading">See whether steady care fits.</h2>
+    <p class="lede">Book a session. We will look at the report you have now and say whether it needs care or a new build.</p>
+    <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
+  </div>
+</section></article>
+  </div>
 </BaseLayout>
