@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CtaBand from "../components/CtaBand.astro";
-import RelatedLinks from "../components/RelatedLinks.astro";
 import Crumbs from "../components/Crumbs.astro";
-import { SITE, RELATED } from "../lib/site";
+import RelatedLinks from "../components/RelatedLinks.astro";
+import { SITE } from "../lib/site";
 
 const jsonLd = [
   {
@@ -12,35 +12,90 @@ const jsonLd = [
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
       { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      { "@type": "ListItem", position: 3, name: "Data & Analytics Project Management", item: SITE.url + "/data-project-management-change-leadership" },
+      { "@type": "ListItem", position: 3, name: "Data & Analytics project management", item: SITE.url + "/data-project-management-change-leadership" },
     ],
   },
 ];
 ---
 <BaseLayout
   title="Analytics project management | Alluvium"
-  description="Analytics project management for Power BI: scope, RLS, refresh and gateway owners, training, and change leadership so last-mile delivery does not stall."
+  description="The work stalls when nobody owns the decisions. We run the dashboard project to a finish the business will actually use."
   canonicalPath="/data-project-management-change-leadership"
   jsonLd={jsonLd}
 >
-  <header class="hero">
-    <div class="wrap">
-      <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Data & Analytics project management" }]} />
-      <p class="kicker">Services</p>
-      <h1>Data &amp; Analytics project management and change leadership</h1>
-      <p class="lede">Oversight for analytics and Power BI initiatives: scope, teams, timelines, communication, training, and adoption—so delivery does not stall in the last mile.</p>
-      <p><a class="btn" href="/contact">Book a Session</a></p>
-    </div>
-  </header>
-  <figure class="still bw">
-    <img src="/blog/why-month-end-still-takes-a-week-hero.jpg" alt="Black and white photo of a quiet office corridor at month-end" width="1600" height="900" />
-  </figure>
-  <section class="band">
-    <div class="wrap prose">
-      <h2>Analytics project management, RLS, refresh, and adoption</h2>
-      <p>The model can be right and still fail if finance never opens it. We treat adoption as part of delivery, not a slide at the end.</p>
-    </div>
-  </section>
-  <RelatedLinks services={RELATED["/data-project-management-change-leadership"].services} posts={RELATED["/data-project-management-change-leadership"].posts} />
-  <CtaBand heading="Keep the last mile from stalling" text="A session is enough to see whether the gap is the model, the plan, or adoption." />
+  <article>
+    <header class="hero">
+      <div class="wrap">
+        <Crumbs crumbs={[{ href: "/", label: "Home" }, { href: "/services", label: "Services" }, { label: "Data & Analytics project management" }]} />
+        <p class="kicker">Project leadership</p>
+        <h1>Someone has to own the dashboard project</h1>
+        <p class="lede">The work stalls when nobody owns the decisions. We run it to a finish the business will actually use.</p>
+        <p class="hero-actions"><a class="btn" href="/contact">Book a Session</a></p>
+      </div>
+    </header>
+    <section class="band">
+      <div class="wrap prose">
+        <h2>The build can look done and still sit unused</h2>
+        <p>Scope keeps moving. Nobody owns the refresh. Nobody owns who can see which rows. The training is a slide, and it happens after the meeting that needed the report.</p>
+        <p>Finance still opens the old file. The model was not the failure. The failure is that no one owned the decisions that get the report used.</p>
+      </div>
+    </section>
+    <section class="band band-alt">
+      <div class="wrap">
+        <h2>They work in the report, not on a slide</h2>
+        <p>The slide sits behind the page. The people who have to use the number are in the report.</p>
+        <figure>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" role="img" aria-label="A slide of text sits behind a large report. Two pointers rest on the report.">
+        <rect x="28" y="58" width="220" height="236" rx="4" fill="#f4f7fa" stroke="#dcdcdc" stroke-width="2"/>
+        <line x1="48" y1="92" x2="156" y2="92" stroke="#dcdcdc" stroke-width="6" stroke-linecap="round"/>
+        <line x1="48" y1="116" x2="150" y2="116" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+        <line x1="48" y1="134" x2="142" y2="134" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+        <line x1="48" y1="152" x2="154" y2="152" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+        <line x1="48" y1="170" x2="128" y2="170" stroke="#dcdcdc" stroke-width="3" stroke-linecap="round"/>
+
+        <rect x="176" y="24" width="472" height="276" rx="8" fill="#ffffff" stroke="#1c1c1c" stroke-width="2.5"/>
+        <line x1="196" y1="72" x2="628" y2="72" stroke="#e7f1f8" stroke-width="6" stroke-linecap="round"/>
+        <rect x="200" y="88" width="56" height="16" rx="8" fill="#397fb0"/>
+        <rect x="266" y="88" width="56" height="16" rx="8" fill="#ffffff" stroke="#397fb0" stroke-width="2"/>
+        <rect x="332" y="88" width="56" height="16" rx="8" fill="#ffffff" stroke="#dcdcdc" stroke-width="2"/>
+        <line x1="200" y1="256" x2="620" y2="256" stroke="#dcdcdc" stroke-width="2"/>
+        <rect x="214" y="196" width="32" height="60" fill="#dcdcdc"/>
+        <rect x="270" y="156" width="32" height="100" fill="#397fb0"/>
+        <rect x="326" y="176" width="32" height="80" fill="#397fb0" opacity="0.72"/>
+        <rect x="382" y="116" width="32" height="140" fill="#1c1c1c"/>
+        <rect x="438" y="166" width="32" height="90" fill="#397fb0"/>
+        <rect x="494" y="206" width="32" height="50" fill="#e7f1f8" stroke="#397fb0" stroke-width="2"/>
+        <rect x="550" y="186" width="32" height="70" fill="#dcdcdc"/>
+        <path d="M306 132 l0 20 5 0 4 9 4-2-4-9 6 0 z" fill="#397fb0"/>
+        <path d="M418 112 l0 24 6 0 5 11 5-2.5-5-11 7 0 z" fill="#1c1c1c"/>
+      </svg>
+        </figure>
+      </div>
+    </section>
+    <section class="band">
+      <div class="wrap">
+        <h2>What we hold until people use it</h2>
+        <div class="cards">
+          <article class="card"><h3>Scope</h3><p>Tied to the decision the report has to support. A new request does not join the work by default.</p></article>
+          <article class="card"><h3>Owners</h3><p>A name for the team, a name for keeping the report current, and a name for who can see which rows.</p></article>
+          <article class="card"><h3>The calendar</h3><p>A timeline the business can see, including when people are told what changed.</p></article>
+          <article class="card"><h3>Training</h3><p>On the report, before the meeting that needs it, and checked after. Not assumed.</p></article>
+        </div>
+        <p>You get a Power BI project people use. Not a file that was only handed over.</p>
+      </div>
+    </section>
+    <RelatedLinks
+      services={[
+        { href: "/power-bi-training", label: "Power BI training" },
+        { href: "/analytics-ai-strategy-roadmap", label: "Analytics strategy roadmap" },
+        { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
+      ]}
+      posts={[
+        { href: "/blog/analytics-programs-fail-in-delivery", label: "Analytics programs fail in delivery" },
+        { href: "/blog/pmo-should-own-the-analytics-backlog", label: "PMO should own the analytics backlog" },
+        { href: "/blog/the-meeting-after-go-live", label: "The meeting after go-live" },
+      ]}
+    />
+    <CtaBand heading="Name the decision nobody owns." text="Book a session. We will see whether the gap is the plan, the owners, or the fact that nobody opens the report." />
+  </article>
 </BaseLayout>
