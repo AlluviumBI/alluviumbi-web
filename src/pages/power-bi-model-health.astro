@@ -8,11 +8,11 @@ const description =
   "Upload Power BI semantic model metadata for a free scored review—relationships, DAX, Power Query (M), and RLS. Prioritized fixes by email.";
 
 const whatYouGet = [
-  "A clear <strong>score out of 100</strong> so you know if the model is green, yellow, or in the danger zone",
-  "<strong>Top 5 fixes</strong> ranked by impact — not a 40-item laundry list",
-  "Findings that explain <strong>why it matters</strong>, <strong>what breaks if you ignore it</strong>, and <strong>what improves when you fix it</strong>",
-  "Coverage across <strong>relationships, DAX, Power Query (M), and row-level security</strong> when those show up in the export",
-  "A report written like a senior model review — with a path to <strong>Book a Session</strong> if you want help remediating",
+  "You get a score out of 100, so you can see whether the model is in good shape, needs work, or is likely to fail you at the close.",
+  "The top five fixes, ranked by impact, not a list of forty items.",
+  "Each finding says why it matters, what breaks if you leave it, and what gets better when you fix it.",
+  "Coverage of relationships, DAX, Power Query (M), and row-level security when those show up in the export.",
+  "The write-up reads like a senior model review. If you want help fixing the findings, <a href=\"/contact\">book a Session</a>.",
 ];
 
 const jsonLd = [
@@ -59,10 +59,19 @@ const jsonLd = [
         <p class="kicker">Free review</p>
         <h1>Power BI model health score</h1>
         <p class="lede">
-          Upload your semantic model metadata. Get a scored email with prioritized fixes — relationships, DAX, Power Query (M), and row-level security when present.
+          Upload semantic model metadata. You get a scored email with the fixes in priority order. The review covers relationships, DAX, Power Query (M), and row-level security when that is in the export.
         </p>
       </div>
     </header>
+
+    <section class="band" aria-labelledby="mh-safe">
+      <div class="wrap-narrow">
+        <h2 id="mh-safe">Whether this model is safe to ask</h2>
+        <p>
+          A score tells you whether questions should hit the report the meeting already uses. If the model is full of copies, a plain question can land on a pale report and come back with a number the room will not sign.
+        </p>
+      </div>
+    </section>
 
     <section class="band band-alt" aria-labelledby="mh-get">
       <div class="wrap-narrow">
@@ -77,22 +86,22 @@ const jsonLd = [
         <ul class="mh-chips" aria-label="Accepted file types">
           <li class="mh-chip mh-chip-preferred">
             <span class="mh-chip-label">Preferred</span>
-            Zipped <code>.SemanticModel</code> folder from a <code>.pbip</code>, or TMDL folder zip / <code>.bim</code> (max 7&nbsp;MB)
+            A zipped .SemanticModel folder from a .pbip, or a TMDL folder zip, or a .bim. Maximum 7 MB.
           </li>
           <li class="mh-chip">
-            <span class="mh-chip-label">Also</span>
-            DAX Studio INFO CSV zip
+            <span class="mh-chip-label">Also accepted</span>
+            A DAX Studio INFO CSV zip
           </li>
           <li class="mh-chip mh-chip-no">
             <span class="mh-chip-label">Not accepted</span>
-            <code>.pbix</code> · Power BI cache (<code>.pbi</code> / <code>.abf</code>) · files over 7&nbsp;MB
+            A .pbix, a Power BI cache (.pbi or .abf), or a file over 7 MB.
           </li>
         </ul>
         <p class="mh-file-hint" id="mh-file-hint" role="status" aria-live="polite" hidden></p>
 
         <p class="mh-howto-row">
           <button type="button" class="mh-link" id="mh-open-modal" aria-haspopup="dialog" aria-controls="mh-modal">
-            How to get this file →
+            How to export model metadata
           </button>
         </p>
 
@@ -135,20 +144,18 @@ const jsonLd = [
           <p><button class="btn" type="submit">Get my score</button></p>
         </form>
 
-        <p class="mh-privacy">Work email required. Files used only to produce your report.</p>
+        <p class="mh-privacy">Work email and the metadata file. We use the file only to produce your report. A work email is required.</p>
 
         <aside class="mh-deep-dive" aria-labelledby="mh-deep">
           <h2 id="mh-deep">Model Health Deep Dive</h2>
           <p>
-            Free score first. Want help on the worst findings? Ask about a Model Health Deep Dive on a Session.
+            The score is free. If you want help on the worst findings, ask about a Model Health Deep Dive on a Session. It is not a self-serve checkout. We qualify it in the conversation.
           </p>
           <p class="mh-deep-note">
-            Deeper findings with Why / Risk / Impact, a top fix list for the next 30 days,
-            and a short readout — still from your metadata export. Not self-serve checkout:
-            we qualify on a Session.
+            The Deep Dive is still based on your metadata export. You get deeper findings, with why, risk, and impact, a fix list for the next 30 days, and a short readout.
           </p>
           <p class="hero-actions" style="margin-top:1rem;">
-            <a class="btn" href="/contact">Get a Model Health Deep Dive</a>
+            <a class="btn" href="/contact">Ask about a Model Health Deep Dive</a>
             <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
           </p>
         </aside>
@@ -170,40 +177,39 @@ const jsonLd = [
       tabindex="-1"
     >
       <div class="mh-modal-header">
-        <h2 id="mh-modal-title">How to export model metadata (no .pbix)</h2>
+        <h2 id="mh-modal-title">How to export model metadata</h2>
         <button type="button" class="mh-modal-close" id="mh-close-modal" aria-label="Close">
           ×
         </button>
       </div>
       <div class="mh-modal-body">
         <section class="mh-option">
-          <h3>Option A — Power BI Project <span class="mh-rec">(recommended)</span></h3>
+          <h3>Option A. Power BI project</h3>
           <ol>
-            <li>Open your <code>.pbip</code> project in Power BI Desktop (or File → Save as Power BI Project if you only have a <code>.pbix</code>).</li>
-            <li>In File Explorer, find the folder ending in <code>.SemanticModel</code>.</li>
-            <li>Zip that entire <code>.SemanticModel</code> folder — <strong>strip</strong> <code>.pbi</code> cache folders and any <code>.abf</code> so the zip stays under 7&nbsp;MB.</li>
-            <li>Upload the zip. Do not upload the <code>.Report</code> folder.</li>
+            <li>Open your .pbip project in Power BI Desktop. If you only have a .pbix, use File, Save as Power BI Project.</li>
+            <li>In File Explorer, find the folder ending in .SemanticModel.</li>
+            <li>Zip that entire folder. Leave out .pbi cache folders and any .abf so the zip stays under 7 MB.</li>
+            <li>Upload the zip. Do not upload the .Report folder.</li>
           </ol>
         </section>
         <section class="mh-option">
-          <h3>Option B — Tabular Editor</h3>
+          <h3>Option B. Tabular Editor</h3>
           <ol>
             <li>Connect Tabular Editor to your Desktop model or dataset.</li>
-            <li>File → Save to Folder (TMDL) or Save as <code>.bim</code>.</li>
-            <li>Zip the folder / file and upload.</li>
+            <li>Use File, Save to Folder (TMDL), or Save as .bim.</li>
+            <li>Zip the folder or file and upload it.</li>
           </ol>
         </section>
         <section class="mh-option">
-          <h3>Option C — DAX Studio</h3>
+          <h3>Option C. DAX Studio</h3>
           <ol>
             <li>Connect to the Desktop model.</li>
-            <li>Export to CSV: INFO.TABLES, INFO.COLUMNS, INFO.RELATIONSHIPS, INFO.MEASURES.</li>
-            <li>Zip the CSVs and upload. (Structure + DAX; limited M coverage.)</li>
+            <li>Export these to CSV: INFO.TABLES, INFO.COLUMNS, INFO.RELATIONSHIPS, INFO.MEASURES.</li>
+            <li>Zip the CSVs and upload them. This covers structure and DAX. Coverage of M is limited.</li>
           </ol>
         </section>
         <p class="mh-modal-note">
-          We review model definition metadata only (max 7&nbsp;MB). Zip the <code>.SemanticModel</code> / TMDL folder and
-          <strong>omit</strong> <code>.pbi</code> cache and <code>.abf</code> files. Do not upload a <code>.pbix</code>.
+          We review model definition metadata only. Do not upload a .pbix.
         </p>
       </div>
     </div>
@@ -482,7 +488,7 @@ const jsonLd = [
       }
       const name = (file.name || "").toLowerCase();
       if (name.endsWith(".pbix")) {
-        setHint("Reject: .pbix files are not accepted. Export a .SemanticModel / TMDL zip or .bim instead (see How to get this file).");
+        setHint("Reject: .pbix files are not accepted. Export a .SemanticModel / TMDL zip or .bim instead (see How to export model metadata).");
         return false;
       }
       if (file.size > MH_MAX_BYTES) {

@@ -11,36 +11,36 @@ const checklist = [
   {
     id: "c1",
     strong: "Can they start with one painful report?",
-    span: "A focused early win beats a six-month “BI transformation” with no output.",
+    span: "A focused early result beats a six-month program with nothing to show.",
   },
   {
     id: "c2",
-    strong: "Do they model for reuse across finance and ops?",
-    span: "Shop-floor metrics and P&L should share definitions—not two sets of books.",
+    strong: "Do they model for reuse across finance and operations?",
+    span: "Shop-floor metrics and the profit and loss should share definitions.",
   },
   {
     id: "c3",
-    strong: "Are they ERP-aware?",
-    span: "SAP, Odoo, Infor, and similar systems need practical extract and model patterns.",
+    strong: "Do they know the ERP?",
+    span: "SAP, Odoo, Infor, and similar systems need practical extracts, not a slide about connectors.",
   },
   {
     id: "c4",
-    strong: "Will they fix trust, not just visuals?",
-    span: "Slow refresh, wrong grain, and inconsistent KPIs kill adoption faster than ugly charts.",
+    strong: "Will they fix trust, not just the visuals?",
+    span: "Slow refresh, the wrong grain, and inconsistent measures kill adoption faster than an ugly chart.",
   },
   {
     id: "c5",
     strong: "Who does the work?",
-    span: "Prefer senior practitioners who stay on the engagement—not bait-and-switch staffing.",
+    span: "Prefer senior people who stay on the engagement.",
   },
   {
     id: "c6",
     strong: "What does handoff look like?",
-    span: "Working report, clear measures, and training on your data—not a slide deck.",
+    span: "A working report, clear measures, and training on your data.",
   },
   {
     id: "c7",
-    strong: "How do they price scope?",
+    strong: "How do they price a defined scope?",
     span: "Flat fee for a defined deliverable is easier to approve than open-ended hours.",
   },
   {
@@ -56,7 +56,7 @@ const checklist = [
   {
     id: "c10",
     strong: "What happens after go-live?",
-    span: "Optional retainer or clear next steps—without locking you into a platform pitch.",
+    span: "An optional retainer or a clear next step, without a platform pitch.",
   },
 ];
 
@@ -103,7 +103,7 @@ const jsonLd = [
         <h1 id="mfg-hero-heading">How to choose a Power BI partner for manufacturing</h1>
         <p>
           Most manufacturers do not need another dashboard vendor. They need a partner who can connect ERP and plant data,
-          align finance and ops on the same numbers, and leave the team able to run the model after handoff.
+          put finance and operations on the same numbers, and leave the team able to run the model after handoff.
         </p>
       </div>
       <div class="mfg-hero-media">
@@ -120,9 +120,9 @@ const jsonLd = [
 
     <section class="band" aria-labelledby="checklist-heading">
       <div class="wrap-narrow">
-        <h2 id="checklist-heading">Buyer checklist: what to ask before you hire</h2>
+        <h2 id="checklist-heading">What to ask before you hire</h2>
         <p class="lede">
-          Use this as a working list. If a partner cannot answer these clearly, keep looking. Check items off as you evaluate.
+          Use this as a working list. If a partner cannot answer these clearly, keep looking.
         </p>
         <ul class="mfg-checklist" id="checklist">
           {checklist.map((item) => (
@@ -137,7 +137,7 @@ const jsonLd = [
         </ul>
         <p class="mfg-progress" id="progress" aria-live="polite">0 of 10 checked</p>
         <p>
-          For manufacturing reporting patterns and where consulting usually helps, see
+          For reporting patterns, see
           <a href="/blog/power-bi-for-manufacturing-reporting-consulting">Power BI for manufacturing reporting consulting</a>.
         </p>
       </div>
@@ -145,26 +145,26 @@ const jsonLd = [
 
     <section class="band band-alt" aria-labelledby="signals-heading">
       <div class="wrap-narrow">
-        <h2 id="signals-heading">Manufacturing-specific signals</h2>
+        <h2 id="signals-heading">Signals that matter in manufacturing</h2>
         <div class="mfg-signals">
           <div class="mfg-card">
             <h3>Strong signals</h3>
             <ul>
-              <li>Throughput, scrap/yield, OTIF, inventory, downtime + finance close</li>
-              <li>Asks about grain (unit, shift, line, plant) before visuals</li>
-              <li>Expects ERP + MES + CMMS + Excel reality</li>
-              <li>Role-fit views for operators, plant leads, leadership</li>
-              <li>Treats performance as first-class at high volume</li>
+              <li>They talk about throughput, scrap and yield, on-time delivery, inventory, downtime, and the finance close in the same conversation.</li>
+              <li>They ask about grain, meaning unit, shift, line, and plant, before they talk about visuals.</li>
+              <li>They expect ERP, a plant system, maintenance, and Excel to all be in the picture.</li>
+              <li>They expect different pages for operators, plant leads, and leadership.</li>
+              <li>They treat report speed as part of the job when volume is high.</li>
             </ul>
           </div>
           <div class="mfg-card">
             <h3>Weak signals</h3>
             <ul>
-              <li>Leads with AI chatbot before the model is trusted</li>
-              <li>Only clean SaaS demos with tiny datasets</li>
-              <li>Ops vs finance forever separate projects</li>
-              <li>Enterprise program when you asked for one weekly report</li>
-              <li>Cannot explain certified, reusable measures</li>
+              <li>They lead with a chatbot before the model is trusted.</li>
+              <li>The only demos are clean SaaS data in tiny files.</li>
+              <li>Operations and finance are forever separate projects.</li>
+              <li>They propose an enterprise program when you asked for one weekly report.</li>
+              <li>They cannot explain a certified, reusable measure.</li>
             </ul>
           </div>
         </div>
@@ -176,23 +176,22 @@ const jsonLd = [
         <div class="mfg-fit">
           <h2 id="fit-heading">When Alluvium fits</h2>
           <p>
-            Alluvium (Alluvium LLC) is a Power BI / analytics delivery partner for US mid-market manufacturers and similar
-            ops-heavy firms.
+            Alluvium LLC is a Power BI and analytics delivery partner for US mid-market manufacturers and similar
+            operations-heavy firms.
           </p>
           <p><strong>We fit when you need:</strong></p>
           <ul>
             <li>
-              One high-impact report automated fast →
+              One high-impact report automated quickly. That is the
               <a href="/power-bi-quickstart">Power BI Quickstart</a>
             </li>
-            <li>Ops and finance on one trusted model</li>
-            <li>Dashboard optimization when people don’t trust what exists</li>
-            <li>Training on your model—not generic slides</li>
-            <li>Roadmap or retainer without hiring a full-time BI team yet</li>
+            <li>Operations and finance on one trusted model.</li>
+            <li>A cleanup when people do not trust what already exists.</li>
+            <li>Training on your model, not generic slides.</li>
+            <li>A roadmap or a retainer without hiring a full-time BI team yet.</li>
           </ul>
           <p>
-            <strong>Not a fit:</strong> body shop staffing, multi-year rewrite before any report ships, chatbot on unverified
-            measures.
+            We are not a fit for body-shop staffing, a multi-year rewrite before any report ships, or a chatbot on measures nobody has verified.
           </p>
         </div>
       </div>
@@ -201,7 +200,7 @@ const jsonLd = [
     <section class="band band-cta mfg-cta" aria-labelledby="next-heading">
       <div class="wrap-narrow">
         <h2 id="next-heading">Next step</h2>
-        <p class="lede">Start with one bottleneck report, or talk through fit.</p>
+        <p class="lede">Start with one bottleneck report, or talk through whether we fit.</p>
         <div class="hero-actions">
           <a class="btn" href="/power-bi-quickstart">Power BI Quickstart</a>
           <a class="btn mfg-btn-session" href="/contact">Book a Session</a>
