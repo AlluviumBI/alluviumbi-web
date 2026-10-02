@@ -14,7 +14,7 @@ const jsonLd = [
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
       { "@type": "ListItem", position: 2, name: "Power BI migration", item: SITE.url + "/power-bi-migration" },
-      { "@type": "ListItem", position: 3, name: "Excel as BI → Power BI", item: SITE.url + "/excel-as-bi-to-power-bi" },
+      { "@type": "ListItem", position: 3, name: "Excel as BI \u2192 Power BI", item: SITE.url + "/excel-as-bi-to-power-bi" },
     ],
   },
   {
@@ -34,13 +34,13 @@ const jsonLd = [
         <Crumbs crumbs={[
             { href: "/", label: "Home" },
             { href: "/power-bi-migration", label: "Power BI migration" },
-            { label: "Excel as BI → Power BI" }
+            { label: "Excel as BI \u2192 Power BI" }
           ]} />
         <div class="hero-grid">
       <div>
-        <p class="kicker">Excel as BI → Power BI</p>
-        <h1>Stop running the business from brittle workbooks.</h1>
-        <p class="lede">When Excel is the real BI tool, the pain is mainly manual effort, human error, poor visuals, and weak dynamic analysis. Owners and ops leads feel it every Monday. We put the living model in Power BI so Excel becomes export-only.</p>
+        <p class="kicker">Excel as BI \u2192 Power BI</p>
+        <h1>Stop running the business from brittle workbooks</h1>
+        <p class="lede">When Excel is the real reporting system, someone spends Monday moving numbers by hand. A wrong paste becomes an argument. The charts do not answer the next question without a new file. Owners and operations leads feel that every week. We put the living model in Power BI so Excel is the export, not the system of record.</p>
         <p class="hero-actions">
           <a class="btn" href="/contact">Book a Session</a>
         </p>
@@ -56,7 +56,6 @@ const jsonLd = [
           <circle cx="56" cy="50" r="4.5" fill="#dcdcdc"/>
           <circle cx="72" cy="50" r="4.5" fill="#dcdcdc"/>
           <circle cx="88" cy="50" r="4.5" fill="#397fb0" opacity="0.75"/>
-          <!-- scattered workbooks -->
           <rect x="78" y="100" width="82" height="108" rx="6" fill="#fff" stroke="#dcdcdc" transform="rotate(-12 119 154)"/>
           <rect x="110" y="110" width="82" height="108" rx="6" fill="#fff" stroke="#dcdcdc" transform="rotate(4 151 164)"/>
           <rect x="136" y="106" width="82" height="108" rx="6" fill="#fff" stroke="#999"/>
@@ -73,7 +72,6 @@ const jsonLd = [
             </linearGradient>
           </defs>
           <rect x="230" y="88" width="80" height="190" fill="url(#xlF2)"/>
-          <!-- living model product -->
           <rect x="290" y="84" width="290" height="196" rx="16" fill="#1c1c1c"/>
           <rect x="290" y="84" width="290" height="28" rx="16" fill="#2a2a2a"/>
           <rect x="290" y="98" width="290" height="14" fill="#2a2a2a"/>
@@ -102,7 +100,7 @@ const jsonLd = [
 <section class="band band-alt">
   <div class="wrap">
     <p class="kicker">Why leave</p>
-    <h2>Manual work, errors, weak visuals, weak analysis</h2>
+    <h2>Manual work, errors, and analysis that cannot move</h2>
     <div class="beats">
       <article class="beat">
                 <div class="mini">
@@ -115,7 +113,6 @@ const jsonLd = [
               <circle cx="28" cy="22" r="2.8" fill="#dcdcdc"/>
               <circle cx="38" cy="22" r="2.8" fill="#dcdcdc"/>
               <circle cx="48" cy="22" r="2.8" fill="#397fb0" opacity="0.7"/>
-              <!-- three workbook cards in handoff -->
               <rect x="30" y="44" width="52" height="60" rx="6" fill="#fff" stroke="#dcdcdc"/>
               <path d="M42 60h28M42 72h22M42 84h16" stroke="#e0e0e0" stroke-width="2"/>
               <path d="M90 74 H108" stroke="#397fb0" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
@@ -126,13 +123,12 @@ const jsonLd = [
               <path d="M186 68l8 6-8 6" fill="none" stroke="#397fb0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
               <rect x="198" y="44" width="52" height="60" rx="6" fill="#fff" stroke="#999"/>
               <path d="M210 60h28M210 72h22M210 84h16" stroke="#dcdcdc" stroke-width="2"/>
-              <!-- soft clock tick (weekly rebuild) -->
               <circle cx="224" cy="52" r="8" fill="none" stroke="#397fb0" stroke-width="1.4" opacity="0.4"/>
               <path d="M224 48 V52 H228" fill="none" stroke="#397fb0" stroke-width="1.4" stroke-linecap="round" opacity="0.4"/>
             </svg>
         </div>
         <h3>Manual effort</h3>
-        <p>Someone rebuilds the pack every week. That time should go to running the business, not stitching files. Power BI refreshes the model so people stop being the glue.</p>
+        <p>Someone rebuilds the pack every week. That time should go to running the business. Power BI refreshes the model so a person is not the glue between files.</p>
       </article>
       <article class="beat">
                 <div class="mini">
@@ -146,16 +142,12 @@ const jsonLd = [
               <circle cx="38" cy="22" r="2.8" fill="#dcdcdc"/>
               <circle cx="48" cy="22" r="2.8" fill="#397fb0" opacity="0.7"/>
               <rect x="40" y="44" width="200" height="60" rx="12" fill="#f4f4f4"/>
-              <!-- bad tile -->
               <rect x="58" y="56" width="56" height="36" rx="5" fill="#fff" stroke="#999"/>
               <path d="M72 66 L100 82 M72 82 L100 66" stroke="#999" stroke-width="2.2" stroke-linecap="round"/>
-              <!-- contested tile -->
               <rect x="132" y="56" width="56" height="36" rx="5" fill="#fff" stroke="#dcdcdc"/>
               <path d="M146 68h28M146 78h18" stroke="#e0e0e0" stroke-width="2"/>
-              <!-- error badge -->
               <circle cx="210" cy="74" r="14" fill="#fff" stroke="#999" stroke-width="1.8"/>
               <path d="M203 67l14 14M217 67l-14 14" stroke="#999" stroke-width="2.2" stroke-linecap="round"/>
-              <!-- soft dissolve hint toward calm -->
               <defs>
                 <linearGradient id="xlErrFade" x1="0" y1="0" x2="1" y2="0">
                   <stop offset="0" stop-color="#397fb0" stop-opacity="0"/>
@@ -166,7 +158,7 @@ const jsonLd = [
             </svg>
         </div>
         <h3>Human error</h3>
-        <p>Wrong cell, wrong paste, wrong version—finance and ops burn meetings arguing numbers. A certified Power BI model cuts that argument out of Monday.</p>
+        <p>A wrong cell, a wrong paste, or the wrong version of the file burns the meeting. Finance and operations argue the numbers instead of the decision. A certified Power BI model takes that argument off the table when the definitions are shared.</p>
       </article>
       <article class="beat">
                 <div class="mini">
@@ -179,7 +171,6 @@ const jsonLd = [
               <circle cx="28" cy="22" r="2.8" fill="#dcdcdc"/>
               <circle cx="38" cy="22" r="2.8" fill="#dcdcdc"/>
               <circle cx="48" cy="22" r="2.8" fill="#397fb0" opacity="0.7"/>
-              <!-- weak flat bars -->
               <rect x="32" y="84" width="16" height="22" rx="2" fill="#dcdcdc"/>
               <rect x="54" y="72" width="16" height="34" rx="2" fill="#dcdcdc"/>
               <rect x="76" y="78" width="16" height="28" rx="2" fill="#c8c8c8"/>
@@ -190,15 +181,14 @@ const jsonLd = [
                 </linearGradient>
               </defs>
               <rect x="96" y="40" width="36" height="70" fill="url(#xlVizFade)"/>
-              <!-- rich dark viz -->
               <rect x="128" y="40" width="120" height="66" rx="10" fill="#1c1c1c"/>
               <path d="M144 84 L164 56 L180 70 L204 46" fill="none" stroke="#397fb0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
               <circle cx="204" cy="46" r="3.5" fill="#397fb0"/>
               <rect x="144" y="92" width="88" height="6" rx="2" fill="#2a2a2a"/>
             </svg>
         </div>
-        <h3>Visuals and analysis</h3>
-        <p>Excel charts stay flat and hard to explore. Power BI gives clearer visuals and real dynamic analysis—filter, drill, and answer the next question without a new file.</p>
+        <h3>Charts that cannot answer the next question</h3>
+        <p>Excel charts stay flat. In Power BI, people filter and drill the same model instead of asking for another workbook.</p>
       </article>
     </div>
   </div>
@@ -207,8 +197,8 @@ const jsonLd = [
 <section class="band-cta">
   <div class="wrap">
     <p class="kicker">Next step</p>
-    <h2>Move the living model out of Excel.</h2>
-    <p class="lede">Book a Session to size which workbooks become Power BI first—and land one certified slice while Excel becomes export-only.</p>
+    <h2>Move the model out of Excel</h2>
+    <p class="lede">Book a Session to decide which workbooks become Power BI first, and to land one certified slice while Excel becomes the export. See also <a href="/power-bi-migration">Power BI migration</a>.</p>
     <p class="hero-actions">
       <a class="btn" href="/contact">Book a Session</a>
     </p>
