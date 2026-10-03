@@ -540,3 +540,15 @@ nav.crumbs a:hover { text-decoration: underline; }
 .service-fold .card-quickstart .icon-line { color: #397fb0; }
 .service-fold figure.diagram { margin: 0.35rem auto 0.25rem; max-width: 42rem; }
 .service-fold figure.diagram figcaption { margin-top: 0.65rem; color: var(--ink-soft); }
+
+/* Five closers only (APV, migration hub, Tableau, Excel, homegrown).
+   They use band-cta without .band, so the button row's 1rem margin
+   collapsed to a 16px seam. Match service-page section padding
+   (1.75rem) under the button and do not stack that margin.
+   Does not change .btn size, color, padding, or label. */
+section.band-cta.cta-foot {
+  padding-bottom: 1.75rem;
+}
+section.band-cta.cta-foot .hero-actions {
+  margin-bottom: 0;
+}
