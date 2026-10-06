@@ -1,6 +1,6 @@
 ---
 title: "Your Analytics Budget Funds Outputs, Not Decisions"
-description: "A full Power BI backlog can still deliver little executive value. Fund recurring decisions, shared model capabilities, and retirement instead of report volume."
+description: "A full Power BI backlog can deliver little executive value, so fund recurring decisions, shared model capabilities, and retirement over report volume."
 pubDate: 2026-09-07
 tags:
   - Power BI
@@ -9,47 +9,45 @@ tags:
 draft: false
 ---
 
-Your analytics team is busy. The backlog is full. New Power BI reports arrive every month.
+Your analytics team is busy. The backlog is full, and new Power BI reports arrive every month. The executive team still waits for the same answers.
 
-The executive team still waits for the same answers.
-
-That is what happens when the budget funds outputs instead of decisions. Requests get approved. Pages get delivered. The portfolio grows. Nobody can say which recurring management choice became faster, safer, or easier.
+That is what happens when the budget funds outputs instead of decisions. Requests get approved, pages get delivered, and the portfolio grows. Nobody can say which recurring management choice became faster, safer, or easier.
 
 ![Black-and-white dirt track beside a harvested field fading into fog](/blog/your-analytics-budget-funds-outputs-not-decisions-hero.jpg)
 
 ## A report is an asset only when a decision uses it
 
-Mid-sized firms rarely lack demand for analytics. Every function has a list. Finance wants another variance view. Operations wants more plant detail. Sales wants another customer cut. Leadership wants a summary of all of it.
+Mid-sized firms rarely lack demand for analytics. Every function has a list. Finance wants another variance view, operations wants more plant detail, sales wants another customer cut, and leadership wants a summary of all of it.
 
 The requests are reasonable. The funding logic is not.
 
-Most analytics portfolios approve work one artifact at a time. A sponsor asks for a report. The team estimates effort. Someone finds capacity. Delivery becomes the finish line.
+Most analytics portfolios approve work one artifact at a time. A sponsor asks for a report, the team estimates effort, and someone finds capacity. Delivery becomes the finish line.
 
 That process can produce a large Power BI estate without producing a management system. The portfolio counts releases. The business experiences waiting, reconciliation, and one more place to look.
 
-A better unit of investment is the recurring decision. Which choice gets made? How often? Who owns it? Which measures and dimensions have to be trusted? What happens when the answer changes?
+A better unit of investment is the recurring decision. Define which choice gets made, how often, and who owns it. Then name the measures and dimensions that have to be trusted, and what happens when the answer changes.
 
-A report may be part of that product. It is not the product by itself. The product is a dependable decision path built on a shared semantic model.
+A report may be part of that product, but it is not the product by itself. The product is a dependable decision path built on a shared semantic model.
 
-This is not a call for a new governance program. It is not a scoring exercise for every dashboard. It is a capital-allocation question: what management capability are you buying, and what existing work stops when it arrives?
+This is not a call for a new governance program or a scoring exercise for every dashboard. It is a capital-allocation question: what management capability are you buying, and what existing work stops when it arrives?
 
 ## The costs of funding outputs
 
 1. **Visible sponsors beat valuable decisions.** The loudest function gets a page because it has a clear requester. Cross-functional model work loses because no single department owns it. The portfolio rewards asking power, not enterprise value.
 
-2. **Shared capabilities stay underfunded.** A governed customer dimension, calendar, plant hierarchy, or margin definition can serve many reports. It does not look like a finished executive deliverable. Teams postpone it, then rebuild similar logic inside each output.
+2. **Shared capabilities stay underfunded.** A governed customer dimension, calendar, plant hierarchy, or margin definition can serve many reports, but it does not look like a finished executive deliverable. Teams postpone it, then rebuild similar logic inside each output.
 
 3. **The estate grows without an exit.** Every approved report creates refresh, access, support, testing, and explanation work. If retirement is never funded, last year's priorities keep consuming this year's capacity.
 
-4. **Delivery speed hides decision latency.** A page can ship on time while the executive follow-up still enters a queue. The portfolio marks the work complete. The meeting still cannot move from the headline to a trusted answer.
+4. **Delivery speed hides decision latency.** A page can ship on time while the executive follow-up still enters a queue. The portfolio marks the work complete, and the meeting still cannot move from the headline to a trusted answer.
 
-5. **Maintenance crowds out improvement.** Defects, source changes, security requests, and measure questions accumulate across the estate. The team looks fully utilized. Much of that utilization protects outputs that no longer serve a decision.
+5. **Maintenance crowds out improvement.** Defects, source changes, security requests, and measure questions accumulate across the estate. The team looks fully utilized, but much of that utilization protects outputs that no longer serve a decision.
 
 6. **Conversational analytics becomes another surface.** Leadership gets a new way to ask questions while definitions stay fragmented. The company funds an interface instead of the semantic capability that would make the answer dependable.
 
-7. **Executives cannot compare investments.** One project promises a dashboard. One promises a data model. One promises faster reporting. Without a common decision unit, the steering group compares unlike things and defaults to urgency.
+7. **Executives cannot compare investments.** One project promises a dashboard, another a data model, a third faster reporting. Without a common decision unit, the steering group compares unlike things and defaults to urgency.
 
-8. **Success becomes impossible to defend.** Usage counts show opens. Delivery reports show completion. Neither proves a recurring decision changed. When budgets tighten, analytics looks like a pile of tools and people rather than an operating capability.
+8. **Success becomes impossible to defend.** Usage counts show opens and delivery reports show completion. Neither proves a recurring decision changed. When budgets tighten, analytics looks like a pile of tools and people rather than an operating capability.
 
 A busy backlog is not proof of a healthy portfolio. It can be proof that demand has no economic filter.
 
@@ -67,23 +65,23 @@ A busy backlog is not proof of a healthy portfolio. It can be proof that demand 
 
 6. **Reserve capacity for model health.** Not every cycle should chase a new visible page. Protect time for definitions, performance, security, lineage, testing, and source changes. That work keeps trusted answers trustworthy.
 
-7. **Treat unanswered follow-ups as portfolio evidence.** When an executive question leaves the model and becomes private analysis, record it. Repeated misses show where another dashboard matters less than a new governed dimension or measure.
+7. **Treat unanswered follow-ups as portfolio evidence.** When an executive question leaves the model and becomes private analysis, record it. Repeated misses show where a new governed dimension or measure matters more than another dashboard.
 
 8. **Make conversation earn its place.** A conversational layer should shorten a known follow-up chain on certified measures, show its context, and admit the model's limits. Do not fund question volume. Fund a faster path through a decision that repeats.
 
-9. **Review the portfolio by decision, not by report.** For each investment, ask whether the decision still exists, who owns it, whether the model answers in time, and which artifacts support it. Consolidate surfaces that serve the same choice. Retire the ones with no owner.
+9. **Review the portfolio by decision, not by report.** For each investment, ask whether the decision still exists, who owns it, whether the model answers in time, and which artifacts support it. Consolidate surfaces that serve the same choice and retire the ones with no owner.
 
-10. **Use stop, sustain, and improve as real funding categories.** Stop unused outputs. Sustain trusted capabilities. Improve the decision paths that matter now. New requests compete against all three. That is portfolio management, not a suggestion box.
+10. **Use stop, sustain, and improve as real funding categories.** Stop unused outputs, sustain trusted capabilities, and improve the decision paths that matter now. New requests compete against all three. That is portfolio management, not a suggestion box.
 
 ## What a decision-funded portfolio looks like
 
 The executive list is short. It names recurring choices: capacity, working capital, pricing exceptions, forecast response, service risk.
 
-Each choice has a business owner. Each has trusted measures and approved cuts in the semantic model. Power BI gives the room an efficient way to scan performance. Conversational analytics supports governed follow-ups where speed matters.
+Each choice has a business owner and trusted measures with approved cuts in the semantic model. Power BI gives the room an efficient way to scan performance, and conversational analytics supports governed follow-ups where speed matters.
 
-The backlog holds capabilities, not only pages. Add the product hierarchy. Settle freight treatment. Fix the as-of point. Retire the duplicate plant pack. Extend access to an approved role.
+The backlog holds capabilities, not only pages: add the product hierarchy, settle freight treatment, fix the as-of point, retire the duplicate plant pack, extend access to an approved role.
 
-Delivery reviews ask whether the decision path works. Can the room reach the answer before the action is chosen? Does the answer carry the same definition across a report and a conversation? Did an old artifact stop?
+Delivery reviews ask whether the decision path works. The room should reach the answer before the action is chosen, the answer should carry the same definition in a report and in a conversation, and an old artifact should have stopped.
 
 The team still builds reports. It simply stops treating report volume as the return.
 
@@ -91,6 +89,6 @@ The team still builds reports. It simply stops treating report volume as the ret
 
 Do not ask how many dashboards the budget produced. Ask which recurring decisions now run on trusted answers, and which old work disappeared.
 
-Fund the semantic capability. Fund the decision path. Fund retirement. Then let each report justify its place as one useful surface on a managed product.
+Fund the semantic capability, the decision path, and retirement. Then let each report justify its place as one useful surface on a managed product.
 
-Need a 30-minute look at where your analytics portfolio funds outputs instead of decisions? [Contact Alluvium](/contact). We'll map one recurring executive choice, the model capability it needs, and the reporting work that should stop.
+Want to see where your analytics portfolio funds outputs instead of decisions? [Book a session with Alluvium](/contact). We'll map one recurring executive choice, the model capability it needs, and the reporting work that should stop. To check the model underneath, request a [free Model Health check](/power-bi-model-health).

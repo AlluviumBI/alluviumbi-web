@@ -1,6 +1,6 @@
 ---
 title: "The Refresh Succeeded. The Data Is Still Wrong"
-description: "A green Power BI refresh does not mean the numbers are right. Add data-quality checks after refresh or executives will distrust every successful run."
+description: "A green Power BI refresh does not mean the numbers are right. Add data-quality checks after refresh or executives will distrust every run."
 pubDate: 2026-09-29
 tags:
   - Power BI
@@ -9,11 +9,9 @@ tags:
 draft: false
 ---
 
-The refresh history says success. Green check. On time. Rows loaded.
+The refresh history says success. The check is green, the run finished on time, and the rows loaded.
 
-Finance opens the page and the revenue number is still wrong. Inventory does not tie. A plant is missing. Yesterday’s partial file quietly became today’s certified truth.
-
-Success meant the pipeline ran. It did not mean the business can trust the output.
+Then finance opens the page and revenue is still wrong. Inventory does not tie and a plant is missing. Yesterday’s partial file quietly became today’s certified truth. Success meant the pipeline ran. It did not mean the business can trust what came out.
 
 ![Black-and-white industrial pipes, valves, and steel tanks in a processing plant](/blog/refresh-succeeded-data-still-wrong-hero.jpg)
 
@@ -21,104 +19,84 @@ Success meant the pipeline ran. It did not mean the business can trust the outpu
 
 Many mid-market teams treat refresh success as the quality gate. If the dataset refreshed, the day can proceed.
 
-That gate only proves connectivity, credentials, and that a query completed. It does not prove completeness, reconciliation, grain, or business rules.
+That gate only proves connectivity, credentials, and a completed query. It proves nothing about completeness, reconciliation, grain, or business rules.
 
-This sits next to [refresh failures are a close risk](/blog/refresh-failures-are-a-close-risk). Failures are visible. Wrong-but-successful refreshes are worse: they spread confidently.
-
-It also sits next to [data quality shows up as arguments](/blog/data-quality-shows-up-as-arguments). When the pipeline smiles and the number lies, the argument moves into the meeting with no error log to point at.
+This sits next to [refresh failures are a close risk](/blog/refresh-failures-are-a-close-risk). Failures are visible. Wrong but successful refreshes are worse, because they spread with confidence. It also sits next to [data quality shows up as arguments](/blog/data-quality-shows-up-as-arguments). When the pipeline smiles and the number lies, the argument moves into the meeting with no error log to point at.
 
 Executives do not care that the gateway was healthy. They care that the pack matches the books, the floor, or the customer truth they already feel in their gut.
 
 ## Why wrong data still refreshes cleanly
 
-Source systems accept incomplete extracts. A file lands with yesterday’s rows missing a plant. The load succeeds because the file is well-formed.
+Source systems accept incomplete extracts. A file lands with a plant missing from yesterday’s rows, and the load succeeds because the file is well-formed.
 
 Incremental logic skips periods it should have reprocessed. Success means “no exception,” not “catch-up complete.”
 
-Silent filter changes in Power Query drop rows that used to load. The refresh does not fail. The fact table simply shrinks.
+A quiet filter change in Power Query drops rows that used to load. The refresh does not fail. The fact table just shrinks.
 
-Currency, calendar, or late-arriving dimensions are stale while facts are fresh. Measures calculate. Meaning breaks.
+Currency, calendar, or late-arriving dimensions go stale while the facts stay fresh. The measures calculate, but the meaning breaks.
 
-Upstream “temporary” manual adjustments never made it into the source the model reads. Operations fixed the workbook. The model never saw the fix.
+“Temporary” manual adjustments upstream never reach the source the model reads. Operations fixed the workbook, and the model never saw the fix.
 
-Duplicate keys and fan-out inflate totals without throwing. The engine is fine. The business is not.
+Duplicate keys and fan-out inflate totals without throwing an error. The engine is fine. The business is not.
 
 ## The costs of trusting green without quality gates
 
-1. **Wrong numbers travel farther than failed ones.** A failed refresh stops distribution. A successful wrong refresh feeds every app, export, and screenshot in the chain.
+1. **Wrong numbers travel farther than failed ones.** A failed refresh stops distribution. A successful wrong refresh feeds every app, export, and screenshot downstream.
 
-2. **Close and forecast calls burn time.** Controllers reconcile for hours against a dataset that “worked.” The calendar slips while everyone trusts the wrong green.
+2. **Close and forecast calls burn time.** Controllers spend hours reconciling against a dataset that “worked,” and the calendar slips while everyone trusts the wrong green.
 
-3. **Teams disable alerts.** After enough false confidence, leaders stop believing success messages. Real failures then get ignored too.
+3. **Teams disable alerts.** After enough false confidence, leaders stop believing success messages, and then real failures get ignored too.
 
 4. **Certified labels lose meaning.** [Certified datasets](/blog/certified-datasets-vs-wild-west) that publish wrong totals teach the business that certification is theater.
 
 5. **Shadow workbooks return.** People keep a “known good” extract on the side. Adoption reverses even while refresh SLAs look excellent.
 
-6. **Root cause hides in business logic.** Engineers debug gateways. The bug was a missing plant code, a changed ledger mapping, or a late file. The wrong team owns the incident.
+6. **Root cause hides in business logic.** Engineers debug gateways while the real bug is a missing plant code, a changed ledger mapping, or a late file. The wrong team owns the incident.
 
 7. **Executive trust resets to zero.** One confident wrong Monday can undo a quarter of delivery goodwill. Trust is asymmetric.
 
-8. **You optimize the wrong SLA.** Uptime becomes the KPI. Decision-grade accuracy never gets an owner.
+8. **You optimize the wrong SLA.** Uptime becomes the KPI, and decision-grade accuracy never gets an owner.
 
 ## How to fix it: quality checks after refresh, before trust
 
-1. **Define a short reconciliation pack per critical dataset.** Row counts by plant. Totals versus GL or source system control totals. Freshness by partition. Null rates on key dimensions. Keep it boring and automatic.
+1. **Define a short reconciliation pack per critical dataset.** Include row counts by plant, totals against GL or source control totals, freshness by partition, and null rates on key dimensions. Keep it boring and automatic.
 
-2. **Fail the business release, not only the technical refresh.** A dataset can refresh and still be blocked from the executive app until checks pass. Separate “loaded” from “published for decisions.”
+2. **Gate the business release, not only the technical refresh.** A dataset can refresh and still be held back from the executive app until checks pass. Separate “loaded” from “published for decisions.”
 
-3. **Alert on shape, not only on error.** Sudden drop in row count, missing expected plant, zero invoice lines for a weekday—these should wake someone even when the refresh is green.
+3. **Alert on shape, not only on error.** A sudden drop in row count, a missing plant, or zero invoice lines on a weekday should wake someone up even when the refresh is green.
 
 4. **Pin an as-of and a quality badge on executive pages.** “Refreshed 6:12 a.m. Reconciled to GL control. Status: pass.” Silence about quality reads as assumed perfection.
 
-5. **Own late-arriving and partial files explicitly.** Document what happens when Tuesday’s file lands late. Do not let partial success look like a full day.
+5. **Own late-arriving and partial files explicitly.** Document what happens when Tuesday’s file lands late. Do not let partial success pass for a full day.
 
-6. **Tie incidents to business owners.** When margin is wrong, the measure owner and the data steward share the ticket. Same living ownership idea as KPI tiles that still show departed names.
+6. **Tie incidents to business owners.** When margin is wrong, the measure owner and the data steward share the ticket. It is the same living ownership idea behind [KPI tiles that still show departed names](/blog/kpi-owner-left-tile-still-named).
 
 7. **Regression-test measures after source changes.** Mapping edits and ERP patches break totals without breaking refresh. Put business tests next to technical tests.
 
-8. **Keep [the semantic model as the product](/blog/semantic-model-is-the-product).** Quality rules belong with the product, not in a side spreadsheet someone remembers to check when they have time.
+8. **Keep [the semantic model as the product](/blog/semantic-model-is-the-product).** Quality rules belong with the product, not in a side spreadsheet someone checks when they have time.
 
-9. **Review false greens monthly.** Which successful refreshes still caused meeting pain? Promote those pain points into automated checks. Shrink the gap between pipeline success and decision trust.
+9. **Review false greens monthly.** Ask which successful refreshes still caused pain in a meeting, and turn those into automated checks. Each one shrinks the gap between pipeline success and decision trust.
 
-## What good looks like
+## Start with three controls, not thirty
 
-Refresh history can still show green. The executive pack only opens on datasets that also passed reconciliation gates.
+Do not boil the ocean. For the dataset behind the executive pack, automate three controls first: control-total tie-out, expected entity coverage, and freshness by critical partition. Ship those, then add null rates and period-over-period shape checks. A short gate that runs beats a perfect framework that never leaves the slide.
 
-When something is wrong, the page says so before the CFO finds it. Distribution pauses on purpose. The incident has a business owner and a technical owner.
-
-Over time, “refresh succeeded” stops being the end of the story. It becomes the start of a short, automatic quality handshake.
+Put the result where decisions happen, not in a steward’s mailbox. Show pass or fail and the as-of on the executive page. If the status is fail, say what failed in one line: missing plant file, control total variance, stale dimension.
 
 ## Make “wrong but green” discussable
 
 Many teams hide quality misses because they fear looking incompetent next to a green pipeline. That silence is expensive.
 
-Create a blameless review for false greens. Celebrate the check that caught a partial plant file. Treat the miss that reached the CFO as a product defect with owners—not as a personal failure of the person who clicked refresh.
+Run blameless reviews of false greens. Celebrate the check that caught a partial plant file. Treat the miss that reached the CFO as a product defect with owners, not as a personal failure of whoever clicked refresh. When quality is discussable, checks improve. When it is shameful, people stop looking.
 
-When quality is discussable, checks improve. When quality is shameful, people stop looking.
+## What good looks like
 
-## Start with three controls, not thirty
+Refresh history can still show green, but the executive pack only opens on datasets that also passed reconciliation. When something is wrong, the page says so before the CFO finds it, distribution pauses on purpose, and the incident has both a business owner and a technical owner.
 
-Do not boil the ocean. For the dataset behind the executive pack, automate three controls first: control-total tie-out, expected entity coverage, and freshness by critical partition.
-
-Ship those. Then add null rates and period-over-period shape checks. A short gate that runs beats a perfect framework that never leaves the slide.
-
-If [refresh failures are a close risk](/blog/refresh-failures-are-a-close-risk), false greens are a close ambush. Build the second gate before the next month-end teaches the lesson the hard way.
-
-Leaders should ask a sharper question than “did refresh succeed?” Ask “what business checks passed before we trusted this pack?” That question alone changes how teams design pipelines.
-
-## Make quality visible where decisions happen
-
-Do not hide reconciliation in a steward mailbox. Put pass/fail and as-of on the executive page. If status is fail, say what failed in one line: missing plant file, control total variance, stale dimension.
-
-Visible quality changes behavior. Leaders stop treating green refresh history as a blessing. Teams stop shipping “successful” loads that still cannot survive the first finance question.
+Leaders start asking a sharper question than “did refresh succeed?” They ask “what business checks passed before we trusted this pack?” Over time, “refresh succeeded” stops being the end of the story and becomes the start of a short, automatic quality handshake.
 
 ## Executive takeaway
 
-A successful refresh is plumbing. Decision-grade data needs a second gate.
+A successful refresh is plumbing. Decision-grade data needs a second gate. If [refresh failures are a close risk](/blog/refresh-failures-are-a-close-risk), false greens are a close ambush, so build that gate before the next month-end teaches the lesson the hard way.
 
-Automate reconciliation. Separate loaded from published. Put quality on the page. Then green means something a steering committee can believe.
-
-Need a practical quality gate on the datasets your close depends on? [Contact Alluvium](https://www.alluviumbi.com/contact). We will map control totals, alert rules, and the publish path that should stop wrong numbers from looking successful.
-
-[Book a 30-minute consult](/contact).
+Want a practical quality gate on the datasets your close depends on? [Book a session with Alluvium](/contact). We will map control totals, alert rules, and the publish path that keeps wrong numbers from looking successful. To start with the model itself, request a [free Model Health check](/power-bi-model-health).
