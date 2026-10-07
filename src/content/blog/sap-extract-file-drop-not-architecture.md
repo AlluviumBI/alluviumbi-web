@@ -60,7 +60,7 @@ The architecture here is boring on purpose: durable landing, keys, history, chec
 
 7. **Certify one path for Monday and close.** Promote a [certified dataset](/blog/certified-datasets-vs-wild-west) fed from the landing zone and retire personal imports of the raw share. Exploration can use sandboxes. The pack cannot.
 
-8. **Document as-of on the page.** “SAP extract batch 2026-10-08 05:10 CT, books grain” beats “live from SAP” when the truth is a file. Honest labels restore trust faster than a new visual.
+8. **Document as-of on the page.** “SAP extract batch, first business day, 05:10 CT, books grain” beats “live from SAP” when the truth is a file. Honest labels restore trust faster than a new visual.
 
 9. **Sequence delivery.** Build the landing zone and one owned measure first, then the dashboard. Reversing that order funds another quarter of source fights.
 

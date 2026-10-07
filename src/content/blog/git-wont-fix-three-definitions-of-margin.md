@@ -92,7 +92,7 @@ Pair the repo with a lightweight change record: date, measure, old vs new defini
 
 ## Common mid-market failure mode
 
-A manufacturer "modernizes" analytics over a weekend. Files land in Azure DevOps and a pipeline badge turns green. Monday's QBR still opens three Excels for margin by channel, by plant, and by finance.
+Say a manufacturer "modernizes" analytics over a weekend. Files land in Azure DevOps and a pipeline badge turns green. Monday's QBR still opens three Excels for margin by channel, by plant, and by finance.
 
 Leadership concludes Git was a waste. The real waste was skipping the definition step and calling the badge governance. Put the badge after the steward, not instead of one.
 

@@ -7,11 +7,11 @@ tags:
 draft: false
 ---
 
-For many companies, Power BI is where reporting lives. One complaint keeps coming up anyway, on Reddit threads, community forums, and in internal meetings: "Why is my Power BI dashboard so slow?"
+For many companies, Power BI is where reporting lives. One complaint keeps coming up anyway, on community forums and in internal meetings: "Why is my Power BI dashboard so slow?"
 
 If you run BI or oversee operations, you have heard that question more than once. Lag costs more than patience. It eats productivity, stalls adoption, and quietly drags down the return on what you spent.
 
-Below are five proven ways to speed up Power BI dashboards. They come from real implementations, BI advisory work, and the shared frustration of thousands of analysts staring at a loading spinner.
+Below are five proven ways to speed up Power BI dashboards. They come from implementation and advisory work, and from the shared frustration of every analyst who has stared at a loading spinner.
 
 ### Why Power BI Dashboards Lag
 
@@ -34,7 +34,7 @@ Every fast Power BI solution sits on a clean star schema. Avoid snowflake models
 - Avoid bidirectional relationships unless required.
 - Use numeric keys instead of text for relationships.
 
-**Impact:** One retail client improved load time by 47 percent by removing four unnecessary tables and replacing text keys with integers.
+**Impact:** Fewer tables and integer keys mean a smaller model, and a smaller model answers faster.
 
 ### Tip 2: Optimize DAX Measures
 
@@ -46,7 +46,7 @@ DAX is easy to write and hard to master at scale. One slow measure can drag down
 - Avoid ALL unless you truly need it, especially on large tables.
 - Measure only what matters. Remove legacy and unused measures.
 
-**Impact:** On a dashboard for a healthcare organization, refactoring four key DAX measures cut average visual load time from 12 seconds to under 3.
+**Impact:** Fix the few measures that every visual depends on, and every page that uses them speeds up.
 
 ### Tip 3: Aggregate Your Data at the Right Level
 
@@ -54,10 +54,10 @@ If visuals slice millions of transactions in real time, performance will suffer.
 
 **Practical fixes:**
 - Build summary tables for high-level dashboards, such as monthly or quarterly aggregates.
-- Use aggregation tables in combination with USERELATIONSHIP or GROUPBY where appropriate.
+- Use Manage aggregations to map an aggregated import table to a detail DirectQuery table, so summary visuals hit the small table and drill-down still reaches the detail.
 - Push aggregation upstream into the data source or ETL process when possible.
 
-**Impact:** One logistics client cut data volume by 80 percent and halved load times by aggregating shipment data at the week level.
+**Impact:** Summarizing at the grain the page actually uses, such as the week, cuts the rows every visual has to scan.
 
 ### Tip 4: Reduce Visual Load Per Page
 
@@ -69,7 +69,7 @@ Each visual in Power BI runs a query. A page with 15 visuals fires 15 separate q
 - Avoid overly complex visuals that combine many dimensions.
 - Disable auto date/time in report settings.
 
-**Impact:** A financial services firm simplified the layouts on its executive dashboards and saw a 60 percent improvement in page rendering time.
+**Impact:** Fewer visuals means fewer queries, and the page renders faster.
 
 ### Tip 5: Use Incremental Refresh and Query Folding
 
@@ -81,24 +81,7 @@ On large datasets, full refreshes can cripple performance and raise failure rate
 - Push filters upstream to the query step.
 - Avoid merging large tables after import.
 
-**Impact:** A manufacturing client set up incremental refresh on a two-year transactional dataset and cut refresh time from 90 minutes to under 10. That made daily updates possible instead of weekly.
-
-### A Real-World Case Study: From 18 Seconds to 3
-
-A professional services firm came to Alluvium with a recurring problem. Their executive dashboard took nearly 20 seconds to load and often timed out or crashed during leadership presentations. A dashboard audit found five bottlenecks:
-- 14 visuals on one landing page
-- Overuse of SUMX and FILTER in key DAX measures
-- High-cardinality columns used as slicers
-- No summary tables or aggregation strategy
-- Extra tables left in the model from legacy builds
-
-In two weeks, our team:
-- Rebuilt the landing page with only the key visuals
-- Refactored the high-cost measures
-- Added a monthly aggregated table for KPIs
-- Removed unnecessary tables and relationships
-
-Load time dropped from 18 seconds to 3. User adoption increased 4x within one month, and the CIO approved a wider Power BI rollout on the strength of the performance gains.
+**Impact:** Refreshing only recent data shortens the refresh, which can make daily updates practical where a full reload only fit once a week.
 
 ### Performance Is More Than Speed
 

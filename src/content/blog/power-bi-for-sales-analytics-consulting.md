@@ -29,7 +29,7 @@ So leaders keep asking:
 ## What Power BI Brings to Sales Analytics
 
 Power BI connects your sales data sources and turns them into clear, interactive dashboards that help leaders:
-- Monitor pipelines and quotas in real time
+- Monitor pipelines and quotas on current data
 - Drill into stalled deals by rep, product, or region
 - Track conversion rates, sales velocity, and cycle length
 - Align CRM data with financial targets for better forecasting
@@ -49,7 +49,7 @@ We help sales leaders:
 
 ## Use Cases We Deliver
 
-Here is how we have helped sales teams move from reacting to managing with data:
+These are common sales use cases we build to help teams move from reacting to managing with data:
 - **Pipeline dashboards** by region, product, and owner, with weekly snapshots
 - **Rep scorecards** that track activity against outcomes, with coaching insights
 - **Quota pacing visuals** that forecast end-of-quarter performance

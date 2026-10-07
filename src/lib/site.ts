@@ -49,6 +49,8 @@ export const SERVICES = [
   { href: "/managed-advisory-retainer", label: "Managed Advisory Retainer" },
   { href: "/power-bi-training", label: "Power BI Training" },
   { href: "/conversational-analytics", label: "Conversational Analytics" },
+  { href: "/power-bi-migration", label: "Power BI Migration" },
+  { href: "/acquisition-performance-visibility", label: "Acquisition Performance Visibility" },
 ] as const;
 
 export type Crumb = { name: string; href: string };

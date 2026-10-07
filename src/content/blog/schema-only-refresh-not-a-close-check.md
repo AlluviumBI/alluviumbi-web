@@ -18,7 +18,7 @@ A schema refresh updates tables and columns. It does not prove the ledger landed
 
 ## Green is not a recon
 
-Power BI offers granular refresh: schema only, selected tables, incremental partitions. Those options exist to save time and capacity, and they are good tools. They are not a finance control.
+Power BI has no refresh option named schema-only. Teams use the word for any refresh or deployment that updates structure without reloading data. A metadata-only deployment pushes new tables, columns, and measures and leaves the old rows in place. An enhanced refresh or TMSL refresh of type calculate recalculates the model without loading new data from the source. Table-scoped and incremental refreshes load some data and skip the rest. Those options exist to save time and capacity, and they are good tools. They are not a finance control.
 
 A schema-only refresh can succeed while fact partitions are skipped, incremental windows miss late invoices, or a dimension updates and the fact does not. The service did what you asked. You asked the wrong question for close.
 

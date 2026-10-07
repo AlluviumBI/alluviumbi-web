@@ -30,7 +30,7 @@ Power BI is capable, but it is not magic. Manufacturing data typically includes:
 - **High cardinality**, such as one row per unit or cycle
 - **Large daily volumes** across shifts, lines, and plants
 
-Out-of-the-box Power BI models cannot carry that weight without tuning. Poor model design, inefficient DAX, and over-reliance on import mode lead to **slow visuals, frequent timeouts, and frustrated teams**.
+Out-of-the-box Power BI models cannot carry that weight without tuning. Poor model design and inefficient DAX lead to **slow visuals, frequent timeouts, and frustrated teams**. Refresh drags for its own reasons: large unfiltered loads, heavy Power Query steps, and no incremental refresh.
 
 ### The Fix: Fast, Focused BI for the Plant Floor
 
@@ -43,7 +43,7 @@ We flatten, filter, and partition data to reduce memory pressure while keeping t
 Raw data is still captured, but visuals run on summaries built for fast interaction.
 
 **Apply hybrid and DirectQuery techniques**
-For high-frequency metrics, we connect directly to source systems with throttled refresh intervals.
+For high-frequency metrics, we query source systems live with DirectQuery and keep the rest in import. DirectQuery has no scheduled refresh, so its speed depends on how fast the source answers and how many queries it can take at once. We keep it to the few metrics that need it.
 
 **Build role-based dashboards**
 Operators, engineers, and leadership each see only what they need.

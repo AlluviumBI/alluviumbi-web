@@ -51,9 +51,9 @@ A Power BI license will not fix poor report design, disconnected data, or intern
 
 ## Common Use Cases We Solve
 
-Here is how we have helped finance leaders use Power BI to cut reporting effort and see more clearly:
-- **Automated monthly close reporting** across 10+ branches, replacing 12 manual spreadsheets
-- **Real-time cash flow dashboard** built on live data from the ERP and bank feeds
+These are common finance use cases we build:
+- **Automated monthly close reporting** across branches, replacing manual spreadsheets
+- **Cash flow dashboard** refreshed on a schedule from ERP and bank data
 - **KPI tracking for departmental budgets**, shared with department heads weekly
 - **Variance analysis with dynamic drill-through** by GL account, region, or cost center
 
