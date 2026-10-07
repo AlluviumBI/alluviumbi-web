@@ -10,88 +10,82 @@ tags:
 draft: false
 ---
 
-Moving the ERP extract into Fabric feels like progress.
+Moving the ERP extract into Fabric feels like progress. The file share dies, the lakehouse lights up, and the pipelines look modern. Leadership hears “we’re on Fabric now” and expects the Monday numbers to finally behave.
 
-The file share dies. The lakehouse lights up. Pipelines look modern. Leadership hears “we’re on Fabric now” and expects the Monday numbers to finally behave.
-
-They will behave the same way—only sooner. An ungoverned ERP feed without grain, owners, and checks does not become trustworthy because it lands in a lakehouse. It becomes a faster path to the same bad Monday.
-
-Fabric will host the mess. Governance still has to own the feed.
+They will behave the same way, only sooner. An ungoverned ERP feed without grain, owners, and checks does not become trustworthy because it lands in a lakehouse. It becomes a faster path to the same bad Monday. Fabric will host the mess, and governance still has to own the feed.
 
 ![Black-and-white industrial skyline with transmission towers and plant smoke at dusk](/blog/fabric-wont-fix-ungoverned-erp-feed-hero.jpg)
 
 ## The platform is not the steward
 
-Mid-market manufacturers often treat a platform move as a fix for tribal extracts, silent overwrites, and five versions of Revenue. A lakehouse can be a better landing place than a brittle share. That is real.
+Mid-market manufacturers often treat a platform move as the fix for tribal extracts, silent overwrites, and five versions of Revenue. A lakehouse can be a better landing place than a brittle share.
 
-What it cannot do: invent primary keys, assign measure owners, define inventory grain, or refuse a partial plant extract. Those are governance decisions. Put them after the migration and you fund faster reconciliation theater.
+What it cannot do is invent primary keys, assign measure owners, define inventory grain, or refuse a partial plant extract. Those are governance decisions. Push them until after the migration and you have funded faster reconciliation theater.
 
-This is the cousin of [certified datasets vs the wild west](/blog/certified-datasets-vs-wild-west) and [why Power BI reports show different numbers](/blog/why-power-bi-reports-show-different-numbers). Clean storage is not a certified measure. An owner is. The [semantic model is still the product](/blog/semantic-model-is-the-product)—wherever the tables live.
+This is a cousin of [certified datasets vs the wild west](/blog/certified-datasets-vs-wild-west) and [why Power BI reports show different numbers](/blog/why-power-bi-reports-show-different-numbers). Clean storage is not a certified measure. An owner is. The [semantic model is still the product](/blog/semantic-model-is-the-product), wherever the tables live.
 
-If [ops still runs the plant from spreadsheets](/blog/ops-still-runs-the-plant-from-spreadsheets), a shinier lakehouse does not retire the workbook. A governed grain and a trusted as-of do.
+If [ops still runs the plant from spreadsheets](/blog/ops-still-runs-the-plant-from-spreadsheets), a shinier lakehouse will not retire the workbook. A governed grain and a trusted as-of will.
 
 ## The costs of hosting an ungoverned ERP feed faster
 
-1. **Bad Monday numbers arrive on time.** Row counts, null keys, and missing plants still refresh “successfully.” The room gets wrong faster. Green pipelines hide empty grain.
+1. **Bad Monday numbers arrive on time.** Bad row counts, null keys, and missing plants still refresh “successfully.” The room gets the wrong answer faster, and green pipelines hide empty grain.
 
-2. **Source fights accelerate, not shrink.** Did ERP change, did the pipeline truncate, or did Power Query filter quietly? Without lineage, batch IDs, and quality gates, the argument just starts earlier.
+2. **Source fights speed up instead of shrinking.** Did the ERP change, did the pipeline truncate, or did Power Query filter quietly? Without lineage, batch IDs, and quality gates, the argument just starts earlier.
 
-3. **History still disappears.** Overwrites—in a lake or on a share—erase Tuesday’s as-of. Controllers cannot replay what the pack showed. Auditors get a platform logo and no trail.
+3. **History still disappears.** Overwrites erase Tuesday’s as-of whether they happen in a lake or on a share. Controllers cannot replay what the pack showed, and auditors get a platform logo with no trail.
 
-4. **Grain stays report-shaped.** Extracts mirror the last Excel ask instead of a designed fact. Every new question needs a new pipeline. The lakehouse becomes a folder of one-offs with better tooling.
+4. **Grain stays shaped like reports.** Extracts mirror the last Excel ask instead of a designed fact, so every new question needs a new pipeline. The lakehouse becomes a folder of one-offs with better tooling.
 
-5. **Five Revenues relocate upstream.** Teams connect Power BI to the new tables and invent measures again. See [measures nobody can explain](/blog/measures-nobody-can-explain). The platform did not own Bookings. Nobody did.
+5. **Five Revenues relocate upstream.** Teams connect Power BI to the new tables and invent the measures again, as in [measures nobody can explain](/blog/measures-nobody-can-explain). Nobody owned Bookings.
 
-6. **Ownership stays nobody.** IT owns the Fabric workspace sometimes. Analytics owns the model sometimes. When the feed is late or wrong, both point at the lake. Close risk has no name on the calendar—pair with [refresh failures are a close risk](/blog/refresh-failures-are-a-close-risk).
+6. **Ownership stays with nobody.** IT owns the Fabric workspace some of the time and analytics owns the model some of the time. When the feed is late or wrong, both point at the lake, and close risk has no name on the calendar. Pair this with [refresh failures are a close risk](/blog/refresh-failures-are-a-close-risk).
 
-7. **Certification becomes a sticker on a lakehouse.** Promoting a workspace is not certifying On-Hand or Margin. Leaders need a named measure in a governed dataset, not a diagram of OneLake folders.
+7. **Certification becomes a sticker on a lakehouse.** Promoting a workspace is not the same as certifying On-Hand or Margin. Leaders need a named measure in a governed dataset, not a diagram of OneLake folders.
 
-8. **Side systems multiply under a new brand.** Plants keep local extracts. Finance keeps a “known good” workbook. Power BI becomes one more consumer of an untrusted feed—now with a modern logo.
+8. **Side systems multiply under a new brand.** Plants keep local extracts and finance keeps a “known good” workbook. Power BI becomes one more consumer of an untrusted feed, now with a modern logo.
 
 ## How to fix it: govern the feed, then let the platform host it
 
-1. **Write the decisions and grain before the migration slide.** Open orders, inventory by plant, actuals by account. Name as-of and system of record. Dashboard and lakehouse pages come after.
+1. **Write the decisions and grain before the migration slide.** Open orders, inventory by plant, actuals by account. Name the as-of and the system of record. Dashboard and lakehouse pages come after.
 
-2. **Require keys, batch IDs, and retention in the landing contract.** Primary keys. Load timestamps. Source batch identifiers. Stop overwriting the only copy—whether the destination is a share, Azure SQL, or a Fabric lakehouse.
+2. **Require keys, batch IDs, and retention in the landing contract.** That means primary keys, load timestamps, and source batch identifiers. Stop overwriting the only copy, whether the destination is a share, Azure SQL, or a Fabric lakehouse.
 
-3. **Add quality gates that can fail the load.** Row-count floors, null-key checks, plant completeness, schema drift alerts. Fail loudly before Power BI refresh. Do not paint green over missing grain.
+3. **Add quality gates that can fail the load.** Use row-count floors, null-key checks, plant completeness, and schema drift alerts. Fail loudly before the Power BI refresh instead of painting green over missing grain.
 
-4. **Assign feed and model owners by name.** A person for the ERP job SLA. A person for the certified dataset. Put both on the close checklist. Platforms do not answer pages.
+4. **Assign feed and model owners by name.** One person owns the ERP job SLA and one owns the certified dataset, and both go on the close checklist. Platforms do not answer pages.
 
-5. **Separate landing from meaning.** The lakehouse (or warehouse) holds curated tables. The Power BI semantic model holds relationships and measures. Do not hide business logic only in notebook transforms that nobody stewards.
+5. **Separate landing from meaning.** The lakehouse (or warehouse) holds curated tables. The Power BI semantic model holds relationships and measures. Do not bury business logic in notebook transforms nobody stewards.
 
-6. **Certify one path for Monday and close.** Promote a certified dataset fed from the governed landing tables. Retire personal imports of the raw feed. Exploration can use sandboxes. The pack cannot.
+6. **Certify one path for Monday and close.** Promote a certified dataset fed from the governed landing tables and retire personal imports of the raw feed. Exploration can use sandboxes. The pack cannot.
 
-7. **Document as-of on the page.** “ERP extract batch 05:10 CT, books grain” beats “live from Fabric” when the truth is a pipeline. Honest labels restore trust faster than a new visual.
+7. **Put the as-of on the page.** “ERP extract batch 05:10 CT, books grain” beats “live from Fabric” when the truth is a pipeline. Honest labels restore trust faster than a new visual.
 
-8. **Sequence delivery.** Grain, keys, checks, and three owned measures first. Then widen self-service. Reverse that order and you migrate the fight.
+8. **Sequence delivery.** Grain, keys, checks, and three owned measures come first, and self-service widens after. Reverse that order and you migrate the fight.
 
-9. **Refuse new feeds without a contract.** If a stakeholder asks for “just one more ERP extract into the lake,” require grain, keys, retention, and an owner—or say no. Unscoped feeds are how governance dies inside a modern platform.
+9. **Refuse new feeds without a contract.** If a stakeholder asks for “just one more ERP extract into the lake,” require grain, keys, retention, and an owner, or say no. Unscoped feeds are how governance dies inside a modern platform.
 
 10. **Treat Fabric as hosting, not absolution.** Use it to land and serve a feed you already defined. Do not use the platform move as proof the feed is governed.
 
 ## What good looks like
 
-The ERP remains the system of record. The landing zone—Fabric lakehouse or otherwise—holds keyed, historical, checked tables on a named SLA. Power BI Import refreshes into a certified model with stewards.
+The ERP remains the system of record. The landing zone, Fabric lakehouse or otherwise, holds keyed, historical, checked tables on a named SLA. Power BI Import refreshes into a certified model with stewards.
 
-When numbers move, the team can replay the batch, show row counts, and point to a measure owner. The meeting debates action—not whether Tuesday’s feed was truncated.
+When numbers move, the team can replay the batch, show row counts, and point to a measure owner. The meeting debates action instead of whether Tuesday’s feed was truncated.
 
-The platform is valuable. It stops being mistaken for ownership.
+The platform is valuable. It is just not ownership.
 
 ## A practical first week (no platform reboot required)
 
-Day one: pick one close-critical subject—inventory or open orders. Write grain, keys, and as-of on one page. Day two: add a row-count and null-key check that pages someone before 6 a.m.—wherever that feed currently lands. Day three: name the feed owner and the model owner on the close distribution list.
+On day one, pick one close-critical subject, such as inventory or open orders, and write the grain, keys, and as-of on one page. On day two, add a row-count and null-key check that pages someone before 6 a.m., wherever that feed lands today. On day three, put the feed owner and the model owner on the close distribution list.
 
 If you are mid-migration into Fabric, pause new dashboard promises until those three exist for one subject. Hosting without gates is how you accelerate the wrong Monday.
 
-Keep the old path read-only during cutover so nobody “fixes” a meeting by grabbing an ungoverned file. Tell finance and plant leads which pack is official and which is shadow. Ambiguous dual paths recreate the source fight.
+Keep the old path read-only during cutover so nobody “fixes” a meeting by grabbing an ungoverned file. Tell finance and plant leads which pack is official and which is shadow.
 
-Do not announce a “Fabric analytics program” while the only interface is still an unscoped ERP dump with new storage. The ICP problem is the feed. The platform is where the feed can land—faster, for better or worse.
+Do not announce a “Fabric analytics program” while the only interface is still an unscoped ERP dump in new storage. The problem is the feed. The platform is just where the feed lands, faster, for better or worse.
 
 ## Executive takeaway
 
-Moving a messy ERP extract into a lakehouse without grain, owners, and checks just accelerates bad Monday numbers.
+Fabric will not fix an ungoverned ERP feed. It will host it faster. Govern grain, keys, quality, and stewards first, then let the platform do what platforms do well: land and serve a contract.
 
-Fabric will not fix an ungoverned ERP feed. It will host it faster. Govern grain, keys, quality, and stewards first. Then let the platform do what platforms do well: land and serve a contract.
-
-Need a 30-minute look at whether your ERP-to-Power-BI path is governed or just newly hosted? [Contact Alluvium](https://www.alluviumbi.com/contact). We’ll map one feed to grain, checks, owners, and the model path close actually needs.
+Want to know whether your ERP-to-Power-BI path is governed or just newly hosted? [Book a session](https://www.alluviumbi.com/contact). We’ll map one feed to grain, checks, owners, and the model path close actually needs. Or start with a [free Model Health check](https://www.alluviumbi.com/power-bi-model-health).
