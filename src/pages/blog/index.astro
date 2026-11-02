@@ -3,10 +3,16 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Crumbs from "../../components/Crumbs.astro";
 import { getCollection } from "astro:content";
 import { SITE } from "../../lib/site";
+import { INSIGHT_CATEGORIES, categoryFor } from "../../lib/insights";
 
 const posts = (await getCollection("blog", ({ data }) => data.draft !== true)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+const latest = posts.slice(0, 3);
+const groups = INSIGHT_CATEGORIES.map((c) => ({
+  ...c,
+  posts: posts.filter((p) => categoryFor(p.slug, p.data.tags) === c.id),
+})).filter((g) => g.posts.length > 0);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -18,32 +24,69 @@ const jsonLd = {
 };
 ---
 <BaseLayout
-  title="Power BI insights for mid-sized companies | Alluvium"
-  description="Power BI insights for mid-sized companies: models, close, licenses, adoption, and trusted numbers. Practical writing for executives and BI leaders now."
+  title="Power BI insights | Alluvium"
+  description="Power BI insights: models, close, licenses, adoption, and trusted numbers. Practical writing for executives and BI leaders now."
   canonicalPath="/blog"
   jsonLd={jsonLd}
 >
   <header class="hero">
     <div class="wrap">
       <Crumbs crumbs={[{ href: "/", label: "Home" }, { label: "Insights" }]} />
-      <p class="kicker">Insights</p>
-      <h1>Power BI insights for mid-sized companies</h1>
-      <p class="lede">Short, practical pieces for C-suite and data leaders at mid-sized companies.</p>
+      <h1 class="page-title">Insights</h1>
     </div>
   </header>
   <section class="band band-alt">
     <div class="wrap">
-      <h2>Latest Power BI articles</h2>
-      <ul class="post-list">
-        {posts.map((post) => (
-          <li>
-            <h3 style="font-size:1.45rem;margin:0.2rem 0 0.4rem;">
-              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-            </h3>
-            <p>{post.data.description}</p>
-          </li>
+      <div class="ins-chips" role="toolbar" aria-label="Filter by topic">
+        <button type="button" class="btn" data-f="all" aria-pressed="true">All ({posts.length})</button>
+        {groups.map((g) => (
+          <button type="button" class="btn btn-ghost" data-f={g.id} aria-pressed="false">{g.label} ({g.posts.length})</button>
         ))}
-      </ul>
+      </div>
+      <section class="ins-group" data-cat="latest" aria-labelledby="cat-latest">
+        <h2 id="cat-latest">Latest</h2>
+        <ul class="post-list">
+          {latest.map((post) => (
+            <li>
+              <h3 style="font-size:1.45rem;margin:0.2rem 0 0.4rem;">
+                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              </h3>
+              <p>{post.data.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+      {groups.map((g) => (
+        <section class="ins-group" data-cat={g.id} aria-labelledby={`cat-${g.id}`}>
+          <h2 id={`cat-${g.id}`}>{g.label}</h2>
+          <ul class="post-list">
+            {g.posts.map((post) => (
+              <li>
+                <h3 style="font-size:1.45rem;margin:0.2rem 0 0.4rem;">
+                  <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+                </h3>
+                <p>{post.data.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
     </div>
   </section>
 </BaseLayout>
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>(".ins-chips button");
+  chips.forEach((b) => {
+    b.addEventListener("click", () => {
+      const f = b.dataset.f;
+      chips.forEach((x) => {
+        const on = x === b;
+        x.setAttribute("aria-pressed", String(on));
+        x.classList.toggle("btn-ghost", !on);
+      });
+      document.querySelectorAll<HTMLElement>(".ins-group").forEach((s) => {
+        s.hidden = !(f === "all" || s.dataset.cat === f);
+      });
+    });
+  });
+</script>
