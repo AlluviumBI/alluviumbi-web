@@ -5,7 +5,7 @@ import { SITE, pageTitle } from "../lib/site";
 
 const title = pageTitle("Acquisition Performance Visibility");
 const description =
-  "After a private equity buy, the buyer and the company that was acquired need one picture of performance. This engagement is a gap analysis and a sequenced roadmap. It is not the post-merger build.";
+  "Acquisition performance visibility: a gap analysis and sequenced roadmap so buyer and company share a clear view of performance through the first 100 days.";
 
 const jsonLd = [
   {
@@ -13,7 +13,8 @@ const jsonLd = [
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
-      { "@type": "ListItem", position: 2, name: "Acquisition Performance Visibility", item: SITE.url + "/acquisition-performance-visibility" },
+      { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
+      { "@type": "ListItem", position: 3, name: "Acquisition Performance Visibility", item: SITE.url + "/acquisition-performance-visibility" },
     ],
   },
   {
@@ -32,17 +33,15 @@ const jsonLd = [
   <div class="wrap">
         <Crumbs crumbs={[
             { href: "/", label: "Home" },
+            { href: "/services", label: "Services" },
             { label: "Acquisition Performance Visibility" }
           ]} />
       </div>
       <div class="wrap hero-grid">
         <div>
-      <p class="kicker">Private equity · Acquired company · Power BI</p>
-      <h1>Acquisition performance visibility</h1>
-      <p class="lede">After a private equity buy, the buyer and the company that was acquired need one picture of performance. They do not need a pile of new reports that exist so someone can check a box. This engagement is a gap analysis and a sequenced roadmap from diligence through the first hundred days. It is not the post-merger build.</p>
-      <p class="hero-actions">
-        <a class="btn" href="/contact">Book a Session</a>
-      </p>
+      
+      <h1 class="page-title">Acquisition Performance Visibility</h1>
+      <p class="lede">After an acquisition, the buyer and the company need a shared view of performance, not a pile of check-the-box reports. We deliver a gap analysis and a sequenced roadmap from diligence through the first 100 days.</p>
     </div>
     <figure class="diagram" aria-label="Before checkbox report hell versus after shared performance picture and roadmap">
       <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Checkbox hell fades at the edge of a shared performance workspace with dual synced panes and a sequenced roadmap.">
@@ -125,7 +124,6 @@ const jsonLd = [
 
 <section class="band band-alt">
   <div class="wrap">
-    <p class="kicker">Three beats</p>
     <h2>Where the definitions already disagree</h2>
     <div class="beats">
       <article class="beat">
@@ -160,8 +158,8 @@ const jsonLd = [
             <rect x="172" y="96" width="64" height="8" rx="3" fill="#ececec"/>
           </svg>
         </div>
-        <h3>The company should be creating value</h3>
-        <p>Operations and finance should be running the business. A named gap list and a roadmap replace the cycle of "send another pack," so the acquired company can execute.</p>
+        <h3>Let the company focus on creating value</h3>
+        <p>Operations and finance should be running the business. A clear gap list and roadmap replace endless report requests, so the team can execute.</p>
       </article>
       <article class="beat">
         <div class="mini">
@@ -184,7 +182,7 @@ const jsonLd = [
           </svg>
         </div>
         <h3>Analysis first, then a handoff both sides can use</h3>
-        <p>We size the gaps from diligence through day 1 to day 100 and hand off a sequenced roadmap. The build comes later. A Session is the next step, once both sides agree on what to fix first.</p>
+        <p>We size the gaps from diligence through day 100 and hand off a sequenced roadmap both sides can act on. The build comes next.</p>
       </article>
     </div>
   </div>
@@ -193,9 +191,8 @@ const jsonLd = [
 
 <section class="band-cta cta-foot">
   <div class="wrap">
-    <p class="kicker">Next step</p>
-    <h2>One gap picture, and a roadmap both sides can run</h2>
-    <p class="lede">Book a Session if you need the gap analysis and a sequence both the buyer and the company can follow.</p>
+    <h2>A shared view, and a roadmap both sides can run</h2>
+    <p class="lede">Tell us about the acquisition. We'll help both sides align on what to fix first.</p>
     <p class="hero-actions">
       <a class="btn" href="/contact">Book a Session</a>
     </p>
@@ -213,11 +210,11 @@ const jsonLd = [
   .beat p,.path-card p{margin:0;font-size:.95rem}
   a.path-card{text-decoration:none;color:inherit;display:block;transition:border-color .15s}
   a.path-card:hover{border-color:var(--accent)}
-  .path-card .go{margin-top:.75rem;font-size:.85rem;color:var(--accent);font-weight:500}
+  .path-card .go{margin-top:.75rem;font-size:.85rem;color: var(--accent-text);font-weight:500}
   .reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem}
   .reason{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1rem}
   .mig-back{font-size:.95rem;margin:0 0 1rem}
-  .mig-back a{color:var(--accent)}
+  .mig-back a{color: var(--accent-text)}
   @media(max-width:900px){
     .beats,.paths,.reasons{grid-template-columns:1fr}
   }
