@@ -8,15 +8,15 @@ import { SITE } from "../lib/site";
 const faqs = [
   {
     q: "What kinds of reports?",
-    a: "It is a report that takes too long. Financial summaries, sales trackers, and operational metrics are typical. The source can be Excel, SQL, or a cloud app.",
+    a: "Any report that takes too long to produce. Financial summaries, sales trackers, and operational metrics are common, from Excel, SQL, or cloud apps.",
   },
   {
     q: "How much time does my team give?",
-    a: "The team gives about two to three hours for the workshop and the training. We handle the build.",
+    a: "About two to three hours, for the workshop and training. We handle the build.",
   },
   {
     q: "What happens after?",
-    a: "You keep a working report and the skill to maintain it. Later add-ons can be another report, model cleanup, workspace access, or Power BI Pro licensing guidance. None of those are required to start.",
+    a: "You keep a working report and the skills to maintain it. Optional next steps include another report, model cleanup, workspace setup, or licensing guidance.",
   },
   {
     q: "Do we need a Power BI license?",
@@ -46,8 +46,8 @@ const jsonLd = [
 ];
 ---
 <BaseLayout
-  title="Power BI Quickstart for mid-sized firms | Alluvium"
-  description="One painful report, rebuilt in two weeks. Flat fee $3,000. You get an automated Power BI report, a training session, and one week of support."
+  title="Power BI Quickstart | Alluvium"
+  description="Your most painful report, rebuilt in Power BI in two weeks, with hands-on training and a week of support."
   canonicalPath="/power-bi-quickstart"
   jsonLd={jsonLd}
 >
@@ -61,21 +61,17 @@ const jsonLd = [
             { label: "Power BI Quickstart" },
           ]}
         />
-        <p class="kicker">Focused engagement</p>
-        <h1>Power BI Quickstart</h1>
-        <p class="lede">We rebuild one painful report in two weeks. You get an automated Power BI report, a training session, and one week of support. The fee is $3,000. There is no second invoice hiding in the scope, and you are not signing up for a retainer.</p>
-        <p class="hero-actions">
-          <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-quickstart">The Quickstart offer</a>
-        </p>
+        
+        <h1 class="page-title">Power BI Quickstart</h1>
+        <p class="lede">We rebuild your most painful report in two weeks. You get an automated Power BI report, hands-on training, and a week of support. Clear scope, no retainer required.</p>
       </div>
     </header>
 
     <section class="band band-alt">
       <div class="wrap prose">
         <h2>The report that eats the week</h2>
-        <p>Someone rebuilds the same pack before every meeting. Numbers move from a spreadsheet, a SQL extract, or a cloud app into slides by hand. The file is late, and two copies do not match.</p>
-        <p>Quickstart takes that one report. It does not start a program, and it does not ask you to stay on after the week of support.</p>
+        <p>Someone rebuilds the same pack before every meeting, copying numbers from spreadsheets, SQL extracts, or cloud apps into slides by hand. It runs late, and the versions rarely match.</p>
+        <p>Quickstart automates that report. No long program, no commitment after the support week.</p>
       </div>
     </section>
 
@@ -85,23 +81,27 @@ const jsonLd = [
         <div class="cards">
           <article class="card">
             <h3>90-minute discovery workshop</h3>
-            <p>We name the report, the decision it has to support, the data, and the owner.</p>
+            <p>We confirm the report, the decisions it supports, the data behind it, and who owns it.</p>
           </article>
           <article class="card">
             <h3>Data connection</h3>
-            <p>We connect Excel, SQL, or a cloud app so the report is not pasted together again.</p>
+            <p>We connect your Excel, SQL, or cloud sources so the report refreshes on its own.</p>
           </article>
           <article class="card">
             <h3>The Power BI report</h3>
-            <p>One report replaces the manual rebuild. People can filter it and trust the figure in the meeting.</p>
+            <p>An automated report replaces the manual rebuild, ready to filter, explore, and trust.</p>
           </article>
           <article class="card">
             <h3>Training and handoff</h3>
-            <p>It is a hands-on session so your team can use the report and adjust it without us in the room.</p>
+            <p>A hands-on session so your team can use and adjust the report with confidence.</p>
           </article>
           <article class="card">
             <h3>One week of support</h3>
-            <p>After go-live we stay for troubleshooting and questions while the first real cycle runs.</p>
+            <p>We stay on after go-live for questions and fixes while the first real cycle runs.</p>
+          </article>
+          <article class="card">
+            <h3>You decide what’s next</h3>
+            <p>Continue with a next engagement, work from a prioritized backlog, or stop with everything handed over. Your call.</p>
           </article>
         </div>
       </div>
@@ -109,42 +109,17 @@ const jsonLd = [
 
     <section class="band band-alt">
       <div class="wrap">
-        <h2>Two weeks, then a week of support</h2>
-        <p>Your team’s time is about two to three hours: the workshop and the training. We do the build.</p>
-        <figure>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 150" role="img" aria-label="A two-week path with four stops, then a lighter week of support.">
-        <line x1="36" y1="78" x2="604" y2="78" stroke="#dcdcdc" stroke-width="6" stroke-linecap="round"/>
-        <line x1="36" y1="78" x2="430" y2="78" stroke="#397fb0" stroke-width="6" stroke-linecap="round"/>
-        <line x1="430" y1="78" x2="604" y2="78" stroke="#397fb0" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 10" opacity="0.55"/>
-        <rect x="36" y="108" width="394" height="8" rx="2" fill="#397fb0"/>
-        <rect x="438" y="108" width="166" height="8" rx="2" fill="#397fb0" opacity="0.35"/>
-        <circle cx="48" cy="78" r="14" fill="#fff" stroke="#397fb0" stroke-width="4"/>
-        <circle cx="230" cy="78" r="14" fill="#397fb0"/>
-        <circle cx="430" cy="78" r="14" fill="#1c1c1c"/>
-        <circle cx="592" cy="78" r="14" fill="#fff" stroke="#397fb0" stroke-width="4"/>
-        <rect x="38" y="36" width="22" height="18" rx="2" fill="none" stroke="#397fb0" stroke-width="2"/>
-        <line x1="38" y1="42" x2="60" y2="42" stroke="#397fb0" stroke-width="2"/>
-        <rect x="214" y="34" width="32" height="22" rx="2" fill="#e7f1f8" stroke="#397fb0" stroke-width="2"/>
-        <line x1="220" y1="42" x2="240" y2="42" stroke="#397fb0" stroke-width="2"/>
-        <line x1="220" y1="48" x2="234" y2="48" stroke="#397fb0" stroke-width="2"/>
-        <rect x="416" y="32" width="28" height="22" rx="2" fill="none" stroke="#1c1c1c" stroke-width="2"/>
-        <path d="M422 44 h8 M434 40 v8" stroke="#1c1c1c" stroke-width="2" fill="none"/>
-      </svg>
-          <ol class="timeline-labels">
-            <li><strong>Discover.</strong> It takes ninety minutes to name the report and the owner.</li>
-            <li><strong>Build.</strong> It takes about one week to connect the data and make the report.</li>
-            <li><strong>Hand off.</strong> It takes one to two days of training so the team can run it.</li>
-            <li><strong>Support.</strong> The week after go-live is for questions while it is in use.</li>
-          </ol>
-        </figure>
+        <h2>Two weeks to build, one week of support</h2>
+        <p>Your team invests about two to three hours, for the workshop and training. We handle the build.</p>
+        <figure> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 150" role="img" aria-label="Three weeks: two weeks of build, then one week of support."> <line x1="48" y1="78" x2="592" y2="78" stroke="#dcdcdc" stroke-width="6" stroke-linecap="round"></line> <line x1="48" y1="78" x2="411" y2="78" stroke="#397fb0" stroke-width="6" stroke-linecap="round"></line> <line x1="411" y1="78" x2="592" y2="78" stroke="#397fb0" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 10" opacity="0.55"></line> <rect x="36" y="108" width="371" height="8" rx="2" fill="#397fb0"></rect> <rect x="415" y="108" width="189" height="8" rx="2" fill="#397fb0" opacity="0.35"></rect> <text x="221" y="140" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="14" fill="#1c1c1c">Weeks 1–2: Build</text> <text x="510" y="140" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="14" fill="#1c1c1c">Week 3: Support</text> <circle cx="48" cy="78" r="14" fill="#fff" stroke="#397fb0" stroke-width="4"></circle> <circle cx="411" cy="78" r="14" fill="#1c1c1c"></circle> <circle cx="592" cy="78" r="14" fill="#fff" stroke="#397fb0" stroke-width="4"></circle> <rect x="38" y="36" width="22" height="18" rx="2" fill="none" stroke="#397fb0" stroke-width="2"></rect> <line x1="38" y1="42" x2="60" y2="42" stroke="#397fb0" stroke-width="2"></line> <rect x="397" y="32" width="28" height="22" rx="2" fill="none" stroke="#1c1c1c" stroke-width="2"></rect> <path d="M403 44 h8 M415 40 v8" stroke="#1c1c1c" stroke-width="2" fill="none"></path> <text x="48" y="24" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="12" fill="#333">Kickoff</text> <text x="411" y="24" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="12" fill="#333">Go-live</text> <text x="592" y="24" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="12" fill="#333">Done</text> </svg> <ol class="timeline-labels"> <li><strong>Weeks 1–2: Build.</strong> A 90-minute discovery workshop, then we connect the data, build the report, and train your team.</li> <li><strong>Go-live.</strong> The automated report replaces the manual rebuild.</li> <li><strong>Week 3: Support.</strong> We answer questions and fix issues while the report is in real use.</li> </ol> </figure>
       </div>
     </section>
 
     <section class="band">
       <div class="wrap prose">
         <h2>Who it is for</h2>
-        <p>It is for a mid-sized team that can point at the report, for people buried in the weekly spreadsheet, and for a leader who wants proof that Power BI is worth using, on one real file, before a larger effort.</p>
-        <p>If you cannot name the report, the data, and an owner, start with Readiness and Governance Groundwork. That is not this offer under another name.</p>
+        <p>For teams that know which report is holding them back, people buried in the weekly spreadsheet, and leaders who want to see Power BI prove itself on real work before a larger effort.</p>
+        <p>Not sure which report, data, or owner to start with? Begin with Readiness and Governance Groundwork instead.</p>
       </div>
     </section>
 
@@ -174,8 +149,8 @@ const jsonLd = [
     />
 
     <CtaBand
-      heading="Name the one report."
-      text="Book a session. We will confirm the report, the data, and the owner. That is one report, two weeks, and $3,000."
+      heading="Start with the report that matters most."
+      text="Tell us about your reporting needs. We'll confirm the scope and get you started."
     />
   </article>
 </BaseLayout>
