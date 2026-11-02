@@ -8,7 +8,7 @@ import { SITE, pageTitle } from "../lib/site";
 
 const title = pageTitle("Power BI for quality");
 const description =
-  "Power BI for mid-market quality: scrap, yield, and customer escapes in the Monday pack—not a plant-only report.";
+  "Power BI for quality: scrap, yield, and customer escapes in the Monday pack—not a plant-only report.";
 
 const faqs = [
   {
@@ -16,16 +16,12 @@ const faqs = [
     a: "Plant quality—scrap, yield, rework, and customer escapes. Dirty feeds show up as arguments too, but this landing is the pack that never saw the bin.",
   },
   {
-    q: "Can quality and finance share one model?",
-    a: "Yes. MES, QMS, and ERP should feed scrap quantity, cost, and reason into the same semantic model as production and COGS—not a side workspace named “ops only.”",
+    q: "Can quality and finance work from the same definitions?",
+    a: "Yes. MES, QMS, and ERP should bring scrap quantity, cost, and reason into the same reporting as production and COGS—not a side workspace named “ops only.”",
   },
   {
     q: "Where does this sit relative to manufacturing Power BI?",
     a: "Manufacturing covers plant grain and shared KPIs. Quality focuses on yield that graduates into the Monday pack finance will defend. They link naturally.",
-  },
-  {
-    q: "What does the Quickstart cost?",
-    a: "It is a flat fee for one quality report rebuilt in two weeks, with training and one week of support. The amount is on the Quickstart page.",
   },
 ];
 
@@ -89,14 +85,9 @@ const jsonLd = [
             { label: "Power BI for quality" },
           ]}
         />
-        <p class="kicker">By audience</p>
-        <h1>Power BI for quality</h1>
+        <h1 class="page-title">Power BI for quality</h1>
         <p class="lede">
-          Scrap, yield, and customer escapes belong in the Monday pack. On a lot of mid-market plants they stay on the floor, and finance books a smoother yield story two weeks later.
-        </p>
-        <p class="hero-actions">
-          <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
+          Scrap, yield, and customer escapes belong in the Monday pack. On a lot of plants they stay on the floor, and finance books a smoother yield story two weeks later.
         </p>
       </div>
     </header>
@@ -114,15 +105,15 @@ const jsonLd = [
       <div class="wrap prose">
         <h2>When scrap is known on the floor and missing in the pack</h2>
         <p>
-          Mid-market quality teams already count what they threw away. Finance still books a smoother yield story two weeks later. Rework hides as utilization. Customer escapes live in another system. A Monday pack that only shows cost of goods sold is an incomplete story, and leadership treats quality as something that stays on the floor.
+          Quality teams already count what they threw away. Finance still books a smoother yield story two weeks later. Rework hides as utilization. Customer escapes live in another system. A Monday pack that only shows cost of goods sold is an incomplete story, and leadership treats quality as something that stays on the floor.
         </p>
         <p>
-          Alluvium helps quality, ops, and finance put scrap and yield into the same semantic model as production and the P&amp;L. Named measures. Shared definitions. No invented case-study logos. Power BI that matches how US mid-market plants already run the meeting.
+          Alluvium helps quality, ops, and finance put scrap and yield alongside production and the P&amp;L, with shared definitions. Named measures. No invented case-study logos. Power BI that matches how plants already run the meeting.
         </p>
         <ul>
           <li>First-pass yield, scrap cost, and rework sit in the same pack as throughput.</li>
           <li>Customer escapes that meet internal scrap—not two disconnected systems.</li>
-          <li>One model quality and finance both consume, not an “ops only” side workspace.</li>
+          <li>A shared model quality and finance both consume, not an “ops only” side workspace.</li>
           <li>Links to <a href="/power-bi-for-manufacturing">manufacturing</a> plant grain and <a href="/power-bi-for-finance">finance</a> sign-off where natural.</li>
         </ul>
       </div>
@@ -167,7 +158,7 @@ const jsonLd = [
             <LineIcon name="connect" />
             <h3>QMS, MES, and ERP together</h3>
             <p>
-              Practical extract patterns so scrap quantity, cost, and reason join production and COGS in one model.
+              Practical extract patterns so scrap quantity, cost, and reason sit next to production and COGS.
             </p>
           </article>
           <article class="card">

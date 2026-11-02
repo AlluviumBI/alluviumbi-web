@@ -3,9 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Crumbs from "../components/Crumbs.astro";
 import { SITE, pageTitle } from "../lib/site";
 
-const title = pageTitle("Power BI migration");
+const title = pageTitle("Power BI Migration");
 const description =
-  "Leaving Tableau, Excel as BI, or a homegrown custom stack? Pick your from-pain and move to Power BI.";
+  "Moving from Tableau, Excel, or a homegrown BI stack? Choose your path to Power BI, planned and rebuilt properly.";
 
 const jsonLd = [
   {
@@ -14,7 +14,7 @@ const jsonLd = [
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url + "/" },
       { "@type": "ListItem", position: 2, name: "Services", item: SITE.url + "/services" },
-      { "@type": "ListItem", position: 3, name: "Power BI migration", item: SITE.url + "/power-bi-migration" },
+      { "@type": "ListItem", position: 3, name: "Power BI Migration", item: SITE.url + "/power-bi-migration" },
     ],
   },
   {
@@ -34,17 +34,14 @@ const jsonLd = [
         <Crumbs crumbs={[
             { href: "/", label: "Home" },
             { href: "/services", label: "Services" },
-            { label: "Power BI migration" }
+            { label: "Power BI Migration" }
           ]} />
       </div>
       <div class="wrap hero-grid">
         <div>
-      <p class="kicker">Migrations · Power BI</p>
-      <h1>Choose what you are leaving</h1>
-      <p class="lede">Owners, operations leads, and finance leads usually leave one of three stacks. Tableau costs too much and is hard to staff. Excel has become the real reporting system. Or a homegrown build no longer keeps up. Pick the path that matches the pain, and we size the move to Power BI.</p>
-      <p class="hero-actions">
-        <a class="btn" href="/contact">Book a Session</a>
-      </p>
+      
+      <h1 class="page-title">Power BI Migration</h1>
+      <p class="lede">Most migrations start from one of three places: Tableau that costs too much to run, Excel that became the reporting system, or a homegrown build that can't keep up. Choose your path and we'll plan the move to Power BI.</p>
     </div>
     <figure class="diagram" aria-label="Three from-pains map into Power BI">
       <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three from-pains funnel softly into one elevated Power BI product workspace.">
@@ -119,8 +116,7 @@ const jsonLd = [
 
 <section class="band band-alt">
   <div class="wrap">
-    <p class="kicker">Pick your path</p>
-    <h2>Three places to start, one place to land</h2>
+    <h2>Three starting points, one destination</h2>
     <div class="paths">
       <a class="path-card" href="/tableau-to-power-bi">
                 <div class="mini">
@@ -209,7 +205,7 @@ const jsonLd = [
             </svg>
         </div>
         <h3>Excel as BI → Power BI</h3>
-        <p>The pain is manual effort, bad pastes, and analysis that cannot move without a new file. The model moves to Power BI. Excel becomes the export.</p>
+        <p>Manual effort, copy-paste errors, and analysis that needs a new file every time. Reporting moves to Power BI; Excel becomes the export.</p>
         <p class="go">Open the Excel path</p>
       </a>
       <a class="path-card" href="/homegrown-custom-bi-to-power-bi">
@@ -259,7 +255,7 @@ const jsonLd = [
             </svg>
         </div>
         <h3>Homegrown → Power BI</h3>
-        <p>The custom stack is old, inflexible, and dependent on one person. Rebuild on Power BI, where you can hire.</p>
+        <p>An aging, inflexible stack that depends on one person. Rebuild on Power BI, where talent is easy to find.</p>
         <p class="go">Open the homegrown path</p>
       </a>
     </div>
@@ -268,9 +264,8 @@ const jsonLd = [
 
 <section class="band-cta cta-foot">
   <div class="wrap">
-    <p class="kicker">Next step</p>
-    <h2>Book a Session to size the move</h2>
-    <p class="lede">Tell us which stack you are leaving. We map the move in plain language for owners, operations, and finance.</p>
+    <h2>Plan your move to Power BI</h2>
+    <p class="lede">Tell us what you're moving from. We'll map a clear path to Power BI.</p>
     <p class="hero-actions">
       <a class="btn" href="/contact">Book a Session</a>
     </p>
@@ -286,13 +281,13 @@ const jsonLd = [
   .beat,.path-card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1rem 1rem}
   .beat .mini,.path-card .mini{margin:0 0 .75rem;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
   .beat p,.path-card p{margin:0;font-size:.95rem}
-  a.path-card{text-decoration:none;color:inherit;display:block;transition:border-color .15s}
+  a.path-card{text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color .15s}
   a.path-card:hover{border-color:var(--accent)}
-  .path-card .go{margin-top:.75rem;font-size:.85rem;color:var(--accent);font-weight:500}
+  .path-card .go{margin-top:auto;padding-top:.75rem;font-size:.85rem;color: var(--accent-text);font-weight:500}
   .reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:1.15rem}
   .reason{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1rem}
   .mig-back{font-size:.95rem;margin:0 0 1rem}
-  .mig-back a{color:var(--accent)}
+  .mig-back a{color: var(--accent-text)}
   @media(max-width:900px){
     .beats,.paths,.reasons{grid-template-columns:1fr}
   }
