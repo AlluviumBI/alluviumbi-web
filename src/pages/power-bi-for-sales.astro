@@ -8,7 +8,7 @@ import { SITE, pageTitle } from "../lib/site";
 
 const title = pageTitle("Power BI for sales analytics");
 const description =
-  "Power BI for mid-market sales: pipeline and bookings finance will accept, CRM + ERP on shared definitions.";
+  "Power BI for sales: pipeline and bookings finance will accept, CRM + ERP on shared definitions.";
 
 const faqs = [
   {
@@ -16,16 +16,12 @@ const faqs = [
     a: "No—and it should not pretend to. We name pipeline, commit, and bookings as separate measures with clear calendars so the QBR stops subtracting two different processes.",
   },
   {
-    q: "Can CRM and ERP share the same model?",
+    q: "Can CRM and ERP numbers be reported together?",
     a: "Yes. Salesforce, Dynamics, HubSpot, and similar CRMs can sit beside ERP and finance facts—with mapped grain, not a hallway translation on Monday.",
   },
   {
     q: "Do you invent sales case studies or logos?",
     a: "No. Same delivery pattern as finance and manufacturing: one painful report, named measures, training on your model—no invented clients.",
-  },
-  {
-    q: "What does the Quickstart cost?",
-    a: "It is a flat fee for one sales report rebuilt in two weeks, with discovery, the automated report, training, and one week of support. The amount is on the Quickstart page.",
   },
 ];
 
@@ -89,14 +85,9 @@ const jsonLd = [
             { label: "Power BI for sales" },
           ]}
         />
-        <p class="kicker">By audience</p>
-        <h1>Power BI for sales</h1>
+        <h1 class="page-title">Power BI for sales</h1>
         <p class="lede">
-          Pipeline and bookings are different numbers. Mid-market sales can run the CRM facts. Finance will accept the bookings. The quarterly review stops pretending a weighted forecast is the same thing as what shipped or invoiced.
-        </p>
-        <p class="hero-actions">
-          <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
+          Pipeline and bookings are different numbers. Sales can run the CRM facts. Finance will accept the bookings. The quarterly review stops pretending a weighted forecast is the same thing as what shipped or invoiced.
         </p>
       </div>
     </header>
@@ -122,7 +113,7 @@ const jsonLd = [
         <ul>
           <li>Pipeline hygiene: stale opportunities removed, stage exit rules sales will defend, and a next step and close date someone maintains.</li>
           <li>Bookings and finance facts are not labeled as weighted pipeline.</li>
-          <li>CRM and ERP sit in one semantic model, so the report is not cleaning the CRM inside a measure.</li>
+          <li>CRM and ERP sit in a shared semantic model, so the report is not cleaning the CRM inside a measure.</li>
           <li>Training is on your certified measures, so the skill stays with the team.</li>
         </ul>
       </div>

@@ -8,12 +8,12 @@ import { SITE, pageTitle } from "../lib/site";
 
 const title = pageTitle("Power BI for manufacturing");
 const description =
-  "Power BI for mid-market manufacturing: shared shop-floor and finance KPIs, OEE and scrap in the huddle, ERP-aware models.";
+  "Power BI for manufacturing: shared shop-floor and finance KPIs, OEE and scrap in the huddle, ERP-aware models.";
 
 const faqs = [
   {
     q: "Do you build separate plant and finance models?",
-    a: "No. We design one semantic model with shared definitions so throughput, scrap, and P&L stop living as two sets of books.",
+    a: "No. We design a shared semantic model with common definitions so throughput, scrap, and P&L stop living as two sets of books.",
   },
   {
     q: "Can this work with our ERP?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What does a Quickstart cover for a plant?",
-    a: "It is one report, such as weekly production, a scrap pack, on-time delivery, or inventory visibility, rebuilt in two weeks, with training and one week of support. The fee is stated on the Quickstart page.",
+    a: "It is one report, such as weekly production, a scrap pack, on-time delivery, or inventory visibility, rebuilt in two weeks, with training and one week of support.",
   },
 ];
 
@@ -89,14 +89,9 @@ const jsonLd = [
             { label: "Power BI for manufacturing" },
           ]}
         />
-        <p class="kicker">By industry</p>
-        <h1>Power BI for manufacturing</h1>
+        <h1 class="page-title">Power BI for manufacturing</h1>
         <p class="lede">
-          Mid-market plants usually already have dashboards. What they lack is one model a supervisor can open at the start of the shift and a controller can defend at the close.
-        </p>
-        <p class="hero-actions">
-          <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
+          Most plants already have dashboards. What they need is a shared model a supervisor can open at the start of the shift and a controller can defend at the close.
         </p>
       </div>
     </header>
@@ -114,10 +109,10 @@ const jsonLd = [
       <div class="wrap prose">
         <h2>When the plant and finance stop sharing a number</h2>
         <p>
-          Mid-market manufacturers rarely lack dashboards. They lack one model that ops can open at 6:30 a.m. and finance can defend in the close. Supervisors rebuild shift grain in Excel. Scrap never makes the Monday pack. The weekly ops review becomes a slide deck. Slow refresh costs downtime while quality issues keep running.
+          Manufacturers rarely lack dashboards. They lack a shared model that ops can open at 6:30 a.m. and finance can defend in the close. Supervisors rebuild shift grain in Excel. Scrap never makes the Monday pack. The weekly ops review becomes a slide deck. Slow refresh costs downtime while quality issues keep running.
         </p>
         <p>
-          The work starts from the decisions the plant already runs. Shop-floor measures and the profit and loss live in one semantic model, so operations and finance are not keeping two sets of books.
+          We start from the decisions the plant already runs. Shop-floor measures and the profit and loss share definitions, so operations and finance are not keeping two sets of books.
         </p>
         <ul>
           <li>Shop-floor vs finance on shared measures—not two workbooks that never tie.</li>
@@ -160,7 +155,7 @@ const jsonLd = [
             <LineIcon name="finance" />
             <h3>Shared measures with finance</h3>
             <p>
-              One semantic model for production and P&amp;L definitions. Ops and controllers argue less about which number is “real.”
+              Production and P&amp;L share the same definitions. Ops and controllers argue less about which number is “real.”
             </p>
           </article>
           <article class="card">
@@ -254,7 +249,7 @@ const jsonLd = [
     />
 
     <CtaBand
-      heading="Put the plant and finance on one model"
+      heading="Put the plant and finance on the same page"
       text="Book a Session and name the report that slows the huddle or the close. Or start with a Quickstart if you can already point at that one report."
     />
   </article>

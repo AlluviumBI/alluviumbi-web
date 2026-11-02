@@ -1,9 +1,9 @@
 export const SITE = {
   name: "Alluvium",
   url: "https://www.alluviumbi.com",
-  title: "Power BI consulting for mid-market | Alluvium",
+  title: "Microsoft Power BI consulting | Alluvium",
   description:
-    "Power BI consulting for mid-sized companies: semantic models, dashboard optimization, and trusted numbers in the meeting. Book a Session.",
+    "Microsoft Power BI consulting: reporting your team can rely on. Quickstart, strategy, optimization, training, and advisory.",
   locale: "en_US",
   region: "United States",
 } as const;
@@ -44,7 +44,7 @@ export const NAV = [
 export const SERVICES = [
   { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
   { href: "/analytics-ai-strategy-roadmap", label: "Analytics Strategy Roadmap" },
-  { href: "/data-project-management-change-leadership", label: "Data Project Management" },
+  { href: "/data-project-management-change-leadership", label: "Data and Analytics Project Management" },
   { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard Optimization" },
   { href: "/managed-advisory-retainer", label: "Managed Advisory Retainer" },
   { href: "/power-bi-training", label: "Power BI Training" },
@@ -72,7 +72,7 @@ export const RELATED: Record<
   },
   "/analytics-ai-strategy-roadmap": {
     services: [
-      { href: "/data-project-management-change-leadership", label: "Analytics project management" },
+      { href: "/data-project-management-change-leadership", label: "Data and analytics project management" },
       { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
       { href: "/conversational-analytics", label: "Conversational analytics" },
     ],
@@ -109,7 +109,7 @@ export const RELATED: Record<
   "/managed-advisory-retainer": {
     services: [
       { href: "/power-bi-dashboard-optimization-ai-insights", label: "Dashboard optimization" },
-      { href: "/data-project-management-change-leadership", label: "Analytics project management" },
+      { href: "/data-project-management-change-leadership", label: "Data and analytics project management" },
       { href: "/power-bi-training", label: "Power BI training" },
     ],
     posts: [
@@ -121,7 +121,7 @@ export const RELATED: Record<
   "/power-bi-training": {
     services: [
       { href: "/power-bi-quickstart", label: "Power BI Quickstart" },
-      { href: "/data-project-management-change-leadership", label: "Analytics project management" },
+      { href: "/data-project-management-change-leadership", label: "Data and analytics project management" },
       { href: "/managed-advisory-retainer", label: "Managed advisory retainer" },
     ],
     posts: [

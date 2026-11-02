@@ -8,7 +8,7 @@ import { SITE, pageTitle } from "../lib/site";
 
 const title = pageTitle("Power BI for HR");
 const description =
-  "Power BI for mid-market HR and people analytics: headcount, labor, and people costs that tie to the P&L.";
+  "Power BI for HR and people analytics: headcount, labor, and people costs that tie to the P&L.";
 
 const faqs = [
   {
@@ -16,16 +16,12 @@ const faqs = [
     a: "People analytics that finance will accept—headcount, labor, and people costs on shared definitions with the P&L, not a side HR dashboard that never ties out.",
   },
   {
-    q: "Can HR and finance share the same model?",
+    q: "Can HR and finance work from the same definitions?",
     a: "Yes. Headcount and labor should use the same calendar, org, and cost-center grain finance already owns—so Monday’s meeting is not two versions of people cost.",
   },
   {
     q: "Do you invent HR case studies or logos?",
     a: "No. We reuse the same delivery pattern as finance and manufacturing Quickstarts: one painful report, named measures, training on your model—no invented clients.",
-  },
-  {
-    q: "What does the Quickstart cost?",
-    a: "It is a flat fee for one HR or people-cost report rebuilt in two weeks. The amount is on the Quickstart page.",
   },
 ];
 
@@ -89,14 +85,9 @@ const jsonLd = [
             { label: "Power BI for HR" },
           ]}
         />
-        <p class="kicker">By audience</p>
-        <h1>Power BI for HR</h1>
+        <h1 class="page-title">Power BI for HR</h1>
         <p class="lede">
           Headcount, labor, and people costs have to tie to the profit and loss. A side dashboard that finance will not sign is not people analytics. It is a second roster.
-        </p>
-        <p class="hero-actions">
-          <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
         </p>
       </div>
     </header>
@@ -114,10 +105,10 @@ const jsonLd = [
       <div class="wrap prose">
         <h2>When people costs never tie to the close</h2>
         <p>
-          Mid-market HR and finance already know the pattern: headcount in one workbook, labor in another, overtime argued in email, and a P&amp;L that cannot explain the people line. Power BI helps—but only when org, calendar, and cost center match the definitions controllers already own.
+          HR and finance already know the pattern: headcount in one workbook, labor in another, overtime argued in email, and a P&amp;L that cannot explain the people line. Power BI helps—but only when org, calendar, and cost center match the definitions controllers already own.
         </p>
         <p>
-          Alluvium helps HR, FP&amp;A, and ops put headcount and labor on the same semantic model as the close. People analytics that leadership will open on Monday. No invented HR case studies. No chatbot project dressed up as workforce BI.
+          Alluvium helps HR, FP&amp;A, and ops report headcount and labor with the same definitions finance uses at close. People analytics that leadership will open on Monday. No invented HR case studies. No chatbot project dressed up as workforce BI.
         </p>
         <ul>
           <li>Headcount and full-time equivalent share calendar and org grain with finance.</li>
@@ -245,7 +236,7 @@ const jsonLd = [
     />
 
     <CtaBand
-      heading="Put people costs on the same model as the P&L"
+      heading="Tie people costs to the P&L"
       text="Book a Session and name the HR report that never ties to the close."
     />
   </article>

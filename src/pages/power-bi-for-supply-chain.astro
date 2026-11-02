@@ -8,11 +8,11 @@ import { SITE, pageTitle } from "../lib/site";
 
 const title = pageTitle("Power BI for supply chain");
 const description =
-  "Power BI for mid-market supply chain: inventory, OTIF, and supplier numbers in the same model as finance.";
+  "Power BI for supply chain: inventory, OTIF, and supplier numbers tied to finance.";
 
 const faqs = [
   {
-    q: "Can inventory live in the same model as the P&L?",
+    q: "Can inventory be reported against the P&L?",
     a: "Yes—and it should. On-hand, turns, and fill rate need shared definitions with finance so Monday’s cash talk and the warehouse meeting are not two companies.",
   },
   {
@@ -22,10 +22,6 @@ const faqs = [
   {
     q: "How does this relate to manufacturing Power BI?",
     a: "Throughput and inventory are different clocks. We keep plant grain for the huddle and working-capital views for cash—linked where natural, not collapsed into one dishonest tile.",
-  },
-  {
-    q: "What does the Quickstart cost?",
-    a: "It is a flat fee for one supply-chain report rebuilt in two weeks. The amount is on the Quickstart page.",
   },
 ];
 
@@ -89,14 +85,9 @@ const jsonLd = [
             { label: "Power BI for supply chain" },
           ]}
         />
-        <p class="kicker">By audience</p>
-        <h1>Power BI for supply chain</h1>
+        <h1 class="page-title">Power BI for supply chain</h1>
         <p class="lede">
-          Inventory, on-time in full, and supplier numbers belong in the same model as finance. Otherwise operations and the controller manage working capital from last Friday’s extract.
-        </p>
-        <p class="hero-actions">
-          <a class="btn" href="/contact">Book a Session</a>
-          <a class="btn btn-ghost" href="/power-bi-quickstart">Power BI Quickstart</a>
+          Inventory, on-time in full, and supplier numbers should tie to finance. Otherwise operations and the controller manage working capital from last Friday’s extract.
         </p>
       </div>
     </header>
@@ -114,10 +105,10 @@ const jsonLd = [
       <div class="wrap prose">
         <h2>When inventory is cash and the report is a week late</h2>
         <p>
-          Mid-market supply chain teams rarely lack spreadsheets. They lack on-hand, turns, aging, and fill rate in one semantic model finance will defend. The COO feels lag as service. The CFO feels it as cash. Warehouses stay full while customers wait—because the pack still waits on Excel.
+          Supply chain teams rarely lack spreadsheets. They lack on-hand, turns, aging, and fill rate in a shared semantic model finance will defend. The COO feels lag as service. The CFO feels it as cash. Warehouses stay full while customers wait—because the pack still waits on Excel.
         </p>
         <p>
-          Alluvium helps supply chain, ops, and finance put inventory and OTIF on the same definitions as the P&amp;L. Not a second set of books. Not invented client logos. Practical Power BI that matches how US mid-market teams already run the meeting.
+          Alluvium helps supply chain, ops, and finance put inventory and OTIF on the same definitions as the P&amp;L. Not a second set of books. Not invented client logos. Practical Power BI that matches how teams already run the meeting.
         </p>
         <ul>
           <li>On-hand, turns, and dead stock refresh from the sources you already run.</li>
@@ -150,7 +141,7 @@ const jsonLd = [
           </article>
           <article class="card">
             <LineIcon name="finance" />
-            <h3>The same model as finance</h3>
+            <h3>Tied to finance</h3>
             <p>
               Shared definitions so Monday’s cash talk and the warehouse meeting stop being two companies.
               Related: <a href="/power-bi-for-finance">Power BI for finance</a>.
@@ -245,7 +236,7 @@ const jsonLd = [
     />
 
     <CtaBand
-      heading="Put inventory and finance on one model"
+      heading="Put inventory and finance on the same page"
       text="Book a Session and name the supply-chain report that slows service or cash."
     />
   </article>

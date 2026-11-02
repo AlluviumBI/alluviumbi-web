@@ -5,7 +5,7 @@ import { SITE } from "../lib/site";
 
 const title = "How to Choose a Power BI Partner for Manufacturing | Alluvium";
 const description =
-  "A practical checklist for mid-market manufacturers choosing a Power BI partner—ERP fit, shared KPIs, adoption, and when a Quickstart beats a long project.";
+  "A practical checklist for manufacturers choosing a Power BI partner—ERP fit, shared KPIs, adoption, and when a Quickstart beats a long project.";
 
 const checklist = [
   {
@@ -99,8 +99,7 @@ const jsonLd = [
             { label: "How to choose a Power BI partner for manufacturing" },
           ]}
         />
-        <p class="kicker mfg-kicker">Manufacturing buyer guide</p>
-        <h1 id="mfg-hero-heading">How to choose a Power BI partner for manufacturing</h1>
+        <h1 class="page-title" id="mfg-hero-heading">How to choose a Power BI partner for manufacturing</h1>
         <p>
           Most manufacturers do not need another dashboard vendor. They need a partner who can connect ERP and plant data,
           put finance and operations on the same numbers, and leave the team able to run the model after handoff.
@@ -176,7 +175,7 @@ const jsonLd = [
         <div class="mfg-fit">
           <h2 id="fit-heading">When Alluvium fits</h2>
           <p>
-            Alluvium LLC is a Power BI and analytics delivery partner for US mid-market manufacturers and similar
+            Alluvium LLC is a Power BI and analytics delivery partner for US manufacturers and similar
             operations-heavy firms.
           </p>
           <p><strong>We fit when you need:</strong></p>
@@ -248,15 +247,15 @@ const jsonLd = [
   .mfg-partner-guide .mfg-kicker {
     color: rgba(255, 255, 255, 0.75);
   }
-  .mfg-partner-guide .crumbs {
+  .mfg-partner-guide :global(.crumbs) {
     margin: 0 0 0.85rem;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 0.85rem;
   }
-  .mfg-partner-guide .crumbs a {
-    color: rgba(255, 255, 255, 0.8);
+  .mfg-partner-guide :global(.crumbs a) {
+    color: var(--white);
   }
-  .mfg-partner-guide .crumbs a:hover {
+  .mfg-partner-guide :global(.crumbs a:hover) {
     color: var(--white);
   }
   .mfg-partner-guide .mfg-hero-copy h1 {
@@ -324,7 +323,7 @@ const jsonLd = [
     background: var(--paper);
   }
   .mfg-partner-guide .mfg-checklist input[type="checkbox"]:checked {
-    background: var(--accent);
+    background: var(--accent-text);
     border-color: var(--accent);
   }
   .mfg-partner-guide .mfg-checklist input[type="checkbox"]:checked::after {
@@ -403,13 +402,13 @@ const jsonLd = [
   }
   .mfg-partner-guide .mfg-cta .btn,
   .mfg-partner-guide .mfg-cta .mfg-btn-session {
-    background: #397fb0;
+    background: var(--accent-text);
     color: var(--white);
     border: 0;
   }
   .mfg-partner-guide .mfg-cta .btn:hover,
   .mfg-partner-guide .mfg-cta .mfg-btn-session:hover {
-    background: #2f6a94;
+    background: var(--accent-text-hover);
     color: var(--white);
   }
   @media (max-width: 860px) {
