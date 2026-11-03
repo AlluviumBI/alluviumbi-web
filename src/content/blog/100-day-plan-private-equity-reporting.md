@@ -1,6 +1,6 @@
 ---
 title: "PE 100 Day Plan: Put Reporting in Week One"
-description: "Most 100 day plan private equity templates park reporting near the end. Lock KPI definitions, the close calendar, and one model in the first weeks."
+description: "Most 100 day plan private equity templates park reporting near the end. Lock KPI definitions, the close calendar, and a Power BI model built once in the first weeks."
 pubDate: 2026-11-03
 tags:
   - Power BI
@@ -14,7 +14,7 @@ The deal closed on a Friday. Monday morning the operating partner sends over the
 
 That gap is where portfolio companies get hurt. Every other workstream in the plan gets measured with numbers. If the numbers are still being rebuilt in Excel every month, each workstream argues about its own baseline. A 100 day plan for a private equity portfolio company works better when reporting goes first, in week one, and the rest of the plan stands on it.
 
-![Black and white photo of plowed furrows stretching to the horizon](/blog/100-day-plan-private-equity-reporting-hero.svg)
+![Black and white image of plowed furrows stretching to the horizon](/blog/100-day-plan-private-equity-reporting-hero.svg)
 
 ## What a 100 day plan private equity template leaves out
 
@@ -38,7 +38,7 @@ You do not need a data platform in week one. You need a short list of decisions 
 1. **Pick the KPIs the sponsor will actually read.** Revenue, gross margin, EBITDA, cash, working capital, and the two or three operating measures in the thesis. For a manufacturer that might be on-time delivery, scrap, or throughput. Keep the list short. You can add later. You cannot easily take away.
 2. **Write the definition of each one in plain words.** What is in it, what is out, which system it comes from, and who signs off. Gross margin at standard cost or actual cost. Revenue on ship date or invoice date. Write it down and get the CFO and the operating partner to agree before anyone builds a chart. [One definition across the portfolio](/blog/acquisition-performance-visibility-one-definition) is the whole point.
 3. **Lock the close calendar.** Decide which business day the books are closed enough to report, and when the package goes out. If month end already takes a week, the plan should say so out loud. [Why month end still takes a week](/blog/why-month-end-still-takes-a-week) covers the usual reasons.
-4. **Build one model, not one report per request.** Load the general ledger, sales, and the operating data the KPIs need into a single Power BI semantic model. Every report the sponsor sees reads from it. When the procurement team wants a savings view, it uses the same cost measure the board deck uses.
+4. **Build the model once, not one report per request.** Load the general ledger, sales, and the operating data the KPIs need into a single Power BI semantic model. Every report the sponsor sees reads from it. When the procurement team wants a savings view, it uses the same cost measure the board deck uses.
 5. **Name an owner for the model.** One person on the finance side owns the definitions. Someone owns the refresh. If the company has no analytics team, that owner might be an outside partner for the first few months. It still has to be a name, not a department.
 6. **Ship the first package from the model.** Even if it is rough. The second package will be better, and both will tie to the ledger. That is worth more than a pretty deck built by hand.
 
@@ -46,7 +46,7 @@ You do not need a data platform in week one. You need a short list of decisions 
 
 Once the ruler is in place, every other workstream gets easier to judge.
 
-1. **Working capital has a real baseline.** AR, AP, and inventory come from the same model, on the same close calendar. The [working capital dashboard](/blog/working-capital-dashboard-power-bi-pe) stops being a separate project and becomes three more pages on the model you already built.
+1. **Working capital has a real baseline.** AR, AP, and inventory come from the shared model, on the same close calendar. The [working capital dashboard](/blog/working-capital-dashboard-power-bi-pe) stops being a separate project and becomes three more pages on the model you already built.
 2. **Pricing and procurement argue about the business, not the math.** Both teams read gross margin from one measure. When they disagree, they disagree about price and cost, which is the argument you want.
 3. **The value creation plan gets a scoreboard.** Each initiative has a KPI with a definition and a baseline from week one. Progress at day 100 is a number the sponsor can check.
 4. **Add-ons have a landing spot.** The next acquisition maps its accounts and items into the definitions you already wrote. It is still work. It is not starting over.
@@ -63,6 +63,6 @@ If you are filling in the template this week, change three cells.
 
 ## Executive takeaway
 
-A 100 day plan private equity sponsors can trust puts reporting in week one. Pick the KPIs, write the definitions, lock the close calendar, and build one model that every workstream and every package reads from. Then the pricing, procurement, and working capital work gets judged on numbers that hold, and the value creation plan has a scoreboard from the start.
+A 100 day plan private equity sponsors can trust puts reporting in week one. Pick the KPIs, write the definitions, lock the close calendar, and build the model once, so every workstream and every package reads from it. Then the pricing, procurement, and working capital work gets judged on numbers that hold, and the value creation plan has a scoreboard from the start.
 
 If you are inside the first 100 days and the sponsor package is still being built by hand, see how [acquisition performance visibility](https://www.alluviumbi.com/acquisition-performance-visibility) works, then [Book a Session](https://www.alluviumbi.com/contact).
