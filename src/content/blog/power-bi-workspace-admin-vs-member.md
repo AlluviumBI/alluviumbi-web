@@ -28,9 +28,9 @@ A few things stay with the Admin alone:
 2. **Add or remove anyone, including other admins.** A member can add people at a lower role, but cannot remove anyone and cannot change an existing person's role. Microsoft notes that an admin has to remove the person first before a member can add them back at a new level.
 3. **Let contributors update the app.** That delegation is an admin decision.
 
-In Fabric, [workspace roles](https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces) extend the same model. Microsoft lists connecting a workspace to a Git repository and creating a workspace identity as admin-only capabilities.
+In Fabric, [workspace roles](https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces) build on the Power BI roles. Microsoft lists connecting a workspace to a Git repository and creating a workspace identity as admin-only capabilities.
 
-Two details are easy to miss. If someone is in several groups, they get the highest role any of those groups grants. And every role except Viewer needs a Power BI Pro or Premium Per User license to do its work.
+Two details are easy to miss. If someone is in several groups, they get the highest role any of those groups grants. And licensing depends on the capacity. In a shared capacity, everyone added to the workspace needs a Power BI Pro or Premium Per User license. Only on a Premium or Fabric capacity can Viewers work without Pro.
 
 ## Which role fits which person
 
