@@ -30,7 +30,7 @@ A few things stay with the Admin alone:
 
 In Fabric, [workspace roles](https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces) build on the Power BI roles. Microsoft lists connecting a workspace to a Git repository and creating a workspace identity as admin-only capabilities.
 
-Two details are easy to miss. If someone is in several groups, they get the highest role any of those groups grants. And licensing depends on the capacity. In a shared capacity, everyone added to the workspace needs a Power BI Pro or Premium Per User license. Only on a Premium or Fabric capacity can Viewers work without Pro.
+Three details are easy to miss. If someone is in several groups, they get the highest role any of those groups grants. In a shared capacity, everyone added to the workspace needs a Power BI Pro or Premium Per User license. Viewers skip that requirement only on a Premium capacity or on a Fabric capacity of F64 or larger, per [Microsoft's Fabric licenses page](https://learn.microsoft.com/en-us/fabric/enterprise/licenses). On smaller Fabric capacities, Viewers still need Pro or Premium Per User.
 
 ## Which role fits which person
 
