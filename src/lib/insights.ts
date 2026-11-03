@@ -14,6 +14,7 @@ export type InsightCategoryId = (typeof INSIGHT_CATEGORIES)[number]["id"];
 
 /** Explicit assignment by slug. New posts fall back to tags (see categoryFor). */
 export const INSIGHT_CATEGORY_BY_SLUG: Record<string, InsightCategoryId> = {
+  "power-bi-workspace-admin-vs-member": "governance",
   "power-bi-copilot-vs-data-agent": "fabric",
   "13-week-cash-flow-forecast-power-bi": "finance",
   "budgeting-forecasting-power-bi-without-planning-tool": "finance",
