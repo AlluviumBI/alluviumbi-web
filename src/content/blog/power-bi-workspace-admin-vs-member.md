@@ -1,5 +1,5 @@
 ---
-title: "Power BI Workspace Admin vs Member: Hand Out Roles Before Someone Changes the Wrong Setting"
+title: "Power BI Workspace Admin vs Member"
 description: "Power BI workspace admin vs member: admins control who is in the workspace and whether it exists. Members publish and share. Assign each on purpose."
 pubDate: 2026-11-05
 tags:
@@ -14,9 +14,7 @@ A new analyst needs to publish a report. Someone opens the workspace, clicks Man
 
 The difference in Power BI workspace admin vs member is not about who does more work. It is about who controls the workspace itself. Members run the content. Admins run the room the content lives in. Hand out each role on purpose and the workspace stays something your team can trust.
 
-![Old key in a door lock](/blog/power-bi-workspace-admin-vs-member-hero.svg)
-
-*Photo: Old key in door lock by Santeri Viinamäki, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons. Converted to black and white.*
+![Black and white photo of an old key in a door lock](/blog/power-bi-workspace-admin-vs-member-hero.svg)
 
 ## Power BI workspace admin vs member: what each role can do
 
