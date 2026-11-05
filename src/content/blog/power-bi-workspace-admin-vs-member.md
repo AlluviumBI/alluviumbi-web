@@ -7,14 +7,14 @@ tags:
   - Microsoft Fabric
   - Workspaces
   - Governance
-draft: true
+draft: false
 ---
 
 A new analyst needs to publish a report. Someone opens the workspace, clicks Manage access, and picks the top role on the list because it is the fastest way to make the error go away. Six months later the workspace has five admins, nobody remembers why, and a setting changed on a Tuesday that nobody owns.
 
 The difference in Power BI workspace admin vs member is not about who does more work. It is about who controls the workspace itself. Members run the content. Admins run the room the content lives in. Hand out each role on purpose and the workspace stays something your team can trust.
 
-![Black and white photo of an old key in a door lock](/blog/power-bi-workspace-admin-vs-member-hero.svg)
+![Black and white image of an old key in a door lock](/blog/power-bi-workspace-admin-vs-member-hero.svg)
 
 ## Power BI workspace admin vs member: what each role can do
 
